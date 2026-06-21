@@ -3,6 +3,7 @@
 .env.*
 !.env.example
 .herenow/
+artifacts/
 node_modules/
 dist/
 build/
