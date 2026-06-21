@@ -1,0 +1,39 @@
+name: Propose an ESG skill
+description: Describe a skill before preparing a pull request.
+title: "Skill proposal: "
+labels: ["skill-proposal"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form when you want feedback before preparing the text-only skill folder.
+  - type: input
+    id: outcome
+    attributes:
+      label: ESG job to be completed
+      description: State one concrete outcome.
+    validations:
+      required: true
+  - type: textarea
+    id: workflow
+    attributes:
+      label: Proposed workflow
+      description: Explain the inputs, main steps, output, and verification.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources and standards
+      description: List the standards, public sources, or original material the skill relies on.
+    validations:
+      required: true
+  - type: checkboxes
+    id: rights
+    attributes:
+      label: Rights and boundaries
+      options:
+        - label: I wrote this content or have permission to redistribute it.
+          required: true
+        - label: The skill will not promise legal, financial, compliance, certification, or assurance outcomes.
+          required: true

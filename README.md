@@ -1,0 +1,43 @@
+# ESG Skills Marketplace
+
+A curated catalogue of Codex-compatible skills for environmental, social, and governance (ESG) work.
+
+The marketplace is intentionally conservative. Skills are proposed through GitHub pull requests, checked automatically, reviewed by a human, and published only after they are merged into `main`.
+
+## Trust gate
+
+Every proposed skill must pass five gates:
+
+1. **Restricted format** — v1 accepts text-only bundles. Executables, binaries, symlinks, hidden files, and dependency manifests are rejected.
+2. **Structural policy** — deterministic checks enforce naming, frontmatter, allowed paths, file sizes, and catalogue consistency.
+3. **Security scan** — [NVIDIA SkillSpector](https://github.com/NVIDIA/SkillSpector) runs static analysis from a pinned commit without executing submitted content.
+4. **Human review** — GitHub requests review from `@FilhoRicardo`; the reviewer reads the changes and the scanner report.
+5. **Protected merge** — only approved pull requests with all required checks can enter `main`. The public catalogue reads only merged content.
+
+These controls reduce risk; they do not prove that a skill is safe or correct. SkillSpector documents limits including no dynamic execution and possible false positives or missed attacks. Users should still read a skill before installing it and apply normal professional judgement.
+
+## Browse or contribute
+
+- Browse approved skills in [`skills/`](skills/).
+- Read the beginner-friendly [contribution guide](CONTRIBUTING.md).
+- Use the [skill template](templates/skill-template/) to prepare a submission.
+- Maintainers follow the [owner review runbook](docs/OWNER-RUNBOOK.md).
+
+## Repository structure
+
+```text
+skills/                    Approved skill bundles
+templates/skill-template/  Copyable submission template
+scripts/                   Deterministic policy and catalogue tools
+site/                      Static public catalogue
+tests/                     Policy tests
+.github/                   Review ownership and required CI checks
+```
+
+## Security tooling
+
+CI pins NVIDIA SkillSpector to commit `a5092dd9b9521ff57a9b53612bb129ce78019002` (Apache-2.0) and installs its frozen dependency lockfile with uv `0.11.14`. Updating either pin requires a maintainer platform change and a fresh review.
+
+## Licence
+
+Repository code and original templates are available under the [MIT License](LICENSE). Individual submitted skills must be original or redistributable under compatible terms.
