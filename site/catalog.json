@@ -1,1 +1,9 @@
-[]
+[
+  {
+    "slug": "ci-safe-fixture",
+    "title": "CI safe fixture",
+    "description": "Prepare a bounded ESG evidence summary from user-provided source material.",
+    "category": "reporting",
+    "path": "skills/ci-safe-fixture"
+  }
+]
