@@ -1,1 +1,16 @@
-[]
+[
+  {
+    "slug": "esg-materiality-brief",
+    "title": "ESG materiality brief",
+    "description": "Turn user-provided business and stakeholder evidence into a traceable ESG materiality briefing with explicit uncertainty.",
+    "category": "strategy",
+    "path": "skills/esg-materiality-brief"
+  },
+  {
+    "slug": "ghg-inventory-evidence-pack",
+    "title": "GHG inventory evidence pack",
+    "description": "Organize user-provided greenhouse-gas inventory data and factors into a traceable working evidence pack for review.",
+    "category": "data",
+    "path": "skills/ghg-inventory-evidence-pack"
+  }
+]

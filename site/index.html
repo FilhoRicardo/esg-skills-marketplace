@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="A curated catalogue of reviewed Codex-compatible environmental, social, and governance skills."
+    >
+    <title>ESG Skills Marketplace</title>
+    <link rel="stylesheet" href="aster-tokens.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body class="aster-bg">
+    <div class="site-shell">
+      <header class="topbar" aria-label="Site header">
+        <a class="brand" href="./" aria-label="ESG Skills Marketplace home">
+          <span class="brand-mark" aria-hidden="true">✲</span>
+          <span>ESG Skills Marketplace</span>
+        </a>
+        <a
+          class="aster-btn aster-btn--green-ghost source-link"
+          href="https://github.com/FilhoRicardo/esg-skills-marketplace"
+          target="_blank"
+          rel="noreferrer"
+        >View repository</a>
+      </header>
+
+      <main class="catalogue">
+        <section class="intro aster-glass" aria-labelledby="page-title">
+          <p class="aster-eyebrow aster-eyebrow--green">Curated workflows · v1</p>
+          <h1 id="page-title">Evidence-first ESG work, with the boundaries left visible.</h1>
+          <p class="intro-copy">
+            Two Codex-compatible workflows for organising environmental, social, and governance
+            evidence. Each skill is text-only, checked automatically, and reviewed before it enters
+            the catalogue.
+          </p>
+
+          <dl class="trust-list" aria-label="Catalogue trust gate">
+            <div class="aster-inner">
+              <dt class="aster-mono">01</dt>
+              <dd>Restricted text-only format</dd>
+            </div>
+            <div class="aster-inner">
+              <dt class="aster-mono">02</dt>
+              <dd>Policy and static security checks</dd>
+            </div>
+            <div class="aster-inner">
+              <dt class="aster-mono">03</dt>
+              <dd>Maintainer review before publication</dd>
+            </div>
+          </dl>
+
+          <aside class="boundary" aria-label="Professional advice boundary">
+            <p class="aster-eyebrow">Working boundary</p>
+            <p>
+              These skills structure evidence and workflow. They do not provide legal, financial,
+              compliance, certification, audit, or assurance advice.
+            </p>
+          </aside>
+        </section>
+
+        <section class="skills-panel aster-glass" aria-labelledby="skills-title">
+          <div class="panel-heading">
+            <div>
+              <p class="aster-eyebrow">Approved catalogue</p>
+              <h2 id="skills-title">Skills ready to inspect</h2>
+            </div>
+            <p id="catalog-status" class="catalog-status aster-mono" aria-live="polite">
+              Loading catalogue
+            </p>
+          </div>
+
+          <div id="skill-list" class="skill-list" aria-busy="true">
+            <div class="state-card aster-inner">
+              <p>Loading the reviewed catalogue…</p>
+            </div>
+          </div>
+
+          <noscript>
+            <div class="state-card aster-inner">
+              <p>JavaScript is required to load the generated catalogue.</p>
+              <a href="https://github.com/FilhoRicardo/esg-skills-marketplace/tree/main/skills">
+                Browse approved skills on GitHub
+              </a>
+            </div>
+          </noscript>
+        </section>
+      </main>
+
+      <footer>
+        <span>GitHub is the source of truth.</span>
+        <span class="aster-mono">No accounts · no payments · no runtime execution</span>
+      </footer>
+    </div>
+  </body>
+</html>

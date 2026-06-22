@@ -16,7 +16,7 @@ SLUG_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 
 def changed_paths(base: str, repo: Path) -> list[str]:
     result = subprocess.run(
-        ["git", "diff", "--name-only", "--diff-filter=ACMRTUXB", f"{base}...HEAD"],
+        ["git", "diff", "--name-only", f"{base}...HEAD"],
         cwd=repo,
         check=True,
         capture_output=True,
