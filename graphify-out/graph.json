@@ -4,58 +4,1066 @@
   "graph": {},
   "nodes": [
     {
+      "label": "CONTRIBUTING.md",
+      "file_type": "document",
+      "source_file": "CONTRIBUTING.md",
+      "source_location": "L1",
+      "id": "contributing",
+      "community": 15,
+      "norm_label": "contributing.md"
+    },
+    {
+      "label": "Contributing a skill",
+      "file_type": "document",
+      "source_file": "CONTRIBUTING.md",
+      "source_location": "L1",
+      "id": "contributing_contributing_a_skill",
+      "community": 15,
+      "norm_label": "contributing a skill"
+    },
+    {
+      "label": "Before you start",
+      "file_type": "document",
+      "source_file": "CONTRIBUTING.md",
+      "source_location": "L5",
+      "id": "contributing_before_you_start",
+      "community": 15,
+      "norm_label": "before you start"
+    },
+    {
+      "label": "Prepare the folder",
+      "file_type": "document",
+      "source_file": "CONTRIBUTING.md",
+      "source_location": "L16",
+      "id": "contributing_prepare_the_folder",
+      "community": 15,
+      "norm_label": "prepare the folder"
+    },
+    {
+      "label": "Submit through the public site",
+      "file_type": "document",
+      "source_file": "CONTRIBUTING.md",
+      "source_location": "L30",
+      "id": "contributing_submit_through_the_public_site",
+      "community": 15,
+      "norm_label": "submit through the public site"
+    },
+    {
+      "label": "Open the request on GitHub directly",
+      "file_type": "document",
+      "source_file": "CONTRIBUTING.md",
+      "source_location": "L40",
+      "id": "contributing_open_the_request_on_github_directly",
+      "community": 15,
+      "norm_label": "open the request on github directly"
+    },
+    {
+      "label": "What the checks do",
+      "file_type": "document",
+      "source_file": "CONTRIBUTING.md",
+      "source_location": "L51",
+      "id": "contributing_what_the_checks_do",
+      "community": 15,
+      "norm_label": "what the checks do"
+    },
+    {
+      "label": "Categories",
+      "file_type": "document",
+      "source_file": "CONTRIBUTING.md",
+      "source_location": "L58",
+      "id": "contributing_categories",
+      "community": 15,
+      "norm_label": "categories"
+    },
+    {
+      "label": "Review outcomes",
+      "file_type": "document",
+      "source_file": "CONTRIBUTING.md",
+      "source_location": "L69",
+      "id": "contributing_review_outcomes",
+      "community": 15,
+      "norm_label": "review outcomes"
+    },
+    {
+      "label": "PLAN.md",
+      "file_type": "document",
+      "source_file": "PLAN.md",
+      "source_location": "L1",
+      "id": "plan",
+      "community": 8,
+      "norm_label": "plan.md"
+    },
+    {
+      "label": "Plan: Repair The Marketplace UX And Redeploy",
+      "file_type": "document",
+      "source_file": "PLAN.md",
+      "source_location": "L1",
+      "id": "plan_plan_repair_the_marketplace_ux_and_redeploy",
+      "community": 8,
+      "norm_label": "plan: repair the marketplace ux and redeploy"
+    },
+    {
+      "label": "Goal",
+      "file_type": "document",
+      "source_file": "PLAN.md",
+      "source_location": "L3",
+      "id": "plan_goal",
+      "community": 8,
+      "norm_label": "goal"
+    },
+    {
+      "label": "Acceptance Criteria",
+      "file_type": "document",
+      "source_file": "PLAN.md",
+      "source_location": "L7",
+      "id": "plan_acceptance_criteria",
+      "community": 8,
+      "norm_label": "acceptance criteria"
+    },
+    {
+      "label": "Approach",
+      "file_type": "document",
+      "source_file": "PLAN.md",
+      "source_location": "L27",
+      "id": "plan_approach",
+      "community": 8,
+      "norm_label": "approach"
+    },
+    {
+      "label": "Key Decisions And Tradeoffs",
+      "file_type": "document",
+      "source_file": "PLAN.md",
+      "source_location": "L44",
+      "id": "plan_key_decisions_and_tradeoffs",
+      "community": 8,
+      "norm_label": "key decisions and tradeoffs"
+    },
+    {
+      "label": "Risks And Unknowns",
+      "file_type": "document",
+      "source_file": "PLAN.md",
+      "source_location": "L53",
+      "id": "plan_risks_and_unknowns",
+      "community": 8,
+      "norm_label": "risks and unknowns"
+    },
+    {
+      "label": "Out Of Scope",
+      "file_type": "document",
+      "source_file": "PLAN.md",
+      "source_location": "L61",
+      "id": "plan_out_of_scope",
+      "community": 8,
+      "norm_label": "out of scope"
+    },
+    {
+      "label": "Verification",
+      "file_type": "document",
+      "source_file": "PLAN.md",
+      "source_location": "L69",
+      "id": "plan_verification",
+      "community": 8,
+      "norm_label": "verification"
+    },
+    {
+      "label": "GitHub, Linear, And Memory Impact",
+      "file_type": "document",
+      "source_file": "PLAN.md",
+      "source_location": "L88",
+      "id": "plan_github_linear_and_memory_impact",
+      "community": 8,
+      "norm_label": "github, linear, and memory impact"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "id": "readme",
+      "community": 16,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "ESG Skills Marketplace",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "id": "readme_esg_skills_marketplace",
+      "community": 16,
+      "norm_label": "esg skills marketplace"
+    },
+    {
+      "label": "Trust gate",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L7",
+      "id": "readme_trust_gate",
+      "community": 16,
+      "norm_label": "trust gate"
+    },
+    {
+      "label": "Browse or contribute",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L19",
+      "id": "readme_browse_or_contribute",
+      "community": 16,
+      "norm_label": "browse or contribute"
+    },
+    {
+      "label": "Current catalogue",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L29",
+      "id": "readme_current_catalogue",
+      "community": 16,
+      "norm_label": "current catalogue"
+    },
+    {
+      "label": "Repository structure",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L36",
+      "id": "readme_repository_structure",
+      "community": 16,
+      "norm_label": "repository structure"
+    },
+    {
+      "label": "Security tooling",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L47",
+      "id": "readme_security_tooling",
+      "community": 16,
+      "norm_label": "security tooling"
+    },
+    {
+      "label": "Licence",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L51",
+      "id": "readme_licence",
+      "community": 16,
+      "norm_label": "licence"
+    },
+    {
+      "label": "SITE-OPERATIONS.md",
+      "file_type": "document",
+      "source_file": "docs/SITE-OPERATIONS.md",
+      "source_location": "L1",
+      "id": "docs_site_operations",
+      "community": 17,
+      "norm_label": "site-operations.md"
+    },
+    {
+      "label": "Site operations",
+      "file_type": "document",
+      "source_file": "docs/SITE-OPERATIONS.md",
+      "source_location": "L1",
+      "id": "docs_site_operations_site_operations",
+      "community": 17,
+      "norm_label": "site operations"
+    },
+    {
+      "label": "What the public site does",
+      "file_type": "document",
+      "source_file": "docs/SITE-OPERATIONS.md",
+      "source_location": "L5",
+      "id": "docs_site_operations_what_the_public_site_does",
+      "community": 17,
+      "norm_label": "what the public site does"
+    },
+    {
+      "label": "Required GitHub configuration",
+      "file_type": "document",
+      "source_file": "docs/SITE-OPERATIONS.md",
+      "source_location": "L12",
+      "id": "docs_site_operations_required_github_configuration",
+      "community": 17,
+      "norm_label": "required github configuration"
+    },
+    {
+      "label": "Required here.now configuration",
+      "file_type": "document",
+      "source_file": "docs/SITE-OPERATIONS.md",
+      "source_location": "L24",
+      "id": "docs_site_operations_required_here_now_configuration",
+      "community": 17,
+      "norm_label": "required here.now configuration"
+    },
+    {
+      "label": "Safety boundaries",
+      "file_type": "document",
+      "source_file": "docs/SITE-OPERATIONS.md",
+      "source_location": "L34",
+      "id": "docs_site_operations_safety_boundaries",
+      "community": 17,
+      "norm_label": "safety boundaries"
+    },
+    {
+      "label": "Operational checks",
+      "file_type": "document",
+      "source_file": "docs/SITE-OPERATIONS.md",
+      "source_location": "L42",
+      "id": "docs_site_operations_operational_checks",
+      "community": 17,
+      "norm_label": "operational checks"
+    },
+    {
+      "label": "site_intake.py",
+      "file_type": "code",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L1",
+      "id": "scripts_site_intake",
+      "community": 4,
+      "norm_label": "site_intake.py"
+    },
+    {
+      "label": "submission_config()",
+      "file_type": "code",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L25",
+      "id": "scripts_site_intake_submission_config",
+      "community": 4,
+      "norm_label": "submission_config()"
+    },
+    {
+      "label": "_bounded_text()",
+      "file_type": "code",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L41",
+      "id": "scripts_site_intake_bounded_text",
+      "community": 4,
+      "norm_label": "_bounded_text()"
+    },
+    {
+      "label": "_normalize_public_field()",
+      "file_type": "code",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L48",
+      "id": "scripts_site_intake_normalize_public_field",
+      "community": 4,
+      "norm_label": "_normalize_public_field()"
+    },
+    {
+      "label": "validate_submission()",
+      "file_type": "code",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L55",
+      "id": "scripts_site_intake_validate_submission",
+      "community": 4,
+      "norm_label": "validate_submission()"
+    },
+    {
+      "label": "Path",
+      "file_type": "code",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L55",
+      "id": "scripts_site_intake_py_path",
+      "community": 4,
+      "norm_label": "path"
+    },
+    {
+      "label": "write_submission()",
+      "file_type": "code",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L96",
+      "id": "scripts_site_intake_write_submission",
+      "community": 4,
+      "norm_label": "write_submission()"
+    },
+    {
+      "label": "_write_metadata()",
+      "file_type": "code",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L130",
+      "id": "scripts_site_intake_write_metadata",
+      "community": 4,
+      "norm_label": "_write_metadata()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L135",
+      "id": "scripts_site_intake_main",
+      "community": 4,
+      "norm_label": "main()"
+    },
+    {
+      "label": "app.js",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L1",
+      "id": "site_app",
+      "community": 0,
+      "norm_label": "app.js"
+    },
+    {
+      "label": "list",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L1",
+      "id": "site_app_list",
+      "community": 0,
+      "norm_label": "list"
+    },
+    {
+      "label": "status",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L2",
+      "id": "site_app_status",
+      "community": 0,
+      "norm_label": "status"
+    },
+    {
+      "label": "submissionStatus",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L3",
+      "id": "site_app_submissionstatus",
+      "community": 0,
+      "norm_label": "submissionstatus"
+    },
+    {
+      "label": "form",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L4",
+      "id": "site_app_form",
+      "community": 0,
+      "norm_label": "form"
+    },
+    {
+      "label": "skillFileInput",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L5",
+      "id": "site_app_skillfileinput",
+      "community": 0,
+      "norm_label": "skillfileinput"
+    },
+    {
+      "label": "marketplaceTitleInput",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L6",
+      "id": "site_app_marketplacetitleinput",
+      "community": 0,
+      "norm_label": "marketplacetitleinput"
+    },
+    {
+      "label": "marketplaceCategoryInput",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L7",
+      "id": "site_app_marketplacecategoryinput",
+      "community": 0,
+      "norm_label": "marketplacecategoryinput"
+    },
+    {
+      "label": "publicNameInput",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L8",
+      "id": "site_app_publicnameinput",
+      "community": 0,
+      "norm_label": "publicnameinput"
+    },
+    {
+      "label": "publicContactInput",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L9",
+      "id": "site_app_publiccontactinput",
+      "community": 0,
+      "norm_label": "publiccontactinput"
+    },
+    {
+      "label": "rightsInput",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L10",
+      "id": "site_app_rightsinput",
+      "community": 0,
+      "norm_label": "rightsinput"
+    },
+    {
+      "label": "boundaryInput",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L11",
+      "id": "site_app_boundaryinput",
+      "community": 0,
+      "norm_label": "boundaryinput"
+    },
+    {
+      "label": "submitButton",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L12",
+      "id": "site_app_submitbutton",
+      "community": 0,
+      "norm_label": "submitbutton"
+    },
+    {
+      "label": "previewHeading",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L13",
+      "id": "site_app_previewheading",
+      "community": 0,
+      "norm_label": "previewheading"
+    },
+    {
+      "label": "previewSlug",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L14",
+      "id": "site_app_previewslug",
+      "community": 0,
+      "norm_label": "previewslug"
+    },
+    {
+      "label": "previewTitle",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L15",
+      "id": "site_app_previewtitle",
+      "community": 0,
+      "norm_label": "previewtitle"
+    },
+    {
+      "label": "previewCategory",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L16",
+      "id": "site_app_previewcategory",
+      "community": 0,
+      "norm_label": "previewcategory"
+    },
+    {
+      "label": "previewDetail",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L17",
+      "id": "site_app_previewdetail",
+      "community": 0,
+      "norm_label": "previewdetail"
+    },
+    {
+      "label": "feedbackCard",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L18",
+      "id": "site_app_feedbackcard",
+      "community": 0,
+      "norm_label": "feedbackcard"
+    },
+    {
+      "label": "feedbackTitle",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L19",
+      "id": "site_app_feedbacktitle",
+      "community": 0,
+      "norm_label": "feedbacktitle"
+    },
+    {
+      "label": "feedbackDetail",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L20",
+      "id": "site_app_feedbackdetail",
+      "community": 0,
+      "norm_label": "feedbackdetail"
+    },
+    {
+      "label": "LOCAL_HOSTS",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L22",
+      "id": "site_app_local_hosts",
+      "community": 0,
+      "norm_label": "local_hosts"
+    },
+    {
+      "label": "LOCAL_PREVIEW_RESPONSE_CODES",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L23",
+      "id": "site_app_local_preview_response_codes",
+      "community": 0,
+      "norm_label": "local_preview_response_codes"
+    },
+    {
+      "label": "setState()",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L29",
+      "id": "site_app_setstate",
+      "community": 0,
+      "norm_label": "setstate()"
+    },
+    {
+      "label": "setFeedback()",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L47",
+      "id": "site_app_setfeedback",
+      "community": 0,
+      "norm_label": "setfeedback()"
+    },
+    {
+      "label": "clearFeedback()",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L54",
+      "id": "site_app_clearfeedback",
+      "community": 0,
+      "norm_label": "clearfeedback()"
+    },
+    {
+      "label": "setSubmissionTone()",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L61",
+      "id": "site_app_setsubmissiontone",
+      "community": 0,
+      "norm_label": "setsubmissiontone()"
+    },
+    {
+      "label": "bytesLength()",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L66",
+      "id": "site_app_byteslength",
+      "community": 0,
+      "norm_label": "byteslength()"
+    },
+    {
+      "label": "normalizePublicField()",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L70",
+      "id": "site_app_normalizepublicfield",
+      "community": 0,
+      "norm_label": "normalizepublicfield()"
+    },
+    {
+      "label": "parseFrontmatter()",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L74",
+      "id": "site_app_parsefrontmatter",
+      "community": 0,
+      "norm_label": "parsefrontmatter()"
+    },
+    {
+      "label": "parseMarketplace()",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L106",
+      "id": "site_app_parsemarketplace",
+      "community": 0,
+      "norm_label": "parsemarketplace()"
+    },
+    {
+      "label": "buildPreview()",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L126",
+      "id": "site_app_buildpreview",
+      "community": 0,
+      "norm_label": "buildpreview()"
+    },
+    {
+      "label": "updatePreview()",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L190",
+      "id": "site_app_updatepreview",
+      "community": 0,
+      "norm_label": "updatepreview()"
+    },
+    {
+      "label": "syncSubmitButton()",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L209",
+      "id": "site_app_syncsubmitbutton",
+      "community": 0,
+      "norm_label": "syncsubmitbutton()"
+    },
+    {
+      "label": "readSubmissionValues()",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L218",
+      "id": "site_app_readsubmissionvalues",
+      "community": 0,
+      "norm_label": "readsubmissionvalues()"
+    },
+    {
+      "label": "refreshSubmissionPreview()",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L232",
+      "id": "site_app_refreshsubmissionpreview",
+      "community": 0,
+      "norm_label": "refreshsubmissionpreview()"
+    },
+    {
+      "label": "createSkillCard()",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L261",
+      "id": "site_app_createskillcard",
+      "community": 0,
+      "norm_label": "createskillcard()"
+    },
+    {
+      "label": "loadCatalogue()",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L292",
+      "id": "site_app_loadcatalogue",
+      "community": 0,
+      "norm_label": "loadcatalogue()"
+    },
+    {
+      "label": "loadSubmissionConfig()",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L323",
+      "id": "site_app_loadsubmissionconfig",
+      "community": 0,
+      "norm_label": "loadsubmissionconfig()"
+    },
+    {
+      "label": "submission-config.json",
+      "file_type": "code",
+      "source_file": "site/submission-config.json",
+      "source_location": "L1",
+      "id": "site_submission_config",
+      "community": 9,
+      "norm_label": "submission-config.json"
+    },
+    {
+      "label": "dispatchPath",
+      "file_type": "code",
+      "source_file": "site/submission-config.json",
+      "source_location": "L2",
+      "id": "site_submission_config_dispatchpath",
+      "community": 9,
+      "norm_label": "dispatchpath"
+    },
+    {
+      "label": "allowedCategories",
+      "file_type": "code",
+      "source_file": "site/submission-config.json",
+      "source_location": "L3",
+      "id": "site_submission_config_allowedcategories",
+      "community": 9,
+      "norm_label": "allowedcategories"
+    },
+    {
+      "label": "maxSkillFileBytes",
+      "file_type": "code",
+      "source_file": "site/submission-config.json",
+      "source_location": "L11",
+      "id": "site_submission_config_maxskillfilebytes",
+      "community": 9,
+      "norm_label": "maxskillfilebytes"
+    },
+    {
+      "label": "maxMarketplaceFileBytes",
+      "file_type": "code",
+      "source_file": "site/submission-config.json",
+      "source_location": "L12",
+      "id": "site_submission_config_maxmarketplacefilebytes",
+      "community": 9,
+      "norm_label": "maxmarketplacefilebytes"
+    },
+    {
+      "label": "maxPublicNameChars",
+      "file_type": "code",
+      "source_file": "site/submission-config.json",
+      "source_location": "L13",
+      "id": "site_submission_config_maxpublicnamechars",
+      "community": 9,
+      "norm_label": "maxpublicnamechars"
+    },
+    {
+      "label": "maxPublicContactChars",
+      "file_type": "code",
+      "source_file": "site/submission-config.json",
+      "source_location": "L14",
+      "id": "site_submission_config_maxpubliccontactchars",
+      "community": 9,
+      "norm_label": "maxpubliccontactchars"
+    },
+    {
+      "label": "minTitleChars",
+      "file_type": "code",
+      "source_file": "site/submission-config.json",
+      "source_location": "L15",
+      "id": "site_submission_config_mintitlechars",
+      "community": 9,
+      "norm_label": "mintitlechars"
+    },
+    {
+      "label": "maxTitleChars",
+      "file_type": "code",
+      "source_file": "site/submission-config.json",
+      "source_location": "L16",
+      "id": "site_submission_config_maxtitlechars",
+      "community": 9,
+      "norm_label": "maxtitlechars"
+    },
+    {
+      "label": "minDescriptionChars",
+      "file_type": "code",
+      "source_file": "site/submission-config.json",
+      "source_location": "L17",
+      "id": "site_submission_config_mindescriptionchars",
+      "community": 9,
+      "norm_label": "mindescriptionchars"
+    },
+    {
+      "label": "maxDescriptionChars",
+      "file_type": "code",
+      "source_file": "site/submission-config.json",
+      "source_location": "L18",
+      "id": "site_submission_config_maxdescriptionchars",
+      "community": 9,
+      "norm_label": "maxdescriptionchars"
+    },
+    {
+      "label": "minBodyChars",
+      "file_type": "code",
+      "source_file": "site/submission-config.json",
+      "source_location": "L19",
+      "id": "site_submission_config_minbodychars",
+      "community": 9,
+      "norm_label": "minbodychars"
+    },
+    {
+      "label": "test_build_catalog.py",
+      "file_type": "code",
+      "source_file": "tests/test_build_catalog.py",
+      "source_location": "L1",
+      "id": "tests_test_build_catalog",
+      "community": 5,
+      "norm_label": "test_build_catalog.py"
+    },
+    {
+      "label": "BuildCatalogueTests",
+      "file_type": "code",
+      "source_file": "tests/test_build_catalog.py",
+      "source_location": "L12",
+      "id": "tests_test_build_catalog_buildcataloguetests",
+      "community": 5,
+      "norm_label": "buildcataloguetests"
+    },
+    {
+      "label": ".make_root()",
+      "file_type": "code",
+      "source_file": "tests/test_build_catalog.py",
+      "source_location": "L13",
+      "id": "tests_test_build_catalog_buildcataloguetests_make_root",
+      "community": 5,
+      "norm_label": ".make_root()"
+    },
+    {
+      "label": "Path",
+      "file_type": "code",
+      "source_file": "tests/test_build_catalog.py",
+      "source_location": "L13",
+      "id": "tests_test_build_catalog_py_path",
+      "community": 5,
+      "norm_label": "path"
+    },
+    {
+      "label": ".add_skill()",
+      "file_type": "code",
+      "source_file": "tests/test_build_catalog.py",
+      "source_location": "L21",
+      "id": "tests_test_build_catalog_buildcataloguetests_add_skill",
+      "community": 5,
+      "norm_label": ".add_skill()"
+    },
+    {
+      "label": ".test_submission_config_exposes_public_limits()",
+      "file_type": "code",
+      "source_file": "tests/test_build_catalog.py",
+      "source_location": "L39",
+      "id": "tests_test_build_catalog_buildcataloguetests_test_submission_config_exposes_public_limits",
+      "community": 5,
+      "norm_label": ".test_submission_config_exposes_public_limits()"
+    },
+    {
+      "label": ".test_download_bundle_contains_reviewed_bundle()",
+      "file_type": "code",
+      "source_file": "tests/test_build_catalog.py",
+      "source_location": "L47",
+      "id": "tests_test_build_catalog_buildcataloguetests_test_download_bundle_contains_reviewed_bundle",
+      "community": 5,
+      "norm_label": ".test_download_bundle_contains_reviewed_bundle()"
+    },
+    {
+      "label": "test_site_pages.py",
+      "file_type": "code",
+      "source_file": "tests/test_site_pages.py",
+      "source_location": "L1",
+      "id": "tests_test_site_pages",
+      "community": 7,
+      "norm_label": "test_site_pages.py"
+    },
+    {
+      "label": "IdAndLinkParser",
+      "file_type": "code",
+      "source_file": "tests/test_site_pages.py",
+      "source_location": "L13",
+      "id": "tests_test_site_pages_idandlinkparser",
+      "community": 7,
+      "norm_label": "idandlinkparser"
+    },
+    {
+      "label": "HTMLParser",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "id": "htmlparser",
+      "community": 7,
+      "norm_label": "htmlparser"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "tests/test_site_pages.py",
+      "source_location": "L14",
+      "id": "tests_test_site_pages_idandlinkparser_init",
+      "community": 7,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": ".handle_starttag()",
+      "file_type": "code",
+      "source_file": "tests/test_site_pages.py",
+      "source_location": "L20",
+      "id": "tests_test_site_pages_idandlinkparser_handle_starttag",
+      "community": 7,
+      "norm_label": ".handle_starttag()"
+    },
+    {
+      "label": "parse_page()",
+      "file_type": "code",
+      "source_file": "tests/test_site_pages.py",
+      "source_location": "L30",
+      "id": "tests_test_site_pages_parse_page",
+      "community": 7,
+      "norm_label": "parse_page()"
+    },
+    {
+      "label": "SitePageTests",
+      "file_type": "code",
+      "source_file": "tests/test_site_pages.py",
+      "source_location": "L36",
+      "id": "tests_test_site_pages_sitepagetests",
+      "community": 7,
+      "norm_label": "sitepagetests"
+    },
+    {
+      "label": ".test_catalogue_and_submission_are_separate_pages()",
+      "file_type": "code",
+      "source_file": "tests/test_site_pages.py",
+      "source_location": "L37",
+      "id": "tests_test_site_pages_sitepagetests_test_catalogue_and_submission_are_separate_pages",
+      "community": 7,
+      "norm_label": ".test_catalogue_and_submission_are_separate_pages()"
+    },
+    {
+      "label": ".test_both_pages_load_the_shared_assets()",
+      "file_type": "code",
+      "source_file": "tests/test_site_pages.py",
+      "source_location": "L52",
+      "id": "tests_test_site_pages_sitepagetests_test_both_pages_load_the_shared_assets",
+      "community": 7,
+      "norm_label": ".test_both_pages_load_the_shared_assets()"
+    },
+    {
+      "label": ".test_browser_still_sends_generated_marketplace_metadata()",
+      "file_type": "code",
+      "source_file": "tests/test_site_pages.py",
+      "source_location": "L60",
+      "id": "tests_test_site_pages_sitepagetests_test_browser_still_sends_generated_marketplace_metadata",
+      "community": 7,
+      "norm_label": ".test_browser_still_sends_generated_marketplace_metadata()"
+    },
+    {
+      "label": ".test_public_page_does_not_lock_document_scrolling()",
+      "file_type": "code",
+      "source_file": "tests/test_site_pages.py",
+      "source_location": "L65",
+      "id": "tests_test_site_pages_sitepagetests_test_public_page_does_not_lock_document_scrolling",
+      "community": 7,
+      "norm_label": ".test_public_page_does_not_lock_document_scrolling()"
+    },
+    {
       "label": "MEMORY.md",
       "file_type": "document",
       "source_file": "MEMORY.md",
       "source_location": "L1",
-      "id": "memory",
       "community": 14,
-      "norm_label": "memory.md"
+      "norm_label": "memory.md",
+      "id": "memory"
     },
     {
       "label": "ESG Skills Marketplace Memory",
       "file_type": "document",
       "source_file": "MEMORY.md",
       "source_location": "L1",
-      "id": "memory_esg_skills_marketplace_memory",
       "community": 14,
-      "norm_label": "esg skills marketplace memory"
+      "norm_label": "esg skills marketplace memory",
+      "id": "memory_esg_skills_marketplace_memory"
     },
     {
       "label": "Contacts",
       "file_type": "document",
       "source_file": "MEMORY.md",
       "source_location": "L3",
-      "id": "memory_contacts",
       "community": 14,
-      "norm_label": "contacts"
+      "norm_label": "contacts",
+      "id": "memory_contacts"
     },
     {
       "label": "Source Links",
       "file_type": "document",
       "source_file": "MEMORY.md",
       "source_location": "L7",
-      "id": "memory_source_links",
       "community": 14,
-      "norm_label": "source links"
+      "norm_label": "source links",
+      "id": "memory_source_links"
     },
     {
       "label": "Key Decisions",
       "file_type": "document",
       "source_file": "MEMORY.md",
       "source_location": "L17",
-      "id": "memory_key_decisions",
       "community": 14,
-      "norm_label": "key decisions"
+      "norm_label": "key decisions",
+      "id": "memory_key_decisions"
     },
     {
       "label": "Durable Outcomes",
       "file_type": "document",
       "source_file": "MEMORY.md",
       "source_location": "L25",
-      "id": "memory_durable_outcomes",
       "community": 14,
-      "norm_label": "durable outcomes"
+      "norm_label": "durable outcomes",
+      "id": "memory_durable_outcomes"
     },
     {
       "label": "PLAN-REVIEW-LOG.md",
@@ -247,96 +1255,6 @@
       "id": "plan_review_log_2026_06_22_frontend_repair_signoff"
     },
     {
-      "label": "PLAN.md",
-      "file_type": "document",
-      "source_file": "PLAN.md",
-      "source_location": "L1",
-      "community": 8,
-      "norm_label": "plan.md",
-      "id": "plan"
-    },
-    {
-      "label": "Plan: Repair The Marketplace UX And Redeploy",
-      "file_type": "document",
-      "source_file": "PLAN.md",
-      "source_location": "L1",
-      "community": 8,
-      "norm_label": "plan: repair the marketplace ux and redeploy",
-      "id": "plan_plan_repair_the_marketplace_ux_and_redeploy"
-    },
-    {
-      "label": "Goal",
-      "file_type": "document",
-      "source_file": "PLAN.md",
-      "source_location": "L3",
-      "community": 8,
-      "norm_label": "goal",
-      "id": "plan_goal"
-    },
-    {
-      "label": "Acceptance Criteria",
-      "file_type": "document",
-      "source_file": "PLAN.md",
-      "source_location": "L7",
-      "community": 8,
-      "norm_label": "acceptance criteria",
-      "id": "plan_acceptance_criteria"
-    },
-    {
-      "label": "Approach",
-      "file_type": "document",
-      "source_file": "PLAN.md",
-      "source_location": "L27",
-      "community": 8,
-      "norm_label": "approach",
-      "id": "plan_approach"
-    },
-    {
-      "label": "Key Decisions And Tradeoffs",
-      "file_type": "document",
-      "source_file": "PLAN.md",
-      "source_location": "L44",
-      "community": 8,
-      "norm_label": "key decisions and tradeoffs",
-      "id": "plan_key_decisions_and_tradeoffs"
-    },
-    {
-      "label": "Risks And Unknowns",
-      "file_type": "document",
-      "source_file": "PLAN.md",
-      "source_location": "L53",
-      "community": 8,
-      "norm_label": "risks and unknowns",
-      "id": "plan_risks_and_unknowns"
-    },
-    {
-      "label": "Out Of Scope",
-      "file_type": "document",
-      "source_file": "PLAN.md",
-      "source_location": "L61",
-      "community": 8,
-      "norm_label": "out of scope",
-      "id": "plan_out_of_scope"
-    },
-    {
-      "label": "Verification",
-      "file_type": "document",
-      "source_file": "PLAN.md",
-      "source_location": "L69",
-      "community": 8,
-      "norm_label": "verification",
-      "id": "plan_verification"
-    },
-    {
-      "label": "GitHub, Linear, And Memory Impact",
-      "file_type": "document",
-      "source_file": "PLAN.md",
-      "source_location": "L88",
-      "community": 8,
-      "norm_label": "github, linear, and memory impact",
-      "id": "plan_github_linear_and_memory_impact"
-    },
-    {
       "label": "design-qa.md",
       "file_type": "document",
       "source_file": "design-qa.md",
@@ -416,438 +1334,6 @@
       "community": 10,
       "norm_label": "follow-up polish",
       "id": "design_qa_follow_up_polish"
-    },
-    {
-      "label": "app.js",
-      "file_type": "code",
-      "source_file": "site/app.js",
-      "source_location": "L1",
-      "community": 0,
-      "norm_label": "app.js",
-      "id": "site_app"
-    },
-    {
-      "label": "list",
-      "file_type": "code",
-      "source_file": "site/app.js",
-      "source_location": "L1",
-      "community": 0,
-      "norm_label": "list",
-      "id": "site_app_list"
-    },
-    {
-      "label": "status",
-      "file_type": "code",
-      "source_file": "site/app.js",
-      "source_location": "L2",
-      "community": 0,
-      "norm_label": "status",
-      "id": "site_app_status"
-    },
-    {
-      "label": "submissionStatus",
-      "file_type": "code",
-      "source_file": "site/app.js",
-      "source_location": "L3",
-      "community": 0,
-      "norm_label": "submissionstatus",
-      "id": "site_app_submissionstatus"
-    },
-    {
-      "label": "form",
-      "file_type": "code",
-      "source_file": "site/app.js",
-      "source_location": "L4",
-      "community": 0,
-      "norm_label": "form",
-      "id": "site_app_form"
-    },
-    {
-      "label": "skillFileInput",
-      "file_type": "code",
-      "source_file": "site/app.js",
-      "source_location": "L5",
-      "community": 0,
-      "norm_label": "skillfileinput",
-      "id": "site_app_skillfileinput"
-    },
-    {
-      "label": "marketplaceFileInput",
-      "file_type": "code",
-      "source_file": "site/app.js",
-      "source_location": "L6",
-      "community": 0,
-      "norm_label": "marketplacefileinput",
-      "id": "site_app_marketplacefileinput"
-    },
-    {
-      "label": "publicNameInput",
-      "file_type": "code",
-      "source_file": "site/app.js",
-      "source_location": "L7",
-      "community": 0,
-      "norm_label": "publicnameinput",
-      "id": "site_app_publicnameinput"
-    },
-    {
-      "label": "publicContactInput",
-      "file_type": "code",
-      "source_file": "site/app.js",
-      "source_location": "L8",
-      "community": 0,
-      "norm_label": "publiccontactinput",
-      "id": "site_app_publiccontactinput"
-    },
-    {
-      "label": "rightsInput",
-      "file_type": "code",
-      "source_file": "site/app.js",
-      "source_location": "L9",
-      "community": 0,
-      "norm_label": "rightsinput",
-      "id": "site_app_rightsinput"
-    },
-    {
-      "label": "boundaryInput",
-      "file_type": "code",
-      "source_file": "site/app.js",
-      "source_location": "L10",
-      "community": 0,
-      "norm_label": "boundaryinput",
-      "id": "site_app_boundaryinput"
-    },
-    {
-      "label": "submitButton",
-      "file_type": "code",
-      "source_file": "site/app.js",
-      "source_location": "L11",
-      "community": 0,
-      "norm_label": "submitbutton",
-      "id": "site_app_submitbutton"
-    },
-    {
-      "label": "previewHeading",
-      "file_type": "code",
-      "source_file": "site/app.js",
-      "source_location": "L12",
-      "community": 0,
-      "norm_label": "previewheading",
-      "id": "site_app_previewheading"
-    },
-    {
-      "label": "previewSlug",
-      "file_type": "code",
-      "source_file": "site/app.js",
-      "source_location": "L13",
-      "community": 0,
-      "norm_label": "previewslug",
-      "id": "site_app_previewslug"
-    },
-    {
-      "label": "previewTitle",
-      "file_type": "code",
-      "source_file": "site/app.js",
-      "source_location": "L14",
-      "community": 0,
-      "norm_label": "previewtitle",
-      "id": "site_app_previewtitle"
-    },
-    {
-      "label": "previewCategory",
-      "file_type": "code",
-      "source_file": "site/app.js",
-      "source_location": "L15",
-      "community": 0,
-      "norm_label": "previewcategory",
-      "id": "site_app_previewcategory"
-    },
-    {
-      "label": "previewDetail",
-      "file_type": "code",
-      "source_file": "site/app.js",
-      "source_location": "L16",
-      "community": 0,
-      "norm_label": "previewdetail",
-      "id": "site_app_previewdetail"
-    },
-    {
-      "label": "feedbackCard",
-      "file_type": "code",
-      "source_file": "site/app.js",
-      "source_location": "L17",
-      "community": 0,
-      "norm_label": "feedbackcard",
-      "id": "site_app_feedbackcard"
-    },
-    {
-      "label": "feedbackTitle",
-      "file_type": "code",
-      "source_file": "site/app.js",
-      "source_location": "L18",
-      "community": 0,
-      "norm_label": "feedbacktitle",
-      "id": "site_app_feedbacktitle"
-    },
-    {
-      "label": "feedbackDetail",
-      "file_type": "code",
-      "source_file": "site/app.js",
-      "source_location": "L19",
-      "community": 0,
-      "norm_label": "feedbackdetail",
-      "id": "site_app_feedbackdetail"
-    },
-    {
-      "label": "LOCAL_HOSTS",
-      "file_type": "code",
-      "source_file": "site/app.js",
-      "source_location": "L21",
-      "community": 0,
-      "norm_label": "local_hosts",
-      "id": "site_app_local_hosts"
-    },
-    {
-      "label": "LOCAL_PREVIEW_RESPONSE_CODES",
-      "file_type": "code",
-      "source_file": "site/app.js",
-      "source_location": "L22",
-      "community": 0,
-      "norm_label": "local_preview_response_codes",
-      "id": "site_app_local_preview_response_codes"
-    },
-    {
-      "label": "setState()",
-      "file_type": "code",
-      "source_file": "site/app.js",
-      "source_location": "L28",
-      "community": 0,
-      "norm_label": "setstate()",
-      "id": "site_app_setstate"
-    },
-    {
-      "label": "setFeedback()",
-      "file_type": "code",
-      "source_file": "site/app.js",
-      "source_location": "L46",
-      "community": 0,
-      "norm_label": "setfeedback()",
-      "id": "site_app_setfeedback"
-    },
-    {
-      "label": "clearFeedback()",
-      "file_type": "code",
-      "source_file": "site/app.js",
-      "source_location": "L53",
-      "community": 0,
-      "norm_label": "clearfeedback()",
-      "id": "site_app_clearfeedback"
-    },
-    {
-      "label": "setSubmissionTone()",
-      "file_type": "code",
-      "source_file": "site/app.js",
-      "source_location": "L60",
-      "community": 0,
-      "norm_label": "setsubmissiontone()",
-      "id": "site_app_setsubmissiontone"
-    },
-    {
-      "label": "bytesLength()",
-      "file_type": "code",
-      "source_file": "site/app.js",
-      "source_location": "L65",
-      "community": 0,
-      "norm_label": "byteslength()",
-      "id": "site_app_byteslength"
-    },
-    {
-      "label": "normalizePublicField()",
-      "file_type": "code",
-      "source_file": "site/app.js",
-      "source_location": "L69",
-      "community": 0,
-      "norm_label": "normalizepublicfield()",
-      "id": "site_app_normalizepublicfield"
-    },
-    {
-      "label": "parseFrontmatter()",
-      "file_type": "code",
-      "source_file": "site/app.js",
-      "source_location": "L73",
-      "community": 0,
-      "norm_label": "parsefrontmatter()",
-      "id": "site_app_parsefrontmatter"
-    },
-    {
-      "label": "parseMarketplace()",
-      "file_type": "code",
-      "source_file": "site/app.js",
-      "source_location": "L105",
-      "community": 0,
-      "norm_label": "parsemarketplace()",
-      "id": "site_app_parsemarketplace"
-    },
-    {
-      "label": "buildPreview()",
-      "file_type": "code",
-      "source_file": "site/app.js",
-      "source_location": "L125",
-      "community": 0,
-      "norm_label": "buildpreview()",
-      "id": "site_app_buildpreview"
-    },
-    {
-      "label": "updatePreview()",
-      "file_type": "code",
-      "source_file": "site/app.js",
-      "source_location": "L182",
-      "community": 0,
-      "norm_label": "updatepreview()",
-      "id": "site_app_updatepreview"
-    },
-    {
-      "label": "syncSubmitButton()",
-      "file_type": "code",
-      "source_file": "site/app.js",
-      "source_location": "L201",
-      "community": 0,
-      "norm_label": "syncsubmitbutton()",
-      "id": "site_app_syncsubmitbutton"
-    },
-    {
-      "label": "readSelectedFiles()",
-      "file_type": "code",
-      "source_file": "site/app.js",
-      "source_location": "L210",
-      "community": 0,
-      "norm_label": "readselectedfiles()",
-      "id": "site_app_readselectedfiles"
-    },
-    {
-      "label": "refreshSubmissionPreview()",
-      "file_type": "code",
-      "source_file": "site/app.js",
-      "source_location": "L223",
-      "community": 0,
-      "norm_label": "refreshsubmissionpreview()",
-      "id": "site_app_refreshsubmissionpreview"
-    },
-    {
-      "label": "createSkillCard()",
-      "file_type": "code",
-      "source_file": "site/app.js",
-      "source_location": "L252",
-      "community": 0,
-      "norm_label": "createskillcard()",
-      "id": "site_app_createskillcard"
-    },
-    {
-      "label": "loadCatalogue()",
-      "file_type": "code",
-      "source_file": "site/app.js",
-      "source_location": "L283",
-      "community": 0,
-      "norm_label": "loadcatalogue()",
-      "id": "site_app_loadcatalogue"
-    },
-    {
-      "label": "loadSubmissionConfig()",
-      "file_type": "code",
-      "source_file": "site/app.js",
-      "source_location": "L314",
-      "community": 0,
-      "norm_label": "loadsubmissionconfig()",
-      "id": "site_app_loadsubmissionconfig"
-    },
-    {
-      "label": "test_site_pages.py",
-      "file_type": "code",
-      "source_file": "tests/test_site_pages.py",
-      "source_location": "L1",
-      "community": 7,
-      "norm_label": "test_site_pages.py",
-      "id": "tests_test_site_pages"
-    },
-    {
-      "label": "IdAndLinkParser",
-      "file_type": "code",
-      "source_file": "tests/test_site_pages.py",
-      "source_location": "L13",
-      "community": 7,
-      "norm_label": "idandlinkparser",
-      "id": "tests_test_site_pages_idandlinkparser"
-    },
-    {
-      "label": "HTMLParser",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "community": 7,
-      "norm_label": "htmlparser",
-      "id": "htmlparser"
-    },
-    {
-      "label": ".__init__()",
-      "file_type": "code",
-      "source_file": "tests/test_site_pages.py",
-      "source_location": "L14",
-      "community": 7,
-      "norm_label": ".__init__()",
-      "id": "tests_test_site_pages_idandlinkparser_init"
-    },
-    {
-      "label": ".handle_starttag()",
-      "file_type": "code",
-      "source_file": "tests/test_site_pages.py",
-      "source_location": "L20",
-      "community": 7,
-      "norm_label": ".handle_starttag()",
-      "id": "tests_test_site_pages_idandlinkparser_handle_starttag"
-    },
-    {
-      "label": "parse_page()",
-      "file_type": "code",
-      "source_file": "tests/test_site_pages.py",
-      "source_location": "L30",
-      "community": 7,
-      "norm_label": "parse_page()",
-      "id": "tests_test_site_pages_parse_page"
-    },
-    {
-      "label": "SitePageTests",
-      "file_type": "code",
-      "source_file": "tests/test_site_pages.py",
-      "source_location": "L36",
-      "community": 7,
-      "norm_label": "sitepagetests",
-      "id": "tests_test_site_pages_sitepagetests"
-    },
-    {
-      "label": ".test_catalogue_and_submission_are_separate_pages()",
-      "file_type": "code",
-      "source_file": "tests/test_site_pages.py",
-      "source_location": "L37",
-      "community": 7,
-      "norm_label": ".test_catalogue_and_submission_are_separate_pages()",
-      "id": "tests_test_site_pages_sitepagetests_test_catalogue_and_submission_are_separate_pages"
-    },
-    {
-      "label": ".test_both_pages_load_the_shared_assets()",
-      "file_type": "code",
-      "source_file": "tests/test_site_pages.py",
-      "source_location": "L49",
-      "community": 7,
-      "norm_label": ".test_both_pages_load_the_shared_assets()",
-      "id": "tests_test_site_pages_sitepagetests_test_both_pages_load_the_shared_assets"
-    },
-    {
-      "label": ".test_public_page_does_not_lock_document_scrolling()",
-      "file_type": "code",
-      "source_file": "tests/test_site_pages.py",
-      "source_location": "L57",
-      "community": 7,
-      "norm_label": ".test_public_page_does_not_lock_document_scrolling()",
-      "id": "tests_test_site_pages_sitepagetests_test_public_page_does_not_lock_document_scrolling"
     },
     {
       "label": "build_catalog.py",
@@ -976,87 +1462,6 @@
       "id": "scripts_publish_site_main"
     },
     {
-      "label": "site_intake.py",
-      "file_type": "code",
-      "source_file": "scripts/site_intake.py",
-      "source_location": "L1",
-      "community": 4,
-      "norm_label": "site_intake.py",
-      "id": "scripts_site_intake"
-    },
-    {
-      "label": "submission_config()",
-      "file_type": "code",
-      "source_file": "scripts/site_intake.py",
-      "source_location": "L25",
-      "community": 4,
-      "norm_label": "submission_config()",
-      "id": "scripts_site_intake_submission_config"
-    },
-    {
-      "label": "_bounded_text()",
-      "file_type": "code",
-      "source_file": "scripts/site_intake.py",
-      "source_location": "L39",
-      "community": 4,
-      "norm_label": "_bounded_text()",
-      "id": "scripts_site_intake_bounded_text"
-    },
-    {
-      "label": "_normalize_public_field()",
-      "file_type": "code",
-      "source_file": "scripts/site_intake.py",
-      "source_location": "L46",
-      "community": 4,
-      "norm_label": "_normalize_public_field()",
-      "id": "scripts_site_intake_normalize_public_field"
-    },
-    {
-      "label": "validate_submission()",
-      "file_type": "code",
-      "source_file": "scripts/site_intake.py",
-      "source_location": "L53",
-      "community": 4,
-      "norm_label": "validate_submission()",
-      "id": "scripts_site_intake_validate_submission"
-    },
-    {
-      "label": "Path",
-      "file_type": "code",
-      "source_file": "scripts/site_intake.py",
-      "source_location": "L53",
-      "community": 4,
-      "norm_label": "path",
-      "id": "scripts_site_intake_py_path"
-    },
-    {
-      "label": "write_submission()",
-      "file_type": "code",
-      "source_file": "scripts/site_intake.py",
-      "source_location": "L94",
-      "community": 4,
-      "norm_label": "write_submission()",
-      "id": "scripts_site_intake_write_submission"
-    },
-    {
-      "label": "_write_metadata()",
-      "file_type": "code",
-      "source_file": "scripts/site_intake.py",
-      "source_location": "L128",
-      "community": 4,
-      "norm_label": "_write_metadata()",
-      "id": "scripts_site_intake_write_metadata"
-    },
-    {
-      "label": "main()",
-      "file_type": "code",
-      "source_file": "scripts/site_intake.py",
-      "source_location": "L133",
-      "community": 4,
-      "norm_label": "main()",
-      "id": "scripts_site_intake_main"
-    },
-    {
       "label": "validate_skills.py",
       "file_type": "code",
       "source_file": "scripts/validate_skills.py",
@@ -1070,7 +1475,7 @@
       "file_type": "code",
       "source_file": "scripts/validate_skills.py",
       "source_location": "L39",
-      "community": 4,
+      "community": 1,
       "norm_label": "policyerror",
       "id": "scripts_validate_skills_policyerror"
     },
@@ -1169,7 +1574,7 @@
       "file_type": "rationale",
       "source_file": "scripts/validate_skills.py",
       "source_location": "L40",
-      "community": 4,
+      "community": 1,
       "norm_label": "a skill violates the marketplace intake policy.",
       "id": "scripts_validate_skills_rationale_40"
     },
@@ -1262,159 +1667,6 @@
       "community": 6,
       "norm_label": "x-github-api-version",
       "id": "herenow_proxy_headers_x_github_api_version"
-    },
-    {
-      "label": "submission-config.json",
-      "file_type": "code",
-      "source_file": "site/submission-config.json",
-      "source_location": "L1",
-      "community": 9,
-      "norm_label": "submission-config.json",
-      "id": "site_submission_config"
-    },
-    {
-      "label": "dispatchPath",
-      "file_type": "code",
-      "source_file": "site/submission-config.json",
-      "source_location": "L2",
-      "community": 9,
-      "norm_label": "dispatchpath",
-      "id": "site_submission_config_dispatchpath"
-    },
-    {
-      "label": "allowedCategories",
-      "file_type": "code",
-      "source_file": "site/submission-config.json",
-      "source_location": "L3",
-      "community": 9,
-      "norm_label": "allowedcategories",
-      "id": "site_submission_config_allowedcategories"
-    },
-    {
-      "label": "maxSkillFileBytes",
-      "file_type": "code",
-      "source_file": "site/submission-config.json",
-      "source_location": "L11",
-      "community": 9,
-      "norm_label": "maxskillfilebytes",
-      "id": "site_submission_config_maxskillfilebytes"
-    },
-    {
-      "label": "maxMarketplaceFileBytes",
-      "file_type": "code",
-      "source_file": "site/submission-config.json",
-      "source_location": "L12",
-      "community": 9,
-      "norm_label": "maxmarketplacefilebytes",
-      "id": "site_submission_config_maxmarketplacefilebytes"
-    },
-    {
-      "label": "maxPublicNameChars",
-      "file_type": "code",
-      "source_file": "site/submission-config.json",
-      "source_location": "L13",
-      "community": 9,
-      "norm_label": "maxpublicnamechars",
-      "id": "site_submission_config_maxpublicnamechars"
-    },
-    {
-      "label": "maxPublicContactChars",
-      "file_type": "code",
-      "source_file": "site/submission-config.json",
-      "source_location": "L14",
-      "community": 9,
-      "norm_label": "maxpubliccontactchars",
-      "id": "site_submission_config_maxpubliccontactchars"
-    },
-    {
-      "label": "minDescriptionChars",
-      "file_type": "code",
-      "source_file": "site/submission-config.json",
-      "source_location": "L15",
-      "community": 9,
-      "norm_label": "mindescriptionchars",
-      "id": "site_submission_config_mindescriptionchars"
-    },
-    {
-      "label": "maxDescriptionChars",
-      "file_type": "code",
-      "source_file": "site/submission-config.json",
-      "source_location": "L16",
-      "community": 9,
-      "norm_label": "maxdescriptionchars",
-      "id": "site_submission_config_maxdescriptionchars"
-    },
-    {
-      "label": "minBodyChars",
-      "file_type": "code",
-      "source_file": "site/submission-config.json",
-      "source_location": "L17",
-      "community": 9,
-      "norm_label": "minbodychars",
-      "id": "site_submission_config_minbodychars"
-    },
-    {
-      "label": "test_build_catalog.py",
-      "file_type": "code",
-      "source_file": "tests/test_build_catalog.py",
-      "source_location": "L1",
-      "community": 5,
-      "norm_label": "test_build_catalog.py",
-      "id": "tests_test_build_catalog"
-    },
-    {
-      "label": "BuildCatalogueTests",
-      "file_type": "code",
-      "source_file": "tests/test_build_catalog.py",
-      "source_location": "L12",
-      "community": 5,
-      "norm_label": "buildcataloguetests",
-      "id": "tests_test_build_catalog_buildcataloguetests"
-    },
-    {
-      "label": ".make_root()",
-      "file_type": "code",
-      "source_file": "tests/test_build_catalog.py",
-      "source_location": "L13",
-      "community": 5,
-      "norm_label": ".make_root()",
-      "id": "tests_test_build_catalog_buildcataloguetests_make_root"
-    },
-    {
-      "label": "Path",
-      "file_type": "code",
-      "source_file": "tests/test_build_catalog.py",
-      "source_location": "L13",
-      "community": 5,
-      "norm_label": "path",
-      "id": "tests_test_build_catalog_py_path"
-    },
-    {
-      "label": ".add_skill()",
-      "file_type": "code",
-      "source_file": "tests/test_build_catalog.py",
-      "source_location": "L21",
-      "community": 5,
-      "norm_label": ".add_skill()",
-      "id": "tests_test_build_catalog_buildcataloguetests_add_skill"
-    },
-    {
-      "label": ".test_submission_config_exposes_public_limits()",
-      "file_type": "code",
-      "source_file": "tests/test_build_catalog.py",
-      "source_location": "L39",
-      "community": 5,
-      "norm_label": ".test_submission_config_exposes_public_limits()",
-      "id": "tests_test_build_catalog_buildcataloguetests_test_submission_config_exposes_public_limits"
-    },
-    {
-      "label": ".test_download_bundle_contains_reviewed_bundle()",
-      "file_type": "code",
-      "source_file": "tests/test_build_catalog.py",
-      "source_location": "L45",
-      "community": 5,
-      "norm_label": ".test_download_bundle_contains_reviewed_bundle()",
-      "id": "tests_test_build_catalog_buildcataloguetests_test_download_bundle_contains_reviewed_bundle"
     },
     {
       "label": "test_site_intake.py",
@@ -1624,32 +1876,6 @@
       "id": "tests_test_workflow_config_skillreviewworkflowtests_test_ready_for_review_is_not_a_trigger"
     },
     {
-      "label": "Contributing Guide",
-      "file_type": "document",
-      "source_file": "CONTRIBUTING.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 3,
-      "norm_label": "contributing guide",
-      "id": "contributing_guide"
-    },
-    {
-      "label": "ESG Skills Marketplace README",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 3,
-      "norm_label": "esg skills marketplace readme",
-      "id": "readme_esg"
-    },
-    {
       "label": "Publish Public Marketplace Workflow",
       "file_type": "code",
       "source_file": ".github/workflows/site-deploy.yml",
@@ -1702,19 +1928,6 @@
       "id": "ownerrunbook_doc"
     },
     {
-      "label": "Site Operations",
-      "file_type": "document",
-      "source_file": "docs/SITE-OPERATIONS.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 3,
-      "norm_label": "site operations",
-      "id": "siteoperations_doc"
-    },
-    {
       "label": "Build Catalog Script",
       "file_type": "code",
       "source_file": "scripts/build_catalog.py",
@@ -1752,19 +1965,6 @@
       "community": 3,
       "norm_label": "publish site script",
       "id": "publishsite_script"
-    },
-    {
-      "label": "Site Intake Script",
-      "file_type": "code",
-      "source_file": "scripts/site_intake.py",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 3,
-      "norm_label": "site intake script",
-      "id": "siteintake_script"
     },
     {
       "label": "Validate PR Scope Script",
@@ -1853,7 +2053,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 3,
+      "community": 18,
       "norm_label": "skill template",
       "id": "skilltemplate_template"
     }
@@ -1862,252 +2062,82 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "MEMORY.md",
+      "source_file": "CONTRIBUTING.md",
       "source_location": "L1",
       "weight": 1.0,
-      "source": "memory",
-      "target": "memory_esg_skills_marketplace_memory",
+      "source": "contributing",
+      "target": "contributing_contributing_a_skill",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "MEMORY.md",
-      "source_location": "L3",
-      "weight": 1.0,
-      "source": "memory_esg_skills_marketplace_memory",
-      "target": "memory_contacts",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "MEMORY.md",
-      "source_location": "L25",
-      "weight": 1.0,
-      "source": "memory_esg_skills_marketplace_memory",
-      "target": "memory_durable_outcomes",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "MEMORY.md",
-      "source_location": "L17",
-      "weight": 1.0,
-      "source": "memory_esg_skills_marketplace_memory",
-      "target": "memory_key_decisions",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "MEMORY.md",
-      "source_location": "L7",
-      "weight": 1.0,
-      "source": "memory_esg_skills_marketplace_memory",
-      "target": "memory_source_links",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "PLAN-REVIEW-LOG.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plan_review_log",
-      "target": "plan_review_log_plan_review_log"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "PLAN-REVIEW-LOG.md",
+      "source_file": "CONTRIBUTING.md",
       "source_location": "L5",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plan_review_log_plan_review_log",
-      "target": "plan_review_log_2026_06_21_review_attempt"
+      "source": "contributing_contributing_a_skill",
+      "target": "contributing_before_you_start",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "PLAN-REVIEW-LOG.md",
-      "source_location": "L11",
+      "source_file": "CONTRIBUTING.md",
+      "source_location": "L58",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plan_review_log_plan_review_log",
-      "target": "plan_review_log_2026_06_21_user_approval_and_security_scope"
+      "source": "contributing_contributing_a_skill",
+      "target": "contributing_categories",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "PLAN-REVIEW-LOG.md",
-      "source_location": "L17",
+      "source_file": "CONTRIBUTING.md",
+      "source_location": "L40",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plan_review_log_plan_review_log",
-      "target": "plan_review_log_2026_06_22_completion_plan_prepared"
+      "source": "contributing_contributing_a_skill",
+      "target": "contributing_open_the_request_on_github_directly",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "PLAN-REVIEW-LOG.md",
-      "source_location": "L166",
+      "source_file": "CONTRIBUTING.md",
+      "source_location": "L16",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plan_review_log_plan_review_log",
-      "target": "plan_review_log_2026_06_22_frontend_repair_signoff"
+      "source": "contributing_contributing_a_skill",
+      "target": "contributing_prepare_the_folder",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "PLAN-REVIEW-LOG.md",
-      "source_location": "L105",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plan_review_log_plan_review_log",
-      "target": "plan_review_log_2026_06_22_implementation_correction"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "PLAN-REVIEW-LOG.md",
-      "source_location": "L143",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plan_review_log_plan_review_log",
-      "target": "plan_review_log_2026_06_22_rf_100_frontend_repair_planning_gate"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "PLAN-REVIEW-LOG.md",
-      "source_location": "L110",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plan_review_log_plan_review_log",
-      "target": "plan_review_log_2026_06_22_rf_100_planning_gate"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "PLAN-REVIEW-LOG.md",
-      "source_location": "L100",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plan_review_log_plan_review_log",
-      "target": "plan_review_log_2026_06_22_user_signoff"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "PLAN-REVIEW-LOG.md",
-      "source_location": "L23",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plan_review_log_2026_06_22_completion_plan_prepared",
-      "target": "plan_review_log_round_1"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "PLAN-REVIEW-LOG.md",
-      "source_location": "L28",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plan_review_log_2026_06_22_completion_plan_prepared",
-      "target": "plan_review_log_round_2_claude_verdict_revise"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "PLAN-REVIEW-LOG.md",
-      "source_location": "L49",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plan_review_log_2026_06_22_completion_plan_prepared",
-      "target": "plan_review_log_round_3_claude_verdict_revise"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "PLAN-REVIEW-LOG.md",
+      "source_file": "CONTRIBUTING.md",
       "source_location": "L69",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plan_review_log_2026_06_22_completion_plan_prepared",
-      "target": "plan_review_log_round_4_claude_verdict_revise"
+      "source": "contributing_contributing_a_skill",
+      "target": "contributing_review_outcomes",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "PLAN-REVIEW-LOG.md",
-      "source_location": "L86",
+      "source_file": "CONTRIBUTING.md",
+      "source_location": "L30",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plan_review_log_2026_06_22_completion_plan_prepared",
-      "target": "plan_review_log_round_5_claude_verdict_revise"
+      "source": "contributing_contributing_a_skill",
+      "target": "contributing_submit_through_the_public_site",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "PLAN-REVIEW-LOG.md",
-      "source_location": "L125",
+      "source_file": "CONTRIBUTING.md",
+      "source_location": "L51",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plan_review_log_2026_06_22_rf_100_planning_gate",
-      "target": "plan_review_log_round_1_125"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "PLAN-REVIEW-LOG.md",
-      "source_location": "L131",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plan_review_log_2026_06_22_rf_100_planning_gate",
-      "target": "plan_review_log_round_2"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "PLAN-REVIEW-LOG.md",
-      "source_location": "L137",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plan_review_log_2026_06_22_rf_100_planning_gate",
-      "target": "plan_review_log_round_3"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "PLAN-REVIEW-LOG.md",
-      "source_location": "L150",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plan_review_log_2026_06_22_rf_100_frontend_repair_planning_gate",
-      "target": "plan_review_log_round_1_150"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "PLAN-REVIEW-LOG.md",
-      "source_location": "L155",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plan_review_log_2026_06_22_rf_100_frontend_repair_planning_gate",
-      "target": "plan_review_log_round_2_155"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "PLAN-REVIEW-LOG.md",
-      "source_location": "L160",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plan_review_log_2026_06_22_rf_100_frontend_repair_planning_gate",
-      "target": "plan_review_log_round_3_160"
+      "source": "contributing_contributing_a_skill",
+      "target": "contributing_what_the_checks_do",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2202,82 +2232,443 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "design-qa.md",
+      "source_file": "README.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "design_qa",
-      "target": "design_qa_design_qa_calm_ledger_frontend_repair"
+      "source": "readme",
+      "target": "readme_esg_skills_marketplace",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "design-qa.md",
-      "source_location": "L30",
+      "source_file": "README.md",
+      "source_location": "L19",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "design_qa_design_qa_calm_ledger_frontend_repair",
-      "target": "design_qa_findings"
+      "source": "readme_esg_skills_marketplace",
+      "target": "readme_browse_or_contribute",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "design-qa.md",
-      "source_location": "L17",
+      "source_file": "README.md",
+      "source_location": "L29",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "design_qa_design_qa_calm_ledger_frontend_repair",
-      "target": "design_qa_focused_region_comparison_evidence"
+      "source": "readme_esg_skills_marketplace",
+      "target": "readme_current_catalogue",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "design-qa.md",
-      "source_location": "L56",
+      "source_file": "README.md",
+      "source_location": "L51",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "design_qa_design_qa_calm_ledger_frontend_repair",
-      "target": "design_qa_follow_up_polish"
+      "source": "readme_esg_skills_marketplace",
+      "target": "readme_licence",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "design-qa.md",
-      "source_location": "L11",
+      "source_file": "README.md",
+      "source_location": "L36",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "design_qa_design_qa_calm_ledger_frontend_repair",
-      "target": "design_qa_full_view_comparison_evidence"
+      "source": "readme_esg_skills_marketplace",
+      "target": "readme_repository_structure",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "design-qa.md",
+      "source_file": "README.md",
       "source_location": "L47",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "design_qa_design_qa_calm_ledger_frontend_repair",
-      "target": "design_qa_implementation_checklist"
+      "source": "readme_esg_skills_marketplace",
+      "target": "readme_security_tooling",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "design-qa.md",
-      "source_location": "L40",
+      "source_file": "README.md",
+      "source_location": "L7",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "design_qa_design_qa_calm_ledger_frontend_repair",
-      "target": "design_qa_patches_made_since_the_first_comparison"
+      "source": "readme_esg_skills_marketplace",
+      "target": "readme_trust_gate",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "design-qa.md",
-      "source_location": "L21",
+      "source_file": "docs/SITE-OPERATIONS.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "docs_site_operations",
+      "target": "docs_site_operations_site_operations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/SITE-OPERATIONS.md",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "docs_site_operations_site_operations",
+      "target": "docs_site_operations_operational_checks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/SITE-OPERATIONS.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "docs_site_operations_site_operations",
+      "target": "docs_site_operations_required_github_configuration",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/SITE-OPERATIONS.md",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "docs_site_operations_site_operations",
+      "target": "docs_site_operations_required_here_now_configuration",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/SITE-OPERATIONS.md",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "docs_site_operations_site_operations",
+      "target": "docs_site_operations_safety_boundaries",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/SITE-OPERATIONS.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "docs_site_operations_site_operations",
+      "target": "docs_site_operations_what_the_public_site_does",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L39",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "design_qa_design_qa_calm_ledger_frontend_repair",
-      "target": "design_qa_required_fidelity_surfaces"
+      "source": "scripts_site_intake",
+      "target": "scripts_site_intake_bounded_text"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L133",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_site_intake",
+      "target": "scripts_site_intake_main"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L46",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_site_intake",
+      "target": "scripts_site_intake_normalize_public_field"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_site_intake",
+      "target": "scripts_site_intake_submission_config"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L53",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_site_intake",
+      "target": "scripts_site_intake_validate_submission"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L128",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_site_intake",
+      "target": "scripts_site_intake_write_metadata"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L94",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_site_intake",
+      "target": "scripts_site_intake_write_submission"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_site_intake.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_site_intake",
+      "target": "scripts_site_intake"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "scripts/build_catalog.py",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "scripts_build_catalog_rendered_submission_config",
+      "target": "scripts_site_intake_submission_config"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L149",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_site_intake_main",
+      "target": "scripts_site_intake_submission_config"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "scripts_site_intake_bounded_text",
+      "target": "scripts_validate_skills_policyerror"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L66",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_site_intake_validate_submission",
+      "target": "scripts_site_intake_bounded_text"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "scripts_site_intake_normalize_public_field",
+      "target": "scripts_validate_skills_policyerror"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L115",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_site_intake_write_submission",
+      "target": "scripts_site_intake_normalize_public_field"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L53",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_site_intake_validate_submission",
+      "target": "scripts_site_intake_py_path"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L77",
+      "weight": 1.0,
+      "source": "scripts_site_intake_validate_submission",
+      "target": "scripts_validate_skills_parse_frontmatter"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "scripts_site_intake_validate_submission",
+      "target": "scripts_validate_skills_policyerror"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L85",
+      "weight": 1.0,
+      "source": "scripts_site_intake_validate_submission",
+      "target": "scripts_validate_skills_validate_skill"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L104",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_site_intake_write_submission",
+      "target": "scripts_site_intake_validate_submission"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_site_intake.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_site_intake",
+      "target": "scripts_site_intake_validate_submission"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_site_intake.py",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "tests_test_site_intake_siteintaketests_test_existing_slug_is_rejected",
+      "target": "scripts_site_intake_validate_submission"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_site_intake.py",
+      "source_location": "L73",
+      "weight": 1.0,
+      "source": "tests_test_site_intake_siteintaketests_test_missing_attestation_is_rejected",
+      "target": "scripts_site_intake_validate_submission"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_site_intake.py",
+      "source_location": "L63",
+      "weight": 1.0,
+      "source": "tests_test_site_intake_siteintaketests_test_site_specific_size_limit_is_enforced",
+      "target": "scripts_site_intake_validate_submission"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_site_intake.py",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "tests_test_site_intake_siteintaketests_test_valid_site_submission_passes",
+      "target": "scripts_site_intake_validate_submission"
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L17",
+      "weight": 0.8,
+      "confidence_score": 0.5,
+      "source": "scripts_site_intake_py_path",
+      "target": "scripts_validate_skills_policyerror"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L128",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_site_intake_write_metadata",
+      "target": "scripts_site_intake_py_path"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L94",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_site_intake_write_submission",
+      "target": "scripts_site_intake_py_path"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L156",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_site_intake_main",
+      "target": "scripts_site_intake_write_submission"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L172",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_site_intake_main",
+      "target": "scripts_site_intake_write_metadata"
     },
     {
       "relation": "contains",
@@ -2423,11 +2814,21 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "site/app.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "site_app",
+      "target": "site_app_marketplacecategoryinput",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/app.js",
       "source_location": "L6",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "site_app",
-      "target": "site_app_marketplacefileinput"
+      "target": "site_app_marketplacetitleinput",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2533,11 +2934,11 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "site/app.js",
-      "source_location": "L210",
+      "source_location": "L218",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "site_app",
-      "target": "site_app_readselectedfiles"
+      "target": "site_app_readsubmissionvalues",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2797,11 +3198,270 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "site/app.js",
-      "source_location": "L232",
+      "source_location": "L241",
+      "weight": 1.0,
+      "source": "site_app_refreshsubmissionpreview",
+      "target": "site_app_readsubmissionvalues",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/submission-config.json",
+      "source_location": "L3",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "site_app_refreshsubmissionpreview",
-      "target": "site_app_readselectedfiles"
+      "source": "site_submission_config",
+      "target": "site_submission_config_allowedcategories"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/submission-config.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "site_submission_config",
+      "target": "site_submission_config_dispatchpath"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/submission-config.json",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "site_submission_config",
+      "target": "site_submission_config_maxdescriptionchars"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/submission-config.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "site_submission_config",
+      "target": "site_submission_config_maxmarketplacefilebytes"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/submission-config.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "site_submission_config",
+      "target": "site_submission_config_maxpubliccontactchars"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/submission-config.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "site_submission_config",
+      "target": "site_submission_config_maxpublicnamechars"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/submission-config.json",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "site_submission_config",
+      "target": "site_submission_config_maxskillfilebytes"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/submission-config.json",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "site_submission_config",
+      "target": "site_submission_config_maxtitlechars",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/submission-config.json",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "site_submission_config",
+      "target": "site_submission_config_minbodychars"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/submission-config.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "site_submission_config",
+      "target": "site_submission_config_mindescriptionchars"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/submission-config.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "site_submission_config",
+      "target": "site_submission_config_mintitlechars",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_build_catalog.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_build_catalog",
+      "target": "scripts_build_catalog"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_build_catalog.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_build_catalog",
+      "target": "scripts_build_catalog_build_download_bundles"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_build_catalog.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_build_catalog",
+      "target": "scripts_build_catalog_rendered_submission_config"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_build_catalog.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_build_catalog",
+      "target": "tests_test_build_catalog_buildcataloguetests"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_build_catalog.py",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_build_catalog_buildcataloguetests",
+      "target": "tests_test_build_catalog_buildcataloguetests_add_skill"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_build_catalog.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_build_catalog_buildcataloguetests",
+      "target": "tests_test_build_catalog_buildcataloguetests_make_root"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_build_catalog.py",
+      "source_location": "L45",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_build_catalog_buildcataloguetests",
+      "target": "tests_test_build_catalog_buildcataloguetests_test_download_bundle_contains_reviewed_bundle"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_build_catalog.py",
+      "source_location": "L39",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_build_catalog_buildcataloguetests",
+      "target": "tests_test_build_catalog_buildcataloguetests_test_submission_config_exposes_public_limits"
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_build_catalog.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_build_catalog_buildcataloguetests_make_root",
+      "target": "tests_test_build_catalog_py_path"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_build_catalog.py",
+      "source_location": "L46",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_build_catalog_buildcataloguetests_test_download_bundle_contains_reviewed_bundle",
+      "target": "tests_test_build_catalog_buildcataloguetests_make_root"
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_build_catalog.py",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_build_catalog_buildcataloguetests_add_skill",
+      "target": "tests_test_build_catalog_py_path"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_build_catalog.py",
+      "source_location": "L47",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_build_catalog_buildcataloguetests_test_download_bundle_contains_reviewed_bundle",
+      "target": "tests_test_build_catalog_buildcataloguetests_add_skill"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_build_catalog.py",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "tests_test_build_catalog_buildcataloguetests_test_submission_config_exposes_public_limits",
+      "target": "scripts_build_catalog_rendered_submission_config"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_build_catalog.py",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "tests_test_build_catalog_buildcataloguetests_test_download_bundle_contains_reviewed_bundle",
+      "target": "scripts_build_catalog_build_download_bundles"
     },
     {
       "relation": "contains",
@@ -2910,6 +3570,16 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_site_pages.py",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "tests_test_site_pages_sitepagetests",
+      "target": "tests_test_site_pages_sitepagetests_test_browser_still_sends_generated_marketplace_metadata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_site_pages.py",
       "source_location": "L37",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -2925,6 +3595,336 @@
       "confidence_score": 1.0,
       "source": "tests_test_site_pages_sitepagetests",
       "target": "tests_test_site_pages_sitepagetests_test_public_page_does_not_lock_document_scrolling"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MEMORY.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "memory",
+      "target": "memory_esg_skills_marketplace_memory"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MEMORY.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "memory_esg_skills_marketplace_memory",
+      "target": "memory_contacts"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MEMORY.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "memory_esg_skills_marketplace_memory",
+      "target": "memory_durable_outcomes"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MEMORY.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "memory_esg_skills_marketplace_memory",
+      "target": "memory_key_decisions"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "MEMORY.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "memory_esg_skills_marketplace_memory",
+      "target": "memory_source_links"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PLAN-REVIEW-LOG.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plan_review_log",
+      "target": "plan_review_log_plan_review_log"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PLAN-REVIEW-LOG.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plan_review_log_plan_review_log",
+      "target": "plan_review_log_2026_06_21_review_attempt"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PLAN-REVIEW-LOG.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plan_review_log_plan_review_log",
+      "target": "plan_review_log_2026_06_21_user_approval_and_security_scope"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PLAN-REVIEW-LOG.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plan_review_log_plan_review_log",
+      "target": "plan_review_log_2026_06_22_completion_plan_prepared"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PLAN-REVIEW-LOG.md",
+      "source_location": "L166",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plan_review_log_plan_review_log",
+      "target": "plan_review_log_2026_06_22_frontend_repair_signoff"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PLAN-REVIEW-LOG.md",
+      "source_location": "L105",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plan_review_log_plan_review_log",
+      "target": "plan_review_log_2026_06_22_implementation_correction"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PLAN-REVIEW-LOG.md",
+      "source_location": "L143",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plan_review_log_plan_review_log",
+      "target": "plan_review_log_2026_06_22_rf_100_frontend_repair_planning_gate"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PLAN-REVIEW-LOG.md",
+      "source_location": "L110",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plan_review_log_plan_review_log",
+      "target": "plan_review_log_2026_06_22_rf_100_planning_gate"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PLAN-REVIEW-LOG.md",
+      "source_location": "L100",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plan_review_log_plan_review_log",
+      "target": "plan_review_log_2026_06_22_user_signoff"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PLAN-REVIEW-LOG.md",
+      "source_location": "L23",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plan_review_log_2026_06_22_completion_plan_prepared",
+      "target": "plan_review_log_round_1"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PLAN-REVIEW-LOG.md",
+      "source_location": "L28",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plan_review_log_2026_06_22_completion_plan_prepared",
+      "target": "plan_review_log_round_2_claude_verdict_revise"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PLAN-REVIEW-LOG.md",
+      "source_location": "L49",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plan_review_log_2026_06_22_completion_plan_prepared",
+      "target": "plan_review_log_round_3_claude_verdict_revise"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PLAN-REVIEW-LOG.md",
+      "source_location": "L69",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plan_review_log_2026_06_22_completion_plan_prepared",
+      "target": "plan_review_log_round_4_claude_verdict_revise"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PLAN-REVIEW-LOG.md",
+      "source_location": "L86",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plan_review_log_2026_06_22_completion_plan_prepared",
+      "target": "plan_review_log_round_5_claude_verdict_revise"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PLAN-REVIEW-LOG.md",
+      "source_location": "L125",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plan_review_log_2026_06_22_rf_100_planning_gate",
+      "target": "plan_review_log_round_1_125"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PLAN-REVIEW-LOG.md",
+      "source_location": "L131",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plan_review_log_2026_06_22_rf_100_planning_gate",
+      "target": "plan_review_log_round_2"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PLAN-REVIEW-LOG.md",
+      "source_location": "L137",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plan_review_log_2026_06_22_rf_100_planning_gate",
+      "target": "plan_review_log_round_3"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PLAN-REVIEW-LOG.md",
+      "source_location": "L150",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plan_review_log_2026_06_22_rf_100_frontend_repair_planning_gate",
+      "target": "plan_review_log_round_1_150"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PLAN-REVIEW-LOG.md",
+      "source_location": "L155",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plan_review_log_2026_06_22_rf_100_frontend_repair_planning_gate",
+      "target": "plan_review_log_round_2_155"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PLAN-REVIEW-LOG.md",
+      "source_location": "L160",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plan_review_log_2026_06_22_rf_100_frontend_repair_planning_gate",
+      "target": "plan_review_log_round_3_160"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "design-qa.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "design_qa",
+      "target": "design_qa_design_qa_calm_ledger_frontend_repair"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "design-qa.md",
+      "source_location": "L30",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "design_qa_design_qa_calm_ledger_frontend_repair",
+      "target": "design_qa_findings"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "design-qa.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "design_qa_design_qa_calm_ledger_frontend_repair",
+      "target": "design_qa_focused_region_comparison_evidence"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "design-qa.md",
+      "source_location": "L56",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "design_qa_design_qa_calm_ledger_frontend_repair",
+      "target": "design_qa_follow_up_polish"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "design-qa.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "design_qa_design_qa_calm_ledger_frontend_repair",
+      "target": "design_qa_full_view_comparison_evidence"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "design-qa.md",
+      "source_location": "L47",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "design_qa_design_qa_calm_ledger_frontend_repair",
+      "target": "design_qa_implementation_checklist"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "design-qa.md",
+      "source_location": "L40",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "design_qa_design_qa_calm_ledger_frontend_repair",
+      "target": "design_qa_patches_made_since_the_first_comparison"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "design-qa.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "design_qa_design_qa_calm_ledger_frontend_repair",
+      "target": "design_qa_required_fidelity_surfaces"
     },
     {
       "relation": "contains",
@@ -2965,17 +3965,6 @@
       "confidence_score": 1.0,
       "source": "scripts_build_catalog",
       "target": "scripts_build_catalog_rendered_submission_config"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_build_catalog.py",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tests_test_build_catalog",
-      "target": "scripts_build_catalog"
     },
     {
       "relation": "calls",
@@ -3048,39 +4037,6 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "scripts/build_catalog.py",
-      "source_location": "L26",
-      "weight": 1.0,
-      "source": "scripts_build_catalog_rendered_submission_config",
-      "target": "scripts_site_intake_submission_config"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_build_catalog.py",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tests_test_build_catalog",
-      "target": "scripts_build_catalog_rendered_submission_config"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "tests/test_build_catalog.py",
-      "source_location": "L40",
-      "weight": 1.0,
-      "source": "tests_test_build_catalog_buildcataloguetests_test_submission_config_exposes_public_limits",
-      "target": "scripts_build_catalog_rendered_submission_config"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "scripts/build_catalog.py",
       "source_location": "L35",
       "weight": 1.0,
       "source": "scripts_build_catalog_build_download_bundles",
@@ -3095,28 +4051,6 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "scripts_build_catalog_main",
-      "target": "scripts_build_catalog_build_download_bundles"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_build_catalog.py",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tests_test_build_catalog",
-      "target": "scripts_build_catalog_build_download_bundles"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "tests/test_build_catalog.py",
-      "source_location": "L48",
-      "weight": 1.0,
-      "source": "tests_test_build_catalog_buildcataloguetests_test_download_bundle_contains_reviewed_bundle",
       "target": "scripts_build_catalog_build_download_bundles"
     },
     {
@@ -3277,306 +4211,6 @@
       "weight": 1.0,
       "source": "scripts_publish_site_publish_directory",
       "target": "valueerror"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scripts/site_intake.py",
-      "source_location": "L39",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scripts_site_intake",
-      "target": "scripts_site_intake_bounded_text"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scripts/site_intake.py",
-      "source_location": "L133",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scripts_site_intake",
-      "target": "scripts_site_intake_main"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scripts/site_intake.py",
-      "source_location": "L46",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scripts_site_intake",
-      "target": "scripts_site_intake_normalize_public_field"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scripts/site_intake.py",
-      "source_location": "L25",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scripts_site_intake",
-      "target": "scripts_site_intake_submission_config"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scripts/site_intake.py",
-      "source_location": "L53",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scripts_site_intake",
-      "target": "scripts_site_intake_validate_submission"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scripts/site_intake.py",
-      "source_location": "L128",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scripts_site_intake",
-      "target": "scripts_site_intake_write_metadata"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scripts/site_intake.py",
-      "source_location": "L94",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scripts_site_intake",
-      "target": "scripts_site_intake_write_submission"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_site_intake.py",
-      "source_location": "L8",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tests_test_site_intake",
-      "target": "scripts_site_intake"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "scripts/site_intake.py",
-      "source_location": "L149",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scripts_site_intake_main",
-      "target": "scripts_site_intake_submission_config"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "scripts/site_intake.py",
-      "source_location": "L42",
-      "weight": 1.0,
-      "source": "scripts_site_intake_bounded_text",
-      "target": "scripts_validate_skills_policyerror"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "scripts/site_intake.py",
-      "source_location": "L66",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scripts_site_intake_validate_submission",
-      "target": "scripts_site_intake_bounded_text"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "scripts/site_intake.py",
-      "source_location": "L49",
-      "weight": 1.0,
-      "source": "scripts_site_intake_normalize_public_field",
-      "target": "scripts_validate_skills_policyerror"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "scripts/site_intake.py",
-      "source_location": "L115",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scripts_site_intake_write_submission",
-      "target": "scripts_site_intake_normalize_public_field"
-    },
-    {
-      "relation": "references",
-      "context": "parameter_type",
-      "confidence": "EXTRACTED",
-      "source_file": "scripts/site_intake.py",
-      "source_location": "L53",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scripts_site_intake_validate_submission",
-      "target": "scripts_site_intake_py_path"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "scripts/site_intake.py",
-      "source_location": "L77",
-      "weight": 1.0,
-      "source": "scripts_site_intake_validate_submission",
-      "target": "scripts_validate_skills_parse_frontmatter"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "scripts/site_intake.py",
-      "source_location": "L62",
-      "weight": 1.0,
-      "source": "scripts_site_intake_validate_submission",
-      "target": "scripts_validate_skills_policyerror"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "scripts/site_intake.py",
-      "source_location": "L85",
-      "weight": 1.0,
-      "source": "scripts_site_intake_validate_submission",
-      "target": "scripts_validate_skills_validate_skill"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "scripts/site_intake.py",
-      "source_location": "L104",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scripts_site_intake_write_submission",
-      "target": "scripts_site_intake_validate_submission"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_site_intake.py",
-      "source_location": "L8",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tests_test_site_intake",
-      "target": "scripts_site_intake_validate_submission"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "tests/test_site_intake.py",
-      "source_location": "L52",
-      "weight": 1.0,
-      "source": "tests_test_site_intake_siteintaketests_test_existing_slug_is_rejected",
-      "target": "scripts_site_intake_validate_submission"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "tests/test_site_intake.py",
-      "source_location": "L73",
-      "weight": 1.0,
-      "source": "tests_test_site_intake_siteintaketests_test_missing_attestation_is_rejected",
-      "target": "scripts_site_intake_validate_submission"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "tests/test_site_intake.py",
-      "source_location": "L63",
-      "weight": 1.0,
-      "source": "tests_test_site_intake_siteintaketests_test_site_specific_size_limit_is_enforced",
-      "target": "scripts_site_intake_validate_submission"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "tests/test_site_intake.py",
-      "source_location": "L34",
-      "weight": 1.0,
-      "source": "tests_test_site_intake_siteintaketests_test_valid_site_submission_passes",
-      "target": "scripts_site_intake_validate_submission"
-    },
-    {
-      "relation": "uses",
-      "confidence": "INFERRED",
-      "source_file": "scripts/site_intake.py",
-      "source_location": "L17",
-      "weight": 0.8,
-      "confidence_score": 0.5,
-      "source": "scripts_site_intake_py_path",
-      "target": "scripts_validate_skills_policyerror"
-    },
-    {
-      "relation": "references",
-      "context": "parameter_type",
-      "confidence": "EXTRACTED",
-      "source_file": "scripts/site_intake.py",
-      "source_location": "L128",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scripts_site_intake_write_metadata",
-      "target": "scripts_site_intake_py_path"
-    },
-    {
-      "relation": "references",
-      "context": "parameter_type",
-      "confidence": "EXTRACTED",
-      "source_file": "scripts/site_intake.py",
-      "source_location": "L94",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scripts_site_intake_write_submission",
-      "target": "scripts_site_intake_py_path"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "scripts/site_intake.py",
-      "source_location": "L156",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scripts_site_intake_main",
-      "target": "scripts_site_intake_write_submission"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "scripts/site_intake.py",
-      "source_location": "L172",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scripts_site_intake_main",
-      "target": "scripts_site_intake_write_metadata"
     },
     {
       "relation": "contains",
@@ -4142,190 +4776,6 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "site/submission-config.json",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "site_submission_config",
-      "target": "site_submission_config_allowedcategories"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "site/submission-config.json",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "site_submission_config",
-      "target": "site_submission_config_dispatchpath"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "site/submission-config.json",
-      "source_location": "L16",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "site_submission_config",
-      "target": "site_submission_config_maxdescriptionchars"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "site/submission-config.json",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "site_submission_config",
-      "target": "site_submission_config_maxmarketplacefilebytes"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "site/submission-config.json",
-      "source_location": "L14",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "site_submission_config",
-      "target": "site_submission_config_maxpubliccontactchars"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "site/submission-config.json",
-      "source_location": "L13",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "site_submission_config",
-      "target": "site_submission_config_maxpublicnamechars"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "site/submission-config.json",
-      "source_location": "L11",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "site_submission_config",
-      "target": "site_submission_config_maxskillfilebytes"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "site/submission-config.json",
-      "source_location": "L17",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "site_submission_config",
-      "target": "site_submission_config_minbodychars"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "site/submission-config.json",
-      "source_location": "L15",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "site_submission_config",
-      "target": "site_submission_config_mindescriptionchars"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_build_catalog.py",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tests_test_build_catalog",
-      "target": "tests_test_build_catalog_buildcataloguetests"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_build_catalog.py",
-      "source_location": "L21",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tests_test_build_catalog_buildcataloguetests",
-      "target": "tests_test_build_catalog_buildcataloguetests_add_skill"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_build_catalog.py",
-      "source_location": "L13",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tests_test_build_catalog_buildcataloguetests",
-      "target": "tests_test_build_catalog_buildcataloguetests_make_root"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_build_catalog.py",
-      "source_location": "L45",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tests_test_build_catalog_buildcataloguetests",
-      "target": "tests_test_build_catalog_buildcataloguetests_test_download_bundle_contains_reviewed_bundle"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_build_catalog.py",
-      "source_location": "L39",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tests_test_build_catalog_buildcataloguetests",
-      "target": "tests_test_build_catalog_buildcataloguetests_test_submission_config_exposes_public_limits"
-    },
-    {
-      "relation": "references",
-      "context": "return_type",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_build_catalog.py",
-      "source_location": "L13",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tests_test_build_catalog_buildcataloguetests_make_root",
-      "target": "tests_test_build_catalog_py_path"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_build_catalog.py",
-      "source_location": "L46",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tests_test_build_catalog_buildcataloguetests_test_download_bundle_contains_reviewed_bundle",
-      "target": "tests_test_build_catalog_buildcataloguetests_make_root"
-    },
-    {
-      "relation": "references",
-      "context": "return_type",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_build_catalog.py",
-      "source_location": "L21",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tests_test_build_catalog_buildcataloguetests_add_skill",
-      "target": "tests_test_build_catalog_py_path"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_build_catalog.py",
-      "source_location": "L47",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tests_test_build_catalog_buildcataloguetests_test_download_bundle_contains_reviewed_bundle",
-      "target": "tests_test_build_catalog_buildcataloguetests_add_skill"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
       "source_file": "tests/test_site_intake.py",
       "source_location": "L24",
       "weight": 1.0,
@@ -4735,86 +5185,6 @@
       "target": "tests_test_workflow_config_skillreviewworkflowtests_test_ready_for_review_is_not_a_trigger"
     },
     {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "CONTRIBUTING.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "contributing_guide",
-      "target": "buildcatalog_script"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "CONTRIBUTING.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "contributing_guide",
-      "target": "skilltemplate_template"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "CONTRIBUTING.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "contributing_guide",
-      "target": "validateskills_script"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "readme_esg",
-      "target": "contributing_guide"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "readme_esg",
-      "target": "ownerrunbook_doc"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "readme_esg",
-      "target": "siteoperations_doc"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "readme_esg",
-      "target": "skillspector_tool"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "readme_esg",
-      "target": "skilltemplate_template"
-    },
-    {
       "relation": "calls",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -4855,16 +5225,6 @@
       "target": "validateskills_script"
     },
     {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/SITE-OPERATIONS.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "siteoperations_doc",
-      "target": "sitedeployyml_workflow"
-    },
-    {
       "relation": "shares_data_with",
       "confidence": "INFERRED",
       "confidence_score": 0.85,
@@ -4872,16 +5232,6 @@
       "source_location": null,
       "weight": 0.85,
       "source": "proxyjson_config",
-      "target": "sitesubmissionintakeyml_workflow"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/SITE-OPERATIONS.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "siteoperations_doc",
       "target": "sitesubmissionintakeyml_workflow"
     },
     {
@@ -4903,16 +5253,6 @@
       "weight": 1.0,
       "source": "sitesubmissionintakeyml_workflow",
       "target": "catalogjson_data"
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".github/workflows/site-submission-intake.yml",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "sitesubmissionintakeyml_workflow",
-      "target": "siteintake_script"
     },
     {
       "relation": "conceptually_related_to",
@@ -4985,16 +5325,6 @@
       "target": "validateskills_script"
     },
     {
-      "relation": "conceptually_related_to",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 0.8,
-      "source": "ownerrunbook_doc",
-      "target": "siteoperations_doc"
-    },
-    {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -5003,46 +5333,6 @@
       "weight": 1.0,
       "source": "ownerrunbook_doc",
       "target": "skillspector_tool"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/SITE-OPERATIONS.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "siteoperations_doc",
-      "target": "buildcatalog_script"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/SITE-OPERATIONS.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "siteoperations_doc",
-      "target": "proxyjson_config"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/SITE-OPERATIONS.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "siteoperations_doc",
-      "target": "validateskills_script"
-    },
-    {
-      "relation": "shares_data_with",
-      "confidence": "INFERRED",
-      "confidence_score": 0.9,
-      "source_file": ".github/workflows/site-submission-intake.yml",
-      "source_location": null,
-      "weight": 0.9,
-      "source": "siteintake_script",
-      "target": "catalogjson_data"
     },
     {
       "relation": "calls",
@@ -5056,5 +5346,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "1c6b8dcc5130f60cd7d506073267b6629e68da01"
+  "built_at_commit": "ff585f226a065cc29fd58254920ab896d173ab3e"
 }
