@@ -1,20 +1,6 @@
 {
   "nodes": [
     {
-      "id": "scripts_init",
-      "label": "__init__.py",
-      "file_type": "code",
-      "source_file": "scripts/__init__.py",
-      "source_location": "L1"
-    },
-    {
-      "id": "scripts_init_rationale_1",
-      "label": "Repository policy tools.",
-      "file_type": "rationale",
-      "source_file": "scripts/__init__.py",
-      "source_location": "L1"
-    },
-    {
       "id": "scripts_build_catalog",
       "label": "build_catalog.py",
       "file_type": "code",
@@ -26,91 +12,154 @@
       "label": "rendered_catalog()",
       "file_type": "code",
       "source_file": "scripts/build_catalog.py",
-      "source_location": "L18"
+      "source_location": "L21"
     },
     {
       "id": "scripts_build_catalog_py_path",
       "label": "Path",
       "file_type": "code",
       "source_file": "scripts/build_catalog.py",
-      "source_location": "L18"
+      "source_location": "L21"
+    },
+    {
+      "id": "scripts_build_catalog_rendered_submission_config",
+      "label": "rendered_submission_config()",
+      "file_type": "code",
+      "source_file": "scripts/build_catalog.py",
+      "source_location": "L25"
+    },
+    {
+      "id": "scripts_build_catalog_build_download_bundles",
+      "label": "build_download_bundles()",
+      "file_type": "code",
+      "source_file": "scripts/build_catalog.py",
+      "source_location": "L29"
     },
     {
       "id": "scripts_build_catalog_main",
       "label": "main()",
       "file_type": "code",
       "source_file": "scripts/build_catalog.py",
-      "source_location": "L22"
+      "source_location": "L44"
     },
     {
-      "id": "scripts_run_skillspector",
-      "label": "run_skillspector.py",
+      "id": "scripts_publish_site",
+      "label": "publish_site.py",
       "file_type": "code",
-      "source_file": "scripts/run_skillspector.py",
+      "source_file": "scripts/publish_site.py",
       "source_location": "L1"
     },
     {
-      "id": "scripts_run_skillspector_changed_skill_directories",
-      "label": "changed_skill_directories()",
+      "id": "scripts_publish_site_content_type",
+      "label": "_content_type()",
       "file_type": "code",
-      "source_file": "scripts/run_skillspector.py",
-      "source_location": "L19"
+      "source_file": "scripts/publish_site.py",
+      "source_location": "L17"
     },
     {
-      "id": "scripts_run_skillspector_py_path",
+      "id": "scripts_publish_site_py_path",
       "label": "Path",
       "file_type": "code",
-      "source_file": "scripts/run_skillspector.py",
-      "source_location": "L19"
+      "source_file": "scripts/publish_site.py",
+      "source_location": "L17"
     },
     {
-      "id": "scripts_run_skillspector_scan",
-      "label": "scan()",
+      "id": "scripts_publish_site_file_manifest",
+      "label": "_file_manifest()",
       "file_type": "code",
-      "source_file": "scripts/run_skillspector.py",
-      "source_location": "L35"
+      "source_file": "scripts/publish_site.py",
+      "source_location": "L31"
     },
     {
-      "id": "scripts_run_skillspector_main",
+      "id": "scripts_publish_site_request_json",
+      "label": "_request_json()",
+      "file_type": "code",
+      "source_file": "scripts/publish_site.py",
+      "source_location": "L51"
+    },
+    {
+      "id": "scripts_publish_site_upload",
+      "label": "_upload()",
+      "file_type": "code",
+      "source_file": "scripts/publish_site.py",
+      "source_location": "L62"
+    },
+    {
+      "id": "scripts_publish_site_publish_directory",
+      "label": "publish_directory()",
+      "file_type": "code",
+      "source_file": "scripts/publish_site.py",
+      "source_location": "L68"
+    },
+    {
+      "id": "scripts_publish_site_main",
       "label": "main()",
       "file_type": "code",
-      "source_file": "scripts/run_skillspector.py",
-      "source_location": "L63"
+      "source_file": "scripts/publish_site.py",
+      "source_location": "L100"
     },
     {
-      "id": "scripts_validate_pr_scope",
-      "label": "validate_pr_scope.py",
+      "id": "scripts_site_intake",
+      "label": "site_intake.py",
       "file_type": "code",
-      "source_file": "scripts/validate_pr_scope.py",
+      "source_file": "scripts/site_intake.py",
       "source_location": "L1"
     },
     {
-      "id": "scripts_validate_pr_scope_changed_paths",
-      "label": "changed_paths()",
+      "id": "scripts_site_intake_submission_config",
+      "label": "submission_config()",
       "file_type": "code",
-      "source_file": "scripts/validate_pr_scope.py",
-      "source_location": "L17"
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L25"
     },
     {
-      "id": "scripts_validate_pr_scope_py_path",
+      "id": "scripts_site_intake_bounded_text",
+      "label": "_bounded_text()",
+      "file_type": "code",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L39"
+    },
+    {
+      "id": "scripts_site_intake_normalize_public_field",
+      "label": "_normalize_public_field()",
+      "file_type": "code",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L46"
+    },
+    {
+      "id": "scripts_site_intake_validate_submission",
+      "label": "validate_submission()",
+      "file_type": "code",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L53"
+    },
+    {
+      "id": "scripts_site_intake_py_path",
       "label": "Path",
       "file_type": "code",
-      "source_file": "scripts/validate_pr_scope.py",
-      "source_location": "L17"
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L53"
     },
     {
-      "id": "scripts_validate_pr_scope_scope_errors",
-      "label": "scope_errors()",
+      "id": "scripts_site_intake_write_submission",
+      "label": "write_submission()",
       "file_type": "code",
-      "source_file": "scripts/validate_pr_scope.py",
-      "source_location": "L28"
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L94"
     },
     {
-      "id": "scripts_validate_pr_scope_main",
+      "id": "scripts_site_intake_write_metadata",
+      "label": "_write_metadata()",
+      "file_type": "code",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L128"
+    },
+    {
+      "id": "scripts_site_intake_main",
       "label": "main()",
       "file_type": "code",
-      "source_file": "scripts/validate_pr_scope.py",
-      "source_location": "L55"
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L133"
     },
     {
       "id": "scripts_validate_skills",
@@ -180,21 +229,21 @@
       "label": "expected_catalog()",
       "file_type": "code",
       "source_file": "scripts/validate_skills.py",
-      "source_location": "L185"
+      "source_location": "L187"
     },
     {
       "id": "scripts_validate_skills_validate_catalog",
       "label": "validate_catalog()",
       "file_type": "code",
       "source_file": "scripts/validate_skills.py",
-      "source_location": "L189"
+      "source_location": "L191"
     },
     {
       "id": "scripts_validate_skills_main",
       "label": "main()",
       "file_type": "code",
       "source_file": "scripts/validate_skills.py",
-      "source_location": "L204"
+      "source_location": "L206"
     },
     {
       "id": "scripts_validate_skills_rationale_40",
@@ -202,6 +251,76 @@
       "file_type": "rationale",
       "source_file": "scripts/validate_skills.py",
       "source_location": "L40"
+    },
+    {
+      "id": "herenow_proxy",
+      "label": "proxy.json",
+      "file_type": "code",
+      "source_file": "site/.herenow/proxy.json",
+      "source_location": "L1"
+    },
+    {
+      "id": "herenow_proxy_proxies",
+      "label": "proxies",
+      "file_type": "code",
+      "source_file": "site/.herenow/proxy.json",
+      "source_location": "L2"
+    },
+    {
+      "id": "herenow_proxy_proxies_api_submit_skill",
+      "label": "/api/submit-skill",
+      "file_type": "code",
+      "source_file": "site/.herenow/proxy.json",
+      "source_location": "L3"
+    },
+    {
+      "id": "herenow_proxy_api_submit_skill_upstream",
+      "label": "upstream",
+      "file_type": "code",
+      "source_file": "site/.herenow/proxy.json",
+      "source_location": "L4"
+    },
+    {
+      "id": "herenow_proxy_api_submit_skill_method",
+      "label": "method",
+      "file_type": "code",
+      "source_file": "site/.herenow/proxy.json",
+      "source_location": "L5"
+    },
+    {
+      "id": "herenow_proxy_api_submit_skill_ratelimit",
+      "label": "rateLimit",
+      "file_type": "code",
+      "source_file": "site/.herenow/proxy.json",
+      "source_location": "L6"
+    },
+    {
+      "id": "herenow_proxy_api_submit_skill_headers",
+      "label": "headers",
+      "file_type": "code",
+      "source_file": "site/.herenow/proxy.json",
+      "source_location": "L7"
+    },
+    {
+      "id": "herenow_proxy_headers_authorization",
+      "label": "Authorization",
+      "file_type": "code",
+      "source_file": "site/.herenow/proxy.json",
+      "source_location": "L8"
+    },
+    {
+      "id": "herenow_proxy_headers_accept",
+      "label": "Accept",
+      "file_type": "code",
+      "source_file": "site/.herenow/proxy.json",
+      "source_location": "L9"
+    },
+    {
+      "id": "herenow_proxy_headers_x_github_api_version",
+      "label": "X-GitHub-Api-Version",
+      "file_type": "code",
+      "source_file": "site/.herenow/proxy.json",
+      "source_location": "L10"
     },
     {
       "id": "site_app",
@@ -225,144 +344,494 @@
       "source_location": "L2"
     },
     {
+      "id": "site_app_submissionstatus",
+      "label": "submissionStatus",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L3"
+    },
+    {
+      "id": "site_app_form",
+      "label": "form",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L4"
+    },
+    {
+      "id": "site_app_skillfileinput",
+      "label": "skillFileInput",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L5"
+    },
+    {
+      "id": "site_app_marketplacefileinput",
+      "label": "marketplaceFileInput",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L6"
+    },
+    {
+      "id": "site_app_publicnameinput",
+      "label": "publicNameInput",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L7"
+    },
+    {
+      "id": "site_app_publiccontactinput",
+      "label": "publicContactInput",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L8"
+    },
+    {
+      "id": "site_app_rightsinput",
+      "label": "rightsInput",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L9"
+    },
+    {
+      "id": "site_app_boundaryinput",
+      "label": "boundaryInput",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L10"
+    },
+    {
+      "id": "site_app_submitbutton",
+      "label": "submitButton",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L11"
+    },
+    {
+      "id": "site_app_previewheading",
+      "label": "previewHeading",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L12"
+    },
+    {
+      "id": "site_app_previewslug",
+      "label": "previewSlug",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L13"
+    },
+    {
+      "id": "site_app_previewtitle",
+      "label": "previewTitle",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L14"
+    },
+    {
+      "id": "site_app_previewcategory",
+      "label": "previewCategory",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L15"
+    },
+    {
+      "id": "site_app_previewdetail",
+      "label": "previewDetail",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L16"
+    },
+    {
+      "id": "site_app_feedbackcard",
+      "label": "feedbackCard",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L17"
+    },
+    {
+      "id": "site_app_feedbacktitle",
+      "label": "feedbackTitle",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L18"
+    },
+    {
+      "id": "site_app_feedbackdetail",
+      "label": "feedbackDetail",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L19"
+    },
+    {
+      "id": "site_app_local_hosts",
+      "label": "LOCAL_HOSTS",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L21"
+    },
+    {
+      "id": "site_app_local_preview_response_codes",
+      "label": "LOCAL_PREVIEW_RESPONSE_CODES",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L22"
+    },
+    {
       "id": "site_app_setstate",
       "label": "setState()",
       "file_type": "code",
       "source_file": "site/app.js",
-      "source_location": "L5"
+      "source_location": "L28"
+    },
+    {
+      "id": "site_app_setfeedback",
+      "label": "setFeedback()",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L46"
+    },
+    {
+      "id": "site_app_clearfeedback",
+      "label": "clearFeedback()",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L53"
+    },
+    {
+      "id": "site_app_setsubmissiontone",
+      "label": "setSubmissionTone()",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L60"
+    },
+    {
+      "id": "site_app_byteslength",
+      "label": "bytesLength()",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L65"
+    },
+    {
+      "id": "site_app_normalizepublicfield",
+      "label": "normalizePublicField()",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L69"
+    },
+    {
+      "id": "site_app_parsefrontmatter",
+      "label": "parseFrontmatter()",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L73"
+    },
+    {
+      "id": "site_app_parsemarketplace",
+      "label": "parseMarketplace()",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L105"
+    },
+    {
+      "id": "site_app_buildpreview",
+      "label": "buildPreview()",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L125"
+    },
+    {
+      "id": "site_app_updatepreview",
+      "label": "updatePreview()",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L182"
+    },
+    {
+      "id": "site_app_syncsubmitbutton",
+      "label": "syncSubmitButton()",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L201"
+    },
+    {
+      "id": "site_app_readselectedfiles",
+      "label": "readSelectedFiles()",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L210"
+    },
+    {
+      "id": "site_app_refreshsubmissionpreview",
+      "label": "refreshSubmissionPreview()",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": "L223"
     },
     {
       "id": "site_app_createskillcard",
       "label": "createSkillCard()",
       "file_type": "code",
       "source_file": "site/app.js",
-      "source_location": "L30"
+      "source_location": "L252"
     },
     {
       "id": "site_app_loadcatalogue",
       "label": "loadCatalogue()",
       "file_type": "code",
       "source_file": "site/app.js",
-      "source_location": "L64"
+      "source_location": "L283"
     },
     {
-      "id": "site_catalog",
-      "label": "catalog.json",
+      "id": "site_app_loadsubmissionconfig",
+      "label": "loadSubmissionConfig()",
       "file_type": "code",
-      "source_file": "site/catalog.json",
+      "source_file": "site/app.js",
+      "source_location": "L314"
+    },
+    {
+      "id": "site_submission_config",
+      "label": "submission-config.json",
+      "file_type": "code",
+      "source_file": "site/submission-config.json",
       "source_location": "L1"
     },
     {
-      "id": "esg_materiality_brief_marketplace",
-      "label": "marketplace.json",
+      "id": "site_submission_config_dispatchpath",
+      "label": "dispatchPath",
       "file_type": "code",
-      "source_file": "skills/esg-materiality-brief/marketplace.json",
-      "source_location": "L1"
-    },
-    {
-      "id": "esg_materiality_brief_marketplace_title",
-      "label": "title",
-      "file_type": "code",
-      "source_file": "skills/esg-materiality-brief/marketplace.json",
+      "source_file": "site/submission-config.json",
       "source_location": "L2"
     },
     {
-      "id": "esg_materiality_brief_marketplace_category",
-      "label": "category",
+      "id": "site_submission_config_allowedcategories",
+      "label": "allowedCategories",
       "file_type": "code",
-      "source_file": "skills/esg-materiality-brief/marketplace.json",
+      "source_file": "site/submission-config.json",
       "source_location": "L3"
     },
     {
-      "id": "ghg_inventory_evidence_pack_marketplace",
-      "label": "marketplace.json",
+      "id": "site_submission_config_maxskillfilebytes",
+      "label": "maxSkillFileBytes",
       "file_type": "code",
-      "source_file": "skills/ghg-inventory-evidence-pack/marketplace.json",
-      "source_location": "L1"
-    },
-    {
-      "id": "ghg_inventory_evidence_pack_marketplace_title",
-      "label": "title",
-      "file_type": "code",
-      "source_file": "skills/ghg-inventory-evidence-pack/marketplace.json",
-      "source_location": "L2"
-    },
-    {
-      "id": "ghg_inventory_evidence_pack_marketplace_category",
-      "label": "category",
-      "file_type": "code",
-      "source_file": "skills/ghg-inventory-evidence-pack/marketplace.json",
-      "source_location": "L3"
-    },
-    {
-      "id": "skill_template_marketplace",
-      "label": "marketplace.json",
-      "file_type": "code",
-      "source_file": "templates/skill-template/marketplace.json",
-      "source_location": "L1"
-    },
-    {
-      "id": "skill_template_marketplace_title",
-      "label": "title",
-      "file_type": "code",
-      "source_file": "templates/skill-template/marketplace.json",
-      "source_location": "L2"
-    },
-    {
-      "id": "skill_template_marketplace_category",
-      "label": "category",
-      "file_type": "code",
-      "source_file": "templates/skill-template/marketplace.json",
-      "source_location": "L3"
-    },
-    {
-      "id": "tests_test_pr_scope",
-      "label": "test_pr_scope.py",
-      "file_type": "code",
-      "source_file": "tests/test_pr_scope.py",
-      "source_location": "L1"
-    },
-    {
-      "id": "tests_test_pr_scope_pullrequestscopetests",
-      "label": "PullRequestScopeTests",
-      "file_type": "code",
-      "source_file": "tests/test_pr_scope.py",
+      "source_file": "site/submission-config.json",
       "source_location": "L11"
     },
     {
-      "id": "tests_test_pr_scope_pullrequestscopetests_test_owner_can_change_platform_files",
-      "label": ".test_owner_can_change_platform_files()",
+      "id": "site_submission_config_maxmarketplacefilebytes",
+      "label": "maxMarketplaceFileBytes",
       "file_type": "code",
-      "source_file": "tests/test_pr_scope.py",
+      "source_file": "site/submission-config.json",
       "source_location": "L12"
     },
     {
-      "id": "tests_test_pr_scope_pullrequestscopetests_test_external_contributor_can_submit_one_skill",
-      "label": ".test_external_contributor_can_submit_one_skill()",
+      "id": "site_submission_config_maxpublicnamechars",
+      "label": "maxPublicNameChars",
       "file_type": "code",
-      "source_file": "tests/test_pr_scope.py",
+      "source_file": "site/submission-config.json",
+      "source_location": "L13"
+    },
+    {
+      "id": "site_submission_config_maxpubliccontactchars",
+      "label": "maxPublicContactChars",
+      "file_type": "code",
+      "source_file": "site/submission-config.json",
+      "source_location": "L14"
+    },
+    {
+      "id": "site_submission_config_mindescriptionchars",
+      "label": "minDescriptionChars",
+      "file_type": "code",
+      "source_file": "site/submission-config.json",
       "source_location": "L15"
     },
     {
-      "id": "tests_test_pr_scope_pullrequestscopetests_test_external_platform_change_is_rejected",
-      "label": ".test_external_platform_change_is_rejected()",
+      "id": "site_submission_config_maxdescriptionchars",
+      "label": "maxDescriptionChars",
       "file_type": "code",
-      "source_file": "tests/test_pr_scope.py",
-      "source_location": "L23"
+      "source_file": "site/submission-config.json",
+      "source_location": "L16"
     },
     {
-      "id": "tests_test_pr_scope_pullrequestscopetests_test_one_skill_per_pull_request",
-      "label": ".test_one_skill_per_pull_request()",
+      "id": "site_submission_config_minbodychars",
+      "label": "minBodyChars",
       "file_type": "code",
-      "source_file": "tests/test_pr_scope.py",
-      "source_location": "L27"
+      "source_file": "site/submission-config.json",
+      "source_location": "L17"
     },
     {
-      "id": "tests_test_pr_scope_pullrequestscopetests_test_deleted_platform_file_is_rejected",
-      "label": ".test_deleted_platform_file_is_rejected()",
+      "id": "tests_test_build_catalog",
+      "label": "test_build_catalog.py",
       "file_type": "code",
-      "source_file": "tests/test_pr_scope.py",
-      "source_location": "L34"
+      "source_file": "tests/test_build_catalog.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_test_build_catalog_buildcataloguetests",
+      "label": "BuildCatalogueTests",
+      "file_type": "code",
+      "source_file": "tests/test_build_catalog.py",
+      "source_location": "L12"
+    },
+    {
+      "id": "tests_test_build_catalog_buildcataloguetests_make_root",
+      "label": ".make_root()",
+      "file_type": "code",
+      "source_file": "tests/test_build_catalog.py",
+      "source_location": "L13"
+    },
+    {
+      "id": "tests_test_build_catalog_py_path",
+      "label": "Path",
+      "file_type": "code",
+      "source_file": "tests/test_build_catalog.py",
+      "source_location": "L13"
+    },
+    {
+      "id": "tests_test_build_catalog_buildcataloguetests_add_skill",
+      "label": ".add_skill()",
+      "file_type": "code",
+      "source_file": "tests/test_build_catalog.py",
+      "source_location": "L21"
+    },
+    {
+      "id": "tests_test_build_catalog_buildcataloguetests_test_submission_config_exposes_public_limits",
+      "label": ".test_submission_config_exposes_public_limits()",
+      "file_type": "code",
+      "source_file": "tests/test_build_catalog.py",
+      "source_location": "L39"
+    },
+    {
+      "id": "tests_test_build_catalog_buildcataloguetests_test_download_bundle_contains_reviewed_bundle",
+      "label": ".test_download_bundle_contains_reviewed_bundle()",
+      "file_type": "code",
+      "source_file": "tests/test_build_catalog.py",
+      "source_location": "L45"
+    },
+    {
+      "id": "tests_test_site_intake",
+      "label": "test_site_intake.py",
+      "file_type": "code",
+      "source_file": "tests/test_site_intake.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_test_site_intake_siteintaketests",
+      "label": "SiteIntakeTests",
+      "file_type": "code",
+      "source_file": "tests/test_site_intake.py",
+      "source_location": "L24"
+    },
+    {
+      "id": "tests_test_site_intake_siteintaketests_make_root",
+      "label": ".make_root()",
+      "file_type": "code",
+      "source_file": "tests/test_site_intake.py",
+      "source_location": "L25"
+    },
+    {
+      "id": "tests_test_site_intake_py_path",
+      "label": "Path",
+      "file_type": "code",
+      "source_file": "tests/test_site_intake.py",
+      "source_location": "L25"
+    },
+    {
+      "id": "tests_test_site_intake_siteintaketests_test_valid_site_submission_passes",
+      "label": ".test_valid_site_submission_passes()",
+      "file_type": "code",
+      "source_file": "tests/test_site_intake.py",
+      "source_location": "L33"
+    },
+    {
+      "id": "tests_test_site_intake_siteintaketests_test_existing_slug_is_rejected",
+      "label": ".test_existing_slug_is_rejected()",
+      "file_type": "code",
+      "source_file": "tests/test_site_intake.py",
+      "source_location": "L44"
+    },
+    {
+      "id": "tests_test_site_intake_siteintaketests_test_site_specific_size_limit_is_enforced",
+      "label": ".test_site_specific_size_limit_is_enforced()",
+      "file_type": "code",
+      "source_file": "tests/test_site_intake.py",
+      "source_location": "L60"
+    },
+    {
+      "id": "tests_test_site_intake_siteintaketests_test_missing_attestation_is_rejected",
+      "label": ".test_missing_attestation_is_rejected()",
+      "file_type": "code",
+      "source_file": "tests/test_site_intake.py",
+      "source_location": "L71"
+    },
+    {
+      "id": "tests_test_site_pages",
+      "label": "test_site_pages.py",
+      "file_type": "code",
+      "source_file": "tests/test_site_pages.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_test_site_pages_idandlinkparser",
+      "label": "IdAndLinkParser",
+      "file_type": "code",
+      "source_file": "tests/test_site_pages.py",
+      "source_location": "L13"
+    },
+    {
+      "id": "htmlparser",
+      "label": "HTMLParser",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "tests_test_site_pages_idandlinkparser_init",
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "tests/test_site_pages.py",
+      "source_location": "L14"
+    },
+    {
+      "id": "tests_test_site_pages_idandlinkparser_handle_starttag",
+      "label": ".handle_starttag()",
+      "file_type": "code",
+      "source_file": "tests/test_site_pages.py",
+      "source_location": "L20"
+    },
+    {
+      "id": "tests_test_site_pages_parse_page",
+      "label": "parse_page()",
+      "file_type": "code",
+      "source_file": "tests/test_site_pages.py",
+      "source_location": "L30"
+    },
+    {
+      "id": "tests_test_site_pages_sitepagetests",
+      "label": "SitePageTests",
+      "file_type": "code",
+      "source_file": "tests/test_site_pages.py",
+      "source_location": "L36"
+    },
+    {
+      "id": "tests_test_site_pages_sitepagetests_test_catalogue_and_submission_are_separate_pages",
+      "label": ".test_catalogue_and_submission_are_separate_pages()",
+      "file_type": "code",
+      "source_file": "tests/test_site_pages.py",
+      "source_location": "L37"
+    },
+    {
+      "id": "tests_test_site_pages_sitepagetests_test_both_pages_load_the_shared_assets",
+      "label": ".test_both_pages_load_the_shared_assets()",
+      "file_type": "code",
+      "source_file": "tests/test_site_pages.py",
+      "source_location": "L49"
+    },
+    {
+      "id": "tests_test_site_pages_sitepagetests_test_public_page_does_not_lock_document_scrolling",
+      "label": ".test_public_page_does_not_lock_document_scrolling()",
+      "file_type": "code",
+      "source_file": "tests/test_site_pages.py",
+      "source_location": "L57"
     },
     {
       "id": "tests_test_validate_skills",
@@ -442,195 +911,36 @@
       "source_location": "L76"
     },
     {
-      "id": "config_issue_template",
-      "label": "Issue Template Config",
-      "file_type": "document",
-      "source_file": ".github/ISSUE_TEMPLATE/config.yml",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null
-    },
-    {
-      "id": "skillproposal_template",
-      "label": "Skill Proposal Issue Template",
-      "file_type": "document",
-      "source_file": ".github/ISSUE_TEMPLATE/skill-proposal.yml",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null
-    },
-    {
-      "id": "pull_request_template_skill",
-      "label": "Skill Pull Request Template",
-      "file_type": "document",
-      "source_file": ".github/pull_request_template.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null
-    },
-    {
-      "id": "skillreview_workflow",
-      "label": "Skill Intake CI Workflow",
+      "id": "tests_test_validate_skills_skillpolicytests_test_marketplace_title_must_be_single_line",
+      "label": ".test_marketplace_title_must_be_single_line()",
       "file_type": "code",
-      "source_file": ".github/workflows/skill-review.yml",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null
+      "source_file": "tests/test_validate_skills.py",
+      "source_location": "L87"
     },
     {
-      "id": "skillreview_policy_job",
-      "label": "Trust Policy CI Job",
+      "id": "tests_test_workflow_config",
+      "label": "test_workflow_config.py",
       "file_type": "code",
-      "source_file": ".github/workflows/skill-review.yml",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null
+      "source_file": "tests/test_workflow_config.py",
+      "source_location": "L1"
     },
     {
-      "id": "skillreview_skillspector_job",
-      "label": "Trust SkillSpector CI Job",
+      "id": "tests_test_workflow_config_skillreviewworkflowtests",
+      "label": "SkillReviewWorkflowTests",
       "file_type": "code",
-      "source_file": ".github/workflows/skill-review.yml",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null
+      "source_file": "tests/test_workflow_config.py",
+      "source_location": "L10"
     },
     {
-      "id": "scripts_validate_pr_scope",
-      "label": "validate_pr_scope.py",
+      "id": "tests_test_workflow_config_skillreviewworkflowtests_test_ready_for_review_is_not_a_trigger",
+      "label": ".test_ready_for_review_is_not_a_trigger()",
       "file_type": "code",
-      "source_file": ".github/workflows/skill-review.yml",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null
+      "source_file": "tests/test_workflow_config.py",
+      "source_location": "L11"
     },
     {
-      "id": "scripts_run_skillspector",
-      "label": "run_skillspector.py",
-      "file_type": "code",
-      "source_file": ".github/workflows/skill-review.yml",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null
-    },
-    {
-      "id": "agents_codex",
-      "label": "Codex Executor Agent",
-      "file_type": "rationale",
-      "source_file": "AGENTS.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null
-    },
-    {
-      "id": "agents_claude",
-      "label": "Claude Critic Agent",
-      "file_type": "rationale",
-      "source_file": "AGENTS.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null
-    },
-    {
-      "id": "agents_esg_skills_marketplace",
-      "label": "ESG Skills Marketplace Project",
-      "file_type": "concept",
-      "source_file": "AGENTS.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null
-    },
-    {
-      "id": "agents_graphify",
-      "label": "Graphify Tool",
-      "file_type": "concept",
-      "source_file": "AGENTS.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null
-    },
-    {
-      "id": "agents_aster",
-      "label": "Aster Design System",
-      "file_type": "concept",
-      "source_file": "AGENTS.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null
-    },
-    {
-      "id": "agents_herenow",
-      "label": "here.now Platform",
-      "file_type": "concept",
-      "source_file": "AGENTS.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null
-    },
-    {
-      "id": "agents_linear",
-      "label": "Linear Project Management",
-      "file_type": "concept",
-      "source_file": "AGENTS.md",
-      "source_location": null,
-      "source_url": "https://linear.app/rf-ai-workspace/project/esg-skills-marketplace-2a2095348777",
-      "captured_at": null,
-      "author": null,
-      "contributor": null
-    },
-    {
-      "id": "agents_github",
-      "label": "GitHub Repository",
-      "file_type": "concept",
-      "source_file": "AGENTS.md",
-      "source_location": null,
-      "source_url": "https://github.com/FilhoRicardo/esg-skills-marketplace",
-      "captured_at": null,
-      "author": null,
-      "contributor": null
-    },
-    {
-      "id": "claude_critic_role",
-      "label": "Claude Critic Role",
-      "file_type": "rationale",
-      "source_file": "CLAUDE.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null
-    },
-    {
-      "id": "contributing_workflow",
-      "label": "Skill Contributing Workflow",
+      "id": "contributing_guide",
+      "label": "Contributing Guide",
       "file_type": "document",
       "source_file": "CONTRIBUTING.md",
       "source_location": null,
@@ -640,129 +950,8 @@
       "contributor": null
     },
     {
-      "id": "scripts_validate_skills",
-      "label": "validate_skills.py",
-      "file_type": "code",
-      "source_file": "CONTRIBUTING.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null
-    },
-    {
-      "id": "scripts_build_catalog",
-      "label": "build_catalog.py",
-      "file_type": "code",
-      "source_file": "CONTRIBUTING.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null
-    },
-    {
-      "id": "memory_esg_skills_marketplace",
-      "label": "ESG Skills Marketplace",
-      "file_type": "rationale",
-      "source_file": "MEMORY.md",
-      "source_location": null,
-      "source_url": "https://github.com/FilhoRicardo/esg-skills-marketplace",
-      "captured_at": null,
-      "author": null,
-      "contributor": null
-    },
-    {
-      "id": "memory_herenow_platform",
-      "label": "here.now Platform",
-      "file_type": "concept",
-      "source_file": "MEMORY.md",
-      "source_location": null,
-      "source_url": "https://here.now/docs",
-      "captured_at": null,
-      "author": null,
-      "contributor": null
-    },
-    {
-      "id": "memory_github_repository",
-      "label": "GitHub Repository",
-      "file_type": "concept",
-      "source_file": "MEMORY.md",
-      "source_location": null,
-      "source_url": "https://github.com/FilhoRicardo/esg-skills-marketplace",
-      "captured_at": null,
-      "author": null,
-      "contributor": null
-    },
-    {
-      "id": "memory_linear_project",
-      "label": "Linear Project",
-      "file_type": "concept",
-      "source_file": "MEMORY.md",
-      "source_location": null,
-      "source_url": "https://linear.app/rf-ai-workspace/project/esg-skills-marketplace-2a2095348777",
-      "captured_at": null,
-      "author": null,
-      "contributor": null
-    },
-    {
-      "id": "memory_rf99_issue",
-      "label": "RF-99 Issue",
-      "file_type": "document",
-      "source_file": "MEMORY.md",
-      "source_location": null,
-      "source_url": "https://linear.app/rf-ai-workspace/issue/RF-99/initialize-esg-skills-marketplace",
-      "captured_at": null,
-      "author": null,
-      "contributor": null
-    },
-    {
-      "id": "memory_skillspector",
-      "label": "NVIDIA SkillSpector",
-      "file_type": "code",
-      "source_file": "MEMORY.md",
-      "source_location": null,
-      "source_url": "https://github.com/NVIDIA/SkillSpector",
-      "captured_at": null,
-      "author": null,
-      "contributor": null
-    },
-    {
-      "id": "memory_aster",
-      "label": "Aster Frontend",
-      "file_type": "concept",
-      "source_file": "MEMORY.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null
-    },
-    {
-      "id": "memory_graphify",
-      "label": "Graphify",
-      "file_type": "concept",
-      "source_file": "MEMORY.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null
-    },
-    {
-      "id": "memory_codex",
-      "label": "Codex Executor",
-      "file_type": "concept",
-      "source_file": "MEMORY.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null
-    },
-    {
-      "id": "memory_esg_materiality_brief",
-      "label": "ESG Materiality Brief Skill",
+      "id": "memory_esg",
+      "label": "ESG Marketplace Memory",
       "file_type": "document",
       "source_file": "MEMORY.md",
       "source_location": null,
@@ -772,40 +961,7 @@
       "contributor": null
     },
     {
-      "id": "memory_ghg_inventory_evidence_pack",
-      "label": "GHG Inventory Evidence Pack Skill",
-      "file_type": "document",
-      "source_file": "MEMORY.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null
-    },
-    {
-      "id": "memory_filhoricardo",
-      "label": "FilhoRicardo Maintainer",
-      "file_type": "concept",
-      "source_file": "MEMORY.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": "FilhoRicardo"
-    },
-    {
-      "id": "memory_permanent_catalogue",
-      "label": "Permanent Catalogue (here.now)",
-      "file_type": "concept",
-      "source_file": "MEMORY.md",
-      "source_location": null,
-      "source_url": "https://royal-bugle-xgg7.here.now/",
-      "captured_at": null,
-      "author": null,
-      "contributor": null
-    },
-    {
-      "id": "planreviewlog_rounds",
+      "id": "planreviewlog_log",
       "label": "Plan Review Log",
       "file_type": "document",
       "source_file": "PLAN-REVIEW-LOG.md",
@@ -816,8 +972,8 @@
       "contributor": null
     },
     {
-      "id": "plan_completion",
-      "label": "Completion Plan",
+      "id": "plan_uxrepair",
+      "label": "Plan: Repair The Marketplace UX And Redeploy",
       "file_type": "document",
       "source_file": "PLAN.md",
       "source_location": null,
@@ -827,7 +983,7 @@
       "contributor": null
     },
     {
-      "id": "readme_esg_skills_marketplace",
+      "id": "readme_esg",
       "label": "ESG Skills Marketplace README",
       "file_type": "document",
       "source_file": "README.md",
@@ -838,43 +994,10 @@
       "contributor": null
     },
     {
-      "id": "readme_trust_gate",
-      "label": "Trust Gate (5 Gates)",
-      "file_type": "concept",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null
-    },
-    {
-      "id": "readme_skills_directory",
-      "label": "Skills Directory",
-      "file_type": "concept",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null
-    },
-    {
-      "id": "readme_skillspector",
-      "label": "NVIDIA SkillSpector (README ref)",
-      "file_type": "code",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": "https://github.com/NVIDIA/SkillSpector",
-      "captured_at": null,
-      "author": null,
-      "contributor": null
-    },
-    {
-      "id": "readme_contributing_guide",
-      "label": "Contributing Guide",
+      "id": "designqa_calmledger",
+      "label": "Design QA: Calm Ledger Frontend Repair",
       "file_type": "document",
-      "source_file": "README.md",
+      "source_file": "design-qa.md",
       "source_location": null,
       "source_url": null,
       "captured_at": null,
@@ -882,129 +1005,41 @@
       "contributor": null
     },
     {
-      "id": "readme_owner_runbook",
+      "id": "sitedeployyml_workflow",
+      "label": "Publish Public Marketplace Workflow",
+      "file_type": "code",
+      "source_file": ".github/workflows/site-deploy.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "sitesubmissionintakeyml_workflow",
+      "label": "Site Submission Intake Workflow",
+      "file_type": "code",
+      "source_file": ".github/workflows/site-submission-intake.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "skillreviewyml_workflow",
+      "label": "Skill Intake Gate Workflow",
+      "file_type": "code",
+      "source_file": ".github/workflows/skill-review.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "ownerrunbook_doc",
       "label": "Owner Review Runbook",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null
-    },
-    {
-      "id": "readme_skill_template",
-      "label": "Skill Template",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null
-    },
-    {
-      "id": "readme_permanent_catalogue",
-      "label": "Permanent Catalogue URL",
-      "file_type": "concept",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": "https://royal-bugle-xgg7.here.now/",
-      "captured_at": null,
-      "author": null,
-      "contributor": null
-    },
-    {
-      "id": "readme_esg_materiality_brief",
-      "label": "ESG Materiality Brief (README)",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null
-    },
-    {
-      "id": "readme_ghg_inventory_evidence_pack",
-      "label": "GHG Inventory Evidence Pack (README)",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null
-    },
-    {
-      "id": "readme_scripts_directory",
-      "label": "Scripts Directory",
-      "file_type": "concept",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null
-    },
-    {
-      "id": "readme_site_directory",
-      "label": "Site Static Catalogue",
-      "file_type": "code",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null
-    },
-    {
-      "id": "readme_tests_directory",
-      "label": "Tests Directory",
-      "file_type": "code",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null
-    },
-    {
-      "id": "readme_github_actions",
-      "label": "GitHub Actions / CI (.github)",
-      "file_type": "code",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null
-    },
-    {
-      "id": "security_policy",
-      "label": "Security Policy",
-      "file_type": "document",
-      "source_file": "SECURITY.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null
-    },
-    {
-      "id": "security_nvidia_skillspector",
-      "label": "NVIDIA SkillSpector",
-      "file_type": "concept",
-      "source_file": "SECURITY.md",
-      "source_location": null,
-      "source_url": "https://github.com/NVIDIA/SkillSpector",
-      "captured_at": null,
-      "author": null,
-      "contributor": null
-    },
-    {
-      "id": "ownerrunbook_process",
-      "label": "Owner Review Process",
       "file_type": "document",
       "source_file": "docs/OWNER-RUNBOOK.md",
       "source_location": null,
@@ -1014,8 +1049,19 @@
       "contributor": null
     },
     {
-      "id": "index_page",
-      "label": "Catalogue Site Page",
+      "id": "siteoperations_doc",
+      "label": "Site Operations",
+      "file_type": "document",
+      "source_file": "docs/SITE-OPERATIONS.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "indexhtml_page",
+      "label": "ESG Skills Marketplace Homepage",
       "file_type": "code",
       "source_file": "site/index.html",
       "source_location": null,
@@ -1025,10 +1071,10 @@
       "contributor": null
     },
     {
-      "id": "index_appjs",
-      "label": "Catalogue App JavaScript",
+      "id": "submithtml_page",
+      "label": "Submit A Skill Page",
       "file_type": "code",
-      "source_file": "site/index.html",
+      "source_file": "site/submit.html",
       "source_location": null,
       "source_url": null,
       "captured_at": null,
@@ -1036,10 +1082,10 @@
       "contributor": null
     },
     {
-      "id": "index_astertokens",
-      "label": "Aster Tokens CSS",
+      "id": "buildcatalog_script",
+      "label": "Build Catalog Script",
       "file_type": "code",
-      "source_file": "site/index.html",
+      "source_file": "scripts/build_catalog.py",
       "source_location": null,
       "source_url": null,
       "captured_at": null,
@@ -1047,10 +1093,10 @@
       "contributor": null
     },
     {
-      "id": "index_styles",
-      "label": "Site Styles CSS",
+      "id": "validateskills_script",
+      "label": "Validate Skills Script",
       "file_type": "code",
-      "source_file": "site/index.html",
+      "source_file": "scripts/validate_skills.py",
       "source_location": null,
       "source_url": null,
       "captured_at": null,
@@ -1058,10 +1104,10 @@
       "contributor": null
     },
     {
-      "id": "skillsreadme_approved",
-      "label": "Approved Skills Directory",
-      "file_type": "document",
-      "source_file": "skills/README.md",
+      "id": "publishsite_script",
+      "label": "Publish Site Script",
+      "file_type": "code",
+      "source_file": "scripts/publish_site.py",
       "source_location": null,
       "source_url": null,
       "captured_at": null,
@@ -1069,10 +1115,10 @@
       "contributor": null
     },
     {
-      "id": "skill_esg_materiality_brief",
-      "label": "ESG Materiality Brief Skill",
-      "file_type": "document",
-      "source_file": "skills/esg-materiality-brief/SKILL.md",
+      "id": "siteintake_script",
+      "label": "Site Intake Script",
+      "file_type": "code",
+      "source_file": "scripts/site_intake.py",
       "source_location": null,
       "source_url": null,
       "captured_at": null,
@@ -1080,10 +1126,10 @@
       "contributor": null
     },
     {
-      "id": "skill_ghg_inventory_evidence_pack",
-      "label": "GHG Inventory Evidence Pack Skill",
-      "file_type": "document",
-      "source_file": "skills/ghg-inventory-evidence-pack/SKILL.md",
+      "id": "validateprscope_script",
+      "label": "Validate PR Scope Script",
+      "file_type": "code",
+      "source_file": "scripts/validate_pr_scope.py",
       "source_location": null,
       "source_url": null,
       "captured_at": null,
@@ -1091,10 +1137,109 @@
       "contributor": null
     },
     {
-      "id": "skill_template",
-      "label": "Skill Submission Template",
+      "id": "runskillspector_script",
+      "label": "Run SkillSpector Script",
+      "file_type": "code",
+      "source_file": "scripts/run_skillspector.py",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "skillspector_tool",
+      "label": "NVIDIA SkillSpector",
+      "file_type": "code",
+      "source_file": "tools/skillspector",
+      "source_location": null,
+      "source_url": "https://github.com/NVIDIA/SkillSpector",
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "appjs_script",
+      "label": "Site Application Script",
+      "file_type": "code",
+      "source_file": "site/app.js",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "astertokenscss_stylesheet",
+      "label": "Aster Design Tokens Stylesheet",
+      "file_type": "code",
+      "source_file": "site/aster-tokens.css",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "stylescss_stylesheet",
+      "label": "Site Styles Stylesheet",
+      "file_type": "code",
+      "source_file": "site/styles.css",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "catalogjson_data",
+      "label": "Site Catalog JSON",
       "file_type": "document",
-      "source_file": "templates/skill-template/SKILL.md",
+      "source_file": "site/catalog.json",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "proxyjson_config",
+      "label": "Here.now Proxy Configuration",
+      "file_type": "code",
+      "source_file": "site/.herenow/proxy.json",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "skilltemplate_template",
+      "label": "Skill Template",
+      "file_type": "document",
+      "source_file": "templates/skill-template/",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "herenow_platform",
+      "label": "Here.now Hosting Platform",
+      "file_type": "concept",
+      "source_file": "MEMORY.md",
+      "source_location": null,
+      "source_url": "https://here.now/docs",
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "aster_designsystem",
+      "label": "Aster Design System",
+      "file_type": "concept",
+      "source_file": "PLAN.md",
       "source_location": null,
       "source_url": null,
       "captured_at": null,
@@ -1104,15 +1249,6 @@
   ],
   "edges": [
     {
-      "source": "scripts_init_rationale_1",
-      "target": "scripts_init",
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "scripts/__init__.py",
-      "source_location": "L1",
-      "weight": 1.0
-    },
-    {
       "source": "scripts_build_catalog",
       "target": "argparse",
       "relation": "imports",
@@ -1134,7 +1270,7 @@
     },
     {
       "source": "scripts_build_catalog",
-      "target": "sys",
+      "target": "shutil",
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -1144,12 +1280,42 @@
     },
     {
       "source": "scripts_build_catalog",
+      "target": "sys",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/build_catalog.py",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_build_catalog",
+      "target": "zipfile",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/build_catalog.py",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_build_catalog",
       "target": "pathlib",
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "scripts/build_catalog.py",
-      "source_location": "L9",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_build_catalog",
+      "target": "site_intake",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/build_catalog.py",
+      "source_location": "L17",
       "weight": 1.0
     },
     {
@@ -1159,7 +1325,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "scripts/build_catalog.py",
-      "source_location": "L15",
+      "source_location": "L18",
       "weight": 1.0
     },
     {
@@ -1168,7 +1334,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "scripts/build_catalog.py",
-      "source_location": "L18",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -1178,7 +1344,35 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "scripts/build_catalog.py",
-      "source_location": "L18",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_build_catalog",
+      "target": "scripts_build_catalog_rendered_submission_config",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/build_catalog.py",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_build_catalog",
+      "target": "scripts_build_catalog_build_download_bundles",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/build_catalog.py",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_build_catalog_build_download_bundles",
+      "target": "scripts_build_catalog_py_path",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/build_catalog.py",
+      "source_location": "L29",
       "weight": 1.0
     },
     {
@@ -1187,7 +1381,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "scripts/build_catalog.py",
-      "source_location": "L22",
+      "source_location": "L44",
       "weight": 1.0
     },
     {
@@ -1197,291 +1391,484 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "scripts/build_catalog.py",
-      "source_location": "L30",
+      "source_location": "L53",
       "weight": 1.0
     },
     {
-      "source": "scripts_run_skillspector",
+      "source": "scripts_build_catalog_main",
+      "target": "scripts_build_catalog_rendered_submission_config",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/build_catalog.py",
+      "source_location": "L54",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_build_catalog_main",
+      "target": "scripts_build_catalog_build_download_bundles",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/build_catalog.py",
+      "source_location": "L78",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_publish_site",
       "target": "argparse",
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "scripts/run_skillspector.py",
+      "source_file": "scripts/publish_site.py",
       "source_location": "L6",
       "weight": 1.0
     },
     {
-      "source": "scripts_run_skillspector",
+      "source": "scripts_publish_site",
+      "target": "hashlib",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/publish_site.py",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_publish_site",
       "target": "json",
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "scripts/run_skillspector.py",
-      "source_location": "L7",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_run_skillspector",
-      "target": "subprocess",
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "scripts/run_skillspector.py",
+      "source_file": "scripts/publish_site.py",
       "source_location": "L8",
       "weight": 1.0
     },
     {
-      "source": "scripts_run_skillspector",
-      "target": "sys",
+      "source": "scripts_publish_site",
+      "target": "mimetypes",
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "scripts/run_skillspector.py",
+      "source_file": "scripts/publish_site.py",
       "source_location": "L9",
       "weight": 1.0
     },
     {
-      "source": "scripts_run_skillspector",
-      "target": "pathlib",
-      "relation": "imports_from",
+      "source": "scripts_publish_site",
+      "target": "os",
+      "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "scripts/run_skillspector.py",
+      "source_file": "scripts/publish_site.py",
       "source_location": "L10",
       "weight": 1.0
     },
     {
-      "source": "scripts_run_skillspector",
-      "target": "validate_skills",
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "scripts/run_skillspector.py",
-      "source_location": "L16",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_run_skillspector",
-      "target": "scripts_run_skillspector_changed_skill_directories",
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scripts/run_skillspector.py",
-      "source_location": "L19",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_run_skillspector_changed_skill_directories",
-      "target": "scripts_run_skillspector_py_path",
-      "relation": "references",
-      "context": "parameter_type",
-      "confidence": "EXTRACTED",
-      "source_file": "scripts/run_skillspector.py",
-      "source_location": "L19",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_run_skillspector_changed_skill_directories",
-      "target": "scripts_run_skillspector_py_path",
-      "relation": "references",
-      "context": "generic_arg",
-      "confidence": "EXTRACTED",
-      "source_file": "scripts/run_skillspector.py",
-      "source_location": "L19",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_run_skillspector",
-      "target": "scripts_run_skillspector_scan",
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scripts/run_skillspector.py",
-      "source_location": "L35",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_run_skillspector_scan",
-      "target": "scripts_run_skillspector_py_path",
-      "relation": "references",
-      "context": "parameter_type",
-      "confidence": "EXTRACTED",
-      "source_file": "scripts/run_skillspector.py",
-      "source_location": "L35",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_run_skillspector_scan",
-      "target": "scripts_run_skillspector_py_path",
-      "relation": "references",
-      "context": "parameter_type",
-      "confidence": "EXTRACTED",
-      "source_file": "scripts/run_skillspector.py",
-      "source_location": "L35",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_run_skillspector_scan",
-      "target": "scripts_run_skillspector_py_path",
-      "relation": "references",
-      "context": "parameter_type",
-      "confidence": "EXTRACTED",
-      "source_file": "scripts/run_skillspector.py",
-      "source_location": "L35",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_run_skillspector",
-      "target": "scripts_run_skillspector_main",
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scripts/run_skillspector.py",
-      "source_location": "L63",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_run_skillspector_changed_skill_directories",
-      "target": "scripts_run_skillspector_py_path",
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "scripts/run_skillspector.py",
-      "source_location": "L30",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_run_skillspector_main",
-      "target": "scripts_run_skillspector_changed_skill_directories",
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "scripts/run_skillspector.py",
-      "source_location": "L74",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_run_skillspector_main",
-      "target": "scripts_run_skillspector_scan",
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "scripts/run_skillspector.py",
-      "source_location": "L86",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_validate_pr_scope",
-      "target": "argparse",
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "scripts/validate_pr_scope.py",
-      "source_location": "L6",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_validate_pr_scope",
-      "target": "re",
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "scripts/validate_pr_scope.py",
-      "source_location": "L7",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_validate_pr_scope",
-      "target": "subprocess",
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "scripts/validate_pr_scope.py",
-      "source_location": "L8",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_validate_pr_scope",
+      "source": "scripts_publish_site",
       "target": "sys",
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "scripts/validate_pr_scope.py",
-      "source_location": "L9",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_validate_pr_scope",
-      "target": "pathlib",
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "scripts/validate_pr_scope.py",
-      "source_location": "L10",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_validate_pr_scope",
-      "target": "pathlib",
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "scripts/validate_pr_scope.py",
+      "source_file": "scripts/publish_site.py",
       "source_location": "L11",
       "weight": 1.0
     },
     {
-      "source": "scripts_validate_pr_scope",
-      "target": "scripts_validate_pr_scope_changed_paths",
+      "source": "scripts_publish_site",
+      "target": "urllib_error",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/publish_site.py",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_publish_site",
+      "target": "urllib_request",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/publish_site.py",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_publish_site",
+      "target": "pathlib",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/publish_site.py",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_publish_site",
+      "target": "scripts_publish_site_content_type",
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "scripts/validate_pr_scope.py",
+      "source_file": "scripts/publish_site.py",
       "source_location": "L17",
       "weight": 1.0
     },
     {
-      "source": "scripts_validate_pr_scope_changed_paths",
-      "target": "scripts_validate_pr_scope_py_path",
+      "source": "scripts_publish_site_content_type",
+      "target": "scripts_publish_site_py_path",
       "relation": "references",
       "context": "parameter_type",
       "confidence": "EXTRACTED",
-      "source_file": "scripts/validate_pr_scope.py",
+      "source_file": "scripts/publish_site.py",
       "source_location": "L17",
       "weight": 1.0
     },
     {
-      "source": "scripts_validate_pr_scope",
-      "target": "scripts_validate_pr_scope_scope_errors",
+      "source": "scripts_publish_site",
+      "target": "scripts_publish_site_file_manifest",
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "scripts/validate_pr_scope.py",
-      "source_location": "L28",
+      "source_file": "scripts/publish_site.py",
+      "source_location": "L31",
       "weight": 1.0
     },
     {
-      "source": "scripts_validate_pr_scope",
-      "target": "scripts_validate_pr_scope_main",
-      "relation": "contains",
+      "source": "scripts_publish_site_file_manifest",
+      "target": "scripts_publish_site_py_path",
+      "relation": "references",
+      "context": "parameter_type",
       "confidence": "EXTRACTED",
-      "source_file": "scripts/validate_pr_scope.py",
-      "source_location": "L55",
+      "source_file": "scripts/publish_site.py",
+      "source_location": "L31",
       "weight": 1.0
     },
     {
-      "source": "scripts_validate_pr_scope_main",
-      "target": "scripts_validate_pr_scope_scope_errors",
-      "relation": "calls",
-      "context": "call",
+      "source": "scripts_publish_site",
+      "target": "scripts_publish_site_request_json",
+      "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "scripts/validate_pr_scope.py",
+      "source_file": "scripts/publish_site.py",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_publish_site",
+      "target": "scripts_publish_site_upload",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/publish_site.py",
       "source_location": "L62",
       "weight": 1.0
     },
     {
-      "source": "scripts_validate_pr_scope_main",
-      "target": "scripts_validate_pr_scope_changed_paths",
+      "source": "scripts_publish_site",
+      "target": "scripts_publish_site_publish_directory",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/publish_site.py",
+      "source_location": "L68",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_publish_site_publish_directory",
+      "target": "scripts_publish_site_py_path",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/publish_site.py",
+      "source_location": "L68",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_publish_site",
+      "target": "scripts_publish_site_main",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/publish_site.py",
+      "source_location": "L100",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_publish_site_file_manifest",
+      "target": "scripts_publish_site_content_type",
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
-      "source_file": "scripts/validate_pr_scope.py",
-      "source_location": "L62",
+      "source_file": "scripts/publish_site.py",
+      "source_location": "L44",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_publish_site_publish_directory",
+      "target": "scripts_publish_site_file_manifest",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/publish_site.py",
+      "source_location": "L69",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_publish_site_publish_directory",
+      "target": "scripts_publish_site_request_json",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/publish_site.py",
+      "source_location": "L80",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_publish_site_publish_directory",
+      "target": "scripts_publish_site_upload",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/publish_site.py",
+      "source_location": "L89",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_publish_site_main",
+      "target": "scripts_publish_site_publish_directory",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/publish_site.py",
+      "source_location": "L114",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_site_intake",
+      "target": "argparse",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_site_intake",
+      "target": "json",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_site_intake",
+      "target": "os",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_site_intake",
+      "target": "sys",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_site_intake",
+      "target": "tempfile",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_site_intake",
+      "target": "pathlib",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_site_intake",
+      "target": "validate_skills",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_site_intake",
+      "target": "scripts_site_intake_submission_config",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_site_intake",
+      "target": "scripts_site_intake_bounded_text",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_site_intake",
+      "target": "scripts_site_intake_normalize_public_field",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_site_intake",
+      "target": "scripts_site_intake_validate_submission",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L53",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_site_intake_validate_submission",
+      "target": "scripts_site_intake_py_path",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L53",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_site_intake",
+      "target": "scripts_site_intake_write_submission",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L94",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_site_intake_write_submission",
+      "target": "scripts_site_intake_py_path",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L94",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_site_intake",
+      "target": "scripts_site_intake_write_metadata",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L128",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_site_intake_write_metadata",
+      "target": "scripts_site_intake_py_path",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L128",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_site_intake",
+      "target": "scripts_site_intake_main",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L133",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_site_intake_validate_submission",
+      "target": "scripts_site_intake_bounded_text",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L66",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_site_intake_validate_submission",
+      "target": "scripts_site_intake_py_path",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L74",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_site_intake_write_submission",
+      "target": "scripts_site_intake_validate_submission",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L104",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_site_intake_write_submission",
+      "target": "scripts_site_intake_normalize_public_field",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L115",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_site_intake_main",
+      "target": "scripts_site_intake_submission_config",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L149",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_site_intake_main",
+      "target": "scripts_site_intake_write_submission",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L156",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_site_intake_main",
+      "target": "scripts_site_intake_write_metadata",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L172",
       "weight": 1.0
     },
     {
@@ -1683,7 +2070,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "scripts/validate_skills.py",
-      "source_location": "L185",
+      "source_location": "L187",
       "weight": 1.0
     },
     {
@@ -1693,7 +2080,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "scripts/validate_skills.py",
-      "source_location": "L185",
+      "source_location": "L187",
       "weight": 1.0
     },
     {
@@ -1702,7 +2089,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "scripts/validate_skills.py",
-      "source_location": "L189",
+      "source_location": "L191",
       "weight": 1.0
     },
     {
@@ -1712,7 +2099,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "scripts/validate_skills.py",
-      "source_location": "L189",
+      "source_location": "L191",
       "weight": 1.0
     },
     {
@@ -1721,7 +2108,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "scripts/validate_skills.py",
-      "source_location": "L204",
+      "source_location": "L206",
       "weight": 1.0
     },
     {
@@ -1781,7 +2168,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "scripts/validate_skills.py",
-      "source_location": "L186",
+      "source_location": "L188",
       "weight": 1.0
     },
     {
@@ -1791,7 +2178,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "scripts/validate_skills.py",
-      "source_location": "L186",
+      "source_location": "L188",
       "weight": 1.0
     },
     {
@@ -1801,7 +2188,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "scripts/validate_skills.py",
-      "source_location": "L192",
+      "source_location": "L194",
       "weight": 1.0
     },
     {
@@ -1811,7 +2198,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "scripts/validate_skills.py",
-      "source_location": "L197",
+      "source_location": "L199",
       "weight": 1.0
     },
     {
@@ -1821,7 +2208,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "scripts/validate_skills.py",
-      "source_location": "L213",
+      "source_location": "L215",
       "weight": 1.0
     },
     {
@@ -1831,7 +2218,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "scripts/validate_skills.py",
-      "source_location": "L214",
+      "source_location": "L216",
       "weight": 1.0
     },
     {
@@ -1841,7 +2228,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "scripts/validate_skills.py",
-      "source_location": "L218",
+      "source_location": "L220",
       "weight": 1.0
     },
     {
@@ -1851,6 +2238,87 @@
       "confidence": "EXTRACTED",
       "source_file": "scripts/validate_skills.py",
       "source_location": "L40",
+      "weight": 1.0
+    },
+    {
+      "source": "herenow_proxy",
+      "target": "herenow_proxy_proxies",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/.herenow/proxy.json",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "herenow_proxy_proxies",
+      "target": "herenow_proxy_proxies_api_submit_skill",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/.herenow/proxy.json",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "herenow_proxy_proxies_api_submit_skill",
+      "target": "herenow_proxy_api_submit_skill_upstream",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/.herenow/proxy.json",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "herenow_proxy_proxies_api_submit_skill",
+      "target": "herenow_proxy_api_submit_skill_method",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/.herenow/proxy.json",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "herenow_proxy_proxies_api_submit_skill",
+      "target": "herenow_proxy_api_submit_skill_ratelimit",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/.herenow/proxy.json",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "herenow_proxy_proxies_api_submit_skill",
+      "target": "herenow_proxy_api_submit_skill_headers",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/.herenow/proxy.json",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "herenow_proxy_api_submit_skill_headers",
+      "target": "herenow_proxy_headers_authorization",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/.herenow/proxy.json",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "herenow_proxy_api_submit_skill_headers",
+      "target": "herenow_proxy_headers_accept",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/.herenow/proxy.json",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "herenow_proxy_api_submit_skill_headers",
+      "target": "herenow_proxy_headers_x_github_api_version",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/.herenow/proxy.json",
+      "source_location": "L10",
       "weight": 1.0
     },
     {
@@ -1873,7 +2341,25 @@
     },
     {
       "source": "site_app",
-      "target": "site_app_setstate",
+      "target": "site_app_submissionstatus",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/app.js",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "site_app",
+      "target": "site_app_form",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/app.js",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "site_app",
+      "target": "site_app_skillfileinput",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "site/app.js",
@@ -1882,11 +2368,272 @@
     },
     {
       "source": "site_app",
+      "target": "site_app_marketplacefileinput",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/app.js",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "site_app",
+      "target": "site_app_publicnameinput",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/app.js",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "site_app",
+      "target": "site_app_publiccontactinput",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/app.js",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "site_app",
+      "target": "site_app_rightsinput",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/app.js",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "site_app",
+      "target": "site_app_boundaryinput",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/app.js",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "site_app",
+      "target": "site_app_submitbutton",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/app.js",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "site_app",
+      "target": "site_app_previewheading",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/app.js",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "site_app",
+      "target": "site_app_previewslug",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/app.js",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "site_app",
+      "target": "site_app_previewtitle",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/app.js",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "site_app",
+      "target": "site_app_previewcategory",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/app.js",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "site_app",
+      "target": "site_app_previewdetail",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/app.js",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "site_app",
+      "target": "site_app_feedbackcard",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/app.js",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "site_app",
+      "target": "site_app_feedbacktitle",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/app.js",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "site_app",
+      "target": "site_app_feedbackdetail",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/app.js",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "site_app",
+      "target": "site_app_local_hosts",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/app.js",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "site_app",
+      "target": "site_app_local_preview_response_codes",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/app.js",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "site_app",
+      "target": "site_app_setstate",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/app.js",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "site_app",
+      "target": "site_app_setfeedback",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/app.js",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "site_app",
+      "target": "site_app_clearfeedback",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/app.js",
+      "source_location": "L53",
+      "weight": 1.0
+    },
+    {
+      "source": "site_app",
+      "target": "site_app_setsubmissiontone",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/app.js",
+      "source_location": "L60",
+      "weight": 1.0
+    },
+    {
+      "source": "site_app",
+      "target": "site_app_byteslength",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/app.js",
+      "source_location": "L65",
+      "weight": 1.0
+    },
+    {
+      "source": "site_app",
+      "target": "site_app_normalizepublicfield",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/app.js",
+      "source_location": "L69",
+      "weight": 1.0
+    },
+    {
+      "source": "site_app",
+      "target": "site_app_parsefrontmatter",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/app.js",
+      "source_location": "L73",
+      "weight": 1.0
+    },
+    {
+      "source": "site_app",
+      "target": "site_app_parsemarketplace",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/app.js",
+      "source_location": "L105",
+      "weight": 1.0
+    },
+    {
+      "source": "site_app",
+      "target": "site_app_buildpreview",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/app.js",
+      "source_location": "L125",
+      "weight": 1.0
+    },
+    {
+      "source": "site_app",
+      "target": "site_app_updatepreview",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/app.js",
+      "source_location": "L182",
+      "weight": 1.0
+    },
+    {
+      "source": "site_app",
+      "target": "site_app_syncsubmitbutton",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/app.js",
+      "source_location": "L201",
+      "weight": 1.0
+    },
+    {
+      "source": "site_app",
+      "target": "site_app_readselectedfiles",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/app.js",
+      "source_location": "L210",
+      "weight": 1.0
+    },
+    {
+      "source": "site_app",
+      "target": "site_app_refreshsubmissionpreview",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/app.js",
+      "source_location": "L223",
+      "weight": 1.0
+    },
+    {
+      "source": "site_app",
       "target": "site_app_createskillcard",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "site/app.js",
-      "source_location": "L30",
+      "source_location": "L252",
       "weight": 1.0
     },
     {
@@ -1895,7 +2642,116 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "site/app.js",
-      "source_location": "L64",
+      "source_location": "L283",
+      "weight": 1.0
+    },
+    {
+      "source": "site_app",
+      "target": "site_app_loadsubmissionconfig",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/app.js",
+      "source_location": "L314",
+      "weight": 1.0
+    },
+    {
+      "source": "site_app_buildpreview",
+      "target": "site_app_byteslength",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "site/app.js",
+      "source_location": "L130",
+      "weight": 1.0
+    },
+    {
+      "source": "site_app_buildpreview",
+      "target": "site_app_parsefrontmatter",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "site/app.js",
+      "source_location": "L141",
+      "weight": 1.0
+    },
+    {
+      "source": "site_app_buildpreview",
+      "target": "site_app_parsemarketplace",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "site/app.js",
+      "source_location": "L163",
+      "weight": 1.0
+    },
+    {
+      "source": "site_app_refreshsubmissionpreview",
+      "target": "site_app_clearfeedback",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "site/app.js",
+      "source_location": "L224",
+      "weight": 1.0
+    },
+    {
+      "source": "site_app_refreshsubmissionpreview",
+      "target": "site_app_setsubmissiontone",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "site/app.js",
+      "source_location": "L227",
+      "weight": 1.0
+    },
+    {
+      "source": "site_app_refreshsubmissionpreview",
+      "target": "site_app_syncsubmitbutton",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "site/app.js",
+      "source_location": "L228",
+      "weight": 1.0
+    },
+    {
+      "source": "site_app_refreshsubmissionpreview",
+      "target": "site_app_readselectedfiles",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "site/app.js",
+      "source_location": "L232",
+      "weight": 1.0
+    },
+    {
+      "source": "site_app_refreshsubmissionpreview",
+      "target": "site_app_updatepreview",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "site/app.js",
+      "source_location": "L234",
+      "weight": 1.0
+    },
+    {
+      "source": "site_app_refreshsubmissionpreview",
+      "target": "site_app_buildpreview",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "site/app.js",
+      "source_location": "L241",
+      "weight": 1.0
+    },
+    {
+      "source": "site_app_refreshsubmissionpreview",
+      "target": "site_app_setfeedback",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "site/app.js",
+      "source_location": "L246",
       "weight": 1.0
     },
     {
@@ -1905,165 +2761,668 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "site/app.js",
-      "source_location": "L76",
+      "source_location": "L295",
       "weight": 1.0
     },
     {
-      "source": "esg_materiality_brief_marketplace",
-      "target": "esg_materiality_brief_marketplace_title",
+      "source": "site_app_loadsubmissionconfig",
+      "target": "site_app_setsubmissiontone",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "site/app.js",
+      "source_location": "L320",
+      "weight": 1.0
+    },
+    {
+      "source": "site_app_loadsubmissionconfig",
+      "target": "site_app_setfeedback",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "site/app.js",
+      "source_location": "L325",
+      "weight": 1.0
+    },
+    {
+      "source": "site_app_loadsubmissionconfig",
+      "target": "site_app_syncsubmitbutton",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "site/app.js",
+      "source_location": "L332",
+      "weight": 1.0
+    },
+    {
+      "source": "site_submission_config",
+      "target": "site_submission_config_dispatchpath",
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "skills/esg-materiality-brief/marketplace.json",
+      "source_file": "site/submission-config.json",
       "source_location": "L2",
       "weight": 1.0
     },
     {
-      "source": "esg_materiality_brief_marketplace",
-      "target": "esg_materiality_brief_marketplace_category",
+      "source": "site_submission_config",
+      "target": "site_submission_config_allowedcategories",
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "skills/esg-materiality-brief/marketplace.json",
+      "source_file": "site/submission-config.json",
       "source_location": "L3",
       "weight": 1.0
     },
     {
-      "source": "ghg_inventory_evidence_pack_marketplace",
-      "target": "ghg_inventory_evidence_pack_marketplace_title",
-      "relation": "contains",
+      "source": "site_submission_config_allowedcategories",
+      "target": "ref_data",
+      "relation": "extends",
       "confidence": "EXTRACTED",
-      "source_file": "skills/ghg-inventory-evidence-pack/marketplace.json",
-      "source_location": "L2",
-      "weight": 1.0
-    },
-    {
-      "source": "ghg_inventory_evidence_pack_marketplace",
-      "target": "ghg_inventory_evidence_pack_marketplace_category",
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "skills/ghg-inventory-evidence-pack/marketplace.json",
+      "source_file": "site/submission-config.json",
       "source_location": "L3",
-      "weight": 1.0
+      "weight": 1.0,
+      "context": "import"
     },
     {
-      "source": "skill_template_marketplace",
-      "target": "skill_template_marketplace_title",
-      "relation": "contains",
+      "source": "site_submission_config_allowedcategories",
+      "target": "ref_disclosure",
+      "relation": "extends",
       "confidence": "EXTRACTED",
-      "source_file": "templates/skill-template/marketplace.json",
-      "source_location": "L2",
-      "weight": 1.0
-    },
-    {
-      "source": "skill_template_marketplace",
-      "target": "skill_template_marketplace_category",
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "templates/skill-template/marketplace.json",
+      "source_file": "site/submission-config.json",
       "source_location": "L3",
-      "weight": 1.0
+      "weight": 1.0,
+      "context": "import"
     },
     {
-      "source": "tests_test_pr_scope",
-      "target": "subprocess",
-      "relation": "imports",
-      "context": "import",
+      "source": "site_submission_config_allowedcategories",
+      "target": "ref_operations",
+      "relation": "extends",
       "confidence": "EXTRACTED",
-      "source_file": "tests/test_pr_scope.py",
+      "source_file": "site/submission-config.json",
       "source_location": "L3",
-      "weight": 1.0
+      "weight": 1.0,
+      "context": "import"
     },
     {
-      "source": "tests_test_pr_scope",
-      "target": "tempfile",
-      "relation": "imports",
-      "context": "import",
+      "source": "site_submission_config_allowedcategories",
+      "target": "ref_reporting",
+      "relation": "extends",
       "confidence": "EXTRACTED",
-      "source_file": "tests/test_pr_scope.py",
-      "source_location": "L4",
-      "weight": 1.0
+      "source_file": "site/submission-config.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "context": "import"
     },
     {
-      "source": "tests_test_pr_scope",
-      "target": "unittest",
-      "relation": "imports",
-      "context": "import",
+      "source": "site_submission_config_allowedcategories",
+      "target": "ref_risk",
+      "relation": "extends",
       "confidence": "EXTRACTED",
-      "source_file": "tests/test_pr_scope.py",
-      "source_location": "L5",
-      "weight": 1.0
+      "source_file": "site/submission-config.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "context": "import"
     },
     {
-      "source": "tests_test_pr_scope",
-      "target": "pathlib",
-      "relation": "imports_from",
-      "context": "import",
+      "source": "site_submission_config_allowedcategories",
+      "target": "ref_strategy",
+      "relation": "extends",
       "confidence": "EXTRACTED",
-      "source_file": "tests/test_pr_scope.py",
-      "source_location": "L6",
-      "weight": 1.0
+      "source_file": "site/submission-config.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "context": "import"
     },
     {
-      "source": "tests_test_pr_scope",
-      "target": "scripts_validate_pr_scope",
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_pr_scope.py",
-      "source_location": "L8",
-      "weight": 1.0
-    },
-    {
-      "source": "tests_test_pr_scope",
-      "target": "tests_test_pr_scope_pullrequestscopetests",
+      "source": "site_submission_config",
+      "target": "site_submission_config_maxskillfilebytes",
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "tests/test_pr_scope.py",
+      "source_file": "site/submission-config.json",
       "source_location": "L11",
       "weight": 1.0
     },
     {
-      "source": "tests_test_pr_scope_pullrequestscopetests",
-      "target": "tests_test_pr_scope_pullrequestscopetests_test_owner_can_change_platform_files",
-      "relation": "method",
+      "source": "site_submission_config",
+      "target": "site_submission_config_maxmarketplacefilebytes",
+      "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "tests/test_pr_scope.py",
+      "source_file": "site/submission-config.json",
       "source_location": "L12",
       "weight": 1.0
     },
     {
-      "source": "tests_test_pr_scope_pullrequestscopetests",
-      "target": "tests_test_pr_scope_pullrequestscopetests_test_external_contributor_can_submit_one_skill",
-      "relation": "method",
+      "source": "site_submission_config",
+      "target": "site_submission_config_maxpublicnamechars",
+      "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "tests/test_pr_scope.py",
+      "source_file": "site/submission-config.json",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "site_submission_config",
+      "target": "site_submission_config_maxpubliccontactchars",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/submission-config.json",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "site_submission_config",
+      "target": "site_submission_config_mindescriptionchars",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "site/submission-config.json",
       "source_location": "L15",
       "weight": 1.0
     },
     {
-      "source": "tests_test_pr_scope_pullrequestscopetests",
-      "target": "tests_test_pr_scope_pullrequestscopetests_test_external_platform_change_is_rejected",
-      "relation": "method",
+      "source": "site_submission_config",
+      "target": "site_submission_config_maxdescriptionchars",
+      "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "tests/test_pr_scope.py",
-      "source_location": "L23",
+      "source_file": "site/submission-config.json",
+      "source_location": "L16",
       "weight": 1.0
     },
     {
-      "source": "tests_test_pr_scope_pullrequestscopetests",
-      "target": "tests_test_pr_scope_pullrequestscopetests_test_one_skill_per_pull_request",
-      "relation": "method",
+      "source": "site_submission_config",
+      "target": "site_submission_config_minbodychars",
+      "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "tests/test_pr_scope.py",
-      "source_location": "L27",
+      "source_file": "site/submission-config.json",
+      "source_location": "L17",
       "weight": 1.0
     },
     {
-      "source": "tests_test_pr_scope_pullrequestscopetests",
-      "target": "tests_test_pr_scope_pullrequestscopetests_test_deleted_platform_file_is_rejected",
+      "source": "tests_test_build_catalog",
+      "target": "json",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_build_catalog.py",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_build_catalog",
+      "target": "tempfile",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_build_catalog.py",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_build_catalog",
+      "target": "unittest",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_build_catalog.py",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_build_catalog",
+      "target": "zipfile",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_build_catalog.py",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_build_catalog",
+      "target": "pathlib",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_build_catalog.py",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_build_catalog",
+      "target": "scripts_build_catalog",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_build_catalog.py",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_build_catalog",
+      "target": "tests_test_build_catalog_buildcataloguetests",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_build_catalog.py",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_build_catalog_buildcataloguetests",
+      "target": "tests_test_build_catalog_buildcataloguetests_make_root",
       "relation": "method",
       "confidence": "EXTRACTED",
-      "source_file": "tests/test_pr_scope.py",
-      "source_location": "L34",
+      "source_file": "tests/test_build_catalog.py",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_build_catalog_buildcataloguetests_make_root",
+      "target": "tests_test_build_catalog_py_path",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_build_catalog.py",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_build_catalog_buildcataloguetests",
+      "target": "tests_test_build_catalog_buildcataloguetests_add_skill",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_build_catalog.py",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_build_catalog_buildcataloguetests_add_skill",
+      "target": "tests_test_build_catalog_py_path",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_build_catalog.py",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_build_catalog_buildcataloguetests_add_skill",
+      "target": "tests_test_build_catalog_py_path",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_build_catalog.py",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_build_catalog_buildcataloguetests",
+      "target": "tests_test_build_catalog_buildcataloguetests_test_submission_config_exposes_public_limits",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_build_catalog.py",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_build_catalog_buildcataloguetests",
+      "target": "tests_test_build_catalog_buildcataloguetests_test_download_bundle_contains_reviewed_bundle",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_build_catalog.py",
+      "source_location": "L45",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_build_catalog_buildcataloguetests_make_root",
+      "target": "tests_test_build_catalog_py_path",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_build_catalog.py",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_build_catalog_buildcataloguetests_test_download_bundle_contains_reviewed_bundle",
+      "target": "tests_test_build_catalog_buildcataloguetests_make_root",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_build_catalog.py",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_build_catalog_buildcataloguetests_test_download_bundle_contains_reviewed_bundle",
+      "target": "tests_test_build_catalog_buildcataloguetests_add_skill",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_build_catalog.py",
+      "source_location": "L47",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_site_intake",
+      "target": "json",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_site_intake.py",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_site_intake",
+      "target": "tempfile",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_site_intake.py",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_site_intake",
+      "target": "unittest",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_site_intake.py",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_site_intake",
+      "target": "pathlib",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_site_intake.py",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_site_intake",
+      "target": "scripts_site_intake",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_site_intake.py",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_site_intake",
+      "target": "tests_test_site_intake_siteintaketests",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_site_intake.py",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_site_intake_siteintaketests",
+      "target": "tests_test_site_intake_siteintaketests_make_root",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_site_intake.py",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_site_intake_siteintaketests_make_root",
+      "target": "tests_test_site_intake_py_path",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_site_intake.py",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_site_intake_siteintaketests",
+      "target": "tests_test_site_intake_siteintaketests_test_valid_site_submission_passes",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_site_intake.py",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_site_intake_siteintaketests",
+      "target": "tests_test_site_intake_siteintaketests_test_existing_slug_is_rejected",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_site_intake.py",
+      "source_location": "L44",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_site_intake_siteintaketests",
+      "target": "tests_test_site_intake_siteintaketests_test_site_specific_size_limit_is_enforced",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_site_intake.py",
+      "source_location": "L60",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_site_intake_siteintaketests",
+      "target": "tests_test_site_intake_siteintaketests_test_missing_attestation_is_rejected",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_site_intake.py",
+      "source_location": "L71",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_site_intake_siteintaketests_make_root",
+      "target": "tests_test_site_intake_py_path",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_site_intake.py",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_site_intake_siteintaketests_test_valid_site_submission_passes",
+      "target": "tests_test_site_intake_siteintaketests_make_root",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_site_intake.py",
+      "source_location": "L37",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_site_intake_siteintaketests_test_existing_slug_is_rejected",
+      "target": "tests_test_site_intake_siteintaketests_make_root",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_site_intake.py",
+      "source_location": "L45",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_site_intake_siteintaketests_test_site_specific_size_limit_is_enforced",
+      "target": "tests_test_site_intake_siteintaketests_make_root",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_site_intake.py",
+      "source_location": "L66",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_site_intake_siteintaketests_test_missing_attestation_is_rejected",
+      "target": "tests_test_site_intake_siteintaketests_make_root",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_site_intake.py",
+      "source_location": "L76",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_site_pages",
+      "target": "re",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_site_pages.py",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_site_pages",
+      "target": "unittest",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_site_pages.py",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_site_pages",
+      "target": "html_parser",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_site_pages.py",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_site_pages",
+      "target": "pathlib",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_site_pages.py",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_site_pages",
+      "target": "tests_test_site_pages_idandlinkparser",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_site_pages.py",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_site_pages_idandlinkparser",
+      "target": "htmlparser",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_site_pages.py",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_site_pages_idandlinkparser",
+      "target": "tests_test_site_pages_idandlinkparser_init",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_site_pages.py",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_site_pages_idandlinkparser",
+      "target": "tests_test_site_pages_idandlinkparser_handle_starttag",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_site_pages.py",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_site_pages",
+      "target": "tests_test_site_pages_parse_page",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_site_pages.py",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_site_pages_parse_page",
+      "target": "tests_test_site_pages_idandlinkparser",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_site_pages.py",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_site_pages",
+      "target": "tests_test_site_pages_sitepagetests",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_site_pages.py",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_site_pages_sitepagetests",
+      "target": "tests_test_site_pages_sitepagetests_test_catalogue_and_submission_are_separate_pages",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_site_pages.py",
+      "source_location": "L37",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_site_pages_sitepagetests",
+      "target": "tests_test_site_pages_sitepagetests_test_both_pages_load_the_shared_assets",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_site_pages.py",
+      "source_location": "L49",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_site_pages_sitepagetests",
+      "target": "tests_test_site_pages_sitepagetests_test_public_page_does_not_lock_document_scrolling",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_site_pages.py",
+      "source_location": "L57",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_site_pages_parse_page",
+      "target": "tests_test_site_pages_idandlinkparser",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_site_pages.py",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_site_pages_sitepagetests_test_catalogue_and_submission_are_separate_pages",
+      "target": "tests_test_site_pages_parse_page",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_site_pages.py",
+      "source_location": "L38",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_site_pages_sitepagetests_test_both_pages_load_the_shared_assets",
+      "target": "tests_test_site_pages_parse_page",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_site_pages.py",
+      "source_location": "L51",
       "weight": 1.0
     },
     {
@@ -2228,6 +3587,15 @@
       "weight": 1.0
     },
     {
+      "source": "tests_test_validate_skills_skillpolicytests",
+      "target": "tests_test_validate_skills_skillpolicytests_test_marketplace_title_must_be_single_line",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_validate_skills.py",
+      "source_location": "L87",
+      "weight": 1.0
+    },
+    {
       "source": "tests_test_validate_skills_skillpolicytests_make_root",
       "target": "tests_test_validate_skills_py_path",
       "relation": "calls",
@@ -2358,22 +3726,90 @@
       "weight": 1.0
     },
     {
-      "source": "tests_test_pr_scope",
-      "target": "scripts_validate_pr_scope_changed_paths",
-      "relation": "imports",
-      "context": "import",
+      "source": "tests_test_validate_skills_skillpolicytests_test_marketplace_title_must_be_single_line",
+      "target": "tests_test_validate_skills_skillpolicytests_make_root",
+      "relation": "calls",
+      "context": "call",
       "confidence": "EXTRACTED",
-      "source_file": "tests/test_pr_scope.py",
-      "source_location": "L8",
+      "source_file": "tests/test_validate_skills.py",
+      "source_location": "L88",
       "weight": 1.0
     },
     {
-      "source": "tests_test_pr_scope",
-      "target": "scripts_validate_pr_scope_scope_errors",
+      "source": "tests_test_validate_skills_skillpolicytests_test_marketplace_title_must_be_single_line",
+      "target": "tests_test_validate_skills_skillpolicytests_add_skill",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_validate_skills.py",
+      "source_location": "L89",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_workflow_config",
+      "target": "unittest",
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "tests/test_pr_scope.py",
+      "source_file": "tests/test_workflow_config.py",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_workflow_config",
+      "target": "pathlib",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_workflow_config.py",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_workflow_config",
+      "target": "tests_test_workflow_config_skillreviewworkflowtests",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_workflow_config.py",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_workflow_config_skillreviewworkflowtests",
+      "target": "tests_test_workflow_config_skillreviewworkflowtests_test_ready_for_review_is_not_a_trigger",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_workflow_config.py",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_build_catalog",
+      "target": "scripts_build_catalog_build_download_bundles",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_build_catalog.py",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_build_catalog",
+      "target": "scripts_build_catalog_rendered_submission_config",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_build_catalog.py",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_site_intake",
+      "target": "scripts_site_intake_validate_submission",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_site_intake.py",
       "source_location": "L8",
       "weight": 1.0
     },
@@ -2423,7 +3859,16 @@
       "relation": "uses",
       "confidence": "INFERRED",
       "source_file": "scripts/build_catalog.py",
-      "source_location": "L15",
+      "source_location": "L18",
+      "weight": 0.8
+    },
+    {
+      "source": "scripts_site_intake_py_path",
+      "target": "scripts_validate_skills_policyerror",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L17",
       "weight": 0.8
     },
     {
@@ -2452,84 +3897,161 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "scripts/build_catalog.py",
-      "source_location": "L19",
+      "source_location": "L22",
       "weight": 1.0
     },
     {
-      "source": "scripts_run_skillspector_main",
+      "source": "scripts_build_catalog_rendered_submission_config",
+      "target": "scripts_site_intake_submission_config",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "scripts/build_catalog.py",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_build_catalog_build_download_bundles",
       "target": "scripts_validate_skills_skill_directories",
       "relation": "calls",
       "context": "call",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
-      "source_file": "scripts/run_skillspector.py",
-      "source_location": "L74",
+      "source_file": "scripts/build_catalog.py",
+      "source_location": "L35",
       "weight": 1.0
     },
     {
-      "source": "tests_test_pr_scope_pullrequestscopetests_test_owner_can_change_platform_files",
-      "target": "scripts_validate_pr_scope_scope_errors",
+      "source": "scripts_publish_site_publish_directory",
+      "target": "valueerror",
       "relation": "calls",
       "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "tests/test_pr_scope.py",
-      "source_location": "L13",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "scripts/publish_site.py",
+      "source_location": "L71",
       "weight": 1.0
     },
     {
-      "source": "tests_test_pr_scope_pullrequestscopetests_test_external_contributor_can_submit_one_skill",
-      "target": "scripts_validate_pr_scope_scope_errors",
+      "source": "scripts_site_intake_bounded_text",
+      "target": "scripts_validate_skills_policyerror",
       "relation": "calls",
       "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "tests/test_pr_scope.py",
-      "source_location": "L21",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L42",
       "weight": 1.0
     },
     {
-      "source": "tests_test_pr_scope_pullrequestscopetests_test_external_platform_change_is_rejected",
-      "target": "scripts_validate_pr_scope_scope_errors",
+      "source": "scripts_site_intake_normalize_public_field",
+      "target": "scripts_validate_skills_policyerror",
       "relation": "calls",
       "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "tests/test_pr_scope.py",
-      "source_location": "L24",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L49",
       "weight": 1.0
     },
     {
-      "source": "tests_test_pr_scope_pullrequestscopetests_test_one_skill_per_pull_request",
-      "target": "scripts_validate_pr_scope_scope_errors",
+      "source": "scripts_site_intake_validate_submission",
+      "target": "scripts_validate_skills_policyerror",
       "relation": "calls",
       "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "tests/test_pr_scope.py",
-      "source_location": "L28",
-      "weight": 1.0
-    },
-    {
-      "source": "tests_test_pr_scope_pullrequestscopetests_test_deleted_platform_file_is_rejected",
-      "target": "scripts_validate_pr_scope_changed_paths",
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "tests/test_pr_scope.py",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "scripts/site_intake.py",
       "source_location": "L62",
       "weight": 1.0
     },
     {
-      "source": "tests_test_pr_scope_pullrequestscopetests_test_deleted_platform_file_is_rejected",
-      "target": "scripts_validate_pr_scope_scope_errors",
+      "source": "scripts_site_intake_validate_submission",
+      "target": "scripts_validate_skills_parse_frontmatter",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L77",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_site_intake_validate_submission",
+      "target": "scripts_validate_skills_validate_skill",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "scripts/site_intake.py",
+      "source_location": "L85",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_build_catalog_buildcataloguetests_test_submission_config_exposes_public_limits",
+      "target": "scripts_build_catalog_rendered_submission_config",
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "tests/test_pr_scope.py",
-      "source_location": "L64",
+      "source_file": "tests/test_build_catalog.py",
+      "source_location": "L40",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_build_catalog_buildcataloguetests_test_download_bundle_contains_reviewed_bundle",
+      "target": "scripts_build_catalog_build_download_bundles",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_build_catalog.py",
+      "source_location": "L48",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_site_intake_siteintaketests_test_valid_site_submission_passes",
+      "target": "scripts_site_intake_validate_submission",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_site_intake.py",
+      "source_location": "L34",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_site_intake_siteintaketests_test_existing_slug_is_rejected",
+      "target": "scripts_site_intake_validate_submission",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_site_intake.py",
+      "source_location": "L52",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_site_intake_siteintaketests_test_site_specific_size_limit_is_enforced",
+      "target": "scripts_site_intake_validate_submission",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_site_intake.py",
+      "source_location": "L63",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_test_site_intake_siteintaketests_test_missing_attestation_is_rejected",
+      "target": "scripts_site_intake_validate_submission",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_site_intake.py",
+      "source_location": "L73",
       "weight": 1.0
     },
     {
@@ -2610,228 +4132,19 @@
       "weight": 1.0
     },
     {
-      "source": "config_issue_template",
-      "target": "contributing_workflow",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 0.9,
-      "source_file": ".github/ISSUE_TEMPLATE/config.yml",
-      "source_location": null,
-      "weight": 0.9
-    },
-    {
-      "source": "skillproposal_template",
-      "target": "contributing_workflow",
-      "relation": "references",
-      "confidence": "INFERRED",
-      "confidence_score": 0.78,
-      "source_file": ".github/ISSUE_TEMPLATE/skill-proposal.yml",
-      "source_location": null,
-      "weight": 0.78
-    },
-    {
-      "source": "pull_request_template_skill",
-      "target": "skillreview_workflow",
-      "relation": "references",
-      "confidence": "INFERRED",
-      "confidence_score": 0.75,
-      "source_file": ".github/pull_request_template.md",
-      "source_location": null,
-      "weight": 0.75
-    },
-    {
-      "source": "pull_request_template_skill",
-      "target": "security_nvidia_skillspector",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 0.9,
-      "source_file": ".github/pull_request_template.md",
-      "source_location": null,
-      "weight": 0.9
-    },
-    {
-      "source": "skillreview_workflow",
-      "target": "skillreview_policy_job",
+      "source": "tests_test_validate_skills_skillpolicytests_test_marketplace_title_must_be_single_line",
+      "target": "scripts_validate_skills_validate_skill",
       "relation": "calls",
+      "context": "call",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": ".github/workflows/skill-review.yml",
-      "source_location": null,
+      "source_file": "tests/test_validate_skills.py",
+      "source_location": "L95",
       "weight": 1.0
     },
     {
-      "source": "skillreview_workflow",
-      "target": "skillreview_skillspector_job",
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".github/workflows/skill-review.yml",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "skillreview_skillspector_job",
-      "target": "skillreview_policy_job",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".github/workflows/skill-review.yml",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "skillreview_policy_job",
-      "target": "scripts_validate_pr_scope",
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".github/workflows/skill-review.yml",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "skillreview_policy_job",
-      "target": "scripts_validate_skills",
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".github/workflows/skill-review.yml",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "skillreview_policy_job",
-      "target": "scripts_build_catalog",
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".github/workflows/skill-review.yml",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "skillreview_skillspector_job",
-      "target": "scripts_run_skillspector",
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".github/workflows/skill-review.yml",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_run_skillspector",
-      "target": "security_nvidia_skillspector",
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "confidence_score": 0.95,
-      "source_file": ".github/workflows/skill-review.yml",
-      "source_location": null,
-      "weight": 0.95
-    },
-    {
-      "source": "agents_codex",
-      "target": "agents_esg_skills_marketplace",
-      "relation": "implements",
-      "confidence": "EXTRACTED",
-      "confidence_score": 0.95,
-      "source_file": "AGENTS.md",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "agents_claude",
-      "target": "agents_esg_skills_marketplace",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 0.95,
-      "source_file": "AGENTS.md",
-      "source_location": null,
-      "weight": 0.9
-    },
-    {
-      "source": "agents_esg_skills_marketplace",
-      "target": "agents_github",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "AGENTS.md",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "agents_esg_skills_marketplace",
-      "target": "agents_linear",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "AGENTS.md",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "agents_esg_skills_marketplace",
-      "target": "agents_herenow",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "AGENTS.md",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "agents_esg_skills_marketplace",
-      "target": "agents_aster",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "AGENTS.md",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "agents_esg_skills_marketplace",
-      "target": "agents_graphify",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "AGENTS.md",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "agents_codex",
-      "target": "agents_claude",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 0.95,
-      "source_file": "AGENTS.md",
-      "source_location": null,
-      "weight": 0.9
-    },
-    {
-      "source": "claude_critic_role",
-      "target": "plan_completion",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 0.95,
-      "source_file": "CLAUDE.md",
-      "source_location": null,
-      "weight": 0.9
-    },
-    {
-      "source": "claude_critic_role",
-      "target": "planreviewlog_rounds",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 0.95,
-      "source_file": "CLAUDE.md",
-      "source_location": null,
-      "weight": 0.9
-    },
-    {
-      "source": "contributing_workflow",
-      "target": "skill_template",
+      "source": "contributing_guide",
+      "target": "buildcatalog_script",
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -2840,9 +4153,9 @@
       "weight": 1.0
     },
     {
-      "source": "contributing_workflow",
-      "target": "scripts_validate_skills",
-      "relation": "calls",
+      "source": "contributing_guide",
+      "target": "validateskills_script",
+      "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "CONTRIBUTING.md",
@@ -2850,9 +4163,9 @@
       "weight": 1.0
     },
     {
-      "source": "contributing_workflow",
-      "target": "scripts_build_catalog",
-      "relation": "calls",
+      "source": "contributing_guide",
+      "target": "skilltemplate_template",
+      "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "CONTRIBUTING.md",
@@ -2860,298 +4173,18 @@
       "weight": 1.0
     },
     {
-      "source": "memory_esg_skills_marketplace",
-      "target": "memory_herenow_platform",
+      "source": "contributing_guide",
+      "target": "indexhtml_page",
       "relation": "references",
       "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "MEMORY.md",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "memory_esg_skills_marketplace",
-      "target": "memory_github_repository",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "MEMORY.md",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "memory_esg_skills_marketplace",
-      "target": "memory_linear_project",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "MEMORY.md",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "memory_linear_project",
-      "target": "memory_rf99_issue",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "MEMORY.md",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "memory_esg_skills_marketplace",
-      "target": "memory_skillspector",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "MEMORY.md",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "memory_esg_skills_marketplace",
-      "target": "memory_aster",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "MEMORY.md",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "memory_esg_skills_marketplace",
-      "target": "memory_graphify",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "MEMORY.md",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "memory_esg_skills_marketplace",
-      "target": "memory_codex",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "MEMORY.md",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "memory_esg_skills_marketplace",
-      "target": "memory_esg_materiality_brief",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "MEMORY.md",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "memory_esg_skills_marketplace",
-      "target": "memory_ghg_inventory_evidence_pack",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "MEMORY.md",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "memory_esg_skills_marketplace",
-      "target": "memory_filhoricardo",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "MEMORY.md",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "memory_permanent_catalogue",
-      "target": "memory_herenow_platform",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "MEMORY.md",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "memory_esg_skills_marketplace",
-      "target": "memory_permanent_catalogue",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "MEMORY.md",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "memory_graphify",
-      "target": "memory_github_repository",
-      "relation": "conceptually_related_to",
-      "confidence": "INFERRED",
-      "confidence_score": 0.7,
-      "source_file": "MEMORY.md",
-      "source_location": null,
-      "weight": 0.7
-    },
-    {
-      "source": "planreviewlog_rounds",
-      "target": "plan_completion",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "PLAN-REVIEW-LOG.md",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "planreviewlog_rounds",
-      "target": "agents_claude",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "PLAN-REVIEW-LOG.md",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "planreviewlog_rounds",
-      "target": "agents_codex",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "PLAN-REVIEW-LOG.md",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "plan_completion",
-      "target": "skill_esg_materiality_brief",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "PLAN.md",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "plan_completion",
-      "target": "skill_ghg_inventory_evidence_pack",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "PLAN.md",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "plan_completion",
-      "target": "agents_aster",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 0.95,
-      "source_file": "PLAN.md",
+      "confidence_score": 0.9,
+      "source_file": "CONTRIBUTING.md",
       "source_location": null,
       "weight": 0.9
     },
     {
-      "source": "plan_completion",
-      "target": "agents_herenow",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 0.95,
-      "source_file": "PLAN.md",
-      "source_location": null,
-      "weight": 0.9
-    },
-    {
-      "source": "plan_completion",
-      "target": "agents_graphify",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 0.95,
-      "source_file": "PLAN.md",
-      "source_location": null,
-      "weight": 0.9
-    },
-    {
-      "source": "plan_completion",
-      "target": "scripts_validate_skills",
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "PLAN.md",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "plan_completion",
-      "target": "scripts_build_catalog",
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "PLAN.md",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "plan_completion",
-      "target": "scripts_run_skillspector",
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "PLAN.md",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "plan_completion",
-      "target": "agents_github",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 0.95,
-      "source_file": "PLAN.md",
-      "source_location": null,
-      "weight": 0.9
-    },
-    {
-      "source": "plan_completion",
-      "target": "agents_linear",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 0.95,
-      "source_file": "PLAN.md",
-      "source_location": null,
-      "weight": 0.9
-    },
-    {
-      "source": "skill_esg_materiality_brief",
-      "target": "skill_ghg_inventory_evidence_pack",
-      "relation": "semantically_similar_to",
-      "confidence": "INFERRED",
-      "confidence_score": 0.75,
-      "source_file": "PLAN.md",
-      "source_location": null,
-      "weight": 0.75
-    },
-    {
-      "source": "readme_esg_skills_marketplace",
-      "target": "memory_esg_skills_marketplace",
-      "relation": "semantically_similar_to",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "readme_esg_skills_marketplace",
-      "target": "readme_trust_gate",
+      "source": "readme_esg",
+      "target": "contributing_guide",
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -3160,8 +4193,8 @@
       "weight": 1.0
     },
     {
-      "source": "readme_esg_skills_marketplace",
-      "target": "readme_skills_directory",
+      "source": "readme_esg",
+      "target": "ownerrunbook_doc",
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -3170,8 +4203,8 @@
       "weight": 1.0
     },
     {
-      "source": "readme_esg_skills_marketplace",
-      "target": "readme_skillspector",
+      "source": "readme_esg",
+      "target": "siteoperations_doc",
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -3180,8 +4213,8 @@
       "weight": 1.0
     },
     {
-      "source": "readme_esg_skills_marketplace",
-      "target": "readme_contributing_guide",
+      "source": "readme_esg",
+      "target": "skilltemplate_template",
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -3190,8 +4223,8 @@
       "weight": 1.0
     },
     {
-      "source": "readme_esg_skills_marketplace",
-      "target": "readme_owner_runbook",
+      "source": "readme_esg",
+      "target": "skillspector_tool",
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -3200,397 +4233,667 @@
       "weight": 1.0
     },
     {
-      "source": "readme_esg_skills_marketplace",
-      "target": "readme_skill_template",
+      "source": "readme_esg",
+      "target": "herenow_platform",
       "relation": "references",
       "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "readme_esg_skills_marketplace",
-      "target": "readme_permanent_catalogue",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "readme_esg_skills_marketplace",
-      "target": "readme_esg_materiality_brief",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "readme_esg_skills_marketplace",
-      "target": "readme_ghg_inventory_evidence_pack",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "readme_esg_skills_marketplace",
-      "target": "readme_scripts_directory",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "readme_esg_skills_marketplace",
-      "target": "readme_site_directory",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "readme_esg_skills_marketplace",
-      "target": "readme_tests_directory",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "readme_esg_skills_marketplace",
-      "target": "readme_github_actions",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "readme_trust_gate",
-      "target": "readme_skillspector",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "readme_skillspector",
-      "target": "memory_skillspector",
-      "relation": "semantically_similar_to",
-      "confidence": "EXTRACTED",
-      "confidence_score": 0.99,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 0.99
-    },
-    {
-      "source": "readme_esg_materiality_brief",
-      "target": "memory_esg_materiality_brief",
-      "relation": "semantically_similar_to",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "readme_ghg_inventory_evidence_pack",
-      "target": "memory_ghg_inventory_evidence_pack",
-      "relation": "semantically_similar_to",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "readme_permanent_catalogue",
-      "target": "memory_permanent_catalogue",
-      "relation": "semantically_similar_to",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "readme_esg_skills_marketplace",
-      "target": "memory_codex",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 0.97,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 0.97
-    },
-    {
-      "source": "readme_skills_directory",
-      "target": "readme_esg_materiality_brief",
-      "relation": "conceptually_related_to",
-      "confidence": "INFERRED",
       "confidence_score": 0.9,
       "source_file": "README.md",
       "source_location": null,
       "weight": 0.9
     },
     {
-      "source": "readme_skills_directory",
-      "target": "readme_ghg_inventory_evidence_pack",
-      "relation": "conceptually_related_to",
+      "source": "sitedeployyml_workflow",
+      "target": "buildcatalog_script",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".github/workflows/site-deploy.yml",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "sitedeployyml_workflow",
+      "target": "validateskills_script",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".github/workflows/site-deploy.yml",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "sitedeployyml_workflow",
+      "target": "publishsite_script",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".github/workflows/site-deploy.yml",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "sitedeployyml_workflow",
+      "target": "herenow_platform",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".github/workflows/site-deploy.yml",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "sitesubmissionintakeyml_workflow",
+      "target": "buildcatalog_script",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".github/workflows/site-submission-intake.yml",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "sitesubmissionintakeyml_workflow",
+      "target": "siteintake_script",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".github/workflows/site-submission-intake.yml",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "sitesubmissionintakeyml_workflow",
+      "target": "catalogjson_data",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".github/workflows/site-submission-intake.yml",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "skillreviewyml_workflow",
+      "target": "validateprscope_script",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".github/workflows/skill-review.yml",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "skillreviewyml_workflow",
+      "target": "validateskills_script",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".github/workflows/skill-review.yml",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "skillreviewyml_workflow",
+      "target": "buildcatalog_script",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".github/workflows/skill-review.yml",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "skillreviewyml_workflow",
+      "target": "runskillspector_script",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".github/workflows/skill-review.yml",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "skillreviewyml_workflow",
+      "target": "skillspector_tool",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".github/workflows/skill-review.yml",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "runskillspector_script",
+      "target": "skillspector_tool",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".github/workflows/skill-review.yml",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "indexhtml_page",
+      "target": "astertokenscss_stylesheet",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "site/index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "indexhtml_page",
+      "target": "stylescss_stylesheet",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "site/index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "indexhtml_page",
+      "target": "appjs_script",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "site/index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "indexhtml_page",
+      "target": "submithtml_page",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "site/index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "indexhtml_page",
+      "target": "catalogjson_data",
+      "relation": "shares_data_with",
       "confidence": "INFERRED",
       "confidence_score": 0.9,
-      "source_file": "README.md",
+      "source_file": "site/index.html",
       "source_location": null,
       "weight": 0.9
     },
     {
-      "source": "readme_site_directory",
-      "target": "memory_aster",
-      "relation": "conceptually_related_to",
-      "confidence": "INFERRED",
-      "confidence_score": 0.75,
-      "source_file": "README.md",
+      "source": "submithtml_page",
+      "target": "astertokenscss_stylesheet",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "site/submit.html",
       "source_location": null,
-      "weight": 0.75
+      "weight": 1.0
     },
     {
-      "source": "readme_permanent_catalogue",
-      "target": "memory_herenow_platform",
-      "relation": "conceptually_related_to",
-      "confidence": "INFERRED",
-      "confidence_score": 0.92,
-      "source_file": "README.md",
+      "source": "submithtml_page",
+      "target": "stylescss_stylesheet",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "site/submit.html",
       "source_location": null,
-      "weight": 0.92
+      "weight": 1.0
     },
     {
-      "source": "readme_github_actions",
-      "target": "readme_skillspector",
-      "relation": "conceptually_related_to",
+      "source": "submithtml_page",
+      "target": "appjs_script",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "site/submit.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "submithtml_page",
+      "target": "indexhtml_page",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "site/submit.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "submithtml_page",
+      "target": "proxyjson_config",
+      "relation": "shares_data_with",
       "confidence": "INFERRED",
       "confidence_score": 0.85,
-      "source_file": "README.md",
+      "source_file": "site/submit.html",
       "source_location": null,
       "weight": 0.85
     },
     {
-      "source": "readme_github_actions",
-      "target": "memory_filhoricardo",
-      "relation": "conceptually_related_to",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 0.8
-    },
-    {
-      "source": "readme_scripts_directory",
-      "target": "readme_trust_gate",
-      "relation": "conceptually_related_to",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 0.8
-    },
-    {
-      "source": "readme_tests_directory",
-      "target": "readme_trust_gate",
-      "relation": "conceptually_related_to",
-      "confidence": "INFERRED",
-      "confidence_score": 0.78,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 0.78
-    },
-    {
-      "source": "readme_esg_skills_marketplace",
-      "target": "memory_github_repository",
+      "source": "plan_uxrepair",
+      "target": "indexhtml_page",
       "relation": "references",
       "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "plan_uxrepair",
+      "target": "submithtml_page",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "plan_uxrepair",
+      "target": "stylescss_stylesheet",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "plan_uxrepair",
+      "target": "astertokenscss_stylesheet",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "plan_uxrepair",
+      "target": "appjs_script",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "plan_uxrepair",
+      "target": "buildcatalog_script",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "plan_uxrepair",
+      "target": "validateskills_script",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "plan_uxrepair",
+      "target": "skillspector_tool",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "plan_uxrepair",
+      "target": "aster_designsystem",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "plan_uxrepair",
+      "target": "herenow_platform",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "planreviewlog_log",
+      "target": "plan_uxrepair",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PLAN-REVIEW-LOG.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "planreviewlog_log",
+      "target": "memory_esg",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "PLAN-REVIEW-LOG.md",
+      "source_location": null,
+      "weight": 0.9
+    },
+    {
+      "source": "planreviewlog_log",
+      "target": "skillspector_tool",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PLAN-REVIEW-LOG.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "ownerrunbook_doc",
+      "target": "skillreviewyml_workflow",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/OWNER-RUNBOOK.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "ownerrunbook_doc",
+      "target": "skillspector_tool",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/OWNER-RUNBOOK.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "siteoperations_doc",
+      "target": "sitedeployyml_workflow",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/SITE-OPERATIONS.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "siteoperations_doc",
+      "target": "sitesubmissionintakeyml_workflow",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/SITE-OPERATIONS.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "siteoperations_doc",
+      "target": "proxyjson_config",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/SITE-OPERATIONS.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "siteoperations_doc",
+      "target": "buildcatalog_script",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/SITE-OPERATIONS.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "siteoperations_doc",
+      "target": "validateskills_script",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/SITE-OPERATIONS.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "siteoperations_doc",
+      "target": "herenow_platform",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/SITE-OPERATIONS.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "designqa_calmledger",
+      "target": "indexhtml_page",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "design-qa.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "designqa_calmledger",
+      "target": "astertokenscss_stylesheet",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "design-qa.md",
+      "source_location": null,
+      "weight": 0.9
+    },
+    {
+      "source": "designqa_calmledger",
+      "target": "aster_designsystem",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "design-qa.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "designqa_calmledger",
+      "target": "plan_uxrepair",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "design-qa.md",
+      "source_location": null,
+      "weight": 0.9
+    },
+    {
+      "source": "memory_esg",
+      "target": "skillspector_tool",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "MEMORY.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "memory_esg",
+      "target": "herenow_platform",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "MEMORY.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "memory_esg",
+      "target": "aster_designsystem",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.8,
+      "source_file": "MEMORY.md",
+      "source_location": null,
+      "weight": 0.8
+    },
+    {
+      "source": "astertokenscss_stylesheet",
+      "target": "aster_designsystem",
+      "relation": "implements",
+      "confidence": "INFERRED",
       "confidence_score": 0.95,
-      "source_file": "README.md",
+      "source_file": "PLAN.md",
       "source_location": null,
       "weight": 0.95
     },
     {
-      "source": "security_policy",
-      "target": "security_nvidia_skillspector",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "SECURITY.md",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "security_policy",
-      "target": "scripts_run_skillspector",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 0.9,
-      "source_file": "SECURITY.md",
-      "source_location": null,
-      "weight": 0.9
-    },
-    {
-      "source": "ownerrunbook_process",
-      "target": "skillreview_workflow",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 0.9,
-      "source_file": "docs/OWNER-RUNBOOK.md",
-      "source_location": null,
-      "weight": 0.9
-    },
-    {
-      "source": "ownerrunbook_process",
-      "target": "security_nvidia_skillspector",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 0.9,
-      "source_file": "docs/OWNER-RUNBOOK.md",
-      "source_location": null,
-      "weight": 0.9
-    },
-    {
-      "source": "index_page",
-      "target": "index_astertokens",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "site/index.html",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "index_page",
-      "target": "index_styles",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "site/index.html",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "index_page",
-      "target": "index_appjs",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "site/index.html",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "index_astertokens",
-      "target": "agents_aster",
-      "relation": "conceptually_related_to",
+      "source": "stylescss_stylesheet",
+      "target": "astertokenscss_stylesheet",
+      "relation": "shares_data_with",
       "confidence": "INFERRED",
-      "confidence_score": 0.87,
+      "confidence_score": 0.85,
       "source_file": "site/index.html",
       "source_location": null,
-      "weight": 0.87
+      "weight": 0.85
     },
     {
-      "source": "index_page",
-      "target": "skill_esg_materiality_brief",
-      "relation": "references",
+      "source": "proxyjson_config",
+      "target": "sitesubmissionintakeyml_workflow",
+      "relation": "shares_data_with",
       "confidence": "INFERRED",
-      "confidence_score": 0.83,
-      "source_file": "site/index.html",
+      "confidence_score": 0.85,
+      "source_file": "docs/SITE-OPERATIONS.md",
       "source_location": null,
-      "weight": 0.83
+      "weight": 0.85
     },
     {
-      "source": "index_page",
-      "target": "skill_ghg_inventory_evidence_pack",
-      "relation": "references",
+      "source": "buildcatalog_script",
+      "target": "catalogjson_data",
+      "relation": "calls",
       "confidence": "INFERRED",
-      "confidence_score": 0.83,
-      "source_file": "site/index.html",
-      "source_location": null,
-      "weight": 0.83
-    },
-    {
-      "source": "index_page",
-      "target": "agents_github",
-      "relation": "references",
-      "confidence": "EXTRACTED",
       "confidence_score": 0.95,
-      "source_file": "site/index.html",
+      "source_file": ".github/workflows/site-deploy.yml",
       "source_location": null,
       "weight": 0.95
     },
     {
-      "source": "skillsreadme_approved",
-      "target": "skill_template",
-      "relation": "references",
-      "confidence": "EXTRACTED",
+      "source": "publishsite_script",
+      "target": "herenow_platform",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": ".github/workflows/site-deploy.yml",
+      "source_location": null,
+      "weight": 0.95
+    },
+    {
+      "source": "appjs_script",
+      "target": "catalogjson_data",
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
       "confidence_score": 0.9,
-      "source_file": "skills/README.md",
+      "source_file": "site/index.html",
       "source_location": null,
       "weight": 0.9
     },
     {
-      "source": "skillsreadme_approved",
-      "target": "skill_esg_materiality_brief",
-      "relation": "references",
+      "source": "appjs_script",
+      "target": "proxyjson_config",
+      "relation": "shares_data_with",
       "confidence": "INFERRED",
-      "confidence_score": 0.72,
-      "source_file": "skills/README.md",
+      "confidence_score": 0.85,
+      "source_file": "site/submit.html",
       "source_location": null,
-      "weight": 0.72
+      "weight": 0.85
     },
     {
-      "source": "skillsreadme_approved",
-      "target": "skill_ghg_inventory_evidence_pack",
-      "relation": "references",
+      "source": "siteintake_script",
+      "target": "catalogjson_data",
+      "relation": "shares_data_with",
       "confidence": "INFERRED",
-      "confidence_score": 0.72,
-      "source_file": "skills/README.md",
+      "confidence_score": 0.9,
+      "source_file": ".github/workflows/site-submission-intake.yml",
       "source_location": null,
-      "weight": 0.72
+      "weight": 0.9
     },
     {
-      "source": "skill_esg_materiality_brief",
-      "target": "skill_template",
-      "relation": "implements",
+      "source": "plan_uxrepair",
+      "target": "planreviewlog_log",
+      "relation": "references",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
-      "source_file": "skills/esg-materiality-brief/SKILL.md",
+      "source_file": "PLAN-REVIEW-LOG.md",
       "source_location": null,
       "weight": 0.8
     },
     {
-      "source": "skill_ghg_inventory_evidence_pack",
-      "target": "skill_template",
-      "relation": "implements",
+      "source": "sitedeployyml_workflow",
+      "target": "sitesubmissionintakeyml_workflow",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "docs/SITE-OPERATIONS.md",
+      "source_location": null,
+      "weight": 0.75
+    },
+    {
+      "source": "skillreviewyml_workflow",
+      "target": "sitesubmissionintakeyml_workflow",
+      "relation": "conceptually_related_to",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
-      "source_file": "skills/ghg-inventory-evidence-pack/SKILL.md",
+      "source_file": ".github/workflows/site-submission-intake.yml",
       "source_location": null,
       "weight": 0.8
+    },
+    {
+      "source": "ownerrunbook_doc",
+      "target": "siteoperations_doc",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 0.8
+    },
+    {
+      "source": "readme_esg",
+      "target": "indexhtml_page",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 0.9
+    },
+    {
+      "source": "readme_esg",
+      "target": "plan_uxrepair",
+      "relation": "conceptually_related_to",
+      "confidence": "AMBIGUOUS",
+      "confidence_score": 0.6,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 0.6
     }
   ],
   "hyperedges": [],
-  "input_tokens": 0,
-  "output_tokens": 0
+  "input_tokens": 30670,
+  "output_tokens": 10730
 }

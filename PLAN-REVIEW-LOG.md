@@ -139,3 +139,31 @@ Codex response:
 - Claude CLI received a compact plan summary focused on the hidden-proxy, workflow-dispatch, PR-creation, and auto-republish architecture.
 - The process again returned no critique or verdict within 30 seconds.
 - Codex is stopping the review loop here rather than inventing a `CLEAR` result. The reviewed plan is being presented to the user for the required signoff before any RF-100 code starts.
+
+## 2026-06-22 — RF-100 frontend repair planning gate
+
+- Live gstack `/browse` design review graded the branch snapshot D and found structural overlap at desktop and mobile sizes: fixed-height panels held substantially taller content, covered download links, and made the mobile form visually unusable.
+- The user approved the redesign direction and asked Codex to implement and redeploy it to the existing here.now site.
+- Product Design playback locked the brief to Aster, a catalogue-focused homepage, visible downloads, a dedicated fully functional submission page, and no changes to the hidden GitHub intake architecture.
+- Product Design requires the user to select one of three generated visual targets before code begins. Codex is combining that selection with final signoff on this reviewed plan.
+
+### Round 1
+
+- Claude CLI passed the required authenticated no-tools smoke test, then received the full frontend repair plan in no-tools plan mode.
+- The review call returned no critique and no verdict. Codex did not treat silence as `CLEAR` and moved to a compressed retry.
+
+### Round 2
+
+- Claude CLI received a compressed review prompt covering the page split, unchanged intake architecture, responsive acceptance checks, deploy scope, and Product Design selection gate.
+- The call again returned no critique and no verdict. Codex did not treat silence as agreement and moved to a minimal structured retry.
+
+### Round 3
+
+- Claude CLI received a minimal structured prompt and was asked to return JSON-formatted review text with an exact verdict line.
+- The call again returned no critique and no verdict. Three differently shaped authenticated no-tools attempts reproduced the same silent critic behavior already documented for RF-100.
+- Codex stopped the loop rather than inventing consensus. The plan remains bounded to the frontend repair, and the user must select one generated visual target and approve the reviewed plan before implementation.
+
+## 2026-06-22 — Frontend repair signoff
+
+- The user selected visual direction 3, `Calm Ledger`, and thereby approved the reviewed frontend repair plan presented with the three options.
+- Implementation may proceed on the existing RF-100 branch. The visual target is the generated Calm Ledger mockup, and the GitHub intake architecture remains unchanged.

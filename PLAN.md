@@ -1,117 +1,92 @@
-# Plan: Add Site-Native Skill Download And Submission
+# Plan: Repair The Marketplace UX And Redeploy
 
 ## Goal
 
-Deliver RF-100 by turning the ESG Skills Marketplace into a true site-first intake surface: visitors can download approved skills directly from the public site, submit a new skill from the public site without navigating GitHub, and the existing trust gate still controls what reaches `main` and the live catalogue.
+Finish the RF-100 public experience by replacing the broken fixed-height single-page composition with a calm, responsive Aster catalogue and a dedicated submission page, while leaving the reviewed-download and GitHub intake pipeline unchanged. Publish the verified redesign to the existing permanent here.now URL.
 
 ## Acceptance Criteria
 
-- The GitHub repository remains `https://github.com/FilhoRicardo/esg-skills-marketplace`, the Linear project remains `ESG Skills Marketplace`, and implementation is tracked in RF-100.
-- The public site keeps the Aster visual system and still explains the trust boundary in plain language.
-- Each approved skill card exposes a direct frontend download action that does not send the user to GitHub.
-- Approved downloads are generated from merged repository content and contain the reviewed skill bundle, not an ad hoc frontend reconstruction.
-- The homepage exposes a site-native submission flow titled and worded for non-GitHub users.
-- The site-native submission flow accepts the conservative v1 bundle only:
-  - `SKILL.md`
-  - `marketplace.json`
-  - both UTF-8 text, non-executable, and within tighter site-intake size caps chosen to fit the hidden dispatch flow safely
-- The browser performs honest client-side checks before submission:
-  - both required files are present
-  - `SKILL.md` frontmatter contains `name` and `description`
-  - `marketplace.json` contains only `title` and `category`
-  - the slug matches across folder intent and frontmatter
-  - the category is one of the repository's allowed categories
-  - the user confirms redistribution rights and the professional-advice boundary
-- The public site does not expose GitHub tokens, here.now credentials, or a generic authenticated proxy surface in client-side code.
-- Submission from the site uses an authenticated here.now proxy route with:
-  - an exact local path rather than a broad wildcard
-  - a server-side injected secret variable
-  - a route-specific rate limit stricter than the default
-  - no public serving of `.herenow/proxy.json`
-- A dedicated GitHub intake workflow receives the proxied submission, reconstructs the uploaded bundle, runs the repository build steps needed to stage it, and opens a draft pull request automatically.
-- The intake workflow uses a repository secret token rather than `GITHUB_TOKEN` when creating the pull request so the normal trust-check workflows still run on the created PR.
-- Automatically created PRs contain enough review context for the maintainer without exposing private or unnecessary user data.
-- Merged `main` can republish the static site automatically to the permanent authenticated here.now slug, so approved submissions flow back to the live catalogue without manual GitHub browsing by the submitter.
-- Existing trust protections remain intact:
-  - `trust / policy`
-  - `trust / SkillSpector`
-  - human review
-  - merge to `main` before catalogue publication
-- The repository documentation and maintainer runbooks explain the new site-native flow, required secrets/variables, and what stays intentionally out of scope.
+- Work remains in `/Users/ricardofilho/Documents/Projects/active/esg-skills-marketplace`, on GitHub repository `FilhoRicardo/esg-skills-marketplace`, under Linear project `ESG Skills Marketplace` and implementation issue RF-100.
+- The user selects one of three Aster-based visual directions generated from the live-site screenshots before implementation begins.
+- The homepage has one primary job: help visitors understand and download reviewed environmental, social, and governance (ESG) skills.
+- The homepage uses a short hero with one primary `Browse skills` action and a secondary `Submit a skill` link.
+- Every approved skill exposes an immediately visible `Download .zip` action at desktop, tablet, and mobile widths.
+- Submission moves to a dedicated `submit.html` page with the existing two-file intake, browser validation, preview, optional public attribution, attestations, and hidden proxy dispatch intact.
+- User-facing copy describes the job and review boundary without exposing implementation terms such as repository scaffolding, approved slugs, workflow dispatch, or merge to `main`.
+- The Aster system remains authoritative: Schibsted Grotesk, JetBrains Mono for data/labels, greyscale plus forest green, restrained glass surfaces, and no decorative new palette or assets.
+- The public pages use normal document scrolling. No section receives a fixed/equal height that can clip content, no page-level `overflow: hidden` blocks content, and the footer remains in document flow.
+- At 375×812, 768×1024, 1280×720, and 1440px wide:
+  - no content overlaps or horizontal scrolling;
+  - all visible controls are at least 44px high where practical, with usable checkbox hit areas;
+  - every download link and form control passes browser hit testing;
+  - the full submission form and preview are reachable through normal scrolling.
+- The live site loads without console errors, downloads the reviewed zip artefacts, parses representative submission files, and shows honest local/live submission states.
+- The existing proxy route, GitHub intake workflow, trust checks, review boundary, and main-branch deploy workflow are not broadened or bypassed.
+- The verified branch snapshot is published to `https://royal-bugle-xgg7.here.now/` for UX testing, then browser-checked live.
 
 ## Approach
 
-1. Keep the repository as the source of truth, but shift the public UX to site-first language and controls.
-2. Extend the generated public artefacts so approved skills produce downloadable bundles under `site/` and the frontend links to those bundles directly.
-3. Add a new submission section to the static Aster homepage that accepts the two-file v1 bundle, previews the parsed metadata, and performs conservative client-side validation before any network call.
-4. Add `.herenow/proxy.json` to the published site so `fetch('/api/submit-skill')` forwards only to the GitHub workflow-dispatch endpoint, with a server-side injected token variable and a strict per-IP rate limit.
-5. Implement a dedicated GitHub Actions intake workflow that:
-   - validates the submission payload shape again server-side
-   - writes the submitted `SKILL.md` and `marketplace.json` into a branch
-   - regenerates catalogue/download artefacts
-   - opens a draft PR using a dedicated secret token
-6. Keep the existing trust gate as the only route to publication. The intake workflow creates the PR; the current trust checks and maintainer review decide whether it lands.
-7. Add a separate deploy workflow for `main` that republishes the authenticated here.now site automatically after merged changes affecting the public catalogue surface.
-8. Configure the required external state as part of implementation rather than leaving it as manual follow-up:
-   - GitHub repo secrets and variables
-   - here.now account variables used by proxy routes
-   - the permanent site slug used by automated publish
-9. Verify the whole story locally and live:
-   - build artefacts
-   - upload flow in browser
-   - workflow dispatch route
-   - auto-created PR
-   - required checks on that PR
-   - automatic republish after merge
+1. Generate three visual directions from the current desktop/mobile screenshots and the Aster rules. Vary hierarchy and catalogue structure, not the brand system or product scope. The user's selection becomes the visual target.
+2. Replace `site/index.html` with a catalogue-focused page:
+   - compact header and navigation;
+   - concise, card-light hero;
+   - reviewed skills rendered as self-contained rows/cards with persistent download actions;
+   - short trust and professional-advice boundary copy;
+   - normal footer flow.
+3. Add `site/submit.html` for the existing intake flow. Preserve all current fields, validation, preview, and submission feedback, but present them as one clear task with styled 44px+ controls and plain-language guidance.
+4. Split the current page script by responsibility only if needed for clarity: catalogue loading remains on the homepage, while submission logic runs only on the submission page. Do not change payload shape, endpoint, or validation rules.
+5. Rewrite `site/styles.css` around content-sized sections and a small responsive scale. Reuse `site/aster-tokens.css`; reduce nested glass panels and use spacing, typography, and dividers for hierarchy.
+6. Add the smallest useful static-page regression coverage for page separation and required asset/form hooks, then run all existing repository checks.
+7. Serve locally and verify the selected visual target and all primary interactions with gstack `/browse`, including responsive screenshots, scroll reachability, touch-target measurements, hit testing, console errors, zip download, and form preview.
+8. Run the pinned NVIDIA SkillSpector scan without executing skill content and refresh Graphify because meaningful frontend structure changed.
+9. Commit and push the redesign to the existing RF-100 branch/PR, publish the verified `site/` directory to the permanent here.now slug, and recheck the live desktop/mobile flows.
 
 ## Key Decisions And Tradeoffs
 
-- The best possible option in this stack is not a separate backend service. It is a static here.now site plus a narrow authenticated proxy route into a dedicated GitHub intake workflow.
-- The site-native uploader is intentionally narrower than the repository's raw skill intake. It supports the common two-file v1 bundle only, because that gives non-GitHub users a clean flow without exposing a high-power general write API.
-- Downloads are generated from merged source bundles and published with the site. The user gets a real reviewed bundle, not a synthetic export assembled on click.
-- The proxy route will expose exactly one submission endpoint, not a broad GitHub API passthrough. This keeps the public surface narrow even though the underlying secret token has repository power.
-- The hidden-dispatch path needs tighter file-size limits than the repository validator because GitHub workflow-dispatch payloads are better treated as a bounded transport. Larger or more complex future bundles can still remain a repository-only path if needed.
-- The submitter-facing flow will prefer public attribution fields or a public contact URL rather than collecting private data that would be awkward to handle safely in a public-repo workflow.
-- Automatic republish on merged `main` is part of the product, not a convenience. Without it, the site would still depend on maintainer GitHub operations and would not feel like the front door of the marketplace.
+- Aster's `fit-to-viewport` guidance is intentionally not used for this public catalogue. It suits app workspaces with bounded inner panes; applying it to variable public content caused the current clipping. Normal document scrolling is the safer, more familiar pattern.
+- Submission becomes a separate page rather than a modal or collapsed homepage section. This gives catalogue visitors a focused first screen and gives contributors enough room for validation, preview, errors, and mobile use.
+- The redesign changes information architecture and presentation, not the intake architecture. Keeping the proxy and GitHub workflow unchanged narrows risk and makes the visual repair independently verifiable.
+- The catalogue stays simple with two skills. No search, filters, ratings, versioning UI, recommendations, or invented metadata are added.
+- Visual options vary the homepage hierarchy only. The selected system will extend to the submission page without inventing a second style.
+- Aster glass is reserved for a few meaningful surfaces. Skill rows/cards remain self-contained because each represents a downloadable object; nested decorative cards are removed.
 
 ## Risks And Unknowns
 
-- GitHub workflow-dispatch payload size is a practical transport limit even if the repo validator allows larger text bundles. The site flow must enforce smaller caps explicitly and document that it is a conservative intake path.
-- A proxied public submission endpoint can still be spammed. The route-specific rate limit, conservative payload validation, and draft-PR creation reduce impact but do not eliminate abuse entirely.
-- A PR created by automation must still trigger the required trust workflows. The implementation must use a dedicated secret token path and prove that the resulting PR receives `trust / policy` and `trust / SkillSpector`.
-- here.now proxy routes require an authenticated site and configured account variables. This implementation is blocked if the account cannot store the necessary variables or if the permanent site slug is not writable by the configured API key.
-- GitHub repo secrets are currently absent. The implementation must create the required secrets and variables as part of the rollout, or it is not complete.
-- If the deploy workflow republishes a broken site automatically, production could drift immediately after merge. The workflow therefore needs a local build/validation gate before publish, and the live site must be rechecked after rollout.
+- Image-generated text may be imperfect. The selected mockup is a composition and hierarchy target; exact production copy remains the reviewed text in this plan.
+- Splitting the submission page can break DOM assumptions in the current single script. Verification must prove both pages load without null-reference console errors and preserve the exact dispatch payload.
+- Browser file inputs differ by operating system. The implementation must retain an accessible native input while presenting a consistent large picker state.
+- The live branch snapshot will be ahead of `main` until PR #6 is reviewed and merged. The deployment is explicitly for UX testing; GitHub remains the source of truth.
+- here.now publication can succeed while a stale asset remains cached. Live verification will use cache-busting/reload and check the rendered heading, page links, and submission preview.
 
 ## Out Of Scope
 
-- Accounts, passwords, user dashboards, submitter login, or submission-status tracking.
-- Arbitrary multi-file skill bundles, binary attachments, archives, images, PDFs, or executable skill content.
-- Replacing GitHub review with a custom moderation system.
-- Payments, ratings, recommendations, analytics-heavy growth features, or social marketplace features.
-- Private contact storage, hidden inboxes, or CRM-like submitter management.
-- Full background moderation automation after PR creation; human review remains required.
+- Changes to skill validation, intake limits, proxy authentication, GitHub permissions, trust workflows, or publication policy.
+- A real public submission during UX verification; browser parsing and UI states are tested without creating a noise PR.
+- Accounts, submission tracking, analytics, search, filters, ratings, payments, or additional skills.
+- New illustration, photography, icon library, animation system, or brand identity.
+- Merging PR #6 into `main`; the user asked for a UX-test deployment of the branch snapshot.
 
 ## Verification
 
-- `python3 scripts/validate_skills.py --all`
+- `python3 scripts/build_catalog.py`
 - `python3 scripts/build_catalog.py --check`
+- `python3 scripts/validate_skills.py --all`
 - `python3 -m unittest discover -s tests`
-- any new build/check command for downloadable public artefacts returns clean results
-- browser verification with gstack `/browse` covers:
-  - homepage rendering
-  - download buttons
-  - successful local parsing of the submission files
-  - honest validation errors
-  - successful POST to the proxied submission endpoint
-  - responsive layout at mobile, tablet, and desktop widths
-- a live submission from the site creates a draft PR automatically
-- the created PR runs `trust / policy` and `trust / SkillSpector`
-- merging a reviewed submission to `main` republishes the permanent here.now site automatically and the new public download appears live
-- final GitHub, Linear, README, and project memory all agree on the new RF-100 flow and configuration
+- the pinned NVIDIA SkillSpector command used by the repository trust workflow, without executing contributed content
+- Graphify refresh using the existing authenticated `claude-cli` backend and ignored-output policy
+- local gstack `/browse` verification:
+  - homepage and submission page return successfully;
+  - no console errors or failed static asset requests;
+  - reviewed bundle count and both `Download .zip` links are visible and clickable;
+  - a downloaded zip contains the reviewed bundle files;
+  - representative `SKILL.md` and `marketplace.json` files populate the preview;
+  - all form fields and confirmations remain reachable at mobile width;
+  - 375×812, 768×1024, 1280×720, and 1440px layouts have no overlap or horizontal scroll;
+  - interactive elements pass hit testing and target-size checks.
+- live here.now verification repeats the homepage, download-link, dedicated submission-page, responsive, console, and preview checks without queueing a real submission.
 
 ## GitHub, Linear, And Memory Impact
 
-- GitHub: add submission-intake and deploy workflows, generated download artefacts, frontend submission/download UX, configuration docs, and any supporting scripts/tests on a `codex/` branch and PR.
-- Linear: RF-100 is the source-of-truth implementation issue. It should move to active work during implementation and close only after live submission and republish verification.
-- Project memory: record RF-100, the site-first intake architecture, the exact required proxy/secret configuration, and the final durable public workflow once it ships.
+- GitHub: update the existing `codex/rf-100-site-native-intake` branch and draft PR #6 with the verified frontend repair. Existing trust checks must remain green.
+- Linear: RF-100 remains the active source-of-truth issue; no new issue is needed because this repairs the frontend acceptance quality of the same implementation.
+- Project memory: after live publication, add one durable sentence recording that RF-100's public catalogue was redesigned into separate catalogue and submission pages and browser-verified at the permanent slug.

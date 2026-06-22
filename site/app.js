@@ -251,34 +251,32 @@ async function refreshSubmissionPreview() {
 
 function createSkillCard(entry, index) {
   const article = document.createElement("article");
-  article.className = "skill-card aster-inner";
-
-  const meta = document.createElement("div");
-  meta.className = "card-meta";
+  article.className = "skill-card";
 
   const number = document.createElement("span");
-  number.className = "aster-eyebrow";
+  number.className = "skill-number aster-mono";
   number.textContent = String(index + 1).padStart(2, "0");
 
   const category = document.createElement("span");
-  category.className = "aster-badge";
+  category.className = "skill-category aster-badge";
   category.textContent = entry.category;
-  meta.append(number, category);
 
   const title = document.createElement("h3");
+  title.className = "skill-title";
   title.textContent = entry.title;
 
   const description = document.createElement("p");
+  description.className = "skill-description";
   description.textContent = entry.description;
 
   const link = document.createElement("a");
   link.className = "aster-btn aster-btn--primary card-link";
   link.href = `./downloads/${encodeURIComponent(entry.slug)}.zip`;
   link.download = `${entry.slug}.zip`;
-  link.textContent = "Download reviewed bundle";
+  link.textContent = "Download .zip";
   link.setAttribute("aria-label", `Download the reviewed ${entry.title} bundle`);
 
-  article.append(meta, title, description, link);
+  article.append(number, title, category, description, link);
   return article;
 }
 
@@ -290,13 +288,13 @@ async function loadCatalogue() {
     const catalogue = await response.json();
     if (!Array.isArray(catalogue)) throw new TypeError("Catalogue data must be an array");
 
-    status.textContent = `${catalogue.length} reviewed ${catalogue.length === 1 ? "bundle" : "bundles"}`;
+    status.textContent = `${catalogue.length} ${catalogue.length === 1 ? "skill" : "skills"}`;
     list.setAttribute("aria-busy", "false");
 
     if (catalogue.length === 0) {
       setState(
         "No approved bundles yet.",
-        "The catalogue stays empty until a skill passes the trust gate and is merged to main.",
+        "The catalogue stays empty until a skill passes the checks and maintainer review.",
       );
       return;
     }
@@ -334,121 +332,126 @@ async function loadSubmissionConfig() {
   syncSubmitButton();
 }
 
-form.addEventListener("submit", async (event) => {
-  event.preventDefault();
-  clearFeedback();
+if (form) {
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    clearFeedback();
 
-  const files = await readSelectedFiles();
-  if (!files) {
-    setFeedback(
-      "Two files are required",
-      "Choose `SKILL.md` and `marketplace.json` before queueing the submission.",
-      "error",
-    );
-    return;
-  }
+    const files = await readSelectedFiles();
+    if (!files) {
+      setFeedback(
+        "Two files are required",
+        "Choose `SKILL.md` and `marketplace.json` before queueing the submission.",
+        "error",
+      );
+      return;
+    }
 
-  let nextPreview;
-  try {
-    nextPreview = buildPreview(files.skillText, files.marketplaceText);
-    updatePreview(nextPreview);
-  } catch (error) {
-    setSubmissionTone("Fix the files before queueing", "error");
-    setFeedback("Submission needs changes", error.message, "error");
-    syncSubmitButton();
-    return;
-  }
+    let nextPreview;
+    try {
+      nextPreview = buildPreview(files.skillText, files.marketplaceText);
+      updatePreview(nextPreview);
+    } catch (error) {
+      setSubmissionTone("Fix the files before queueing", "error");
+      setFeedback("Submission needs changes", error.message, "error");
+      syncSubmitButton();
+      return;
+    }
 
-  if (!rightsInput.checked || !boundaryInput.checked) {
-    setFeedback(
-      "Confirm both review statements",
-      "The site only queues bundles when the redistribution and review-boundary statements are both confirmed.",
-      "error",
-    );
-    syncSubmitButton();
-    return;
-  }
+    if (!rightsInput.checked || !boundaryInput.checked) {
+      setFeedback(
+        "Confirm both review statements",
+        "The site only queues bundles when the redistribution and review-boundary statements are both confirmed.",
+        "error",
+      );
+      syncSubmitButton();
+      return;
+    }
 
-  submitButton.disabled = true;
-  setSubmissionTone("Queueing site submission", "neutral");
+    submitButton.disabled = true;
+    setSubmissionTone("Sending for review", "neutral");
 
-  const payload = {
-    ref: "main",
-    inputs: {
-      skill_md: files.skillText,
-      marketplace_json: files.marketplaceText,
-      public_name: normalizePublicField(publicNameInput.value, intakeConfig.maxPublicNameChars),
-      public_contact: normalizePublicField(
-        publicContactInput.value,
-        intakeConfig.maxPublicContactChars,
-      ),
-      rights_confirmed: String(rightsInput.checked),
-      boundary_confirmed: String(boundaryInput.checked),
-    },
-  };
-
-  try {
-    const response = await fetch(intakeConfig.dispatchPath, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
+    const payload = {
+      ref: "main",
+      inputs: {
+        skill_md: files.skillText,
+        marketplace_json: files.marketplaceText,
+        public_name: normalizePublicField(publicNameInput.value, intakeConfig.maxPublicNameChars),
+        public_contact: normalizePublicField(
+          publicContactInput.value,
+          intakeConfig.maxPublicContactChars,
+        ),
+        rights_confirmed: String(rightsInput.checked),
+        boundary_confirmed: String(boundaryInput.checked),
       },
-      body: JSON.stringify(payload),
+    };
+
+    try {
+      const response = await fetch(intakeConfig.dispatchPath, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (response.ok || response.status === 204) {
+        form.reset();
+        updatePreview(null);
+        setSubmissionTone("Submission queued for intake", "success");
+        setFeedback(
+          "Submission queued",
+          "Your files passed the browser checks and entered the review queue. Automated checks and maintainer review still run before anything becomes public.",
+          "success",
+        );
+        syncSubmitButton();
+        return;
+      }
+
+      if (
+        LOCAL_HOSTS.has(window.location.hostname) &&
+        LOCAL_PREVIEW_RESPONSE_CODES.has(response.status)
+      ) {
+        setSubmissionTone("Local preview cannot queue submissions", "neutral");
+        setFeedback(
+          "Local preview only",
+          "The files passed browser checks, but local preview does not include the hidden intake proxy. The live published site will.",
+          "neutral",
+        );
+        syncSubmitButton();
+        return;
+      }
+
+      throw new Error(`Submission endpoint returned ${response.status}.`);
+    } catch (error) {
+      console.error("Unable to queue submission", error);
+      setSubmissionTone("Submission unavailable", "error");
+      setFeedback(
+        "Submission could not be queued",
+        "The site could not hand this bundle to the hidden intake service. Try again shortly or contact the maintainer if the problem persists.",
+        "error",
+      );
+      syncSubmitButton();
+    }
+  });
+
+  for (const field of [skillFileInput, marketplaceFileInput]) {
+    field.addEventListener("change", () => {
+      refreshSubmissionPreview();
     });
-
-    if (response.ok || response.status === 204) {
-      form.reset();
-      updatePreview(null);
-      setSubmissionTone("Submission queued for intake", "success");
-      setFeedback(
-        "Submission queued",
-        "Your files passed the browser checks and entered the review queue. If the server-side intake passes, a draft review request will be created and the trust checks will run before anything becomes public.",
-        "success",
-      );
-      syncSubmitButton();
-      return;
-    }
-
-    if (
-      LOCAL_HOSTS.has(window.location.hostname) &&
-      LOCAL_PREVIEW_RESPONSE_CODES.has(response.status)
-    ) {
-      setSubmissionTone("Local preview cannot queue submissions", "neutral");
-      setFeedback(
-        "Local preview only",
-        "The files passed browser checks, but local preview does not include the hidden intake proxy. The live published site will.",
-        "neutral",
-      );
-      syncSubmitButton();
-      return;
-    }
-
-    throw new Error(`Submission endpoint returned ${response.status}.`);
-  } catch (error) {
-    console.error("Unable to queue submission", error);
-    setSubmissionTone("Submission unavailable", "error");
-    setFeedback(
-      "Submission could not be queued",
-      "The site could not hand this bundle to the hidden intake service. Try again shortly or contact the maintainer if the problem persists.",
-      "error",
-    );
-    syncSubmitButton();
   }
-});
 
-for (const field of [skillFileInput, marketplaceFileInput]) {
-  field.addEventListener("change", () => {
-    refreshSubmissionPreview();
-  });
+  for (const field of [rightsInput, boundaryInput]) {
+    field.addEventListener("change", () => {
+      syncSubmitButton();
+    });
+  }
+
+  updatePreview(null);
+  loadSubmissionConfig();
 }
 
-for (const field of [rightsInput, boundaryInput]) {
-  field.addEventListener("change", () => {
-    syncSubmitButton();
-  });
+if (list && status) {
+  loadCatalogue();
 }
-
-updatePreview(null);
-loadCatalogue();
-loadSubmissionConfig();
