@@ -2,7 +2,7 @@
 
 A curated catalogue of Codex-compatible skills for environmental, social, and governance (ESG) work.
 
-The marketplace is intentionally conservative. Skills are proposed through GitHub pull requests, checked automatically, reviewed by a human, and published only after they are merged into `main`.
+The marketplace is intentionally conservative. The public site is the front door: approved skills download directly from the site, and new submissions can be queued from the site without exposing repository scaffolding. GitHub still remains the source of truth behind the scenes: every submission becomes a draft pull request, is checked automatically, reviewed by a human, and is published only after merge to `main`.
 
 ## Trust gate
 
@@ -19,10 +19,12 @@ These controls reduce risk; they do not prove that a skill is safe or correct. S
 ## Browse or contribute
 
 - Open the permanent [ESG Skills Marketplace catalogue](https://royal-bugle-xgg7.here.now/).
-- Browse approved skills in [`skills/`](skills/).
-- Read the beginner-friendly [contribution guide](CONTRIBUTING.md).
-- Use the [skill template](templates/skill-template/) to prepare a submission.
+- Download approved skills from the public catalogue.
+- Submit a new skill from the public site with `SKILL.md` and `marketplace.json`.
+- Read the beginner-friendly [contribution guide](CONTRIBUTING.md) if you want the repository-first fallback.
+- Use the [skill template](templates/skill-template/) to prepare a bundle.
 - Maintainers follow the [owner review runbook](docs/OWNER-RUNBOOK.md).
+- Maintainers configure and operate the hidden intake/deploy path through [site operations](docs/SITE-OPERATIONS.md).
 
 ## Current catalogue
 
@@ -37,7 +39,7 @@ Both workflows organize evidence. They do not provide legal, financial, complian
 skills/                    Approved skill bundles
 templates/skill-template/  Copyable submission template
 scripts/                   Deterministic policy and catalogue tools
-site/                      Static public catalogue
+site/                      Static public catalogue, download bundles, and hidden intake proxy
 tests/                     Policy tests
 .github/                   Review ownership and required CI checks
 ```

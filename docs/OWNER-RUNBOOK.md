@@ -2,6 +2,8 @@
 
 This is the safe path for reviewing a submitted skill. You do not need to use the command line.
 
+Site-native submissions arrive as draft pull requests created by the public intake workflow. The trust gate is unchanged: nothing becomes public until the checks pass and you approve the pull request.
+
 ## When GitHub notifies you
 
 1. Open the pull request from the GitHub notification.

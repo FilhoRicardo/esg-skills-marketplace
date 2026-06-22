@@ -1,87 +1,117 @@
-# Plan: Complete And Publish The ESG Skills Marketplace
+# Plan: Add Site-Native Skill Download And Submission
 
 ## Goal
 
-Finish Linear issue RF-99 by repairing the trust-gate gaps, adding two useful text-only environmental, social, and governance (ESG) skills, building the Aster catalogue frontend, verifying the complete flow, and publishing the site permanently through here.now.
+Deliver RF-100 by turning the ESG Skills Marketplace into a true site-first intake surface: visitors can download approved skills directly from the public site, submit a new skill from the public site without navigating GitHub, and the existing trust gate still controls what reaches `main` and the live catalogue.
 
 ## Acceptance Criteria
 
-- The GitHub repository and Linear project remain linked to RF-99, and RF-99 is closed only after every criterion below is evidenced.
-- External pull requests cannot add, modify, rename, or delete platform files; they may change exactly one valid skill folder plus the generated catalogue.
-- Tests reproduce the deleted-platform-file scope bug by proving `changed_paths()` returns a deleted `.github`, `scripts`, or site-code path and that `scope_errors()` rejects it for an external actor.
-- `main` requires the two trust checks, resolved conversations, one code-owner approval, last-push approval, and administrator enforcement after this release lands.
-- The approved catalogue contains exactly two text-only skills:
-  - `esg-materiality-brief`, which turns user-provided business and stakeholder evidence into a bounded materiality briefing without making compliance or assurance claims.
-  - `ghg-inventory-evidence-pack`, which organizes user-provided greenhouse-gas activity data, factors, boundaries, calculations, and source notes into a reviewable working evidence pack without presenting assurance or legal conclusions.
-- Each seed skill uses the existing schema only: `SKILL.md` has `name` and `description` frontmatter, while `marketplace.json` has exactly `title` and `category`. The categories are `strategy` for the materiality brief and `data` for the greenhouse-gas evidence pack; both are already present in `ALLOWED_CATEGORIES` in `scripts/validate_skills.py`. No new pillar, tag, or `evidence_workflow` field is introduced.
-- Both skills pass structural validation, catalogue integrity checks, and the pinned NVIDIA SkillSpector scan with a `SAFE` recommendation without executing skill content.
-- The framework-free site contains semantic HTML, Aster tokens, small CSS and JavaScript files, and the generated `site/catalog.json`; it renders only merged catalogue data and links each card to its GitHub skill folder.
-- The populated site explains the trust gate and professional-advice boundary in plain language, renders both skills from catalogue data, and handles loading, error, and empty-catalogue states honestly.
-- The primary flow is keyboard accessible, has visible focus states, respects reduced motion, has no blocking console errors, and works at mobile, tablet, and desktop widths in the gstack `/browse` Chromium workflow.
-- The permanent authenticated here.now publish succeeds, the live URL is reloaded and verified, and the URL is recorded in `README.md`, `MEMORY.md`, and RF-99.
-- The installed Graphify CLI produces `graphify-out/graph.json` for the completed repository and its query or explain commands can read that graph; costs and caches remain ignored.
-- The GitHub source is updated through a branch and pull request with both trust checks passing. The user's signoff on this reviewed plan is the one-time human approval for the bootstrap release that establishes administrator enforcement. If the connected GitHub app authors the pull request as a distinct actor, Ricardo also records that approval in GitHub; if GitHub attributes it to Ricardo and rejects self-approval, the administrator merge is permitted only for this explicitly approved bootstrap and enforcement is enabled immediately afterward.
+- The GitHub repository remains `https://github.com/FilhoRicardo/esg-skills-marketplace`, the Linear project remains `ESG Skills Marketplace`, and implementation is tracked in RF-100.
+- The public site keeps the Aster visual system and still explains the trust boundary in plain language.
+- Each approved skill card exposes a direct frontend download action that does not send the user to GitHub.
+- Approved downloads are generated from merged repository content and contain the reviewed skill bundle, not an ad hoc frontend reconstruction.
+- The homepage exposes a site-native submission flow titled and worded for non-GitHub users.
+- The site-native submission flow accepts the conservative v1 bundle only:
+  - `SKILL.md`
+  - `marketplace.json`
+  - both UTF-8 text, non-executable, and within tighter site-intake size caps chosen to fit the hidden dispatch flow safely
+- The browser performs honest client-side checks before submission:
+  - both required files are present
+  - `SKILL.md` frontmatter contains `name` and `description`
+  - `marketplace.json` contains only `title` and `category`
+  - the slug matches across folder intent and frontmatter
+  - the category is one of the repository's allowed categories
+  - the user confirms redistribution rights and the professional-advice boundary
+- The public site does not expose GitHub tokens, here.now credentials, or a generic authenticated proxy surface in client-side code.
+- Submission from the site uses an authenticated here.now proxy route with:
+  - an exact local path rather than a broad wildcard
+  - a server-side injected secret variable
+  - a route-specific rate limit stricter than the default
+  - no public serving of `.herenow/proxy.json`
+- A dedicated GitHub intake workflow receives the proxied submission, reconstructs the uploaded bundle, runs the repository build steps needed to stage it, and opens a draft pull request automatically.
+- The intake workflow uses a repository secret token rather than `GITHUB_TOKEN` when creating the pull request so the normal trust-check workflows still run on the created PR.
+- Automatically created PRs contain enough review context for the maintainer without exposing private or unnecessary user data.
+- Merged `main` can republish the static site automatically to the permanent authenticated here.now slug, so approved submissions flow back to the live catalogue without manual GitHub browsing by the submitter.
+- Existing trust protections remain intact:
+  - `trust / policy`
+  - `trust / SkillSpector`
+  - human review
+  - merge to `main` before catalogue publication
+- The repository documentation and maintainer runbooks explain the new site-native flow, required secrets/variables, and what stays intentionally out of scope.
 
 ## Approach
 
-1. Add a regression test for deleted platform paths, then remove the deletion-excluding diff filter from `changed_paths` so every changed path reaches the existing external-contributor scope policy.
-2. Author the two skill bundles using the existing template and editorial rules. Keep inputs user-provided, preserve source references, state uncertainty, and distinguish workflow guidance from legal, financial, compliance, certification, or assurance advice.
-3. Regenerate `site/catalog.json` from validated skill metadata.
-4. Extend the currently data-only `site/` directory by copying the canonical tokens from `/Users/ricardofilho/Documents/Projects/resources/branding/aster/aster-tokens.css` to `site/aster-tokens.css` and adding its first and only catalogue page, with small vanilla JavaScript for data loading and honest loading, error, and empty states. There is no existing `src/` frontend or second catalogue to preserve.
-5. Extend tests only where they prove repository policy or catalogue/site invariants. Avoid a frontend framework, build step, package manager, backend, installer, or speculative feature.
-6. Run structural validation, catalogue freshness, unit tests, and pinned SkillSpector. Serve `site/` locally and use gstack `/browse` for interaction, console, link, keyboard, and responsive evidence.
-7. Create a release branch, push it, open the pull request through the connected GitHub app, and let both required checks run. Record GitHub approval when actor attribution permits it; otherwise use the user-approved bootstrap exception. Merge, enable administrator enforcement immediately, and verify the final branch-protection state.
-8. Publish the exact merged `site/` directory with the here.now helper and saved credentials. Verify the returned live URL with `/browse`; never publish an expiring anonymous substitute as completion.
-9. Run Graphify extraction against the final repository, verify the graph with a targeted query or explanation, record the permanent URL and durable release facts, close RF-99, and perform a requirement-by-requirement completion audit.
+1. Keep the repository as the source of truth, but shift the public UX to site-first language and controls.
+2. Extend the generated public artefacts so approved skills produce downloadable bundles under `site/` and the frontend links to those bundles directly.
+3. Add a new submission section to the static Aster homepage that accepts the two-file v1 bundle, previews the parsed metadata, and performs conservative client-side validation before any network call.
+4. Add `.herenow/proxy.json` to the published site so `fetch('/api/submit-skill')` forwards only to the GitHub workflow-dispatch endpoint, with a server-side injected token variable and a strict per-IP rate limit.
+5. Implement a dedicated GitHub Actions intake workflow that:
+   - validates the submission payload shape again server-side
+   - writes the submitted `SKILL.md` and `marketplace.json` into a branch
+   - regenerates catalogue/download artefacts
+   - opens a draft PR using a dedicated secret token
+6. Keep the existing trust gate as the only route to publication. The intake workflow creates the PR; the current trust checks and maintainer review decide whether it lands.
+7. Add a separate deploy workflow for `main` that republishes the authenticated here.now site automatically after merged changes affecting the public catalogue surface.
+8. Configure the required external state as part of implementation rather than leaving it as manual follow-up:
+   - GitHub repo secrets and variables
+   - here.now account variables used by proxy routes
+   - the permanent site slug used by automated publish
+9. Verify the whole story locally and live:
+   - build artefacts
+   - upload flow in browser
+   - workflow dispatch route
+   - auto-created PR
+   - required checks on that PR
+   - automatic republish after merge
 
 ## Key Decisions And Tradeoffs
 
-- The two seed skills are evidence-organization workflows, not promises of ESG compliance or professional conclusions. This makes them useful while keeping claims reviewable.
-- The site stays framework-free. Four static files plus generated JSON are enough for two cards, filtering, and deployment.
-- Aster is the concrete visual source. The implementation uses its canonical palette, typography, spacing, glass surfaces, and quiet motion rather than inventing another design direction.
-- With only two cards, search and category filters add more interface than value. The primary interaction is opening each reviewed source skill on GitHub; accounts, ratings, installs, downloads, and submission forms remain out of scope.
-- The site links to GitHub as the source of truth rather than duplicating full skill instructions into the frontend.
-- Administrator enforcement is enabled only after this user-reviewed bootstrap release lands. The bootstrap exception expires with this release; future maintainer-authored platform work requires a second trusted reviewer or an explicitly documented maintenance window.
-- The owner runbook will document the only emergency recovery path for broken required checks: record a maintenance window, temporarily disable administrator enforcement, repair the check through a pull request, and restore enforcement immediately. Normal contributions never use that exception.
-- Permanent authenticated here.now publication is required; an anonymous 24-hour URL is not an acceptable final result.
-- Here, authenticated means the helper reads the saved API key from `~/.herenow/credentials`; permanent means the publish reports authenticated mode and no expiry. The returned slug URL is the stable pointer for later updates, while its content is intentionally mutable only through explicit redeployment; the merged Git commit remains the immutable source that can reproduce it.
+- The best possible option in this stack is not a separate backend service. It is a static here.now site plus a narrow authenticated proxy route into a dedicated GitHub intake workflow.
+- The site-native uploader is intentionally narrower than the repository's raw skill intake. It supports the common two-file v1 bundle only, because that gives non-GitHub users a clean flow without exposing a high-power general write API.
+- Downloads are generated from merged source bundles and published with the site. The user gets a real reviewed bundle, not a synthetic export assembled on click.
+- The proxy route will expose exactly one submission endpoint, not a broad GitHub API passthrough. This keeps the public surface narrow even though the underlying secret token has repository power.
+- The hidden-dispatch path needs tighter file-size limits than the repository validator because GitHub workflow-dispatch payloads are better treated as a bounded transport. Larger or more complex future bundles can still remain a repository-only path if needed.
+- The submitter-facing flow will prefer public attribution fields or a public contact URL rather than collecting private data that would be awkward to handle safely in a public-repo workflow.
+- Automatic republish on merged `main` is part of the product, not a convenience. Without it, the site would still depend on maintainer GitHub operations and would not feel like the front door of the marketplace.
 
 ## Risks And Unknowns
 
-- GitHub may attribute an app-created pull request to the same user who must approve it. This plan makes the user's post-review signoff the explicit bootstrap approval; no continuing bypass remains after administrator enforcement is enabled.
-- SkillSpector may report a false positive. A non-`SAFE` result blocks publication until the content is narrowed or the user explicitly changes the acceptance criterion; the scanner will not be bypassed.
-- SkillSpector success means `risk_assessment.recommendation` in each JSON report is exactly `SAFE`. The wrapper runs locally and in GitHub Actions. If the reviewed upstream commit becomes unavailable, the owner must review and pin a replacement commit in a separate platform change; the check is never weakened to unblock a contribution.
-- Codex may make at most two content revisions in response to SkillSpector findings without changing either skill's promised job. If a skill is still not `SAFE`, publication pauses and the user decides whether to replace that skill or stop; no acceptance criterion is weakened.
-- Graphify is installed locally and its `claude-cli` backend can use the authenticated Claude CLI without another API key. The release runs `graphify extract . --backend claude-cli --no-cluster --out .` and requires a readable `graphify-out/graph.json`.
-- Preflight has confirmed the saved here.now credential is accepted by the authenticated sites endpoint with HTTP 200 and the pinned SkillSpector commit resolves at the expected SHA.
-- Google-hosted Aster fonts are a network dependency. System fallbacks keep the site readable if the font request is unavailable.
-- here.now live behavior can differ from local documentation. The publish helper's current structured result and a live browser reload are authoritative.
+- GitHub workflow-dispatch payload size is a practical transport limit even if the repo validator allows larger text bundles. The site flow must enforce smaller caps explicitly and document that it is a conservative intake path.
+- A proxied public submission endpoint can still be spammed. The route-specific rate limit, conservative payload validation, and draft-PR creation reduce impact but do not eliminate abuse entirely.
+- A PR created by automation must still trigger the required trust workflows. The implementation must use a dedicated secret token path and prove that the resulting PR receives `trust / policy` and `trust / SkillSpector`.
+- here.now proxy routes require an authenticated site and configured account variables. This implementation is blocked if the account cannot store the necessary variables or if the permanent site slug is not writable by the configured API key.
+- GitHub repo secrets are currently absent. The implementation must create the required secrets and variables as part of the rollout, or it is not complete.
+- If the deploy workflow republishes a broken site automatically, production could drift immediately after merge. The workflow therefore needs a local build/validation gate before publish, and the live site must be rechecked after rollout.
 
 ## Out Of Scope
 
-- Payments, subscriptions, accounts, ratings, reviews, analytics, recommendations, or personalised content.
-- Open self-service publication, a contributor portal, a package manager, remote installation, or automatic execution of skills.
-- A backend, database, frontend framework, build service, single-page application routing, custom domain, or private access gate.
-- Regulatory determinations, legal or financial advice, certification, audit, or assurance work.
-- More than the two named seed skills.
+- Accounts, passwords, user dashboards, submitter login, or submission-status tracking.
+- Arbitrary multi-file skill bundles, binary attachments, archives, images, PDFs, or executable skill content.
+- Replacing GitHub review with a custom moderation system.
+- Payments, ratings, recommendations, analytics-heavy growth features, or social marketplace features.
+- Private contact storage, hidden inboxes, or CRM-like submitter management.
+- Full background moderation automation after PR creation; human review remains required.
 
 ## Verification
 
-- `python3 scripts/build_catalog.py --check`
 - `python3 scripts/validate_skills.py --all`
+- `python3 scripts/build_catalog.py --check`
 - `python3 -m unittest discover -s tests`
-- `python3 scripts/run_skillspector.py --all --reports artifacts/skillspector` using NVIDIA SkillSpector pinned at `a5092dd9b9521ff57a9b53612bb129ce78019002`
-- `graphify extract . --backend claude-cli --no-cluster --out .`, followed by a targeted `graphify query` or `graphify explain`
-- GitHub Actions `trust / policy` and `trust / SkillSpector` pass for the release pull request.
-- A manual editorial check confirms both skills describe a bounded job, preserve source references and uncertainty, and make no legal, financial, compliance, certification, audit, assurance, completeness, or guaranteed-outcome claim.
-- GitHub branch protection reports strict checks, conversation resolution, code-owner and last-push approval, one approval, force-push/deletion denial, and administrator enforcement enabled.
-- Local `/browse` checks cover content, both GitHub links, keyboard focus, console errors, failed network requests, and screenshots at 375x812, 768x1024, and 1280x720. Every viewport must show the brand, trust boundary, count, and both cards without horizontal overflow.
-- here.now's current publish result reports authenticated mode and no expiry; `/browse` verifies the returned stable URL, two skill cards, source links, and clean console.
-- `graphify-out/graph.json` exists and answers a targeted query or explanation, while `graphify-out/cost.json` and `graphify-out/cache/` remain untracked.
-- Final `git status`, remote branch, pull request, Linear state, README, and project memory agree on the shipped URL and outcome.
+- any new build/check command for downloadable public artefacts returns clean results
+- browser verification with gstack `/browse` covers:
+  - homepage rendering
+  - download buttons
+  - successful local parsing of the submission files
+  - honest validation errors
+  - successful POST to the proxied submission endpoint
+  - responsive layout at mobile, tablet, and desktop widths
+- a live submission from the site creates a draft PR automatically
+- the created PR runs `trust / policy` and `trust / SkillSpector`
+- merging a reviewed submission to `main` republishes the permanent here.now site automatically and the new public download appears live
+- final GitHub, Linear, README, and project memory all agree on the new RF-100 flow and configuration
 
 ## GitHub, Linear, And Memory Impact
 
-- GitHub: deliver RF-99 on a `codex/` release branch, preserve the trust checks, close the disposable smoke branch if appropriate, land the release, and enable administrator enforcement after merge.
-- Linear: keep RF-99 as the implementation issue, move it through active work, attach the release pull request and permanent site URL, then close it only after live verification.
-- Project memory: record the two shipped skills, trust-gate deletion fix, permanent here.now URL, Aster frontend, final protection state, and Graphify outcome in one or two concise durable entries.
+- GitHub: add submission-intake and deploy workflows, generated download artefacts, frontend submission/download UX, configuration docs, and any supporting scripts/tests on a `codex/` branch and PR.
+- Linear: RF-100 is the source-of-truth implementation issue. It should move to active work during implementation and close only after live submission and republish verification.
+- Project memory: record RF-100, the site-first intake architecture, the exact required proxy/secret configuration, and the final durable public workflow once it ships.

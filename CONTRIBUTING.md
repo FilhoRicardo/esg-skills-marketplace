@@ -1,6 +1,6 @@
 # Contributing a skill
 
-Thank you for proposing an ESG skill. GitHub calls your proposal a **pull request**. Nothing becomes public when you open one: it must pass the automated checks and receive maintainer approval first.
+Thank you for proposing an ESG skill. The easiest path is the public ESG Skills Marketplace site: upload `SKILL.md` and `marketplace.json` there and the hidden intake flow will create a draft review request for you. This repository guide remains the fallback for maintainers and advanced contributors who want the GitHub-first path directly.
 
 ## Before you start
 
@@ -27,7 +27,16 @@ Your v1 submission must:
    python3 -m unittest discover -s tests
    ```
 
-## Open the request on GitHub
+## Submit through the public site
+
+1. Open the live ESG Skills Marketplace site.
+2. Choose `SKILL.md` and `marketplace.json`.
+3. Confirm redistribution rights and the review boundary.
+4. Queue the submission.
+
+If the browser-side checks pass, the site hands the bundle to the hidden intake flow. If the server-side intake also passes, GitHub receives a draft pull request and the normal trust checks begin.
+
+## Open the request on GitHub directly
 
 If you are new to GitHub:
 
@@ -62,4 +71,4 @@ Use one category in `marketplace.json`:
 - **Approved** — the checks and human review passed; the maintainer may merge.
 - **Closed** — the submission is out of scope, unsafe, unverifiable, or cannot be redistributed.
 
-Merging places the skill in the approved source of truth. The public catalogue is updated only from merged content.
+Merging places the skill in the approved source of truth. The public catalogue and direct-download bundles are updated only from merged content.

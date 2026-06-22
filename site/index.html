@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="A curated catalogue of reviewed Codex-compatible environmental, social, and governance skills."
+      content="Download reviewed environmental, social, and governance skill bundles and submit new skills from the public marketplace."
     >
     <title>ESG Skills Marketplace</title>
     <link rel="stylesheet" href="aster-tokens.css">
@@ -19,28 +19,31 @@
           <span class="brand-mark" aria-hidden="true">✲</span>
           <span>ESG Skills Marketplace</span>
         </a>
-        <a
-          class="aster-btn aster-btn--green-ghost source-link"
-          href="https://github.com/FilhoRicardo/esg-skills-marketplace"
-          target="_blank"
-          rel="noreferrer"
-        >View repository</a>
+
+        <nav class="top-actions" aria-label="Primary actions">
+          <a class="aster-btn aster-btn--green-ghost" href="#skills-title">Download skills</a>
+          <a class="aster-btn aster-btn--primary" href="#submit-title">Add your skill</a>
+        </nav>
       </header>
 
       <main class="catalogue">
         <section class="intro aster-glass" aria-labelledby="page-title">
-          <p class="aster-eyebrow aster-eyebrow--green">Curated workflows · v1</p>
-          <h1 id="page-title">Evidence-first ESG work, with the boundaries left visible.</h1>
+          <p class="aster-eyebrow aster-eyebrow--green">Reviewed bundles · site-first intake</p>
+          <h1 id="page-title">Download approved ESG workflows. Submit new ones without GitHub friction.</h1>
           <p class="intro-copy">
-            Two Codex-compatible workflows for organising environmental, social, and governance
-            evidence. Each skill is text-only, checked automatically, and reviewed before it enters
-            the catalogue.
+            The public site is the front door. Reviewed bundles download directly here, and new
+            skills enter a hidden review queue before anything becomes public.
           </p>
+
+          <div class="intro-actions">
+            <a class="aster-btn aster-btn--primary" href="#skills-title">Download reviewed bundles</a>
+            <a class="aster-btn aster-btn--green-ghost" href="#submit-title">Queue a new skill</a>
+          </div>
 
           <dl class="trust-list" aria-label="Catalogue trust gate">
             <div class="aster-inner">
               <dt class="aster-mono">01</dt>
-              <dd>Restricted text-only format</dd>
+              <dd>Text-only bundle intake</dd>
             </div>
             <div class="aster-inner">
               <dt class="aster-mono">02</dt>
@@ -65,7 +68,7 @@
           <div class="panel-heading">
             <div>
               <p class="aster-eyebrow">Approved catalogue</p>
-              <h2 id="skills-title">Skills ready to inspect</h2>
+              <h2 id="skills-title">Reviewed bundles ready to download</h2>
             </div>
             <p id="catalog-status" class="catalog-status aster-mono" aria-live="polite">
               Loading catalogue
@@ -80,17 +83,127 @@
 
           <noscript>
             <div class="state-card aster-inner">
-              <p>JavaScript is required to load the generated catalogue.</p>
-              <a href="https://github.com/FilhoRicardo/esg-skills-marketplace/tree/main/skills">
-                Browse approved skills on GitHub
-              </a>
+              <p>JavaScript is required to load reviewed bundles and the site-native submission flow.</p>
             </div>
           </noscript>
+        </section>
+
+        <section class="submit-panel aster-glass" aria-labelledby="submit-title">
+          <div class="panel-heading submit-heading">
+            <div>
+              <p class="aster-eyebrow">Site-native intake</p>
+              <h2 id="submit-title">Add your skill without exposing repository scaffolding</h2>
+            </div>
+            <p id="submission-status" class="catalog-status aster-mono" aria-live="polite">
+              Loading intake rules
+            </p>
+          </div>
+
+          <div class="submit-layout">
+            <form id="submission-form" class="submission-form" novalidate>
+              <div class="field-grid">
+                <label class="field-card aster-inner" for="skill-file">
+                  <span class="field-label">SKILL.md</span>
+                  <span class="field-help">The reviewed workflow instructions in UTF-8 Markdown.</span>
+                  <input id="skill-file" name="skill-file" type="file" accept=".md,text/markdown" required>
+                </label>
+
+                <label class="field-card aster-inner" for="marketplace-file">
+                  <span class="field-label">marketplace.json</span>
+                  <span class="field-help">The public catalogue title and category in UTF-8 JSON.</span>
+                  <input
+                    id="marketplace-file"
+                    name="marketplace-file"
+                    type="file"
+                    accept=".json,application/json"
+                    required
+                  >
+                </label>
+              </div>
+
+              <div class="field-grid field-grid--copy">
+                <label class="copy-field" for="public-name">
+                  <span class="field-label">Public name (optional)</span>
+                  <span class="field-help">Shown in the draft review request if you want visible attribution.</span>
+                  <input
+                    id="public-name"
+                    name="public-name"
+                    class="aster-input"
+                    type="text"
+                    maxlength="80"
+                    autocomplete="name"
+                  >
+                </label>
+
+                <label class="copy-field" for="public-contact">
+                  <span class="field-label">Public contact (optional)</span>
+                  <span class="field-help">Use a URL or public email only if you are comfortable putting it in review.</span>
+                  <input
+                    id="public-contact"
+                    name="public-contact"
+                    class="aster-input"
+                    type="text"
+                    maxlength="200"
+                    autocomplete="off"
+                  >
+                </label>
+              </div>
+
+              <label class="check-row aster-inner" for="rights-confirmed">
+                <input id="rights-confirmed" name="rights-confirmed" type="checkbox">
+                <span>I confirm the bundle is original or I have permission to redistribute it publicly.</span>
+              </label>
+
+              <label class="check-row aster-inner" for="boundary-confirmed">
+                <input id="boundary-confirmed" name="boundary-confirmed" type="checkbox">
+                <span>I understand approval still requires automated checks, maintainer review, and merge to `main`.</span>
+              </label>
+
+              <div class="submit-actions">
+                <button id="submit-button" class="aster-btn aster-btn--primary" type="submit" disabled>
+                  Queue for review
+                </button>
+                <p class="submit-note">
+                  This intake path is intentionally narrow: two UTF-8 text files for new bundles only.
+                  Updates to approved slugs stay in maintainer review.
+                </p>
+              </div>
+            </form>
+
+            <aside class="submission-preview aster-inner" aria-labelledby="preview-title">
+              <p class="aster-eyebrow">Submission preview</p>
+              <h3 id="preview-title">Waiting for the two required files</h3>
+
+              <dl class="preview-list">
+                <div>
+                  <dt>Slug</dt>
+                  <dd id="preview-slug">—</dd>
+                </div>
+                <div>
+                  <dt>Title</dt>
+                  <dd id="preview-title-value">—</dd>
+                </div>
+                <div>
+                  <dt>Category</dt>
+                  <dd id="preview-category">—</dd>
+                </div>
+              </dl>
+
+              <p id="preview-detail" class="preview-detail">
+                Choose `SKILL.md` and `marketplace.json`, and the site will parse them before anything is queued.
+              </p>
+            </aside>
+          </div>
+
+          <div id="submission-feedback" class="feedback-card aster-inner" hidden>
+            <p id="feedback-title" class="state-title">Submission status</p>
+            <p id="feedback-detail"></p>
+          </div>
         </section>
       </main>
 
       <footer>
-        <span>GitHub is the source of truth.</span>
+        <span>Downloads ship from the reviewed catalogue. New skills stay private to review until approval.</span>
         <span class="aster-mono">No accounts · no payments · no runtime execution</span>
       </footer>
     </div>

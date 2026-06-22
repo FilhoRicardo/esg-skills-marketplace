@@ -106,3 +106,36 @@ Codex response:
 
 - Graphify distinguishes its API-backed `claude` backend from the subscription-backed `claude-cli` backend. The initial command correctly refused to run without `ANTHROPIC_API_KEY`.
 - Codex corrected the reviewed command to `--backend claude-cli`, which uses the already-authenticated local Claude CLI without exposing or requesting an API key.
+
+## 2026-06-22 — RF-100 planning gate
+
+- The user requested the stronger marketplace UX: site-native download, site-native submission, hidden GitHub scaffolding, PR creation behind the scenes, and publication back to the live site after approval.
+- Codex created Linear issue RF-100 to track this new scope: `https://linear.app/rf-ai-workspace/issue/RF-100/add-site-native-skill-download-and-submission-flow`.
+- GitHub remains linked to `FilhoRicardo/esg-skills-marketplace`, and the Linear project remains `ESG Skills Marketplace`.
+- Codex checked the current external configuration before plan review:
+  - GitHub repo secrets: none configured
+  - GitHub repo variables: none configured
+  - here.now account variables: none configured
+  - authenticated here.now default Drive exists, but the reviewed plan currently prefers a narrower workflow-dispatch intake path over a Drive-backed submission store
+- Codex read the current here.now docs through the required gstack `/browse` path and confirmed two implementation-relevant capabilities:
+  - authenticated proxy routes from `.herenow/proxy.json` can inject server-side variables into exact or prefix paths
+  - proxy routes support stricter per-route rate limits and are never served directly to visitors
+- No RF-100 implementation code has started.
+
+### Round 1
+
+- Claude CLI was invoked in authenticated no-tools plan mode with the full `PLAN.md` content.
+- The process did not return critique or a verdict within two 30-second waits.
+- Codex did not treat silence as `CLEAR` and moved to a shorter retry.
+
+### Round 2
+
+- Claude CLI was invoked again in authenticated no-tools plan mode with a compressed review prompt over the same plan.
+- The process again returned no critique or verdict within 30 seconds.
+- Codex did not treat silence as `CLEAR` and moved to a tightly summarized third retry.
+
+### Round 3
+
+- Claude CLI received a compact plan summary focused on the hidden-proxy, workflow-dispatch, PR-creation, and auto-republish architecture.
+- The process again returned no critique or verdict within 30 seconds.
+- Codex is stopping the review loop here rather than inventing a `CLEAR` result. The reviewed plan is being presented to the user for the required signoff before any RF-100 code starts.

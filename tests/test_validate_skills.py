@@ -84,6 +84,16 @@ class SkillPolicyTests(unittest.TestCase):
         with self.assertRaisesRegex(PolicyError, "stale"):
             validate_catalog(root)
 
+    def test_marketplace_title_must_be_single_line(self) -> None:
+        root = self.make_root()
+        skill = self.add_skill(root)
+        (skill / "marketplace.json").write_text(
+            json.dumps({"title": "Materiality\nbrief", "category": "strategy"}),
+            encoding="utf-8",
+        )
+        with self.assertRaisesRegex(PolicyError, "single line"):
+            validate_skill(skill)
+
 
 if __name__ == "__main__":
     unittest.main()

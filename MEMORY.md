@@ -10,6 +10,7 @@ _None recorded yet._
 - GitHub repository: https://github.com/FilhoRicardo/esg-skills-marketplace
 - Linear project: https://linear.app/rf-ai-workspace/project/esg-skills-marketplace-2a2095348777
 - First implementation issue: https://linear.app/rf-ai-workspace/issue/RF-99/initialize-esg-skills-marketplace
+- Site-first submission issue: https://linear.app/rf-ai-workspace/issue/RF-100/add-site-native-skill-download-and-submission-flow
 - Permanent catalogue: https://royal-bugle-xgg7.here.now/
 - Security scanner: https://github.com/NVIDIA/SkillSpector
 
@@ -26,3 +27,4 @@ _None recorded yet._
 - The public GitHub repository, Linear project, and first issue `RF-99` were created on 2026-06-21.
 - V1 was published permanently through authenticated here.now hosting on 2026-06-22 with the `esg-materiality-brief` and `ghg-inventory-evidence-pack` skills; the deleted-platform-file scope regression is covered and the Aster catalogue is browser-verified.
 - The trust-gate workflow was narrowed on 2026-06-22 to `opened`, `synchronize`, and `reopened` pull-request events so draft-to-ready transitions do not queue a redundant post-merge race against the deleted merge ref.
+- RF-100 was created on 2026-06-22 to add site-native skill downloads, a site-native submission flow, hidden GitHub intake orchestration, and post-merge republishing from the public site surface.
