@@ -18,7 +18,7 @@ description: Prepare a bounded ESG briefing from user-provided operating evidenc
 Use the supplied evidence only. Separate facts from assumptions, preserve source links, and call out uncertainty where the source pack is incomplete.
 """
 
-VALID_MARKETPLACE = json.dumps({"title": "Climate action brief", "category": "strategy"})
+VALID_MARKETPLACE = json.dumps({"title": "Climate action brief"})
 
 
 class SiteIntakeTests(unittest.TestCase):
@@ -39,7 +39,17 @@ class SiteIntakeTests(unittest.TestCase):
             boundary_confirmed=True,
         )
         self.assertEqual(entry["slug"], "climate-action-brief")
-        self.assertEqual(entry["category"], "strategy")
+        self.assertEqual(entry["category"], "pending-review")
+
+    def test_site_submitter_cannot_assign_category(self) -> None:
+        with self.assertRaisesRegex(PolicyError, "may only contain title"):
+            validate_submission(
+                VALID_SKILL,
+                json.dumps({"title": "Climate action brief", "category": "strategy"}),
+                root=self.make_root(),
+                rights_confirmed=True,
+                boundary_confirmed=True,
+            )
 
     def test_existing_slug_is_rejected(self) -> None:
         root = self.make_root()
@@ -58,7 +68,7 @@ class SiteIntakeTests(unittest.TestCase):
             )
 
     def test_site_specific_size_limit_is_enforced(self) -> None:
-        oversize_json = "{" + '"title":"' + ("A" * SITE_INTAKE_MARKETPLACE_MAX_BYTES) + '","category":"strategy"}'
+        oversize_json = "{" + '"title":"' + ("A" * SITE_INTAKE_MARKETPLACE_MAX_BYTES) + '"}'
         with self.assertRaisesRegex(PolicyError, "site intake limit"):
             validate_submission(
                 VALID_SKILL,

@@ -101,7 +101,11 @@ def validate_git_modes(root: Path = ROOT) -> None:
             )
 
 
-def validate_skill(skill_dir: Path) -> dict[str, str]:
+def validate_skill(
+    skill_dir: Path,
+    *,
+    allow_pending_category: bool = False,
+) -> dict[str, str]:
     slug = skill_dir.name
     if not SLUG_RE.fullmatch(slug):
         raise PolicyError(f"{skill_dir}: folder name must be a lowercase hyphenated slug")
@@ -164,7 +168,16 @@ def validate_skill(skill_dir: Path) -> dict[str, str]:
         raise PolicyError(f"{marketplace_file}: invalid JSON: {exc.msg}") from exc
     if not isinstance(marketplace, dict):
         raise PolicyError(f"{marketplace_file}: expected a JSON object")
-    if set(marketplace) != {"title", "category"}:
+    marketplace_keys = set(marketplace)
+    if allow_pending_category:
+        if marketplace_keys != {"title"}:
+            raise PolicyError(
+                f"{marketplace_file}: site intake metadata may only contain title"
+            )
+        pending_category = True
+    else:
+        pending_category = False
+    if not allow_pending_category and marketplace_keys != {"title", "category"}:
         raise PolicyError(f"{marketplace_file}: only title and category are allowed")
     title = marketplace.get("title")
     category = marketplace.get("category")
@@ -172,14 +185,14 @@ def validate_skill(skill_dir: Path) -> dict[str, str]:
         raise PolicyError(f"{marketplace_file}: title must contain 4 to 80 characters")
     if any(character in title for character in "\r\n\t"):
         raise PolicyError(f"{marketplace_file}: title must be a single line of plain text")
-    if category not in ALLOWED_CATEGORIES:
+    if not pending_category and category not in ALLOWED_CATEGORIES:
         raise PolicyError(f"{marketplace_file}: category must be one of {sorted(ALLOWED_CATEGORIES)}")
 
     return {
         "slug": slug,
         "title": title.strip(),
         "description": description,
-        "category": category,
+        "category": "pending-review" if pending_category else category,
         "path": f"skills/{slug}",
     }
 

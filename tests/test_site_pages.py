@@ -44,7 +44,7 @@ class SitePageTests(unittest.TestCase):
 
         self.assertIn("submission-form", submission.ids)
         self.assertIn("marketplace-title", submission.ids)
-        self.assertIn("marketplace-category", submission.ids)
+        self.assertNotIn("marketplace-category", submission.ids)
         self.assertNotIn("marketplace-file", submission.ids)
         self.assertIn("submission-preview", (SITE / "styles.css").read_text(encoding="utf-8"))
         self.assertIn("./#skills-title", submission.links)
@@ -59,7 +59,7 @@ class SitePageTests(unittest.TestCase):
 
     def test_browser_still_sends_generated_marketplace_metadata(self) -> None:
         app = (SITE / "app.js").read_text(encoding="utf-8")
-        self.assertIn("JSON.stringify({ title, category })", app)
+        self.assertIn("JSON.stringify({ title })", app)
         self.assertIn("marketplace_json: submission.marketplaceText", app)
 
     def test_public_page_does_not_lock_document_scrolling(self) -> None:

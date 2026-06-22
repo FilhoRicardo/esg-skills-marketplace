@@ -5,7 +5,7 @@ This is the maintainer setup for the site-native download and submission flow.
 ## What the public site does
 
 - serves reviewed skill downloads directly from the live catalogue;
-- accepts `SKILL.md`, a public title, and a category from the site-native submission form, then generates `marketplace.json` in the browser before dispatch;
+- accepts `SKILL.md` and a public title from the site-native submission form, then generates title-only intake metadata before dispatch;
 - forwards only one hidden path, `/api/submit-skill`, through a here.now proxy route;
 - relies on GitHub Actions to create the draft pull request and on `main` deploys to republish the site.
 
@@ -36,7 +36,7 @@ The proxy manifest is committed in `site/.herenow/proxy.json`. here.now does not
 - The public site never receives a broad GitHub API proxy surface.
 - The proxy manifest exposes one exact path only: `/api/submit-skill`.
 - Rate limiting is applied at the proxy route.
-- The intake workflow rebuilds only the submitted skill folder plus generated catalogue artefacts; it is not a generic repository write path.
+- The intake workflow writes only the submitted skill folder. The draft remains blocked until a maintainer assigns a category and regenerates the catalogue artefacts.
 - Publication still requires the trust checks, human review, and merge to `main`.
 
 ## Operational checks

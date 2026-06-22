@@ -33,8 +33,8 @@
             <h1 id="submit-title">Submit a skill for review</h1>
           </div>
           <p>
-            Upload <code>SKILL.md</code>, add a public title, and choose a category. We create the
-            catalogue metadata before sending the bundle to the review queue.
+            Upload <code>SKILL.md</code> and add a public title. The maintainer assigns the category
+            after reading the skill.
           </p>
         </section>
 
@@ -74,19 +74,6 @@
                     >
                   </label>
 
-                  <label class="detail-field" for="marketplace-category">
-                    <span class="field-label">Category</span>
-                    <span class="field-help">Choose the closest job area.</span>
-                    <select
-                      id="marketplace-category"
-                      name="marketplace-category"
-                      class="aster-input"
-                      required
-                      disabled
-                    >
-                      <option value="">Loading categories…</option>
-                    </select>
-                  </label>
                 </div>
               </div>
 
@@ -150,7 +137,7 @@
 
           <aside class="submission-preview aster-inner" aria-labelledby="preview-title">
             <p class="aster-eyebrow">Submission preview</p>
-            <h2 id="preview-title">Waiting for both files</h2>
+            <h2 id="preview-title">Waiting for skill details</h2>
 
             <dl class="preview-list">
               <div>
@@ -163,13 +150,13 @@
               </div>
               <div>
                 <dt>Category</dt>
-                <dd id="preview-category">—</dd>
+                <dd id="preview-category">Assigned during review</dd>
               </div>
             </dl>
 
             <p id="preview-detail" class="preview-detail">
-              Choose <code>SKILL.md</code>, enter a public title, and select a category to check the
-              bundle before it enters review.
+              Choose <code>SKILL.md</code> and enter a public title to check the bundle before it
+              enters review.
             </p>
           </aside>
         </section>

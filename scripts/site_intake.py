@@ -14,7 +14,7 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 if str(SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPT_DIR))
 
-from validate_skills import ALLOWED_CATEGORIES, PolicyError, ROOT, SLUG_RE, parse_frontmatter, validate_skill
+from validate_skills import PolicyError, ROOT, SLUG_RE, parse_frontmatter, validate_skill
 
 SITE_INTAKE_SKILL_MD_MAX_BYTES = 40_000
 SITE_INTAKE_MARKETPLACE_MAX_BYTES = 4_000
@@ -25,7 +25,6 @@ SITE_INTAKE_MAX_PUBLIC_CONTACT_CHARS = 200
 def submission_config() -> dict[str, object]:
     return {
         "dispatchPath": "/api/submit-skill",
-        "allowedCategories": sorted(ALLOWED_CATEGORIES),
         "maxSkillFileBytes": SITE_INTAKE_SKILL_MD_MAX_BYTES,
         "maxMarketplaceFileBytes": SITE_INTAKE_MARKETPLACE_MAX_BYTES,
         "maxPublicNameChars": SITE_INTAKE_MAX_PUBLIC_NAME_CHARS,
@@ -84,7 +83,7 @@ def validate_submission(
         skill_dir.mkdir()
         (skill_dir / "SKILL.md").write_text(skill_md, encoding="utf-8")
         (skill_dir / "marketplace.json").write_text(marketplace_json, encoding="utf-8")
-        entry = validate_skill(skill_dir)
+        entry = validate_skill(skill_dir, allow_pending_category=True)
 
     if (root / "skills" / entry["slug"]).exists():
         raise PolicyError(

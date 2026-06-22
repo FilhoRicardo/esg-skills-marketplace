@@ -1,92 +1,66 @@
-# Plan: Repair The Marketplace UX And Redeploy
+# Plan: Move Category Assignment Into Maintainer Review
 
 ## Goal
 
-Finish the RF-100 public experience by replacing the broken fixed-height single-page composition with a calm, responsive Aster catalogue and a dedicated submission page, while leaving the reviewed-download and GitHub intake pipeline unchanged. Publish the verified redesign to the existing permanent here.now URL.
+Let public contributors upload `SKILL.md` and enter a public title without choosing a category. A maintainer assigns the category after reading the submitted skill.
 
 ## Acceptance Criteria
 
-- Work remains in `/Users/ricardofilho/Documents/Projects/active/esg-skills-marketplace`, on GitHub repository `FilhoRicardo/esg-skills-marketplace`, under Linear project `ESG Skills Marketplace` and implementation issue RF-100.
-- The user selects one of three Aster-based visual directions generated from the live-site screenshots before implementation begins.
-- The homepage has one primary job: help visitors understand and download reviewed environmental, social, and governance (ESG) skills.
-- The homepage uses a short hero with one primary `Browse skills` action and a secondary `Submit a skill` link.
-- Every approved skill exposes an immediately visible `Download .zip` action at desktop, tablet, and mobile widths.
-- Submission uses a dedicated `submit.html` page where contributors upload only `SKILL.md`, enter a public title, and choose a category; the browser generates `marketplace.json` while the existing validation, preview, optional attribution, attestations, and hidden proxy dispatch remain intact.
-- User-facing copy describes the job and review boundary without exposing implementation terms such as repository scaffolding, approved slugs, workflow dispatch, or merge to `main`.
-- The Aster system remains authoritative: Schibsted Grotesk, JetBrains Mono for data/labels, greyscale plus forest green, restrained glass surfaces, and no decorative new palette or assets.
-- The public pages use normal document scrolling. No section receives a fixed/equal height that can clip content, no page-level `overflow: hidden` blocks content, and the footer remains in document flow.
-- At 375×812, 768×1024, 1280×720, and 1440px wide:
-  - no content overlaps or horizontal scrolling;
-  - all visible controls are at least 44px high where practical, with usable checkbox hit areas;
-  - every download link and form control passes browser hit testing;
-  - the full submission form and preview are reachable through normal scrolling.
-- The live site loads without console errors, downloads the reviewed zip artefacts, parses representative submission files, and shows honest local/live submission states.
-- The existing proxy route, GitHub intake workflow, trust checks, review boundary, and main-branch deploy workflow are not broadened or bypassed.
-- The verified branch snapshot is published to `https://royal-bugle-xgg7.here.now/` for UX testing, then browser-checked live.
+- Work remains in the linked GitHub repository, Linear project, and RF-100 issue.
+- `submit.html` has no contributor-facing category control or category requirement copy.
+- A valid `SKILL.md` and public title are sufficient to populate the preview and enable submission after the existing confirmations.
+- The preview says the category will be assigned during review.
+- The browser keeps the existing dispatch endpoint and `marketplace_json` input, but generates title-only intake metadata.
+- Site intake accepts and writes title-only marketplace metadata for a draft submission.
+- The site-submission workflow opens the draft pull request without attempting to build publishable catalogue artefacts.
+- The draft pull-request body tells maintainers to add an allowed category and run `python3 scripts/build_catalog.py`.
+- The normal approved-skill validator remains unchanged and strict, so title-only metadata cannot pass policy checks or merge until a category is assigned.
+- The Aster/Calm Ledger layout remains responsive and otherwise unchanged.
+- The verified branch snapshot is republished to the permanent here.now site.
 
 ## Approach
 
-1. Generate three visual directions from the current desktop/mobile screenshots and the Aster rules. Vary hierarchy and catalogue structure, not the brand system or product scope. The user's selection becomes the visual target.
-2. Replace `site/index.html` with a catalogue-focused page:
-   - compact header and navigation;
-   - concise, card-light hero;
-   - reviewed skills rendered as self-contained rows/cards with persistent download actions;
-   - short trust and professional-advice boundary copy;
-   - normal footer flow.
-3. Add `site/submit.html` for the existing intake flow. Preserve all current fields, validation, preview, and submission feedback, but present them as one clear task with styled 44px+ controls and plain-language guidance.
-4. Split the current page script by responsibility only if needed for clarity: catalogue loading remains on the homepage, while submission logic runs only on the submission page. Do not change payload shape, endpoint, or validation rules.
-5. Rewrite `site/styles.css` around content-sized sections and a small responsive scale. Reuse `site/aster-tokens.css`; reduce nested glass panels and use spacing, typography, and dividers for hierarchy.
-6. Add the smallest useful static-page regression coverage for page separation and required asset/form hooks, then run all existing repository checks.
-7. Serve locally and verify the selected visual target and all primary interactions with gstack `/browse`, including responsive screenshots, scroll reachability, touch-target measurements, hit testing, console errors, zip download, and form preview.
-8. Run the pinned NVIDIA SkillSpector scan without executing skill content and refresh Graphify because meaningful frontend structure changed.
-9. Commit and push the redesign to the existing RF-100 branch/PR, publish the verified `site/` directory to the permanent here.now slug, and recheck the live desktop/mobile flows.
+1. Remove the category field, related DOM handling, generated public config, and contributor-facing copy.
+2. Generate `{ "title": "…" }` as the hidden intake metadata and show `Assigned during review` in the preview.
+3. Add a site-intake-only validation path that permits exactly title-only metadata while retaining all current skill, size, title, duplication, and attestation checks.
+4. Stop the site-submission workflow before catalogue generation and add explicit maintainer completion instructions to the draft pull request.
+5. Update focused tests and documentation, then verify locally and in gstack `/browse` without sending a real submission.
+6. Push the existing branch, refresh draft PR #6, republish here.now, and verify the live mobile and desktop flow.
 
 ## Key Decisions And Tradeoffs
 
-- Aster's `fit-to-viewport` guidance is intentionally not used for this public catalogue. It suits app workspaces with bounded inner panes; applying it to variable public content caused the current clipping. Normal document scrolling is the safer, more familiar pattern.
-- Submission becomes a separate page rather than a modal or collapsed homepage section. This gives catalogue visitors a focused first screen and gives contributors enough room for validation, preview, errors, and mobile use.
-- The redesign changes information architecture and presentation, not the intake architecture. Keeping the proxy and GitHub workflow unchanged narrows risk and makes the visual repair independently verifiable.
-- The catalogue stays simple with two skills. No search, filters, ratings, versioning UI, recommendations, or invented metadata are added.
-- Visual options vary the homepage hierarchy only. The selected system will extend to the submission page without inventing a second style.
-- Aster glass is reserved for a few meaningful surfaces. Skill rows/cards remain self-contained because each represents a downloadable object; nested decorative cards are removed.
+- Pending category is represented honestly by an absent `category` key, not by silently assigning a real but potentially wrong category.
+- Only site intake accepts the pending state. `validate_skills.py` stays strict for approved repository content, making category assignment a hard pre-merge requirement.
+- A newly opened submission pull request is expected to have a failing policy check until a maintainer adds the category and rebuilds the catalogue. The pull-request body explains this workflow.
+- The public workflow-dispatch field remains named `marketplace_json` to avoid changing the here.now proxy contract.
 
 ## Risks And Unknowns
 
-- Image-generated text may be imperfect. The selected mockup is a composition and hierarchy target; exact production copy remains the reviewed text in this plan.
-- Splitting the submission page can break DOM assumptions in the current single script. Verification must prove both pages load without null-reference console errors and preserve the exact dispatch payload.
-- Browser file inputs differ by operating system. The implementation must retain an accessible native input while presenting a consistent large picker state.
-- The live branch snapshot will be ahead of `main` until PR #6 is reviewed and merged. The deployment is explicitly for UX testing; GitHub remains the source of truth.
-- here.now publication can succeed while a stale asset remains cached. Live verification will use cache-busting/reload and check the rendered heading, page links, and submission preview.
+- Stale category references in JavaScript or HTML could break preview initialization; browser QA must cover the empty and valid states.
+- The intentionally incomplete draft must not be mistaken for a broken intake. The generated pull-request body must state the exact maintainer steps.
+- Site intake must not weaken the normal validator or allow arbitrary missing metadata fields.
 
 ## Out Of Scope
 
-- Changes to skill validation, intake limits, proxy authentication, GitHub permissions, trust workflows, or publication policy.
-- A real public submission during UX verification; browser parsing and UI states are tested without creating a noise PR.
-- Accounts, submission tracking, analytics, search, filters, ratings, payments, or additional skills.
-- New illustration, photography, icon library, animation system, or brand identity.
-- Merging PR #6 into `main`; the user asked for a UX-test deployment of the branch snapshot.
+- Automatic category classification.
+- Changes to the approved category taxonomy.
+- Changes to proxy authentication, GitHub permissions, scanner behavior, or merge policy.
+- A real live submission during verification.
+- Any visual redesign beyond removing the category field and reflowing the existing title field.
 
 ## Verification
 
+- `node --check site/app.js`
 - `python3 scripts/build_catalog.py`
 - `python3 scripts/build_catalog.py --check`
 - `python3 scripts/validate_skills.py --all`
 - `python3 -m unittest discover -s tests`
-- the pinned NVIDIA SkillSpector command used by the repository trust workflow, without executing contributed content
-- Graphify refresh using the existing authenticated `claude-cli` backend and ignored-output policy
-- local gstack `/browse` verification:
-  - homepage and submission page return successfully;
-  - no console errors or failed static asset requests;
-  - reviewed bundle count and both `Download .zip` links are visible and clickable;
-  - a downloaded zip contains the reviewed bundle files;
-  - a representative `SKILL.md`, public title, and category populate the preview and generate the existing marketplace metadata payload;
-  - all form fields and confirmations remain reachable at mobile width;
-  - 375×812, 768×1024, 1280×720, and 1440px layouts have no overlap or horizontal scroll;
-  - interactive elements pass hit testing and target-size checks.
-- live here.now verification repeats the homepage, download-link, dedicated submission-page, responsive, console, and preview checks without queueing a real submission.
+- Pinned NVIDIA SkillSpector scan without executing contributed content.
+- Focused tests prove site intake accepts title-only metadata and normal validation rejects it.
+- Local and live gstack `/browse` checks prove the category control is absent, title-only preview works, submission enables after confirmations, responsive layouts have no overflow, and the console has no errors.
 
 ## GitHub, Linear, And Memory Impact
 
-- GitHub: update the existing `codex/rf-100-site-native-intake` branch and draft PR #6 with the verified frontend repair. Existing trust checks must remain green.
-- Linear: RF-100 remains the active source-of-truth issue; no new issue is needed because this repairs the frontend acceptance quality of the same implementation.
-- Project memory: after live publication, add one durable sentence recording that RF-100's public catalogue was redesigned into separate catalogue and submission pages and browser-verified at the permanent slug.
+- GitHub: update `codex/rf-100-site-native-intake` and draft PR #6; future site-submission PRs require a maintainer category edit before checks pass.
+- Linear: RF-100 remains the active linked issue; no new issue is needed.
+- Memory: record the durable decision that public contributors no longer choose categories and maintainers assign them during draft review.

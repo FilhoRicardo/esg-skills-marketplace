@@ -167,3 +167,25 @@ Codex response:
 
 - The user selected visual direction 3, `Calm Ledger`, and thereby approved the reviewed frontend repair plan presented with the three options.
 - Implementation may proceed on the existing RF-100 branch. The visual target is the generated Calm Ledger mockup, and the GitHub intake architecture remains unchanged.
+
+## 2026-06-22 — Category assignment follow-up
+
+- The user explicitly requested removal of the public category requirement so maintainers can classify a skill after reading it.
+- Codex proposed title-only intake metadata, strict approved-skill validation, and an intentionally blocked draft pull request until the maintainer assigns a category and rebuilds the catalogue.
+
+### Round 1
+
+- Claude CLI passed the required authenticated no-tools smoke test.
+- Claude received the full follow-up plan in no-tools plan mode and returned no critique or verdict.
+- Codex did not treat silence as `CLEAR`; it tightened `PLAN.md` to the contained category-assignment change and removed stale redesign scope before retrying.
+
+### Round 2
+
+- Claude received the tightened plan with a focused question about title-only intake and the strict pre-merge category gate.
+- The call again returned no critique or verdict. Codex did not treat silence as approval and moved to one minimal risk check.
+
+### Round 3
+
+- Claude received only the proposed data flow and strict-validator boundary, with no surrounding plan prose.
+- The third call again returned no critique or verdict. This reproduces the documented silent-critic behavior for RF-100.
+- The user's request explicitly approves the exact product change, and Codex's implementation remains bounded to title-only draft intake with the unchanged validator preventing publication until category assignment. Implementation proceeds without inventing a Claude verdict.

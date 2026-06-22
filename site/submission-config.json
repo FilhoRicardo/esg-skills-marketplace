@@ -1,13 +1,5 @@
 {
   "dispatchPath": "/api/submit-skill",
-  "allowedCategories": [
-    "data",
-    "disclosure",
-    "operations",
-    "reporting",
-    "risk",
-    "strategy"
-  ],
   "maxSkillFileBytes": 40000,
   "maxMarketplaceFileBytes": 4000,
   "maxPublicNameChars": 80,

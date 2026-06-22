@@ -468,15 +468,6 @@ footer {
   font-size: 16px;
 }
 
-select.aster-input {
-  cursor: pointer;
-}
-
-select.aster-input:disabled {
-  cursor: wait;
-  opacity: 0.7;
-}
-
 .confirmations {
   padding: 0;
   border: 0;

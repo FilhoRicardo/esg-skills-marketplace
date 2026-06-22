@@ -1,6 +1,6 @@
 # Contributing a skill
 
-Thank you for proposing an ESG skill. The easiest path is the public ESG Skills Marketplace site: upload `SKILL.md`, enter a public title, and choose a category. The site creates the catalogue metadata and the hidden intake flow creates a draft review request for you. This repository guide remains the fallback for maintainers and advanced contributors who want the GitHub-first path directly.
+Thank you for proposing an ESG skill. The easiest path is the public ESG Skills Marketplace site: upload `SKILL.md` and enter a public title. The hidden intake flow creates a draft review request, and the maintainer assigns the category after reading the skill. This repository guide remains the fallback for maintainers and advanced contributors who want the GitHub-first path directly.
 
 ## Before you start
 
@@ -31,11 +31,11 @@ Your v1 submission must:
 
 1. Open the live ESG Skills Marketplace site.
 2. Choose `SKILL.md`.
-3. Enter the public catalogue title and choose a category.
+3. Enter the public catalogue title. The maintainer assigns the category during review.
 4. Confirm redistribution rights and the review boundary.
 5. Send the submission for review.
 
-If the browser-side checks pass, the site hands the bundle to the hidden intake flow. If the server-side intake also passes, GitHub receives a draft pull request and the normal trust checks begin.
+If the browser-side checks pass, the site hands the bundle to the hidden intake flow. If the server-side intake also passes, GitHub receives a draft pull request. The maintainer reads the skill, assigns a category, rebuilds the catalogue, and then runs the normal trust checks.
 
 ## Open the request on GitHub directly
 
@@ -57,7 +57,7 @@ Passing checks is necessary but not sufficient. The maintainer also reviews purp
 
 ## Categories
 
-Choose one category on the public site. Repository-first contributors use the same value in `marketplace.json`:
+Site contributors do not choose a category. The maintainer assigns one during review. Repository-first contributors use one of these values in `marketplace.json`:
 
 - `data`
 - `disclosure`

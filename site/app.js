@@ -4,7 +4,6 @@ const submissionStatus = document.querySelector("#submission-status");
 const form = document.querySelector("#submission-form");
 const skillFileInput = document.querySelector("#skill-file");
 const marketplaceTitleInput = document.querySelector("#marketplace-title");
-const marketplaceCategoryInput = document.querySelector("#marketplace-category");
 const publicNameInput = document.querySelector("#public-name");
 const publicContactInput = document.querySelector("#public-contact");
 const rightsInput = document.querySelector("#rights-confirmed");
@@ -115,9 +114,9 @@ function parseMarketplace(text) {
     throw new Error("marketplace.json must be a JSON object.");
   }
 
-  const keys = Object.keys(data).sort();
-  if (keys.length !== 2 || keys[0] !== "category" || keys[1] !== "title") {
-    throw new Error("marketplace.json may only contain title and category.");
+  const keys = Object.keys(data);
+  if (keys.length !== 1 || keys[0] !== "title") {
+    throw new Error("Submission metadata may only contain the public title.");
   }
 
   return data;
@@ -162,12 +161,6 @@ function buildPreview(skillText, marketplaceText) {
   }
 
   const marketplace = parseMarketplace(marketplaceText);
-  if (!intakeConfig.allowedCategories.includes(marketplace.category)) {
-    throw new Error(
-      `marketplace.json category must be one of: ${intakeConfig.allowedCategories.join(", ")}.`,
-    );
-  }
-
   const title = typeof marketplace.title === "string" ? marketplace.title.trim() : "";
   if (
     title.length < intakeConfig.minTitleChars ||
@@ -182,7 +175,7 @@ function buildPreview(skillText, marketplaceText) {
   return {
     slug,
     title,
-    category: marketplace.category,
+    category: "Assigned during review",
     description,
   };
 }
@@ -193,9 +186,9 @@ function updatePreview(nextPreview) {
     previewHeading.textContent = "Waiting for skill details";
     previewSlug.textContent = "—";
     previewTitle.textContent = "—";
-    previewCategory.textContent = "—";
+    previewCategory.textContent = "Assigned during review";
     previewDetail.textContent =
-      "Choose `SKILL.md`, enter a public title, and select a category before anything is queued.";
+      "Choose `SKILL.md` and enter a public title before anything is queued.";
     return;
   }
 
@@ -218,14 +211,13 @@ function syncSubmitButton() {
 async function readSubmissionValues() {
   const skillFile = skillFileInput.files?.[0];
   const title = marketplaceTitleInput.value.trim();
-  const category = marketplaceCategoryInput.value;
-  if (!skillFile || !title || !category) {
+  if (!skillFile || !title) {
     return null;
   }
 
   return {
     skillText: await skillFile.text(),
-    marketplaceText: JSON.stringify({ title, category }),
+    marketplaceText: JSON.stringify({ title }),
   };
 }
 
@@ -241,7 +233,7 @@ async function refreshSubmissionPreview() {
   const submission = await readSubmissionValues();
   if (!submission) {
     updatePreview(null);
-    setSubmissionTone("Add the file, title, and category", "neutral");
+    setSubmissionTone("Add the file and title", "neutral");
     syncSubmitButton();
     return;
   }
@@ -326,10 +318,6 @@ async function loadSubmissionConfig() {
     if (!response.ok) throw new Error(`Submission config request failed with ${response.status}`);
 
     intakeConfig = await response.json();
-    const placeholder = new Option("Choose a category", "");
-    const options = intakeConfig.allowedCategories.map((category) => new Option(category, category));
-    marketplaceCategoryInput.replaceChildren(placeholder, ...options);
-    marketplaceCategoryInput.disabled = false;
     setSubmissionTone("Ready for skill details", "success");
   } catch (error) {
     console.error("Unable to load submission config", error);
@@ -354,7 +342,7 @@ if (form) {
     if (!submission) {
       setFeedback(
         "Complete the skill details",
-        "Choose `SKILL.md`, enter a public title, and select a category before sending the submission.",
+        "Choose `SKILL.md` and enter a public title before sending the submission.",
         "error",
       );
       return;
@@ -449,11 +437,9 @@ if (form) {
     }
   });
 
-  for (const field of [skillFileInput, marketplaceCategoryInput]) {
-    field.addEventListener("change", () => {
-      refreshSubmissionPreview();
-    });
-  }
+  skillFileInput.addEventListener("change", () => {
+    refreshSubmissionPreview();
+  });
 
   marketplaceTitleInput.addEventListener("input", () => {
     refreshSubmissionPreview();

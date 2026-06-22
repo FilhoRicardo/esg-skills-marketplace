@@ -59,9 +59,6 @@ jobs:
           --root "${GITHUB_WORKSPACE}"
           --metadata-out "${RUNNER_TEMP}/submission.json"
 
-      - name: Regenerate public artefacts
-        run: python3 scripts/build_catalog.py
-
       - name: Create branch, commit, and push
         env:
           SUBMISSION_PR_TOKEN: ${{ secrets.MARKETPLACE_INTAKE_TOKEN }}
@@ -87,7 +84,7 @@ jobs:
           git checkout -b "${BRANCH}"
           git config user.name "ESG Marketplace Intake"
           git config user.email "actions@users.noreply.github.com"
-          git add "skills" "site/catalog.json" "site/submission-config.json"
+          git add "skills"
           git commit -m "${COMMIT_MESSAGE}"
           git remote set-url origin "https://x-access-token:${SUBMISSION_PR_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
           git push -u origin "${BRANCH}"
@@ -107,7 +104,7 @@ jobs:
               "## What changed",
               "",
               f"- adds a new site-submitted skill bundle under `skills/{data['slug']}`;",
-              "- refreshes the generated public catalogue metadata;",
+              "- leaves category assignment and catalogue generation for maintainer review;",
               "",
               "## Why",
               "",
@@ -129,6 +126,8 @@ jobs:
                   "",
                   "## Trust gate",
                   "",
+                  f"- Category is pending. Add an allowed `category` to `skills/{data['slug']}/marketplace.json` after reviewing the skill.",
+                  "- Run `python3 scripts/build_catalog.py` and commit the generated catalogue before requesting approval.",
                   "- `trust / policy` and `trust / SkillSpector` must still pass.",
                   "- Human review and merge to `main` are still required before publication.",
                   "",
