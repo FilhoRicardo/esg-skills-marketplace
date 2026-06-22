@@ -23,6 +23,13 @@ These controls reduce risk; they do not prove that a skill is safe or correct. S
 - Use the [skill template](templates/skill-template/) to prepare a submission.
 - Maintainers follow the [owner review runbook](docs/OWNER-RUNBOOK.md).
 
+## Current catalogue
+
+- **ESG materiality brief** — turns supplied business and stakeholder evidence into a traceable briefing with explicit uncertainty.
+- **GHG inventory evidence pack** — organizes supplied activity data, factors, calculations, and source notes for internal review.
+
+Both workflows organize evidence. They do not provide legal, financial, compliance, certification, audit, or assurance advice.
+
 ## Repository structure
 
 ```text

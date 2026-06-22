@@ -34,3 +34,14 @@ Open the SkillSpector check details and download its JSON report artifact if you
 - Close the pull request without merging when the content is unsafe, unverifiable, out of scope, or cannot be redistributed.
 
 After merge, publish the catalogue only from the current `main` branch. Never publish files directly from a contributor branch.
+
+## Emergency protection maintenance
+
+Administrator enforcement applies to normal work. If a required check itself is broken and prevents its repair:
+
+1. Record the maintenance reason and affected check before changing protection.
+2. Temporarily disable administrator enforcement only; keep the pull-request boundary and other protections in place.
+3. Repair and verify the check through a pull request.
+4. Restore administrator enforcement immediately after merge and confirm the final protection state.
+
+This is a recovery procedure for the trust gate, not a way to bypass a failed skill review.

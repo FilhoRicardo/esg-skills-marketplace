@@ -1,8 +1,11 @@
 from __future__ import annotations
 
+import subprocess
+import tempfile
 import unittest
+from pathlib import Path
 
-from scripts.validate_pr_scope import scope_errors
+from scripts.validate_pr_scope import changed_paths, scope_errors
 
 
 class PullRequestScopeTests(unittest.TestCase):
@@ -27,6 +30,39 @@ class PullRequestScopeTests(unittest.TestCase):
             ["skills/one-skill/SKILL.md", "skills/two-skill/SKILL.md"],
         )
         self.assertIn("submit one skill per pull request", errors)
+
+    def test_deleted_platform_file_is_rejected(self) -> None:
+        temporary = tempfile.TemporaryDirectory()
+        self.addCleanup(temporary.cleanup)
+        root = Path(temporary.name)
+
+        def git(*arguments: str) -> subprocess.CompletedProcess[str]:
+            return subprocess.run(
+                ["git", *arguments],
+                cwd=root,
+                check=True,
+                capture_output=True,
+                text=True,
+            )
+
+        git("init")
+        git("config", "user.name", "Policy test")
+        git("config", "user.email", "policy@example.test")
+        workflow = root / ".github" / "workflows" / "skill-review.yml"
+        workflow.parent.mkdir(parents=True)
+        workflow.write_text("name: review\n", encoding="utf-8")
+        git("add", ".")
+        git("commit", "-m", "base")
+        base = git("rev-parse", "HEAD").stdout.strip()
+
+        workflow.unlink()
+        git("add", "-u")
+        git("commit", "-m", "delete platform workflow")
+
+        paths = changed_paths(base, root)
+        self.assertIn(".github/workflows/skill-review.yml", paths)
+        errors = scope_errors("external-contributor", paths)
+        self.assertTrue(any("platform file" in error for error in errors))
 
 
 if __name__ == "__main__":

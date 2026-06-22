@@ -1,75 +1,87 @@
-# Plan: Launch the ESG Skills Marketplace
+# Plan: Complete And Publish The ESG Skills Marketplace
 
 ## Goal
 
-Launch a small public catalogue that helps people discover and download Codex-compatible environmental, social, and governance (ESG) skills from a public GitHub repository, presented through a permanent public here.now site.
+Finish Linear issue RF-99 by repairing the trust-gate gaps, adding two useful text-only environmental, social, and governance (ESG) skills, building the Aster catalogue frontend, verifying the complete flow, and publishing the site permanently through here.now.
 
 ## Acceptance Criteria
 
-- The managed project scaffold is registered in the Projects workspace with clear GitHub, Linear, Aster, Graphify, and memory guidance.
-- A public GitHub repository named `esg-skills-marketplace` contains the skills collection and catalogue source.
-- The repository uses a simple documented structure for `skills/`, `site/`, and a catalogue data file, plus a reusable skill template and contribution instructions.
-- Contributors propose skills through pull requests; there is no direct upload-to-publication path.
-- V1 skills are text-only and cannot contain executables, binaries, symlinks, hidden files, or dependency manifests.
-- Every proposed skill passes structural validation and NVIDIA SkillSpector static analysis before it can be approved.
-- `main` requires passing checks, resolved conversations, and code-owner approval from `@FilhoRicardo` before merge.
-- The catalogue frontend uses Aster, explains what the collection is, lists available skills from local catalogue data, links each listing to its GitHub skill folder, and handles an empty catalogue honestly.
-- The first release requires no account, payment, rating, submission workflow, database, framework, or build service.
-- The static frontend passes desktop and mobile checks in Chrome with no blocking console errors or broken primary links.
-- The verified site is published permanently to here.now and its live URL is recorded in project memory and the repository documentation.
-- A Linear project and first implementation issue record the approved scope and acceptance criteria.
-- The repository uses the MIT License unless the user changes that choice at signoff.
+- The GitHub repository and Linear project remain linked to RF-99, and RF-99 is closed only after every criterion below is evidenced.
+- External pull requests cannot add, modify, rename, or delete platform files; they may change exactly one valid skill folder plus the generated catalogue.
+- Tests reproduce the deleted-platform-file scope bug by proving `changed_paths()` returns a deleted `.github`, `scripts`, or site-code path and that `scope_errors()` rejects it for an external actor.
+- `main` requires the two trust checks, resolved conversations, one code-owner approval, last-push approval, and administrator enforcement after this release lands.
+- The approved catalogue contains exactly two text-only skills:
+  - `esg-materiality-brief`, which turns user-provided business and stakeholder evidence into a bounded materiality briefing without making compliance or assurance claims.
+  - `ghg-inventory-evidence-pack`, which organizes user-provided greenhouse-gas activity data, factors, boundaries, calculations, and source notes into a reviewable working evidence pack without presenting assurance or legal conclusions.
+- Each seed skill uses the existing schema only: `SKILL.md` has `name` and `description` frontmatter, while `marketplace.json` has exactly `title` and `category`. The categories are `strategy` for the materiality brief and `data` for the greenhouse-gas evidence pack; both are already present in `ALLOWED_CATEGORIES` in `scripts/validate_skills.py`. No new pillar, tag, or `evidence_workflow` field is introduced.
+- Both skills pass structural validation, catalogue integrity checks, and the pinned NVIDIA SkillSpector scan with a `SAFE` recommendation without executing skill content.
+- The framework-free site contains semantic HTML, Aster tokens, small CSS and JavaScript files, and the generated `site/catalog.json`; it renders only merged catalogue data and links each card to its GitHub skill folder.
+- The populated site explains the trust gate and professional-advice boundary in plain language, renders both skills from catalogue data, and handles loading, error, and empty-catalogue states honestly.
+- The primary flow is keyboard accessible, has visible focus states, respects reduced motion, has no blocking console errors, and works at mobile, tablet, and desktop widths in the gstack `/browse` Chromium workflow.
+- The permanent authenticated here.now publish succeeds, the live URL is reloaded and verified, and the URL is recorded in `README.md`, `MEMORY.md`, and RF-99.
+- The installed Graphify CLI produces `graphify-out/graph.json` for the completed repository and its query or explain commands can read that graph; costs and caches remain ignored.
+- The GitHub source is updated through a branch and pull request with both trust checks passing. The user's signoff on this reviewed plan is the one-time human approval for the bootstrap release that establishes administrator enforcement. If the connected GitHub app authors the pull request as a distinct actor, Ricardo also records that approval in GitHub; if GitHub attributes it to Ricardo and rejects self-approval, the administrator merge is permitted only for this explicitly approved bootstrap and enforcement is enabled immediately afterward.
 
 ## Approach
 
-1. Create and link the public GitHub repository, Linear project, and first Linear issue.
-2. Keep the repository framework-free: store text-only skills under `skills/<slug>/SKILL.md`, catalogue metadata in one JSON file, and the static frontend under `site/`.
-3. Add a deterministic validator for allowed paths, text-only files, size limits, frontmatter, slug consistency, duplicate entries, and catalogue integrity.
-4. Pin NVIDIA SkillSpector to reviewed commit `a5092dd9b9521ff57a9b53612bb129ce78019002`; run static analysis on proposed skills and fail the required check unless its recommendation is `SAFE`.
-5. Add CODEOWNERS, a pull-request template, contributor instructions, and protected-branch rules that require checks and approval from `@FilhoRicardo`.
-6. Build a single responsive catalogue page using semantic HTML, small vanilla JavaScript for loading the catalogue JSON, and Aster-based CSS. Render only content merged into `main`.
-7. Verify locally in Chrome at desktop and mobile widths, then publish the `site/` directory through the here.now helper.
-8. Configure Graphify hooks after ignore rules are confirmed safe and build the initial graph once code exists.
+1. Add a regression test for deleted platform paths, then remove the deletion-excluding diff filter from `changed_paths` so every changed path reaches the existing external-contributor scope policy.
+2. Author the two skill bundles using the existing template and editorial rules. Keep inputs user-provided, preserve source references, state uncertainty, and distinguish workflow guidance from legal, financial, compliance, certification, or assurance advice.
+3. Regenerate `site/catalog.json` from validated skill metadata.
+4. Extend the currently data-only `site/` directory by copying the canonical tokens from `/Users/ricardofilho/Documents/Projects/resources/branding/aster/aster-tokens.css` to `site/aster-tokens.css` and adding its first and only catalogue page, with small vanilla JavaScript for data loading and honest loading, error, and empty states. There is no existing `src/` frontend or second catalogue to preserve.
+5. Extend tests only where they prove repository policy or catalogue/site invariants. Avoid a frontend framework, build step, package manager, backend, installer, or speculative feature.
+6. Run structural validation, catalogue freshness, unit tests, and pinned SkillSpector. Serve `site/` locally and use gstack `/browse` for interaction, console, link, keyboard, and responsive evidence.
+7. Create a release branch, push it, open the pull request through the connected GitHub app, and let both required checks run. Record GitHub approval when actor attribution permits it; otherwise use the user-approved bootstrap exception. Merge, enable administrator enforcement immediately, and verify the final branch-protection state.
+8. Publish the exact merged `site/` directory with the here.now helper and saved credentials. Verify the returned live URL with `/browse`; never publish an expiring anonymous substitute as completion.
+9. Run Graphify extraction against the final repository, verify the graph with a targeted query or explanation, record the permanent URL and durable release facts, close RF-99, and perform a requirement-by-requirement completion audit.
 
 ## Key Decisions And Tradeoffs
 
-- A curated catalogue is the v1 marketplace model. This avoids prematurely building commerce, identity, moderation, and submission systems.
-- GitHub is the source of truth for skills. The here.now site is a discovery layer, not a second package registry.
-- A framework-free static site keeps hosting and maintenance small. Client-side loading of one local catalogue JSON file avoids a generator or backend.
-- MIT is recommended because the collection is intended for broad reuse and contains both instructional and code-like material; this is a product choice, not legal advice.
-- The first publish must be authenticated so the site is permanent. If here.now credentials are unavailable, Codex will pause for the documented email-code sign-in flow rather than launch an expiring site.
-- SkillSpector is a required security signal, not a safety guarantee. It is pinned by commit, runs without executing contributed content, and is combined with restrictive file policy and human approval.
-- V1 rejects executable skills entirely. This sacrifices flexibility to make review understandable and materially reduce supply-chain risk.
+- The two seed skills are evidence-organization workflows, not promises of ESG compliance or professional conclusions. This makes them useful while keeping claims reviewable.
+- The site stays framework-free. Four static files plus generated JSON are enough for two cards, filtering, and deployment.
+- Aster is the concrete visual source. The implementation uses its canonical palette, typography, spacing, glass surfaces, and quiet motion rather than inventing another design direction.
+- With only two cards, search and category filters add more interface than value. The primary interaction is opening each reviewed source skill on GitHub; accounts, ratings, installs, downloads, and submission forms remain out of scope.
+- The site links to GitHub as the source of truth rather than duplicating full skill instructions into the frontend.
+- Administrator enforcement is enabled only after this user-reviewed bootstrap release lands. The bootstrap exception expires with this release; future maintainer-authored platform work requires a second trusted reviewer or an explicitly documented maintenance window.
+- The owner runbook will document the only emergency recovery path for broken required checks: record a maintenance window, temporarily disable administrator enforcement, repair the check through a pull request, and restore enforcement immediately. Normal contributions never use that exception.
+- Permanent authenticated here.now publication is required; an anonymous 24-hour URL is not an acceptable final result.
+- Here, authenticated means the helper reads the saved API key from `~/.herenow/credentials`; permanent means the publish reports authenticated mode and no expiry. The returned slug URL is the stable pointer for later updates, while its content is intentionally mutable only through explicit redeployment; the merged Git commit remains the immutable source that can reproduce it.
 
 ## Risks And Unknowns
 
-- No initial ESG skills have been specified. The first site may ship with an honest empty state and a skill template unless the user supplies or requests seed skills.
-- Public skills may be mistaken for legal, financial, compliance, or assurance advice. Copy and contribution rules must avoid unsupported claims and state the boundary clearly.
-- Repository licensing does not prove that every future contribution is original or safe to redistribute; contribution guidance must require contributors to confirm rights.
-- The final here.now URL is unknown until authenticated publishing succeeds.
-- SkillSpector does not perform dynamic execution, may miss non-English or image-based attacks, and has false positives. Review documentation must state these limits plainly.
+- GitHub may attribute an app-created pull request to the same user who must approve it. This plan makes the user's post-review signoff the explicit bootstrap approval; no continuing bypass remains after administrator enforcement is enabled.
+- SkillSpector may report a false positive. A non-`SAFE` result blocks publication until the content is narrowed or the user explicitly changes the acceptance criterion; the scanner will not be bypassed.
+- SkillSpector success means `risk_assessment.recommendation` in each JSON report is exactly `SAFE`. The wrapper runs locally and in GitHub Actions. If the reviewed upstream commit becomes unavailable, the owner must review and pin a replacement commit in a separate platform change; the check is never weakened to unblock a contribution.
+- Codex may make at most two content revisions in response to SkillSpector findings without changing either skill's promised job. If a skill is still not `SAFE`, publication pauses and the user decides whether to replace that skill or stop; no acceptance criterion is weakened.
+- Graphify is installed locally and its `claude-cli` backend can use the authenticated Claude CLI without another API key. The release runs `graphify extract . --backend claude-cli --no-cluster --out .` and requires a readable `graphify-out/graph.json`.
+- Preflight has confirmed the saved here.now credential is accepted by the authenticated sites endpoint with HTTP 200 and the pinned SkillSpector commit resolves at the expected SHA.
+- Google-hosted Aster fonts are a network dependency. System fallbacks keep the site readable if the font request is unavailable.
+- here.now live behavior can differ from local documentation. The publish helper's current structured result and a live browser reload are authoritative.
 
 ## Out Of Scope
 
-- Payments, subscriptions, accounts, ratings, reviews, analytics, and personalised recommendations.
-- Open self-service submissions, moderation queues, or a contributor portal.
-- A package manager, remote installer, backend API, database, or automated GitHub ingestion.
-- Creating the first substantive ESG skills without a separate approved scope.
-- Executable scripts, binaries, dependency manifests, symlinks, and non-text attachments inside contributed skills.
-- Custom domains and project-specific branding.
+- Payments, subscriptions, accounts, ratings, reviews, analytics, recommendations, or personalised content.
+- Open self-service publication, a contributor portal, a package manager, remote installation, or automatic execution of skills.
+- A backend, database, frontend framework, build service, single-page application routing, custom domain, or private access gate.
+- Regulatory determinations, legal or financial advice, certification, audit, or assurance work.
+- More than the two named seed skills.
 
 ## Verification
 
-- Confirm the expected scaffold and repository paths exist and no placeholders remain where links are known.
-- Validate catalogue JSON syntax and confirm every listed skill path resolves to a repository folder containing `SKILL.md`.
-- Confirm rejected fixtures fail the structural validator and safe fixtures pass.
-- Run pinned SkillSpector against every proposed skill, retain its report, and confirm any non-`SAFE` recommendation blocks the check.
-- Serve `site/` locally and use Chrome to verify the page content, skill links, empty state, mobile layout, keyboard navigation, and console output.
-- Publish with the here.now helper, then reload the returned live URL in Chrome and repeat the primary checks.
-- Confirm the GitHub remote, Linear project URL, first issue identifier, here.now URL, Routing Map entry, `PROJECTS.md` row, and durable memory entries.
+- `python3 scripts/build_catalog.py --check`
+- `python3 scripts/validate_skills.py --all`
+- `python3 -m unittest discover -s tests`
+- `python3 scripts/run_skillspector.py --all --reports artifacts/skillspector` using NVIDIA SkillSpector pinned at `a5092dd9b9521ff57a9b53612bb129ce78019002`
+- `graphify extract . --backend claude-cli --no-cluster --out .`, followed by a targeted `graphify query` or `graphify explain`
+- GitHub Actions `trust / policy` and `trust / SkillSpector` pass for the release pull request.
+- A manual editorial check confirms both skills describe a bounded job, preserve source references and uncertainty, and make no legal, financial, compliance, certification, audit, assurance, completeness, or guaranteed-outcome claim.
+- GitHub branch protection reports strict checks, conversation resolution, code-owner and last-push approval, one approval, force-push/deletion denial, and administrator enforcement enabled.
+- Local `/browse` checks cover content, both GitHub links, keyboard focus, console errors, failed network requests, and screenshots at 375x812, 768x1024, and 1280x720. Every viewport must show the brand, trust boundary, count, and both cards without horizontal overflow.
+- here.now's current publish result reports authenticated mode and no expiry; `/browse` verifies the returned stable URL, two skill cards, source links, and clean console.
+- `graphify-out/graph.json` exists and answers a targeted query or explanation, while `graphify-out/cost.json` and `graphify-out/cache/` remain untracked.
+- Final `git status`, remote branch, pull request, Linear state, README, and project memory agree on the shipped URL and outcome.
 
 ## GitHub, Linear, And Memory Impact
 
-- GitHub: `https://github.com/FilhoRicardo/esg-skills-marketplace`.
-- Linear: project `ESG Skills Marketplace`; first issue `RF-99` (`Initialize ESG Skills Marketplace`).
-- Memory: record the approved v1 boundaries, MIT license choice, GitHub and Linear links, here.now URL, Aster adoption, and Graphify setup as they become durable facts.
+- GitHub: deliver RF-99 on a `codex/` release branch, preserve the trust checks, close the disposable smoke branch if appropriate, land the release, and enable administrator enforcement after merge.
+- Linear: keep RF-99 as the implementation issue, move it through active work, attach the release pull request and permanent site URL, then close it only after live verification.
+- Project memory: record the two shipped skills, trust-gate deletion fix, permanent here.now URL, Aster frontend, final protection state, and Graphify outcome in one or two concise durable entries.
