@@ -50,3 +50,5 @@ After changing the submission or deploy path:
 5. Verify the form and downloads in the browser.
 6. Verify a real site submission creates a draft pull request.
 7. Verify a merged change to `main` republishes the permanent here.now site.
+
+The HTML uses a versioned `app.js` URL because here.now may retain a prior static asset between rapid updates. Bump the version whenever submission behavior changes.

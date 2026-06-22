@@ -52,7 +52,7 @@ class SitePageTests(unittest.TestCase):
     def test_both_pages_load_the_shared_assets(self) -> None:
         for name in ("index.html", "submit.html"):
             page = parse_page(name)
-            self.assertIn("app.js", page.scripts)
+            self.assertTrue(any(source.split("?", 1)[0] == "app.js" for source in page.scripts))
             html = (SITE / name).read_text(encoding="utf-8")
             self.assertIn('href="aster-tokens.css"', html)
             self.assertIn('href="styles.css"', html)
