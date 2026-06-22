@@ -442,6 +442,94 @@
       "source_location": "L76"
     },
     {
+      "id": "config_issue_template",
+      "label": "Issue Template Config",
+      "file_type": "document",
+      "source_file": ".github/ISSUE_TEMPLATE/config.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "skillproposal_template",
+      "label": "Skill Proposal Issue Template",
+      "file_type": "document",
+      "source_file": ".github/ISSUE_TEMPLATE/skill-proposal.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "pull_request_template_skill",
+      "label": "Skill Pull Request Template",
+      "file_type": "document",
+      "source_file": ".github/pull_request_template.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "skillreview_workflow",
+      "label": "Skill Intake CI Workflow",
+      "file_type": "code",
+      "source_file": ".github/workflows/skill-review.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "skillreview_policy_job",
+      "label": "Trust Policy CI Job",
+      "file_type": "code",
+      "source_file": ".github/workflows/skill-review.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "skillreview_skillspector_job",
+      "label": "Trust SkillSpector CI Job",
+      "file_type": "code",
+      "source_file": ".github/workflows/skill-review.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "scripts_validate_pr_scope",
+      "label": "validate_pr_scope.py",
+      "file_type": "code",
+      "source_file": ".github/workflows/skill-review.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "scripts_run_skillspector",
+      "label": "run_skillspector.py",
+      "file_type": "code",
+      "source_file": ".github/workflows/skill-review.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
       "id": "agents_codex",
       "label": "Codex Executor Agent",
       "file_type": "rationale",
@@ -552,10 +640,175 @@
       "contributor": null
     },
     {
-      "id": "memory_project",
-      "label": "Project Memory",
+      "id": "scripts_validate_skills",
+      "label": "validate_skills.py",
+      "file_type": "code",
+      "source_file": "CONTRIBUTING.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "scripts_build_catalog",
+      "label": "build_catalog.py",
+      "file_type": "code",
+      "source_file": "CONTRIBUTING.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "memory_esg_skills_marketplace",
+      "label": "ESG Skills Marketplace",
+      "file_type": "rationale",
+      "source_file": "MEMORY.md",
+      "source_location": null,
+      "source_url": "https://github.com/FilhoRicardo/esg-skills-marketplace",
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "memory_herenow_platform",
+      "label": "here.now Platform",
+      "file_type": "concept",
+      "source_file": "MEMORY.md",
+      "source_location": null,
+      "source_url": "https://here.now/docs",
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "memory_github_repository",
+      "label": "GitHub Repository",
+      "file_type": "concept",
+      "source_file": "MEMORY.md",
+      "source_location": null,
+      "source_url": "https://github.com/FilhoRicardo/esg-skills-marketplace",
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "memory_linear_project",
+      "label": "Linear Project",
+      "file_type": "concept",
+      "source_file": "MEMORY.md",
+      "source_location": null,
+      "source_url": "https://linear.app/rf-ai-workspace/project/esg-skills-marketplace-2a2095348777",
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "memory_rf99_issue",
+      "label": "RF-99 Issue",
       "file_type": "document",
       "source_file": "MEMORY.md",
+      "source_location": null,
+      "source_url": "https://linear.app/rf-ai-workspace/issue/RF-99/initialize-esg-skills-marketplace",
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "memory_skillspector",
+      "label": "NVIDIA SkillSpector",
+      "file_type": "code",
+      "source_file": "MEMORY.md",
+      "source_location": null,
+      "source_url": "https://github.com/NVIDIA/SkillSpector",
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "memory_aster",
+      "label": "Aster Frontend",
+      "file_type": "concept",
+      "source_file": "MEMORY.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "memory_graphify",
+      "label": "Graphify",
+      "file_type": "concept",
+      "source_file": "MEMORY.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "memory_codex",
+      "label": "Codex Executor",
+      "file_type": "concept",
+      "source_file": "MEMORY.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "memory_esg_materiality_brief",
+      "label": "ESG Materiality Brief Skill",
+      "file_type": "document",
+      "source_file": "MEMORY.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "memory_ghg_inventory_evidence_pack",
+      "label": "GHG Inventory Evidence Pack Skill",
+      "file_type": "document",
+      "source_file": "MEMORY.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "memory_filhoricardo",
+      "label": "FilhoRicardo Maintainer",
+      "file_type": "concept",
+      "source_file": "MEMORY.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": "FilhoRicardo"
+    },
+    {
+      "id": "memory_permanent_catalogue",
+      "label": "Permanent Catalogue (here.now)",
+      "file_type": "concept",
+      "source_file": "MEMORY.md",
+      "source_location": null,
+      "source_url": "https://royal-bugle-xgg7.here.now/",
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "planreviewlog_rounds",
+      "label": "Plan Review Log",
+      "file_type": "document",
+      "source_file": "PLAN-REVIEW-LOG.md",
       "source_location": null,
       "source_url": null,
       "captured_at": null,
@@ -574,10 +827,10 @@
       "contributor": null
     },
     {
-      "id": "planreviewlog_rounds",
-      "label": "Plan Review Log",
+      "id": "readme_esg_skills_marketplace",
+      "label": "ESG Skills Marketplace README",
       "file_type": "document",
-      "source_file": "PLAN-REVIEW-LOG.md",
+      "source_file": "README.md",
       "source_location": null,
       "source_url": null,
       "captured_at": null,
@@ -585,9 +838,141 @@
       "contributor": null
     },
     {
-      "id": "readme_project",
-      "label": "Project README",
+      "id": "readme_trust_gate",
+      "label": "Trust Gate (5 Gates)",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "readme_skills_directory",
+      "label": "Skills Directory",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "readme_skillspector",
+      "label": "NVIDIA SkillSpector (README ref)",
+      "file_type": "code",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": "https://github.com/NVIDIA/SkillSpector",
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "readme_contributing_guide",
+      "label": "Contributing Guide",
       "file_type": "document",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "readme_owner_runbook",
+      "label": "Owner Review Runbook",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "readme_skill_template",
+      "label": "Skill Template",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "readme_permanent_catalogue",
+      "label": "Permanent Catalogue URL",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": "https://royal-bugle-xgg7.here.now/",
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "readme_esg_materiality_brief",
+      "label": "ESG Materiality Brief (README)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "readme_ghg_inventory_evidence_pack",
+      "label": "GHG Inventory Evidence Pack (README)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "readme_scripts_directory",
+      "label": "Scripts Directory",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "readme_site_directory",
+      "label": "Site Static Catalogue",
+      "file_type": "code",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "readme_tests_directory",
+      "label": "Tests Directory",
+      "file_type": "code",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "readme_github_actions",
+      "label": "GitHub Actions / CI (.github)",
+      "file_type": "code",
       "source_file": "README.md",
       "source_location": null,
       "source_url": null,
@@ -607,67 +992,12 @@
       "contributor": null
     },
     {
-      "id": "pull_request_template_skill",
-      "label": "Skill Pull Request Template",
-      "file_type": "document",
-      "source_file": ".github/pull_request_template.md",
+      "id": "security_nvidia_skillspector",
+      "label": "NVIDIA SkillSpector",
+      "file_type": "concept",
+      "source_file": "SECURITY.md",
       "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null
-    },
-    {
-      "id": "config_issue_template",
-      "label": "Issue Template Config",
-      "file_type": "document",
-      "source_file": ".github/ISSUE_TEMPLATE/config.yml",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null
-    },
-    {
-      "id": "skillproposal_template",
-      "label": "Skill Proposal Issue Template",
-      "file_type": "document",
-      "source_file": ".github/ISSUE_TEMPLATE/skill-proposal.yml",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null
-    },
-    {
-      "id": "skillreview_workflow",
-      "label": "Skill Intake CI Workflow",
-      "file_type": "code",
-      "source_file": ".github/workflows/skill-review.yml",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null
-    },
-    {
-      "id": "skillreview_policy_job",
-      "label": "Trust Policy CI Job",
-      "file_type": "code",
-      "source_file": ".github/workflows/skill-review.yml",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null
-    },
-    {
-      "id": "skillreview_skillspector_job",
-      "label": "Trust SkillSpector CI Job",
-      "file_type": "code",
-      "source_file": ".github/workflows/skill-review.yml",
-      "source_location": null,
-      "source_url": null,
+      "source_url": "https://github.com/NVIDIA/SkillSpector",
       "captured_at": null,
       "author": null,
       "contributor": null
@@ -728,6 +1058,17 @@
       "contributor": null
     },
     {
+      "id": "skillsreadme_approved",
+      "label": "Approved Skills Directory",
+      "file_type": "document",
+      "source_file": "skills/README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
       "id": "skill_esg_materiality_brief",
       "label": "ESG Materiality Brief Skill",
       "file_type": "document",
@@ -756,72 +1097,6 @@
       "source_file": "templates/skill-template/SKILL.md",
       "source_location": null,
       "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null
-    },
-    {
-      "id": "skillsreadme_approved",
-      "label": "Approved Skills Directory",
-      "file_type": "document",
-      "source_file": "skills/README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null
-    },
-    {
-      "id": "scripts_validate_skills",
-      "label": "validate_skills.py",
-      "file_type": "code",
-      "source_file": "CONTRIBUTING.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null
-    },
-    {
-      "id": "scripts_build_catalog",
-      "label": "build_catalog.py",
-      "file_type": "code",
-      "source_file": "CONTRIBUTING.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null
-    },
-    {
-      "id": "scripts_validate_pr_scope",
-      "label": "validate_pr_scope.py",
-      "file_type": "code",
-      "source_file": ".github/workflows/skill-review.yml",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null
-    },
-    {
-      "id": "scripts_run_skillspector",
-      "label": "run_skillspector.py",
-      "file_type": "code",
-      "source_file": ".github/workflows/skill-review.yml",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null
-    },
-    {
-      "id": "security_nvidia_skillspector",
-      "label": "NVIDIA SkillSpector",
-      "file_type": "concept",
-      "source_file": "SECURITY.md",
-      "source_location": null,
-      "source_url": "https://github.com/NVIDIA/SkillSpector",
       "captured_at": null,
       "author": null,
       "contributor": null
@@ -2335,6 +2610,126 @@
       "weight": 1.0
     },
     {
+      "source": "config_issue_template",
+      "target": "contributing_workflow",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": ".github/ISSUE_TEMPLATE/config.yml",
+      "source_location": null,
+      "weight": 0.9
+    },
+    {
+      "source": "skillproposal_template",
+      "target": "contributing_workflow",
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.78,
+      "source_file": ".github/ISSUE_TEMPLATE/skill-proposal.yml",
+      "source_location": null,
+      "weight": 0.78
+    },
+    {
+      "source": "pull_request_template_skill",
+      "target": "skillreview_workflow",
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": ".github/pull_request_template.md",
+      "source_location": null,
+      "weight": 0.75
+    },
+    {
+      "source": "pull_request_template_skill",
+      "target": "security_nvidia_skillspector",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": ".github/pull_request_template.md",
+      "source_location": null,
+      "weight": 0.9
+    },
+    {
+      "source": "skillreview_workflow",
+      "target": "skillreview_policy_job",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".github/workflows/skill-review.yml",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "skillreview_workflow",
+      "target": "skillreview_skillspector_job",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".github/workflows/skill-review.yml",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "skillreview_skillspector_job",
+      "target": "skillreview_policy_job",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".github/workflows/skill-review.yml",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "skillreview_policy_job",
+      "target": "scripts_validate_pr_scope",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".github/workflows/skill-review.yml",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "skillreview_policy_job",
+      "target": "scripts_validate_skills",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".github/workflows/skill-review.yml",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "skillreview_policy_job",
+      "target": "scripts_build_catalog",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".github/workflows/skill-review.yml",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "skillreview_skillspector_job",
+      "target": "scripts_run_skillspector",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".github/workflows/skill-review.yml",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_run_skillspector",
+      "target": "security_nvidia_skillspector",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": ".github/workflows/skill-review.yml",
+      "source_location": null,
+      "weight": 0.95
+    },
+    {
       "source": "agents_codex",
       "target": "agents_esg_skills_marketplace",
       "relation": "implements",
@@ -2465,6 +2860,176 @@
       "weight": 1.0
     },
     {
+      "source": "memory_esg_skills_marketplace",
+      "target": "memory_herenow_platform",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "MEMORY.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "memory_esg_skills_marketplace",
+      "target": "memory_github_repository",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "MEMORY.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "memory_esg_skills_marketplace",
+      "target": "memory_linear_project",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "MEMORY.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "memory_linear_project",
+      "target": "memory_rf99_issue",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "MEMORY.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "memory_esg_skills_marketplace",
+      "target": "memory_skillspector",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "MEMORY.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "memory_esg_skills_marketplace",
+      "target": "memory_aster",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "MEMORY.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "memory_esg_skills_marketplace",
+      "target": "memory_graphify",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "MEMORY.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "memory_esg_skills_marketplace",
+      "target": "memory_codex",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "MEMORY.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "memory_esg_skills_marketplace",
+      "target": "memory_esg_materiality_brief",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "MEMORY.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "memory_esg_skills_marketplace",
+      "target": "memory_ghg_inventory_evidence_pack",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "MEMORY.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "memory_esg_skills_marketplace",
+      "target": "memory_filhoricardo",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "MEMORY.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "memory_permanent_catalogue",
+      "target": "memory_herenow_platform",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "MEMORY.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "memory_esg_skills_marketplace",
+      "target": "memory_permanent_catalogue",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "MEMORY.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "memory_graphify",
+      "target": "memory_github_repository",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "source_file": "MEMORY.md",
+      "source_location": null,
+      "weight": 0.7
+    },
+    {
+      "source": "planreviewlog_rounds",
+      "target": "plan_completion",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PLAN-REVIEW-LOG.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "planreviewlog_rounds",
+      "target": "agents_claude",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PLAN-REVIEW-LOG.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "planreviewlog_rounds",
+      "target": "agents_codex",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PLAN-REVIEW-LOG.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
       "source": "plan_completion",
       "target": "skill_esg_materiality_brief",
       "relation": "references",
@@ -2565,84 +3130,344 @@
       "weight": 0.9
     },
     {
-      "source": "skillreview_workflow",
-      "target": "skillreview_policy_job",
-      "relation": "calls",
+      "source": "skill_esg_materiality_brief",
+      "target": "skill_ghg_inventory_evidence_pack",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "weight": 0.75
+    },
+    {
+      "source": "readme_esg_skills_marketplace",
+      "target": "memory_esg_skills_marketplace",
+      "relation": "semantically_similar_to",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": ".github/workflows/skill-review.yml",
+      "source_file": "README.md",
       "source_location": null,
       "weight": 1.0
     },
     {
-      "source": "skillreview_workflow",
-      "target": "skillreview_skillspector_job",
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".github/workflows/skill-review.yml",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "skillreview_skillspector_job",
-      "target": "skillreview_policy_job",
+      "source": "readme_esg_skills_marketplace",
+      "target": "readme_trust_gate",
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": ".github/workflows/skill-review.yml",
+      "source_file": "README.md",
       "source_location": null,
       "weight": 1.0
     },
     {
-      "source": "skillreview_policy_job",
-      "target": "scripts_validate_pr_scope",
-      "relation": "calls",
+      "source": "readme_esg_skills_marketplace",
+      "target": "readme_skills_directory",
+      "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": ".github/workflows/skill-review.yml",
+      "source_file": "README.md",
       "source_location": null,
       "weight": 1.0
     },
     {
-      "source": "skillreview_policy_job",
-      "target": "scripts_validate_skills",
-      "relation": "calls",
+      "source": "readme_esg_skills_marketplace",
+      "target": "readme_skillspector",
+      "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": ".github/workflows/skill-review.yml",
+      "source_file": "README.md",
       "source_location": null,
       "weight": 1.0
     },
     {
-      "source": "skillreview_policy_job",
-      "target": "scripts_build_catalog",
-      "relation": "calls",
+      "source": "readme_esg_skills_marketplace",
+      "target": "readme_contributing_guide",
+      "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": ".github/workflows/skill-review.yml",
+      "source_file": "README.md",
       "source_location": null,
       "weight": 1.0
     },
     {
-      "source": "skillreview_skillspector_job",
-      "target": "scripts_run_skillspector",
-      "relation": "calls",
+      "source": "readme_esg_skills_marketplace",
+      "target": "readme_owner_runbook",
+      "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": ".github/workflows/skill-review.yml",
+      "source_file": "README.md",
       "source_location": null,
       "weight": 1.0
     },
     {
-      "source": "scripts_run_skillspector",
-      "target": "security_nvidia_skillspector",
-      "relation": "calls",
+      "source": "readme_esg_skills_marketplace",
+      "target": "readme_skill_template",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme_esg_skills_marketplace",
+      "target": "readme_permanent_catalogue",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme_esg_skills_marketplace",
+      "target": "readme_esg_materiality_brief",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme_esg_skills_marketplace",
+      "target": "readme_ghg_inventory_evidence_pack",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme_esg_skills_marketplace",
+      "target": "readme_scripts_directory",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme_esg_skills_marketplace",
+      "target": "readme_site_directory",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme_esg_skills_marketplace",
+      "target": "readme_tests_directory",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme_esg_skills_marketplace",
+      "target": "readme_github_actions",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme_trust_gate",
+      "target": "readme_skillspector",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme_skillspector",
+      "target": "memory_skillspector",
+      "relation": "semantically_similar_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.99,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 0.99
+    },
+    {
+      "source": "readme_esg_materiality_brief",
+      "target": "memory_esg_materiality_brief",
+      "relation": "semantically_similar_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme_ghg_inventory_evidence_pack",
+      "target": "memory_ghg_inventory_evidence_pack",
+      "relation": "semantically_similar_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme_permanent_catalogue",
+      "target": "memory_permanent_catalogue",
+      "relation": "semantically_similar_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme_esg_skills_marketplace",
+      "target": "memory_codex",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.97,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 0.97
+    },
+    {
+      "source": "readme_skills_directory",
+      "target": "readme_esg_materiality_brief",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 0.9
+    },
+    {
+      "source": "readme_skills_directory",
+      "target": "readme_ghg_inventory_evidence_pack",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 0.9
+    },
+    {
+      "source": "readme_site_directory",
+      "target": "memory_aster",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 0.75
+    },
+    {
+      "source": "readme_permanent_catalogue",
+      "target": "memory_herenow_platform",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.92,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 0.92
+    },
+    {
+      "source": "readme_github_actions",
+      "target": "readme_skillspector",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 0.85
+    },
+    {
+      "source": "readme_github_actions",
+      "target": "memory_filhoricardo",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 0.8
+    },
+    {
+      "source": "readme_scripts_directory",
+      "target": "readme_trust_gate",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 0.8
+    },
+    {
+      "source": "readme_tests_directory",
+      "target": "readme_trust_gate",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.78,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 0.78
+    },
+    {
+      "source": "readme_esg_skills_marketplace",
+      "target": "memory_github_repository",
+      "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 0.95,
-      "source_file": ".github/workflows/skill-review.yml",
+      "source_file": "README.md",
       "source_location": null,
       "weight": 0.95
+    },
+    {
+      "source": "security_policy",
+      "target": "security_nvidia_skillspector",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "SECURITY.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "security_policy",
+      "target": "scripts_run_skillspector",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "SECURITY.md",
+      "source_location": null,
+      "weight": 0.9
+    },
+    {
+      "source": "ownerrunbook_process",
+      "target": "skillreview_workflow",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "docs/OWNER-RUNBOOK.md",
+      "source_location": null,
+      "weight": 0.9
+    },
+    {
+      "source": "ownerrunbook_process",
+      "target": "security_nvidia_skillspector",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "docs/OWNER-RUNBOOK.md",
+      "source_location": null,
+      "weight": 0.9
     },
     {
       "source": "index_page",
@@ -2715,6 +3540,36 @@
       "weight": 0.95
     },
     {
+      "source": "skillsreadme_approved",
+      "target": "skill_template",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "skills/README.md",
+      "source_location": null,
+      "weight": 0.9
+    },
+    {
+      "source": "skillsreadme_approved",
+      "target": "skill_esg_materiality_brief",
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.72,
+      "source_file": "skills/README.md",
+      "source_location": null,
+      "weight": 0.72
+    },
+    {
+      "source": "skillsreadme_approved",
+      "target": "skill_ghg_inventory_evidence_pack",
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.72,
+      "source_file": "skills/README.md",
+      "source_location": null,
+      "weight": 0.72
+    },
+    {
       "source": "skill_esg_materiality_brief",
       "target": "skill_template",
       "relation": "implements",
@@ -2733,269 +3588,9 @@
       "source_file": "skills/ghg-inventory-evidence-pack/SKILL.md",
       "source_location": null,
       "weight": 0.8
-    },
-    {
-      "source": "skill_esg_materiality_brief",
-      "target": "skill_ghg_inventory_evidence_pack",
-      "relation": "semantically_similar_to",
-      "confidence": "INFERRED",
-      "confidence_score": 0.75,
-      "source_file": "PLAN.md",
-      "source_location": null,
-      "weight": 0.75
-    },
-    {
-      "source": "planreviewlog_rounds",
-      "target": "plan_completion",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "PLAN-REVIEW-LOG.md",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "planreviewlog_rounds",
-      "target": "agents_claude",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "PLAN-REVIEW-LOG.md",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "planreviewlog_rounds",
-      "target": "agents_codex",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "PLAN-REVIEW-LOG.md",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "ownerrunbook_process",
-      "target": "skillreview_workflow",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 0.9,
-      "source_file": "docs/OWNER-RUNBOOK.md",
-      "source_location": null,
-      "weight": 0.9
-    },
-    {
-      "source": "ownerrunbook_process",
-      "target": "security_nvidia_skillspector",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 0.9,
-      "source_file": "docs/OWNER-RUNBOOK.md",
-      "source_location": null,
-      "weight": 0.9
-    },
-    {
-      "source": "security_policy",
-      "target": "security_nvidia_skillspector",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "SECURITY.md",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "security_policy",
-      "target": "scripts_run_skillspector",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 0.9,
-      "source_file": "SECURITY.md",
-      "source_location": null,
-      "weight": 0.9
-    },
-    {
-      "source": "readme_project",
-      "target": "security_nvidia_skillspector",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "readme_project",
-      "target": "contributing_workflow",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "readme_project",
-      "target": "skill_esg_materiality_brief",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 0.95,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 0.95
-    },
-    {
-      "source": "readme_project",
-      "target": "skill_ghg_inventory_evidence_pack",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 0.95,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 0.95
-    },
-    {
-      "source": "readme_project",
-      "target": "ownerrunbook_process",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 0.9,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 0.9
-    },
-    {
-      "source": "skillsreadme_approved",
-      "target": "skill_template",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 0.9,
-      "source_file": "skills/README.md",
-      "source_location": null,
-      "weight": 0.9
-    },
-    {
-      "source": "skillsreadme_approved",
-      "target": "skill_esg_materiality_brief",
-      "relation": "references",
-      "confidence": "INFERRED",
-      "confidence_score": 0.72,
-      "source_file": "skills/README.md",
-      "source_location": null,
-      "weight": 0.72
-    },
-    {
-      "source": "skillsreadme_approved",
-      "target": "skill_ghg_inventory_evidence_pack",
-      "relation": "references",
-      "confidence": "INFERRED",
-      "confidence_score": 0.72,
-      "source_file": "skills/README.md",
-      "source_location": null,
-      "weight": 0.72
-    },
-    {
-      "source": "config_issue_template",
-      "target": "contributing_workflow",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 0.9,
-      "source_file": ".github/ISSUE_TEMPLATE/config.yml",
-      "source_location": null,
-      "weight": 0.9
-    },
-    {
-      "source": "skillproposal_template",
-      "target": "contributing_workflow",
-      "relation": "references",
-      "confidence": "INFERRED",
-      "confidence_score": 0.78,
-      "source_file": ".github/ISSUE_TEMPLATE/skill-proposal.yml",
-      "source_location": null,
-      "weight": 0.78
-    },
-    {
-      "source": "pull_request_template_skill",
-      "target": "skillreview_workflow",
-      "relation": "references",
-      "confidence": "INFERRED",
-      "confidence_score": 0.75,
-      "source_file": ".github/pull_request_template.md",
-      "source_location": null,
-      "weight": 0.75
-    },
-    {
-      "source": "pull_request_template_skill",
-      "target": "security_nvidia_skillspector",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 0.9,
-      "source_file": ".github/pull_request_template.md",
-      "source_location": null,
-      "weight": 0.9
-    },
-    {
-      "source": "memory_project",
-      "target": "agents_github",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 0.9,
-      "source_file": "MEMORY.md",
-      "source_location": null,
-      "weight": 0.9
-    },
-    {
-      "source": "memory_project",
-      "target": "agents_linear",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 0.9,
-      "source_file": "MEMORY.md",
-      "source_location": null,
-      "weight": 0.9
-    },
-    {
-      "source": "memory_project",
-      "target": "security_nvidia_skillspector",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 0.9,
-      "source_file": "MEMORY.md",
-      "source_location": null,
-      "weight": 0.9
-    },
-    {
-      "source": "memory_project",
-      "target": "agents_herenow",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 0.9,
-      "source_file": "MEMORY.md",
-      "source_location": null,
-      "weight": 0.9
-    },
-    {
-      "source": "memory_project",
-      "target": "agents_aster",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 0.85,
-      "source_file": "MEMORY.md",
-      "source_location": null,
-      "weight": 0.85
-    },
-    {
-      "source": "memory_project",
-      "target": "agents_graphify",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 0.85,
-      "source_file": "MEMORY.md",
-      "source_location": null,
-      "weight": 0.85
     }
   ],
   "hyperedges": [],
-  "input_tokens": 28509,
-  "output_tokens": 20104
+  "input_tokens": 0,
+  "output_tokens": 0
 }
