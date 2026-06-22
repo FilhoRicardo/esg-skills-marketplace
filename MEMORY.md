@@ -25,3 +25,4 @@ _None recorded yet._
 
 - The public GitHub repository, Linear project, and first issue `RF-99` were created on 2026-06-21.
 - V1 was published permanently through authenticated here.now hosting on 2026-06-22 with the `esg-materiality-brief` and `ghg-inventory-evidence-pack` skills; the deleted-platform-file scope regression is covered and the Aster catalogue is browser-verified.
+- The trust-gate workflow was narrowed on 2026-06-22 to `opened`, `synchronize`, and `reopened` pull-request events so draft-to-ready transitions do not queue a redundant post-merge race against the deleted merge ref.
