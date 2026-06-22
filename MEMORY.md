@@ -29,3 +29,4 @@ _None recorded yet._
 - The trust-gate workflow was narrowed on 2026-06-22 to `opened`, `synchronize`, and `reopened` pull-request events so draft-to-ready transitions do not queue a redundant post-merge race against the deleted merge ref.
 - RF-100 was created on 2026-06-22 to add site-native skill downloads, a site-native submission flow, hidden GitHub intake orchestration, and post-merge republishing from the public site surface.
 - RF-100's public UX was redesigned on 2026-06-22 using the selected Calm Ledger direction: the catalogue and submission now have separate responsive pages, direct downloads and live file preview were browser-verified, and the branch snapshot is published at the permanent here.now slug.
+- The public intake was simplified on 2026-06-22 so contributors upload only `SKILL.md`, enter a public title, and choose a category; the browser generates `marketplace.json` while preserving the existing dispatch, validation, and review pipeline.
