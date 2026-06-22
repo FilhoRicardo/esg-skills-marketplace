@@ -15,7 +15,7 @@
     "semantic_hash": "aaa1148238a00e4ec7c81d0e38c6b010"
   },
   "scripts/validate_pr_scope.py": {
-    "mtime": 1782104574.364413,
+    "mtime": 1782105255.2946398,
     "ast_hash": "cfca4bdb534b68affd1c6fe0cdaa597f",
     "semantic_hash": "cfca4bdb534b68affd1c6fe0cdaa597f"
   },
@@ -25,22 +25,22 @@
     "semantic_hash": "2920abf0123620164faf0439808e502a"
   },
   "site/app.js": {
-    "mtime": 1782104574.3665953,
+    "mtime": 1782105255.297383,
     "ast_hash": "99e4bcd69c72212c20d1e02708f39d73",
     "semantic_hash": "99e4bcd69c72212c20d1e02708f39d73"
   },
   "site/catalog.json": {
-    "mtime": 1782104584.0862927,
+    "mtime": 1782105255.2992964,
     "ast_hash": "82af9b0f39eb7ba45d21830a3e79d189",
     "semantic_hash": "82af9b0f39eb7ba45d21830a3e79d189"
   },
   "skills/esg-materiality-brief/marketplace.json": {
-    "mtime": 1782104574.365407,
+    "mtime": 1782105255.300085,
     "ast_hash": "1591fc41f024fd9a44509ec21548ed83",
     "semantic_hash": "1591fc41f024fd9a44509ec21548ed83"
   },
   "skills/ghg-inventory-evidence-pack/marketplace.json": {
-    "mtime": 1782104574.3660948,
+    "mtime": 1782105255.3004808,
     "ast_hash": "cc4a7f8fdaf5e83ed534511a762f6ab9",
     "semantic_hash": "cc4a7f8fdaf5e83ed534511a762f6ab9"
   },
@@ -50,7 +50,7 @@
     "semantic_hash": "e5d827e0aad7a4a5641f617a715891d8"
   },
   "tests/test_pr_scope.py": {
-    "mtime": 1782104574.3647525,
+    "mtime": 1782105255.300711,
     "ast_hash": "291019b4259adfedb66640e56c45be31",
     "semantic_hash": "291019b4259adfedb66640e56c45be31"
   },
@@ -58,5 +58,95 @@
     "mtime": 1782069912.0599234,
     "ast_hash": "45192b6b9242e8451420f51a84c46e4e",
     "semantic_hash": "45192b6b9242e8451420f51a84c46e4e"
+  },
+  ".github/ISSUE_TEMPLATE/config.yml": {
+    "mtime": 1782069912.0575714,
+    "ast_hash": "60aca246665b670bdbfc22b24f5c638f",
+    "semantic_hash": "60aca246665b670bdbfc22b24f5c638f"
+  },
+  ".github/ISSUE_TEMPLATE/skill-proposal.yml": {
+    "mtime": 1782069912.0577164,
+    "ast_hash": "2a8d5d41156cdb888bfda9b860d77767",
+    "semantic_hash": "2a8d5d41156cdb888bfda9b860d77767"
+  },
+  ".github/pull_request_template.md": {
+    "mtime": 1782069912.0578227,
+    "ast_hash": "23ca6a239f2de6f257e9178d22b874a4",
+    "semantic_hash": "23ca6a239f2de6f257e9178d22b874a4"
+  },
+  ".github/workflows/skill-review.yml": {
+    "mtime": 1782069912.0579586,
+    "ast_hash": "45167d7b7a6da6f72992895a3722bd92",
+    "semantic_hash": "45167d7b7a6da6f72992895a3722bd92"
+  },
+  "AGENTS.md": {
+    "mtime": 1782069074.1074204,
+    "ast_hash": "fb5affebcb2cbe9fbb571aa0c440f9ae",
+    "semantic_hash": "fb5affebcb2cbe9fbb571aa0c440f9ae"
+  },
+  "CLAUDE.md": {
+    "mtime": 1782069074.108369,
+    "ast_hash": "68e8a342a86249e98f94ef076781d40b",
+    "semantic_hash": "68e8a342a86249e98f94ef076781d40b"
+  },
+  "CONTRIBUTING.md": {
+    "mtime": 1782069912.0582478,
+    "ast_hash": "10c4829d2907e7677d236dda6e2f8ba3",
+    "semantic_hash": "10c4829d2907e7677d236dda6e2f8ba3"
+  },
+  "MEMORY.md": {
+    "mtime": 1782105354.6418848,
+    "ast_hash": "ea16df8dcfa98dfa59ddd34e64989cba",
+    "semantic_hash": "ea16df8dcfa98dfa59ddd34e64989cba"
+  },
+  "PLAN-REVIEW-LOG.md": {
+    "mtime": 1782105255.2919106,
+    "ast_hash": "712b2313fad27daff8cc39e24d0bc8e8",
+    "semantic_hash": "712b2313fad27daff8cc39e24d0bc8e8"
+  },
+  "PLAN.md": {
+    "mtime": 1782105255.2923472,
+    "ast_hash": "bb1e447c9dad61dffb2f3e6effaf5eb8",
+    "semantic_hash": "bb1e447c9dad61dffb2f3e6effaf5eb8"
+  },
+  "README.md": {
+    "mtime": 1782105354.6415582,
+    "ast_hash": "fda939899e96f6f18157af4a887e2812",
+    "semantic_hash": "fda939899e96f6f18157af4a887e2812"
+  },
+  "SECURITY.md": {
+    "mtime": 1782069912.0585606,
+    "ast_hash": "1f1befe895fa6cd75f2c998212f13cef",
+    "semantic_hash": "1f1befe895fa6cd75f2c998212f13cef"
+  },
+  "docs/OWNER-RUNBOOK.md": {
+    "mtime": 1782105255.2927914,
+    "ast_hash": "eef73d23e3447eed457f4a2076c5f7d2",
+    "semantic_hash": "eef73d23e3447eed457f4a2076c5f7d2"
+  },
+  "site/index.html": {
+    "mtime": 1782105255.2995079,
+    "ast_hash": "6c47c8b11ec6c8549bb79893ebc7963d",
+    "semantic_hash": "6c47c8b11ec6c8549bb79893ebc7963d"
+  },
+  "skills/README.md": {
+    "mtime": 1782069912.0594525,
+    "ast_hash": "5933af8db008aed33785acd4d87048f7",
+    "semantic_hash": "5933af8db008aed33785acd4d87048f7"
+  },
+  "skills/esg-materiality-brief/SKILL.md": {
+    "mtime": 1782105255.299925,
+    "ast_hash": "4dccd648507324932adb86a9440b78a4",
+    "semantic_hash": "4dccd648507324932adb86a9440b78a4"
+  },
+  "skills/ghg-inventory-evidence-pack/SKILL.md": {
+    "mtime": 1782105255.3003507,
+    "ast_hash": "29fb77b2e84568b7281e981daf4285e7",
+    "semantic_hash": "29fb77b2e84568b7281e981daf4285e7"
+  },
+  "templates/skill-template/SKILL.md": {
+    "mtime": 1782069912.0596144,
+    "ast_hash": "a5d2da1ba2212e4ca20931155039a873",
+    "semantic_hash": "a5d2da1ba2212e4ca20931155039a873"
   }
 }

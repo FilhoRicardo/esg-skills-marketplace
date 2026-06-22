@@ -10,6 +10,7 @@ _None recorded yet._
 - GitHub repository: https://github.com/FilhoRicardo/esg-skills-marketplace
 - Linear project: https://linear.app/rf-ai-workspace/project/esg-skills-marketplace-2a2095348777
 - First implementation issue: https://linear.app/rf-ai-workspace/issue/RF-99/initialize-esg-skills-marketplace
+- Permanent catalogue: https://royal-bugle-xgg7.here.now/
 - Security scanner: https://github.com/NVIDIA/SkillSpector
 
 ## Key Decisions
@@ -23,3 +24,4 @@ _None recorded yet._
 ## Durable Outcomes
 
 - The public GitHub repository, Linear project, and first issue `RF-99` were created on 2026-06-21.
+- V1 was published permanently through authenticated here.now hosting on 2026-06-22 with the `esg-materiality-brief` and `ghg-inventory-evidence-pack` skills; the deleted-platform-file scope regression is covered and the Aster catalogue is browser-verified.

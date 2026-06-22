@@ -18,6 +18,7 @@ These controls reduce risk; they do not prove that a skill is safe or correct. S
 
 ## Browse or contribute
 
+- Open the permanent [ESG Skills Marketplace catalogue](https://royal-bugle-xgg7.here.now/).
 - Browse approved skills in [`skills/`](skills/).
 - Read the beginner-friendly [contribution guide](CONTRIBUTING.md).
 - Use the [skill template](templates/skill-template/) to prepare a submission.
