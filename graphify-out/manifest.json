@@ -125,9 +125,9 @@
     "semantic_hash": "64adb3e53ae64237f8e4187e67a8abb1"
   },
   "site/index.html": {
-    "mtime": 1782147536.3010774,
-    "ast_hash": "93ab3176826d460ce09e38833d618c08",
-    "semantic_hash": "93ab3176826d460ce09e38833d618c08"
+    "mtime": 1782156262.9506593,
+    "ast_hash": "2d140b2b7c873ae1652a78a18203b215",
+    "semantic_hash": ""
   },
   "skills/README.md": {
     "mtime": 1782069912.0594525,
@@ -180,8 +180,8 @@
     "semantic_hash": ""
   },
   "tests/test_site_pages.py": {
-    "mtime": 1782155981.8168306,
-    "ast_hash": "d2c2b35512a5a70f66d7549844591e54",
+    "mtime": 1782156262.951644,
+    "ast_hash": "3931dcbc071200c9d61e192a5ee5f4b8",
     "semantic_hash": ""
   },
   "tests/test_workflow_config.py": {
@@ -205,13 +205,13 @@
     "semantic_hash": "d8e6abaf704c97504017ade4082dd15b"
   },
   "docs/SITE-OPERATIONS.md": {
-    "mtime": 1782155981.8193572,
-    "ast_hash": "fce1c5b441aa9f16b5cb21869fdd023b",
+    "mtime": 1782156262.9520583,
+    "ast_hash": "5f36d924b359d61b20ce984cf8f270a3",
     "semantic_hash": ""
   },
   "site/submit.html": {
-    "mtime": 1782155981.8150423,
-    "ast_hash": "8f407a53168a55e88ead31c59e7147ed",
+    "mtime": 1782156262.9511898,
+    "ast_hash": "d2af141b1116a5bc54e8e335f10fc81f",
     "semantic_hash": ""
   }
 }
