@@ -33,8 +33,8 @@
             <h1 id="submit-title">Submit a skill for review</h1>
           </div>
           <p>
-            Upload <code>SKILL.md</code> and <code>marketplace.json</code>. We check both files
-            before sending the bundle to the review queue.
+            Upload <code>SKILL.md</code>, add a public title, and choose a category. We create the
+            catalogue metadata before sending the bundle to the review queue.
           </p>
         </section>
 
@@ -42,8 +42,8 @@
           <div class="submission-main">
             <div class="submission-heading">
               <div>
-                <p class="aster-eyebrow">Two-file submission</p>
-                <h2>Choose your files</h2>
+                <p class="aster-eyebrow">Skill submission</p>
+                <h2>Add your skill</h2>
               </div>
               <p id="submission-status" class="catalog-status aster-mono" aria-live="polite">
                 Loading intake rules
@@ -58,17 +58,36 @@
                   <input id="skill-file" name="skill-file" type="file" accept=".md,text/markdown" required>
                 </label>
 
-                <label class="file-field aster-inner" for="marketplace-file">
-                  <span class="field-label">marketplace.json</span>
-                  <span class="field-help">Public title and category in UTF-8 JSON.</span>
-                  <input
-                    id="marketplace-file"
-                    name="marketplace-file"
-                    type="file"
-                    accept=".json,application/json"
-                    required
-                  >
-                </label>
+                <div class="skill-details aster-inner">
+                  <label class="detail-field" for="marketplace-title">
+                    <span class="field-label">Public title</span>
+                    <span class="field-help">The name shown in the catalogue.</span>
+                    <input
+                      id="marketplace-title"
+                      name="marketplace-title"
+                      class="aster-input"
+                      type="text"
+                      minlength="4"
+                      maxlength="80"
+                      autocomplete="off"
+                      required
+                    >
+                  </label>
+
+                  <label class="detail-field" for="marketplace-category">
+                    <span class="field-label">Category</span>
+                    <span class="field-help">Choose the closest job area.</span>
+                    <select
+                      id="marketplace-category"
+                      name="marketplace-category"
+                      class="aster-input"
+                      required
+                      disabled
+                    >
+                      <option value="">Loading categories…</option>
+                    </select>
+                  </label>
+                </div>
               </div>
 
               <div class="field-grid field-grid--copy">
@@ -149,8 +168,8 @@
             </dl>
 
             <p id="preview-detail" class="preview-detail">
-              Choose <code>SKILL.md</code> and <code>marketplace.json</code> to check the bundle
-              before it enters review.
+              Choose <code>SKILL.md</code>, enter a public title, and select a category to check the
+              bundle before it enters review.
             </p>
           </aside>
         </section>

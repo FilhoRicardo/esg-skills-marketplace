@@ -40,6 +40,8 @@ class BuildCatalogueTests(unittest.TestCase):
         rendered = json.loads(rendered_submission_config())
         self.assertEqual(rendered["dispatchPath"], "/api/submit-skill")
         self.assertIn("strategy", rendered["allowedCategories"])
+        self.assertEqual(rendered["minTitleChars"], 4)
+        self.assertEqual(rendered["maxTitleChars"], 80)
         self.assertGreater(rendered["maxSkillFileBytes"], rendered["maxMarketplaceFileBytes"])
 
     def test_download_bundle_contains_reviewed_bundle(self) -> None:

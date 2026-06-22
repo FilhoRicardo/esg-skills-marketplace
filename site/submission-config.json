@@ -12,6 +12,8 @@
   "maxMarketplaceFileBytes": 4000,
   "maxPublicNameChars": 80,
   "maxPublicContactChars": 200,
+  "minTitleChars": 4,
+  "maxTitleChars": 80,
   "minDescriptionChars": 20,
   "maxDescriptionChars": 300,
   "minBodyChars": 80

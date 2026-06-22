@@ -3,7 +3,8 @@ const status = document.querySelector("#catalog-status");
 const submissionStatus = document.querySelector("#submission-status");
 const form = document.querySelector("#submission-form");
 const skillFileInput = document.querySelector("#skill-file");
-const marketplaceFileInput = document.querySelector("#marketplace-file");
+const marketplaceTitleInput = document.querySelector("#marketplace-title");
+const marketplaceCategoryInput = document.querySelector("#marketplace-category");
 const publicNameInput = document.querySelector("#public-name");
 const publicContactInput = document.querySelector("#public-contact");
 const rightsInput = document.querySelector("#rights-confirmed");
@@ -167,13 +168,20 @@ function buildPreview(skillText, marketplaceText) {
     );
   }
 
-  if (typeof marketplace.title !== "string" || marketplace.title.trim().length < 4) {
-    throw new Error("marketplace.json title must contain at least 4 characters.");
+  const title = typeof marketplace.title === "string" ? marketplace.title.trim() : "";
+  if (
+    title.length < intakeConfig.minTitleChars ||
+    title.length > intakeConfig.maxTitleChars ||
+    /[\r\n\t]/.test(title)
+  ) {
+    throw new Error(
+      `Public title must contain ${intakeConfig.minTitleChars} to ${intakeConfig.maxTitleChars} characters on one line.`,
+    );
   }
 
   return {
     slug,
-    title: marketplace.title.trim(),
+    title,
     category: marketplace.category,
     description,
   };
@@ -182,12 +190,12 @@ function buildPreview(skillText, marketplaceText) {
 function updatePreview(nextPreview) {
   preview = nextPreview;
   if (!nextPreview) {
-    previewHeading.textContent = "Waiting for the two required files";
+    previewHeading.textContent = "Waiting for skill details";
     previewSlug.textContent = "—";
     previewTitle.textContent = "—";
     previewCategory.textContent = "—";
     previewDetail.textContent =
-      "Choose `SKILL.md` and `marketplace.json`, and the site will parse them before anything is queued.";
+      "Choose `SKILL.md`, enter a public title, and select a category before anything is queued.";
     return;
   }
 
@@ -207,16 +215,17 @@ function syncSubmitButton() {
   );
 }
 
-async function readSelectedFiles() {
+async function readSubmissionValues() {
   const skillFile = skillFileInput.files?.[0];
-  const marketplaceFile = marketplaceFileInput.files?.[0];
-  if (!skillFile || !marketplaceFile) {
+  const title = marketplaceTitleInput.value.trim();
+  const category = marketplaceCategoryInput.value;
+  if (!skillFile || !title || !category) {
     return null;
   }
 
   return {
     skillText: await skillFile.text(),
-    marketplaceText: await marketplaceFile.text(),
+    marketplaceText: JSON.stringify({ title, category }),
   };
 }
 
@@ -229,16 +238,16 @@ async function refreshSubmissionPreview() {
     return;
   }
 
-  const files = await readSelectedFiles();
-  if (!files) {
+  const submission = await readSubmissionValues();
+  if (!submission) {
     updatePreview(null);
-    setSubmissionTone("Choose the two required files", "neutral");
+    setSubmissionTone("Add the file, title, and category", "neutral");
     syncSubmitButton();
     return;
   }
 
   try {
-    updatePreview(buildPreview(files.skillText, files.marketplaceText));
+    updatePreview(buildPreview(submission.skillText, submission.marketplaceText));
     setSubmissionTone("Browser checks complete", "success");
   } catch (error) {
     updatePreview(null);
@@ -317,7 +326,11 @@ async function loadSubmissionConfig() {
     if (!response.ok) throw new Error(`Submission config request failed with ${response.status}`);
 
     intakeConfig = await response.json();
-    setSubmissionTone("Ready for a two-file submission", "success");
+    const placeholder = new Option("Choose a category", "");
+    const options = intakeConfig.allowedCategories.map((category) => new Option(category, category));
+    marketplaceCategoryInput.replaceChildren(placeholder, ...options);
+    marketplaceCategoryInput.disabled = false;
+    setSubmissionTone("Ready for skill details", "success");
   } catch (error) {
     console.error("Unable to load submission config", error);
     intakeConfig = null;
@@ -337,11 +350,11 @@ if (form) {
     event.preventDefault();
     clearFeedback();
 
-    const files = await readSelectedFiles();
-    if (!files) {
+    const submission = await readSubmissionValues();
+    if (!submission) {
       setFeedback(
-        "Two files are required",
-        "Choose `SKILL.md` and `marketplace.json` before queueing the submission.",
+        "Complete the skill details",
+        "Choose `SKILL.md`, enter a public title, and select a category before sending the submission.",
         "error",
       );
       return;
@@ -349,7 +362,7 @@ if (form) {
 
     let nextPreview;
     try {
-      nextPreview = buildPreview(files.skillText, files.marketplaceText);
+      nextPreview = buildPreview(submission.skillText, submission.marketplaceText);
       updatePreview(nextPreview);
     } catch (error) {
       setSubmissionTone("Fix the files before queueing", "error");
@@ -374,8 +387,8 @@ if (form) {
     const payload = {
       ref: "main",
       inputs: {
-        skill_md: files.skillText,
-        marketplace_json: files.marketplaceText,
+        skill_md: submission.skillText,
+        marketplace_json: submission.marketplaceText,
         public_name: normalizePublicField(publicNameInput.value, intakeConfig.maxPublicNameChars),
         public_contact: normalizePublicField(
           publicContactInput.value,
@@ -402,7 +415,7 @@ if (form) {
         setSubmissionTone("Submission queued for intake", "success");
         setFeedback(
           "Submission queued",
-          "Your files passed the browser checks and entered the review queue. Automated checks and maintainer review still run before anything becomes public.",
+          "Your skill details passed the browser checks and entered the review queue. Automated checks and maintainer review still run before anything becomes public.",
           "success",
         );
         syncSubmitButton();
@@ -416,7 +429,7 @@ if (form) {
         setSubmissionTone("Local preview cannot queue submissions", "neutral");
         setFeedback(
           "Local preview only",
-          "The files passed browser checks, but local preview does not include the hidden intake proxy. The live published site will.",
+          "The skill details passed browser checks, but local preview does not include the hidden intake proxy. The live published site will.",
           "neutral",
         );
         syncSubmitButton();
@@ -436,11 +449,15 @@ if (form) {
     }
   });
 
-  for (const field of [skillFileInput, marketplaceFileInput]) {
+  for (const field of [skillFileInput, marketplaceCategoryInput]) {
     field.addEventListener("change", () => {
       refreshSubmissionPreview();
     });
   }
+
+  marketplaceTitleInput.addEventListener("input", () => {
+    refreshSubmissionPreview();
+  });
 
   for (const field of [rightsInput, boundaryInput]) {
     field.addEventListener("change", () => {

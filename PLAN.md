@@ -11,7 +11,7 @@ Finish the RF-100 public experience by replacing the broken fixed-height single-
 - The homepage has one primary job: help visitors understand and download reviewed environmental, social, and governance (ESG) skills.
 - The homepage uses a short hero with one primary `Browse skills` action and a secondary `Submit a skill` link.
 - Every approved skill exposes an immediately visible `Download .zip` action at desktop, tablet, and mobile widths.
-- Submission moves to a dedicated `submit.html` page with the existing two-file intake, browser validation, preview, optional public attribution, attestations, and hidden proxy dispatch intact.
+- Submission uses a dedicated `submit.html` page where contributors upload only `SKILL.md`, enter a public title, and choose a category; the browser generates `marketplace.json` while the existing validation, preview, optional attribution, attestations, and hidden proxy dispatch remain intact.
 - User-facing copy describes the job and review boundary without exposing implementation terms such as repository scaffolding, approved slugs, workflow dispatch, or merge to `main`.
 - The Aster system remains authoritative: Schibsted Grotesk, JetBrains Mono for data/labels, greyscale plus forest green, restrained glass surfaces, and no decorative new palette or assets.
 - The public pages use normal document scrolling. No section receives a fixed/equal height that can clip content, no page-level `overflow: hidden` blocks content, and the footer remains in document flow.
@@ -79,7 +79,7 @@ Finish the RF-100 public experience by replacing the broken fixed-height single-
   - no console errors or failed static asset requests;
   - reviewed bundle count and both `Download .zip` links are visible and clickable;
   - a downloaded zip contains the reviewed bundle files;
-  - representative `SKILL.md` and `marketplace.json` files populate the preview;
+  - a representative `SKILL.md`, public title, and category populate the preview and generate the existing marketplace metadata payload;
   - all form fields and confirmations remain reachable at mobile width;
   - 375×812, 768×1024, 1280×720, and 1440px layouts have no overlap or horizontal scroll;
   - interactive elements pass hit testing and target-size checks.

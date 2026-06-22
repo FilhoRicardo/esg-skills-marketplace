@@ -5,7 +5,7 @@ This is the maintainer setup for the site-native download and submission flow.
 ## What the public site does
 
 - serves reviewed skill downloads directly from the live catalogue;
-- accepts `SKILL.md` and `marketplace.json` from the site-native submission form;
+- accepts `SKILL.md`, a public title, and a category from the site-native submission form, then generates `marketplace.json` in the browser before dispatch;
 - forwards only one hidden path, `/api/submit-skill`, through a here.now proxy route;
 - relies on GitHub Actions to create the draft pull request and on `main` deploys to republish the site.
 

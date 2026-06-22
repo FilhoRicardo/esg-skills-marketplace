@@ -20,7 +20,7 @@ These controls reduce risk; they do not prove that a skill is safe or correct. S
 
 - Open the permanent [ESG Skills Marketplace catalogue](https://royal-bugle-xgg7.here.now/).
 - Download approved skills from the public catalogue.
-- Submit a new skill from the public site with `SKILL.md` and `marketplace.json`.
+- Submit a new skill from the public site with `SKILL.md`, a public title, and a category. The site creates the catalogue metadata for you.
 - Read the beginner-friendly [contribution guide](CONTRIBUTING.md) if you want the repository-first fallback.
 - Use the [skill template](templates/skill-template/) to prepare a bundle.
 - Maintainers follow the [owner review runbook](docs/OWNER-RUNBOOK.md).

@@ -30,6 +30,8 @@ def submission_config() -> dict[str, object]:
         "maxMarketplaceFileBytes": SITE_INTAKE_MARKETPLACE_MAX_BYTES,
         "maxPublicNameChars": SITE_INTAKE_MAX_PUBLIC_NAME_CHARS,
         "maxPublicContactChars": SITE_INTAKE_MAX_PUBLIC_CONTACT_CHARS,
+        "minTitleChars": 4,
+        "maxTitleChars": 80,
         "minDescriptionChars": 20,
         "maxDescriptionChars": 300,
         "minBodyChars": 80,

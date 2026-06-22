@@ -1,6 +1,6 @@
 # Contributing a skill
 
-Thank you for proposing an ESG skill. The easiest path is the public ESG Skills Marketplace site: upload `SKILL.md` and `marketplace.json` there and the hidden intake flow will create a draft review request for you. This repository guide remains the fallback for maintainers and advanced contributors who want the GitHub-first path directly.
+Thank you for proposing an ESG skill. The easiest path is the public ESG Skills Marketplace site: upload `SKILL.md`, enter a public title, and choose a category. The site creates the catalogue metadata and the hidden intake flow creates a draft review request for you. This repository guide remains the fallback for maintainers and advanced contributors who want the GitHub-first path directly.
 
 ## Before you start
 
@@ -30,9 +30,10 @@ Your v1 submission must:
 ## Submit through the public site
 
 1. Open the live ESG Skills Marketplace site.
-2. Choose `SKILL.md` and `marketplace.json`.
-3. Confirm redistribution rights and the review boundary.
-4. Queue the submission.
+2. Choose `SKILL.md`.
+3. Enter the public catalogue title and choose a category.
+4. Confirm redistribution rights and the review boundary.
+5. Send the submission for review.
 
 If the browser-side checks pass, the site hands the bundle to the hidden intake flow. If the server-side intake also passes, GitHub receives a draft pull request and the normal trust checks begin.
 
@@ -56,7 +57,7 @@ Passing checks is necessary but not sufficient. The maintainer also reviews purp
 
 ## Categories
 
-Use one category in `marketplace.json`:
+Choose one category on the public site. Repository-first contributors use the same value in `marketplace.json`:
 
 - `data`
 - `disclosure`
