@@ -222,3 +222,136 @@ Codex response:
 - The public preview duplicated information contributors do not need. Codex removed the panel, kept validation state in the existing status line, expanded the form to the full workspace width, and added a clear disabled-button state.
 - The intake payload, validation, review workflow, and publication gate are unchanged.
 - The regression was amplified by mixed asset versions: `app.js` was cache-busted but `styles.css` was not. Both shared assets are now versioned together and must be bumped as a pair.
+
+## 2026-06-23 — Automated intake wiring planning gate
+
+- The user asked for a successful public submission to reach Codex, receive low-cost safety review and normalization, enter GitHub, and appear on the portal after approval.
+- Codex confirmed the immediate outage: `.github/workflows/site-submission-intake.yml` exists on draft PR #6 but not on `main`, so GitHub returns `404` for the workflow-dispatch endpoint. The here.now `GITHUB_INTAKE_TOKEN`, GitHub `MARKETPLACE_INTAKE_TOKEN`, `HERENOW_API_KEY`, and `HERENOW_SITE_SLUG` configuration entries all exist.
+- Codex chose the event-driven official Codex GitHub Action for the production worker. Native Codex Desktop automations are scheduled and require the local machine plus app to remain available, so an optional Desktop automation is limited to stalled-PR observability.
+
+### Round 1
+
+- Claude received the full revised `PLAN.md` in authenticated no-tools plan mode.
+- The call produced no critique or verdict after repeated waits. Codex did not treat silence as `CLEAR` and moved to a compressed retry.
+
+### Round 2
+
+- Claude received a compressed architecture and security summary.
+- The call again produced no critique or verdict after repeated waits. Codex did not treat silence as agreement and moved to one tightly bounded security question.
+
+### Round 3 — Claude verdict: REVISE
+
+Claude raised three concerns:
+
+1. Schema-valid JSON can still contain semantically dangerous paths, URLs, or other values that trusted code acts upon.
+2. Anonymous submitted Markdown can prompt-inject the model into returning manipulated but schema-valid values.
+3. The API proxy and static model credential remain trust and exposure points.
+
+`VERDICT: REVISE`
+
+Codex response:
+
+- Accepted concern 1. The plan now restricts model output to a single-line description, one exact category enum, and fixed advisory risk flags. Model output cannot control paths, filenames, URLs, commands, labels, approvals, or merges, and every value receives semantic validation.
+- Accepted concern 2 as a threat-model correction. The model is explicitly not a trust boundary. It runs read-only with no write token; the submitted body is preserved; trusted policy, pinned no-LLM SkillSpector, and human review remain authoritative.
+- Accepted concern 3 within the official action's supported model. The action will be pinned by commit, use a dedicated low-budget OpenAI project key, retain `drop-sudo`, run in a read-only sandbox as the final job step, and pass output to a separate deterministic write job that never receives the OpenAI key.
+
+### Round 4 — Claude verdict: REVISE
+
+Claude found nine remaining concerns:
+
+1. The phrase `semantic validation` did not say whether validation was deterministic or another model call.
+2. Byte preservation could have a time-of-check/time-of-use race if the PR branch changed between jobs.
+3. The write token's repository-wide blast radius remained material.
+4. Unexpected files in the one-skill diff needed an explicit fail-closed rule.
+5. OpenAI budget exhaustion needed a visible fallback behavior.
+6. Prompt injection could still manipulate the advisory category or risk flags.
+7. Unicode format characters could spoof rendered descriptions.
+8. A hardcoded category enum could drift from the validator.
+9. Anonymous submissions could exhaust model budget without a rate boundary.
+
+`VERDICT: REVISE`
+
+Codex response:
+
+- Accepted concerns 1, 2, 4, 5, 6, 7, and 8. Validation is now explicitly deterministic; both jobs bind to the event-time head SHA and fail if it changes; unexpected diffs fail closed; model failure leaves a visible failed run and raw draft for manual normalization; prompt injection is documented as advisory-data risk; descriptions require NFC and reject Unicode control/format categories; and category validation imports the trusted validator's live allowlist.
+- Accepted concern 3 as a residual platform constraint. GitHub does not provide path-scoped repository write tokens, while pushes made with the short-lived `GITHUB_TOKEN` would not trigger the required follow-on workflow. The existing fine-grained token will be limited to this repository's contents and pull requests and exposed only to the small deterministic apply job.
+- Partly accepted concern 9. The workflow runs only once per newly opened server-marked submission PR, here.now already enforces `6/hour/IP`, and the dedicated OpenAI project has a spend cap. A global Actions concurrency group would silently replace queued runs, so it is rejected; distributed denial-of-service remains documented residual risk rather than adding a database-backed quota system to RF-100.
+
+### Round 5 — Claude verdict: REVISE
+
+Claude raised three final concerns:
+
+1. The fine-grained write token needed explicit handling and exposure limits.
+2. The apply job needed an explicit second deterministic validation of model output immediately before writing.
+3. The allowed post-normalization diff needed a machine-checkable definition.
+
+`VERDICT: REVISE`
+
+Codex response:
+
+- Accepted concern 2. The apply job now explicitly re-validates the actual model output immediately before applying it.
+- Accepted concern 3 and corrected Claude's proposed two-file shape to this repository's real generated-output contract. The only allowed paths relative to `main` are the submitted `SKILL.md`, its `marketplace.json`, `site/catalog.json`, and the new skill ZIP. No deletions, renames, symlinks, executable modes, unrelated archives, or other paths may change. ZIP creation becomes deterministic so old bundles remain byte-stable.
+- Partly accepted concern 1. The token will be stored as a repository secret, unavailable to the model job, omitted from checkout via `persist-credentials: false`, and exposed only to the final push step. Claude's requested branch-scoped fine-grained PAT is not a GitHub capability; the repository-scoped token remains necessary because a short-lived `GITHUB_TOKEN` push would not trigger the required follow-on checks.
+- The five-round review cap is reached without `CLEAR`. The remaining disagreement is the unavailable branch/path-scoped token, so Codex is presenting the tightened plan and this residual platform constraint for user signoff rather than inventing consensus.
+
+## 2026-06-23 — Always-on Codex automation revision
+
+- The user confirmed the Mac mini is always on and explicitly approved treating it as a production dependency, so Codex replaced the API-backed GitHub Action plan with an hourly native Codex project automation.
+- GitHub remains the durable intake queue because native Codex automations are scheduled rather than webhook-triggered.
+- The revised plan uses the lowest-cost selectable Codex model, one PR per run, a dedicated worktree, a project-local review skill, deterministic exact-diff helpers, unchanged required checks, and mandatory human merge.
+- The user's message is treated as signoff for this architecture. Codex will pause only if the review identifies a new material product decision.
+
+### Review rounds 1 and 2
+
+- Claude received the full native-automation plan and then a compressed architecture review prompt in authenticated no-tools plan mode.
+- Both calls produced no critique or verdict after repeated waits. Codex did not treat silence as `CLEAR` and moved to a minimal security question.
+
+### Review round 3 — Claude verdict: REVISE
+
+Claude identified three blockers for an unattended local agent with GitHub write access:
+
+1. Pull-request automation must not let anonymous content modify workflow or policy files that CI may execute with repository privileges.
+2. Exact-diff enforcement is only a boundary if anonymous text never controls paths, commands, commit metadata, or the enforcement step itself.
+3. A broad local GitHub credential lets a prompt-injected agent mutate branches, workflows, or repository configuration outside the intended submission branch.
+
+`VERDICT: REVISE`
+
+Codex response:
+
+- The first two concerns are addressed by the existing trusted-main `pull_request_target` design, fixed submission paths, candidate-scope validation, no execution, static SkillSpector, and the planned exact-diff helper.
+- The third concern is confirmed by live configuration and is a material blocker: the Mac's active `gh` token has classic `repo` and `workflow` scopes. A native full-access automation reading anonymous text would inherit substantially more authority than the task requires, and deterministic helpers cannot prevent the agent from bypassing them before a push.
+- The always-on Mac resolves availability but not credential isolation. Codex paused implementation as promised because the user must choose between the safer event-driven Codex GitHub Action with separated model/write jobs, or additional local isolation such as a dedicated automation account and narrow credential.
+
+## 2026-06-23 — Local folder-triggered intake revision
+
+- The user clarified the desired product flow: upload on here.now, save into a designated Mac mini folder, trigger Codex when a file arrives, push the reviewed skill to GitHub, and republish the portal.
+- Current here.now documentation confirms private Drives, path-scoped write tokens, presigned staged uploads, ETag-protected finalization/moves, and owner-side export. GitHub Pages would not add storage or local delivery, so here.now remains the better host.
+- Current Codex documentation confirms native App automations are scheduled rather than filesystem-triggered, while `codex exec` is the supported non-interactive pipeline surface. The revised design uses `launchd` for the file trigger and an isolated, schema-constrained Codex CLI review.
+- The revised security boundary removes both broad local `gh` access and ChatGPT-managed `auth.json` from the untrusted review process. A dedicated API key reaches only the Codex parent process, model-proposed subprocesses inherit no secrets, a deny-all tool hook blocks tool use, and a deterministic publisher holds only a repository deploy key.
+
+### Review rounds 1 and 2
+
+- Claude received the full local-folder plan and then a compressed architecture prompt in authenticated no-tools plan mode.
+- Both calls produced no critique or verdict after repeated waits. Codex did not treat silence as `CLEAR` and moved to a single-risk review.
+
+### Review round 3 — Claude verdict: REVISE
+
+- Claude identified prompt injection as the largest risk, asserting that Codex was the only validation gate and that the publisher would commit its JSON verbatim.
+- Claude recommended deterministic input/output validation and a source content hash.
+
+`VERDICT: REVISE`
+
+Codex response:
+
+- The central assertion is rejected as factually inconsistent with the plan. Codex is advisory only; its output is restricted to description, one category enum, and fixed risk flags, then deterministically schema- and value-validated. It cannot approve or merge. The raw body is preserved, exact-diff validation runs, pinned no-LLM SkillSpector remains required, and a human reviews the draft PR before publication.
+- The source-traceability recommendation is accepted. The staged SHA-256 is rechecked after download and recorded in local state, fixed commit metadata, and the PR body. Any mismatch fails closed.
+- Prompt injection remains a residual data-quality risk for description/category suggestions, not a code-execution or publication boundary.
+
+### Review round 4 — Claude verdict: CLEAR
+
+- Claude re-reviewed the corrected boundary and agreed that prompt injection can affect only bounded advisory metadata.
+- With no tools or GitHub credentials available to Codex, deterministic schema/value/hash/diff validation, preserved raw instructions, pinned no-LLM SkillSpector, and mandatory human merge, the residual risk is equivalent to a contributor supplying misleading metadata rather than a publication or code-execution bypass.
+
+`VERDICT: CLEAR`
+
+- The plan is ready for the user's final signoff before implementation.
