@@ -30,3 +30,5 @@ _None recorded yet._
 - RF-100 was created on 2026-06-22 to add site-native skill downloads, a site-native submission flow, hidden GitHub intake orchestration, and post-merge republishing from the public site surface.
 - RF-100's public UX was redesigned on 2026-06-22 using the selected Calm Ledger direction: the catalogue and submission now have separate responsive pages, direct downloads and live file preview were browser-verified, and the branch snapshot is published at the permanent here.now slug.
 - The public intake now accepts unnormalized UTF-8 Markdown plus a public title. The raw instructions are preserved in a draft, while strict repository validation prevents publication until a maintainer adds valid frontmatter, assigns an allowed category, and rebuilds the catalogue.
+- Keep the public submission surface form-first. Technical slug, frontmatter, category, and generated-metadata previews belong in maintainer review, not the contributor UI.
+- Version `site/app.js` and `site/styles.css` together whenever either changes; mixed cached assets previously reproduced broken layouts after otherwise successful here.now deploys.

@@ -9,11 +9,6 @@ const publicContactInput = document.querySelector("#public-contact");
 const rightsInput = document.querySelector("#rights-confirmed");
 const boundaryInput = document.querySelector("#boundary-confirmed");
 const submitButton = document.querySelector("#submit-button");
-const previewHeading = document.querySelector("#preview-title");
-const previewSlug = document.querySelector("#preview-slug");
-const previewTitle = document.querySelector("#preview-title-value");
-const previewCategory = document.querySelector("#preview-category");
-const previewDetail = document.querySelector("#preview-detail");
 const feedbackCard = document.querySelector("#submission-feedback");
 const feedbackTitle = document.querySelector("#feedback-title");
 const feedbackDetail = document.querySelector("#feedback-detail");
@@ -149,28 +144,11 @@ function buildPreview(skillText, marketplaceText) {
   return {
     slug: slugifyTitle(title),
     title,
-    category: "Assigned during review",
-    description: "Instructions uploaded. Frontmatter and category will be completed during review.",
   };
 }
 
 function updatePreview(nextPreview) {
   preview = nextPreview;
-  if (!nextPreview) {
-    previewHeading.textContent = "Waiting for skill details";
-    previewSlug.textContent = "—";
-    previewTitle.textContent = "—";
-    previewCategory.textContent = "Assigned during review";
-    previewDetail.textContent =
-      "Choose a Markdown file and enter a public title before anything is queued.";
-    return;
-  }
-
-  previewHeading.textContent = nextPreview.title;
-  previewSlug.textContent = nextPreview.slug;
-  previewTitle.textContent = nextPreview.title;
-  previewCategory.textContent = nextPreview.category;
-  previewDetail.textContent = nextPreview.description;
 }
 
 function syncSubmitButton() {
@@ -292,7 +270,7 @@ async function loadSubmissionConfig() {
     if (!response.ok) throw new Error(`Submission config request failed with ${response.status}`);
 
     intakeConfig = await response.json();
-    setSubmissionTone("Ready for skill details", "success");
+    setSubmissionTone("Ready for skill details", "neutral");
   } catch (error) {
     console.error("Unable to load submission config", error);
     intakeConfig = null;

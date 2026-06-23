@@ -9,7 +9,7 @@ Let public contributors submit ordinary Markdown instructions without preparing 
 - Work remains in the linked GitHub repository, Linear project, and RF-100 issue.
 - The public form accepts any UTF-8 Markdown file with meaningful instruction content; YAML frontmatter, a `name`, and a `description` are not required at upload time.
 - The contributor still supplies a public title. The browser and server derive the same lowercase URL slug from that title.
-- The preview says frontmatter and category will be completed during review.
+- The form copy says frontmatter and category will be completed during review without exposing a technical metadata preview.
 - Existing file-size, title, redistribution, review-boundary, duplicate-slug, NUL, and invisible-control protections remain enforced.
 - Site intake writes the submitted Markdown unchanged as `SKILL.md` plus title-only marketplace metadata into a draft pull request.
 - The draft pull-request body tells maintainers to review the raw instructions, add valid `name` and `description` frontmatter, assign a category, rebuild the catalogue, and run the trust checks.
@@ -60,7 +60,7 @@ Let public contributors submit ordinary Markdown instructions without preparing 
 - `python3 -m unittest discover -s tests`
 - Pinned NVIDIA SkillSpector checks on the approved catalogue without executing skill content.
 - Focused tests prove raw Markdown without frontmatter passes site intake while the normal approved-skill validator rejects it.
-- Local and live gstack `/browse` checks prove an ordinary Markdown file previews successfully, the derived slug matches the server rule, frontmatter/category are marked for review, responsive layouts have no overflow, and the console has no errors.
+- Local and live gstack `/browse` checks prove an ordinary Markdown file validates successfully, the derived slug matches the server rule, the public form stays compact, responsive layouts have no overflow, and the console has no errors.
 
 ## GitHub, Linear, And Memory Impact
 

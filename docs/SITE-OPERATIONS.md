@@ -51,4 +51,4 @@ After changing the submission or deploy path:
 6. Verify a real site submission creates a draft pull request.
 7. Verify a merged change to `main` republishes the permanent here.now site.
 
-The HTML uses a versioned `app.js` URL because here.now may retain a prior static asset between rapid updates. Bump the version whenever submission behavior changes.
+The HTML uses versioned `app.js` and `styles.css` URLs because here.now and browsers may retain prior static assets between rapid updates. Bump both versions whenever submission behavior or layout changes so visitors never receive mixed markup, JavaScript, and CSS.

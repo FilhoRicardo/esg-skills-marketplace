@@ -46,7 +46,7 @@ class SitePageTests(unittest.TestCase):
         self.assertIn("marketplace-title", submission.ids)
         self.assertNotIn("marketplace-category", submission.ids)
         self.assertNotIn("marketplace-file", submission.ids)
-        self.assertIn("submission-preview", (SITE / "styles.css").read_text(encoding="utf-8"))
+        self.assertNotIn("submission-preview", (SITE / "submit.html").read_text(encoding="utf-8"))
         self.assertIn("./#skills-title", submission.links)
 
     def test_both_pages_load_the_shared_assets(self) -> None:
@@ -55,7 +55,7 @@ class SitePageTests(unittest.TestCase):
             self.assertTrue(any(source.split("?", 1)[0] == "app.js" for source in page.scripts))
             html = (SITE / name).read_text(encoding="utf-8")
             self.assertIn('href="aster-tokens.css"', html)
-            self.assertIn('href="styles.css"', html)
+            self.assertIn('href="styles.css?', html)
 
     def test_browser_still_sends_generated_marketplace_metadata(self) -> None:
         app = (SITE / "app.js").read_text(encoding="utf-8")
@@ -70,6 +70,11 @@ class SitePageTests(unittest.TestCase):
         self.assertIsNotNone(body_rule)
         self.assertNotIn("overflow: hidden", body_rule.group("body"))
         self.assertNotIn("height: 100dvh", body_rule.group("body"))
+
+    def test_disabled_submit_button_has_a_visible_state(self) -> None:
+        styles = (SITE / "styles.css").read_text(encoding="utf-8")
+        self.assertIn(".aster-btn:disabled", styles)
+        self.assertIn(".aster-btn--primary:disabled", styles)
 
 
 if __name__ == "__main__":

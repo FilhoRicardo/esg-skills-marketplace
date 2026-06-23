@@ -215,3 +215,10 @@ Codex response:
 
 - Accepted the concern as a verification requirement. The browser preview inserts only fixed plain text and metadata through `textContent`; it does not render submitted Markdown. The public catalogue also renders validated metadata through `textContent`, while GitHub owns and sanitizes its pull-request Markdown view.
 - The user's request is the final signoff for this exact bounded change: raw Markdown intake now, maintainer normalization before merge, and no execution or automatic rewriting of submitted instructions.
+
+## 2026-06-23 — Submission UI regression repair
+
+- Live empty-state screenshots confirmed the regression: the technical preview used browser-default definition-list indentation, producing a stair-step layout on mobile and tablet after the frontmatter row was added.
+- The public preview duplicated information contributors do not need. Codex removed the panel, kept validation state in the existing status line, expanded the form to the full workspace width, and added a clear disabled-button state.
+- The intake payload, validation, review workflow, and publication gate are unchanged.
+- The regression was amplified by mixed asset versions: `app.js` was cache-busted but `styles.css` was not. Both shared assets are now versioned together and must be bumped as a pair.
