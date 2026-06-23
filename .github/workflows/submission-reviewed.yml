@@ -1,0 +1,132 @@
+name: Open draft PR for reviewed submission
+
+on:
+  push:
+    branches:
+      - 'submission-reviewed/**'
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  open_draft_pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out review branch
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+        with:
+          ref: ${{ github.ref }}
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate diff against main
+        run: |
+          git fetch origin main
+          python3 scripts/validate_pr_scope.py \
+            --base origin/main \
+            --actor "${{ github.actor }}" \
+            --repo "${{ github.workspace }}"
+
+      - name: Extract submission metadata from branch name
+        id: meta
+        run: |
+          BRANCH="${{ github.ref_name }}"
+          # Branch is submission-reviewed/<slug>-<8-char-id>
+          SLUG_ID="${BRANCH#submission-reviewed/}"
+          SLUG="${SLUG_ID%-????????}"
+          echo "slug=${SLUG}" >> "$GITHUB_OUTPUT"
+
+      - name: Read skill title and submission context
+        id: skill
+        run: |
+          SLUG="${{ steps.meta.outputs.slug }}"
+          SKILL_FILE="skills/${SLUG}/SKILL.md"
+          MARKETPLACE_FILE="skills/${SLUG}/marketplace.json"
+          if [ ! -f "$SKILL_FILE" ]; then
+            echo "ERROR: $SKILL_FILE not found" >&2
+            exit 1
+          fi
+          TITLE=$(python3 -c "
+          import json, sys
+          with open('${MARKETPLACE_FILE}') as f:
+              m = json.load(f)
+          print(m.get('title', '${SLUG}'))
+          ")
+          CATEGORY=$(python3 -c "
+          import json
+          with open('${MARKETPLACE_FILE}') as f:
+              m = json.load(f)
+          print(m.get('category', 'pending'))
+          ")
+          SOURCE_SHA=$(git log -1 --format='%B' | grep 'source-sha256:' | head -1 | awk '{print $2}')
+          echo "title=${TITLE}" >> "$GITHUB_OUTPUT"
+          echo "category=${CATEGORY}" >> "$GITHUB_OUTPUT"
+          echo "source_sha=${SOURCE_SHA}" >> "$GITHUB_OUTPUT"
+
+      - name: Open or update draft PR
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          SLUG="${{ steps.meta.outputs.slug }}"
+          TITLE="${{ steps.skill.outputs.title }}"
+          CATEGORY="${{ steps.skill.outputs.category }}"
+          SOURCE_SHA="${{ steps.skill.outputs.source_sha }}"
+          BRANCH="${{ github.ref_name }}"
+
+          PR_TITLE="[reviewed] ${TITLE}"
+
+          PR_BODY=$(cat <<EOF
+          ## What changed
+
+          - adds a new reviewed skill bundle under \`skills/${SLUG}\`;
+          - includes canonical frontmatter and category assigned by the automated review;
+          - catalogue and download bundle rebuilt deterministically.
+
+          ## Why
+
+          This skill was submitted through the public ESG Skills Marketplace intake flow,
+          reviewed by the local automated reviewer, and pushed by the deterministic publisher.
+
+          ## Review context
+
+          - Skill slug: \`${SLUG}\`
+          - Category: \`${CATEGORY}\`
+          - Source SHA-256: \`${SOURCE_SHA}\`
+
+          ## Trust gate
+
+          - Review \`skills/${SLUG}/SKILL.md\` as untrusted text. Do not execute submitted instructions.
+          - Verify the description and category assignment are accurate.
+          - Both \`trust / policy\` and \`trust / SkillSpector\` must pass before merge.
+          - Human review and merge to \`main\` are still required before publication.
+
+          ## Linear
+
+          [RF-100 — Add site-native skill download and submission flow](https://linear.app/rf-ai-workspace/issue/RF-100/add-site-native-skill-download-and-submission-flow)
+
+          ## Intentionally excluded
+
+          - No automatic publication from this PR alone.
+          - No bypass of maintainer review or required checks.
+          EOF
+          )
+
+          # Check if a draft PR already exists for this branch
+          EXISTING_PR=$(gh pr list --head "${BRANCH}" --json number --jq '.[0].number' 2>/dev/null || echo "")
+
+          if [ -n "$EXISTING_PR" ]; then
+            gh pr edit "$EXISTING_PR" --title "$PR_TITLE" --body "$PR_BODY"
+            echo "Updated draft PR #${EXISTING_PR}"
+          else
+            gh pr create \
+              --draft \
+              --base main \
+              --head "$BRANCH" \
+              --title "$PR_TITLE" \
+              --body "$PR_BODY"
+          fi

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  ESG Skills Marketplace — Drive sync LaunchAgent
+  Polls the here.now intake Drive every 60 seconds.
+
+  BEFORE LOADING:
+    1. Create the here.now ESG Skills Intake Drive (see docs/INTAKE-SETUP.md).
+    2. Set EnvironmentVariables below with your Drive ID and owner API key.
+    3. Copy this file to ~/Library/LaunchAgents/ and load it:
+         cp launchd/com.esg-marketplace.drive-sync.plist ~/Library/LaunchAgents/
+         launchctl load ~/Library/LaunchAgents/com.esg-marketplace.drive-sync.plist
+-->
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.esg-marketplace.drive-sync</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/bin/python3</string>
+    <string>/Users/ricardofilho/Documents/Projects/active/esg-skills-marketplace/scripts/drive_sync.py</string>
+  </array>
+
+  <key>WorkingDirectory</key>
+  <string>/Users/ricardofilho/Documents/Projects/active/esg-skills-marketplace</string>
+
+  <!-- Replace placeholder values before loading -->
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>HERENOW_API_KEY</key>
+    <string>REPLACE_WITH_HERENOW_API_KEY</string>
+    <key>HERENOW_INTAKE_DRIVE_ID</key>
+    <string>REPLACE_WITH_INTAKE_DRIVE_ID</string>
+    <key>ESG_INTAKE_ROOT</key>
+    <string>/Users/ricardofilho/Documents/Projects/active/esg-skills-marketplace</string>
+  </dict>
+
+  <!-- Run every 60 seconds -->
+  <key>StartInterval</key>
+  <integer>60</integer>
+
+  <!-- Bounded log files — rotate when they exceed 1 MB -->
+  <key>StandardOutPath</key>
+  <string>/Users/ricardofilho/Library/Logs/esg-marketplace/drive-sync.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/ricardofilho/Library/Logs/esg-marketplace/drive-sync-error.log</string>
+
+  <key>RunAtLoad</key>
+  <false/>
+</dict>
+</plist>

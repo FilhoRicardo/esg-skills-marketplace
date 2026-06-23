@@ -26,6 +26,9 @@ def rendered_submission_config() -> str:
     return json.dumps(submission_config(), indent=2, ensure_ascii=False) + "\n"
 
 
+_ZIP_FIXED_DATE = (2024, 1, 1, 0, 0, 0)
+
+
 def build_download_bundles(root: Path) -> None:
     downloads_dir = root / "site" / "downloads"
     if downloads_dir.exists():
@@ -38,7 +41,11 @@ def build_download_bundles(root: Path) -> None:
             for path in sorted(skill_dir.rglob("*")):
                 if not path.is_file():
                     continue
-                archive.write(path, arcname=f"{skill_dir.name}/{path.relative_to(skill_dir).as_posix()}")
+                arcname = f"{skill_dir.name}/{path.relative_to(skill_dir).as_posix()}"
+                info = zipfile.ZipInfo(arcname, date_time=_ZIP_FIXED_DATE)
+                info.compress_type = zipfile.ZIP_DEFLATED
+                info.external_attr = 0o644 << 16
+                archive.writestr(info, path.read_bytes())
 
 
 def main() -> int:

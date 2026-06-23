@@ -26,7 +26,8 @@ SITE_INTAKE_MIN_SKILL_CHARS = 80
 
 def submission_config() -> dict[str, object]:
     return {
-        "dispatchPath": "/api/submit-skill",
+        "stageUploadPath": "/api/intake/stage",
+        "finalizeUploadPath": "/api/intake/finalize",
         "maxSkillFileBytes": SITE_INTAKE_SKILL_MD_MAX_BYTES,
         "maxMarketplaceFileBytes": SITE_INTAKE_MARKETPLACE_MAX_BYTES,
         "maxPublicNameChars": SITE_INTAKE_MAX_PUBLIC_NAME_CHARS,

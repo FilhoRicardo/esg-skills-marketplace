@@ -1,13 +1,19 @@
 {
   "proxies": {
-    "/api/submit-skill": {
-      "upstream": "https://api.github.com/repos/FilhoRicardo/esg-skills-marketplace/actions/workflows/site-submission-intake.yml/dispatches",
+    "/api/intake/stage": {
+      "upstream": "https://here.now/api/v1/drives/REPLACE_WITH_INTAKE_DRIVE_ID/files/uploads",
       "method": "POST",
       "rateLimit": "6/hour/ip",
       "headers": {
-        "Authorization": "Bearer ${GITHUB_INTAKE_TOKEN}",
-        "Accept": "application/vnd.github+json",
-        "X-GitHub-Api-Version": "2022-11-28"
+        "Authorization": "Bearer ${HERENOW_INTAKE_DRIVE_TOKEN}"
+      }
+    },
+    "/api/intake/finalize": {
+      "upstream": "https://here.now/api/v1/drives/REPLACE_WITH_INTAKE_DRIVE_ID/files/finalize",
+      "method": "POST",
+      "rateLimit": "6/hour/ip",
+      "headers": {
+        "Authorization": "Bearer ${HERENOW_INTAKE_DRIVE_TOKEN}"
       }
     }
   }

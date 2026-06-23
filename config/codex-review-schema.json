@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "Expected output schema for Codex skill review",
+  "type": "object",
+  "required": ["description", "category", "risk_flags"],
+  "additionalProperties": false,
+  "properties": {
+    "description": {
+      "type": "string",
+      "description": "One-line advisory description, 20-300 NFC characters, no Unicode control/format chars",
+      "minLength": 20,
+      "maxLength": 300
+    },
+    "category": {
+      "type": "string",
+      "description": "One allowed category from the validator allowlist",
+      "enum": ["data", "disclosure", "operations", "reporting", "risk", "strategy"]
+    },
+    "risk_flags": {
+      "type": "array",
+      "description": "Fixed advisory risk flags (informational only, not a trust boundary)",
+      "items": {
+        "type": "string",
+        "enum": [
+          "contains-external-urls",
+          "references-third-party-tools",
+          "includes-financial-guidance",
+          "includes-legal-guidance",
+          "includes-credentials-placeholder"
+        ]
+      },
+      "uniqueItems": true
+    }
+  }
+}

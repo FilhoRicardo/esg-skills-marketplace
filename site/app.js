@@ -170,6 +170,7 @@ async function readSubmissionValues() {
   return {
     skillText: await skillFile.text(),
     marketplaceText: JSON.stringify({ title }),
+    title,
   };
 }
 
@@ -324,47 +325,46 @@ if (form) {
     submitButton.disabled = true;
     setSubmissionTone("Sending for review", "neutral");
 
-    const payload = {
-      ref: "main",
-      inputs: {
-        skill_md: submission.skillText,
-        marketplace_json: submission.marketplaceText,
-        public_name: normalizePublicField(publicNameInput.value, intakeConfig.maxPublicNameChars),
-        public_contact: normalizePublicField(
-          publicContactInput.value,
-          intakeConfig.maxPublicContactChars,
-        ),
-        rights_confirmed: String(rightsInput.checked),
-        boundary_confirmed: String(boundaryInput.checked),
-      },
+    const bundle = {
+      skill_md: submission.skillText,
+      title: submission.title,
+      public_name: normalizePublicField(publicNameInput.value, intakeConfig.maxPublicNameChars),
+      public_contact: normalizePublicField(
+        publicContactInput.value,
+        intakeConfig.maxPublicContactChars,
+      ),
+      rights_confirmed: rightsInput.checked,
+      boundary_confirmed: boundaryInput.checked,
+      submitted_at: new Date().toISOString(),
     };
+    const bundleBytes = new TextEncoder().encode(JSON.stringify(bundle));
 
     try {
-      const response = await fetch(intakeConfig.dispatchPath, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify(payload),
-      });
+      // Step 1: Hash the bundle
+      const hashBuffer = await crypto.subtle.digest("SHA-256", bundleBytes);
+      const hashHex = Array.from(new Uint8Array(hashBuffer))
+        .map((b) => b.toString(16).padStart(2, "0"))
+        .join("");
+      const submissionId = crypto.randomUUID();
+      const remotePath = `incoming/${submissionId}.json`;
 
-      if (response.ok || response.status === 204) {
-        form.reset();
-        updatePreview(null);
-        setSubmissionTone("Submission queued for intake", "success");
-        setFeedback(
-          "Submission queued",
-          "Your skill details passed the browser checks and entered the review queue. Automated checks and maintainer review still run before anything becomes public.",
-          "success",
-        );
-        syncSubmitButton();
-        return;
-      }
+      // Step 2: Stage upload — get presigned PUT URL
+      setSubmissionTone("Staging upload", "neutral");
+      const stageResponse = await fetch(intakeConfig.stageUploadPath, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          path: remotePath,
+          size: bundleBytes.byteLength,
+          contentType: "application/json",
+          sha256: hashHex,
+          ifNoneMatch: "*",
+        }),
+      });
 
       if (
         LOCAL_HOSTS.has(window.location.hostname) &&
-        LOCAL_PREVIEW_RESPONSE_CODES.has(response.status)
+        LOCAL_PREVIEW_RESPONSE_CODES.has(stageResponse.status)
       ) {
         setSubmissionTone("Local preview cannot queue submissions", "neutral");
         setFeedback(
@@ -376,7 +376,43 @@ if (form) {
         return;
       }
 
-      throw new Error(`Submission endpoint returned ${response.status}.`);
+      if (!stageResponse.ok) {
+        throw new Error(`Stage request returned ${stageResponse.status}`);
+      }
+      const stageData = await stageResponse.json();
+      const { uploadId, url: uploadUrl, headers: uploadHeaders } = stageData;
+
+      // Step 3: PUT bundle to presigned URL
+      setSubmissionTone("Uploading bundle", "neutral");
+      const putResponse = await fetch(uploadUrl, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json", ...uploadHeaders },
+        body: bundleBytes,
+      });
+      if (!putResponse.ok) {
+        throw new Error(`Upload PUT returned ${putResponse.status}`);
+      }
+
+      // Step 4: Finalize
+      setSubmissionTone("Finalizing", "neutral");
+      const finalizeResponse = await fetch(intakeConfig.finalizeUploadPath, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ uploadId, path: remotePath }),
+      });
+      if (!finalizeResponse.ok) {
+        throw new Error(`Finalize request returned ${finalizeResponse.status}`);
+      }
+
+      form.reset();
+      updatePreview(null);
+      setSubmissionTone("Submission queued for intake", "success");
+      setFeedback(
+        "Submission queued",
+        "Your skill details passed the browser checks and entered the review queue. Automated checks and maintainer review still run before anything becomes public.",
+        "success",
+      );
+      syncSubmitButton();
     } catch (error) {
       console.error("Unable to queue submission", error);
       setSubmissionTone("Submission unavailable", "error");

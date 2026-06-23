@@ -1,5 +1,6 @@
 {
-  "dispatchPath": "/api/submit-skill",
+  "stageUploadPath": "/api/intake/stage",
+  "finalizeUploadPath": "/api/intake/finalize",
   "maxSkillFileBytes": 40000,
   "maxMarketplaceFileBytes": 4000,
   "maxPublicNameChars": 80,
