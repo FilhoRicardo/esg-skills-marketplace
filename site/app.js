@@ -337,34 +337,17 @@ if (form) {
       boundary_confirmed: boundaryInput.checked,
       submitted_at: new Date().toISOString(),
     };
-    const bundleBytes = new TextEncoder().encode(JSON.stringify(bundle));
 
     try {
-      // Step 1: Hash the bundle
-      const hashBuffer = await crypto.subtle.digest("SHA-256", bundleBytes);
-      const hashHex = Array.from(new Uint8Array(hashBuffer))
-        .map((b) => b.toString(16).padStart(2, "0"))
-        .join("");
-      const submissionId = crypto.randomUUID();
-      const remotePath = `incoming/${submissionId}.json`;
-
-      // Step 2: Stage upload — get presigned PUT URL
-      setSubmissionTone("Staging upload", "neutral");
-      const stageResponse = await fetch(intakeConfig.stageUploadPath, {
+      const response = await fetch(intakeConfig.submitPath, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          path: remotePath,
-          size: bundleBytes.byteLength,
-          contentType: "application/json",
-          sha256: hashHex,
-          ifNoneMatch: "*",
-        }),
+        body: JSON.stringify(bundle),
       });
 
       if (
         LOCAL_HOSTS.has(window.location.hostname) &&
-        LOCAL_PREVIEW_RESPONSE_CODES.has(stageResponse.status)
+        LOCAL_PREVIEW_RESPONSE_CODES.has(response.status)
       ) {
         setSubmissionTone("Local preview cannot queue submissions", "neutral");
         setFeedback(
@@ -376,32 +359,9 @@ if (form) {
         return;
       }
 
-      if (!stageResponse.ok) {
-        throw new Error(`Stage request returned ${stageResponse.status}`);
-      }
-      const stageData = await stageResponse.json();
-      const { uploadId, url: uploadUrl, headers: uploadHeaders } = stageData;
-
-      // Step 3: PUT bundle to presigned URL
-      setSubmissionTone("Uploading bundle", "neutral");
-      const putResponse = await fetch(uploadUrl, {
-        method: "PUT",
-        headers: { "Content-Type": "application/json", ...uploadHeaders },
-        body: bundleBytes,
-      });
-      if (!putResponse.ok) {
-        throw new Error(`Upload PUT returned ${putResponse.status}`);
-      }
-
-      // Step 4: Finalize
-      setSubmissionTone("Finalizing", "neutral");
-      const finalizeResponse = await fetch(intakeConfig.finalizeUploadPath, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ uploadId, path: remotePath }),
-      });
-      if (!finalizeResponse.ok) {
-        throw new Error(`Finalize request returned ${finalizeResponse.status}`);
+      if (!response.ok) {
+        const data = await response.json().catch(() => ({}));
+        throw new Error(data.error || `Submit returned ${response.status}`);
       }
 
       form.reset();

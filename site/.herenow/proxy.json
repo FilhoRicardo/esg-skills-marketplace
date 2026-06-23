@@ -1,19 +1,11 @@
 {
   "proxies": {
-    "/api/intake/stage": {
-      "upstream": "https://here.now/api/v1/drives/REPLACE_WITH_INTAKE_DRIVE_ID/files/uploads",
+    "/api/intake/submit": {
+      "upstream": "https://REPLACE_WITH_TUNNEL_URL/intake",
       "method": "POST",
       "rateLimit": "6/hour/ip",
       "headers": {
-        "Authorization": "Bearer ${HERENOW_INTAKE_DRIVE_TOKEN}"
-      }
-    },
-    "/api/intake/finalize": {
-      "upstream": "https://here.now/api/v1/drives/REPLACE_WITH_INTAKE_DRIVE_ID/files/finalize",
-      "method": "POST",
-      "rateLimit": "6/hour/ip",
-      "headers": {
-        "Authorization": "Bearer ${HERENOW_INTAKE_DRIVE_TOKEN}"
+        "Authorization": "Bearer ${MAC_MINI_INTAKE_SECRET}"
       }
     }
   }
