@@ -72,10 +72,10 @@ When asked to review or process the intake queue:
 
 1. List pending submissions:
    ```
-   ls var/intake/inbox/
+   ls skills-to-review/
    ```
-2. For each submission directory, read `var/intake/inbox/<uuid>/SKILL.md` and
-   `var/intake/inbox/<uuid>/submission.json`.
+2. For each submission directory, read `skills-to-review/<uuid>/SKILL.md` and
+   `skills-to-review/<uuid>/submission.json`.
 3. Evaluate whether the skill is appropriate for the ESG Skills Marketplace:
    - Is it genuinely ESG-related?
    - Is it safe to redistribute? No credentials, no PII, no misleading claims.

@@ -22,4 +22,6 @@ graphify-out/GRAPH_REPORT.md
 graphify-out/graph.html
 .gstack/
 site/downloads/
+site/submission-config.json
 var/
+skills-to-review/

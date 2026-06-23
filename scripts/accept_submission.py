@@ -33,7 +33,7 @@ import unicodedata
 from pathlib import Path
 
 ROOT = Path(os.environ.get("ESG_INTAKE_ROOT", Path(__file__).resolve().parents[1]))
-INBOX_DIR = ROOT / "var" / "intake" / "inbox"
+INBOX_DIR = ROOT / "skills-to-review"
 PUBLISHED_DIR = ROOT / "var" / "intake" / "published"
 SKILLS_DIR = ROOT / "skills"
 

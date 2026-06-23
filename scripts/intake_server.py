@@ -25,7 +25,7 @@ import uuid
 from pathlib import Path
 
 ROOT = Path(os.environ.get("ESG_INTAKE_ROOT", Path(__file__).resolve().parents[1]))
-INBOX_DIR = ROOT / "var" / "intake" / "inbox"
+INBOX_DIR = ROOT / "skills-to-review"
 NEEDS_ATTENTION_DIR = ROOT / "var" / "intake" / "needs-attention"
 PORT = int(os.environ.get("INTAKE_PORT", "8765"))
 
