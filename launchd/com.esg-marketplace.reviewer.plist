@@ -19,16 +19,10 @@
   <key>Label</key>
   <string>com.esg-marketplace.reviewer</string>
 
-  <!-- Shell wrapper runs review then publish in sequence -->
   <key>ProgramArguments</key>
   <array>
-    <string>/bin/sh</string>
-    <string>-c</string>
-    <string>
-      cd /Users/ricardofilho/Documents/Projects/active/esg-skills-marketplace
-      /usr/bin/python3 scripts/local_review.py &amp;&amp;
-      /usr/bin/python3 scripts/submission_publisher.py
-    </string>
+    <string>/usr/bin/python3</string>
+    <string>/Users/ricardofilho/Documents/Projects/active/esg-skills-marketplace/scripts/run_reviewer.py</string>
   </array>
 
   <key>WorkingDirectory</key>
@@ -47,11 +41,9 @@
     <string>FilhoRicardo/esg-skills-marketplace</string>
   </dict>
 
-  <!-- Fire when inbox directory becomes non-empty -->
-  <key>QueueDirectories</key>
-  <array>
-    <string>/Users/ricardofilho/Documents/Projects/active/esg-skills-marketplace/var/intake/inbox</string>
-  </array>
+  <!-- Poll every 30 seconds -->
+  <key>StartInterval</key>
+  <integer>30</integer>
 
   <!-- Bounded log files -->
   <key>StandardOutPath</key>
