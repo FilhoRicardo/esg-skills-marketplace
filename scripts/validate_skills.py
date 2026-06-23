@@ -170,6 +170,8 @@ def validate_skill(skill_dir: Path) -> dict[str, str]:
     category = marketplace.get("category")
     if not isinstance(title, str) or not 4 <= len(title.strip()) <= 80:
         raise PolicyError(f"{marketplace_file}: title must contain 4 to 80 characters")
+    if any(character in title for character in "\r\n\t"):
+        raise PolicyError(f"{marketplace_file}: title must be a single line of plain text")
     if category not in ALLOWED_CATEGORIES:
         raise PolicyError(f"{marketplace_file}: category must be one of {sorted(ALLOWED_CATEGORIES)}")
 

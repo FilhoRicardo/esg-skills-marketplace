@@ -2,14 +2,30 @@
 
 This is the safe path for reviewing a submitted skill. You do not need to use the command line.
 
+Site-native submissions arrive as draft pull requests created by the public intake workflow. Their Markdown may not have frontmatter yet. The trust gate is unchanged: nothing becomes public until the submission is normalized, both checks pass, and you approve the pull request.
+
 ## When GitHub notifies you
 
 1. Open the pull request from the GitHub notification.
-2. Check that it changes one folder under `skills/` and the generated `site/catalog.json`. External contributors should not change `.github/`, `scripts/`, `site` code, or project policy files.
-3. Wait for both required checks:
+2. Check that the initial site submission changes one folder under `skills/`. External contributors should not change `.github/`, `scripts/`, `site` code, or project policy files.
+3. Read the raw instructions before making any structural edits. Do not download, install, or run them.
+
+## Normalize a site submission
+
+Ask Codex to update the same draft branch after your content review:
+
+1. Add YAML frontmatter to `SKILL.md` with a `name` equal to the folder slug and a factual 20–300 character `description`.
+2. Add one allowed `category` to `marketplace.json`.
+3. Preserve the submitted instructions unless a review finding requires a clearly documented change.
+4. Run `python3 scripts/build_catalog.py` and commit the generated catalogue.
+5. Run the repository tests and push the normalized draft.
+
+Then wait for both required checks:
+
    - `trust / policy`
    - `trust / SkillSpector`
-4. Do not approve while either check is red, missing, or still running.
+
+Do not approve while either check is red, missing, or still running. A red policy check before normalization is expected.
 
 ## Read the submission
 

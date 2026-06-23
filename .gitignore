@@ -3,6 +3,8 @@
 .env.*
 !.env.example
 .herenow/
+!site/.herenow/
+!site/.herenow/proxy.json
 artifacts/
 node_modules/
 dist/
@@ -19,3 +21,4 @@ graphify-out/.graphify_*
 graphify-out/GRAPH_REPORT.md
 graphify-out/graph.html
 .gstack/
+site/downloads/

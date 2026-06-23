@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Submit a new environmental, social, and governance skill to the ESG Skills Marketplace review queue."
+    >
+    <title>Submit a skill · ESG Skills Marketplace</title>
+    <link rel="stylesheet" href="aster-tokens.css">
+    <link rel="stylesheet" href="styles.css?v=form-first-repair-2">
+    <script src="app.js?v=form-first-repair-2" defer></script>
+  </head>
+  <body class="aster-bg">
+    <div class="site-shell">
+      <header class="topbar" aria-label="Site header">
+        <a class="brand" href="./" aria-label="ESG Skills Marketplace home">
+          <span class="brand-mark" aria-hidden="true">✲</span>
+          <span>ESG Skills Marketplace</span>
+        </a>
+
+        <nav class="top-actions" aria-label="Primary navigation">
+          <a class="nav-link" href="./#skills-title">Browse skills</a>
+          <a class="aster-btn aster-btn--primary" href="submit.html" aria-current="page">Submit a skill</a>
+        </nav>
+      </header>
+
+      <main class="submit-page">
+        <section class="submit-intro" aria-labelledby="submit-title">
+          <div>
+            <p class="aster-eyebrow aster-eyebrow--green">New skill intake</p>
+            <h1 id="submit-title">Submit a skill for review</h1>
+          </div>
+          <p>
+            Upload any Markdown skill instructions and add a public title. Frontmatter and category
+            are completed during review.
+          </p>
+        </section>
+
+        <section class="submit-workspace aster-glass" aria-label="Skill submission">
+          <div class="submission-main">
+            <div class="submission-heading">
+              <div>
+                <p class="aster-eyebrow">Skill submission</p>
+                <h2>Add your skill</h2>
+              </div>
+              <p id="submission-status" class="catalog-status aster-mono" aria-live="polite">
+                Loading intake rules
+              </p>
+            </div>
+
+            <form id="submission-form" class="submission-form" novalidate>
+              <div class="field-grid">
+                <label class="file-field aster-inner" for="skill-file">
+                  <span class="field-label">Skill instructions</span>
+                  <span class="field-help">Any UTF-8 Markdown file. Frontmatter is optional.</span>
+                  <input id="skill-file" name="skill-file" type="file" accept=".md,text/markdown,text/plain" required>
+                </label>
+
+                <div class="skill-details aster-inner">
+                  <label class="detail-field" for="marketplace-title">
+                    <span class="field-label">Public title</span>
+                    <span class="field-help">The name shown in the catalogue.</span>
+                    <input
+                      id="marketplace-title"
+                      name="marketplace-title"
+                      class="aster-input"
+                      type="text"
+                      minlength="4"
+                      maxlength="80"
+                      autocomplete="off"
+                      required
+                    >
+                  </label>
+
+                </div>
+              </div>
+
+              <div class="field-grid field-grid--copy">
+                <label class="copy-field" for="public-name">
+                  <span class="field-label">Public name <span>(optional)</span></span>
+                  <span class="field-help">Use this if you want visible attribution in the review.</span>
+                  <input
+                    id="public-name"
+                    name="public-name"
+                    class="aster-input"
+                    type="text"
+                    maxlength="80"
+                    autocomplete="name"
+                  >
+                </label>
+
+                <label class="copy-field" for="public-contact">
+                  <span class="field-label">Public contact <span>(optional)</span></span>
+                  <span class="field-help">Add a public URL or email only if you want it shown in review.</span>
+                  <input
+                    id="public-contact"
+                    name="public-contact"
+                    class="aster-input"
+                    type="text"
+                    maxlength="200"
+                    autocomplete="off"
+                  >
+                </label>
+              </div>
+
+              <fieldset class="confirmations">
+                <legend>Before sending</legend>
+                <label class="check-row aster-inner" for="rights-confirmed">
+                  <input id="rights-confirmed" name="rights-confirmed" type="checkbox">
+                  <span>I created this bundle or have permission to publish it.</span>
+                </label>
+
+                <label class="check-row aster-inner" for="boundary-confirmed">
+                  <input id="boundary-confirmed" name="boundary-confirmed" type="checkbox">
+                  <span>I understand that automated checks and maintainer approval are still required.</span>
+                </label>
+              </fieldset>
+
+              <div class="submit-actions">
+                <button id="submit-button" class="aster-btn aster-btn--primary" type="submit" disabled>
+                  Send for review
+                </button>
+                <p class="submit-note">
+                  This form accepts new, text-only skill bundles. Existing published skills stay in
+                  maintainer review.
+                </p>
+              </div>
+            </form>
+
+            <div id="submission-feedback" class="feedback-card aster-inner" hidden>
+              <p id="feedback-title" class="state-title">Submission status</p>
+              <p id="feedback-detail"></p>
+            </div>
+          </div>
+
+        </section>
+      </main>
+
+      <footer>
+        <span>New skills stay in review until approval.</span>
+        <span class="aster-mono">Text only · public attribution optional</span>
+      </footer>
+    </div>
+  </body>
+</html>

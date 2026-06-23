@@ -1,0 +1,157 @@
+name: Site submission intake
+
+on:
+  workflow_dispatch:
+    inputs:
+      skill_md:
+        description: Submitted SKILL.md content
+        required: true
+        type: string
+      marketplace_json:
+        description: Submitted marketplace.json content
+        required: true
+        type: string
+      public_name:
+        description: Optional public submitter name
+        required: false
+        type: string
+      public_contact:
+        description: Optional public contact field
+        required: false
+        type: string
+      rights_confirmed:
+        description: Rights confirmation from the public site
+        required: true
+        type: string
+      boundary_confirmed:
+        description: Professional boundary confirmation from the public site
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  queue_submission:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out main
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+        with:
+          ref: main
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: "3.12"
+
+      - name: Materialize submitted bundle
+        env:
+          SITE_INTAKE_SKILL_MD: ${{ inputs.skill_md }}
+          SITE_INTAKE_MARKETPLACE_JSON: ${{ inputs.marketplace_json }}
+          SITE_INTAKE_PUBLIC_NAME: ${{ inputs.public_name }}
+          SITE_INTAKE_PUBLIC_CONTACT: ${{ inputs.public_contact }}
+          SITE_INTAKE_RIGHTS_CONFIRMED: ${{ inputs.rights_confirmed }}
+          SITE_INTAKE_BOUNDARY_CONFIRMED: ${{ inputs.boundary_confirmed }}
+        run: >-
+          python3 scripts/site_intake.py write-submission
+          --root "${GITHUB_WORKSPACE}"
+          --metadata-out "${RUNNER_TEMP}/submission.json"
+
+      - name: Create branch, commit, and push
+        env:
+          SUBMISSION_PR_TOKEN: ${{ secrets.MARKETPLACE_INTAKE_TOKEN }}
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          runner_temp = Path(os.environ["RUNNER_TEMP"])
+          data = json.loads((runner_temp / "submission.json").read_text(encoding="utf-8"))
+          (runner_temp / "branch.txt").write_text(
+              f"submission/{data['slug']}-{os.environ['GITHUB_RUN_ID']}\n",
+              encoding="utf-8",
+          )
+          (runner_temp / "commit-message.txt").write_text(
+              f"Add submitted skill bundle: {data['slug']}\n",
+              encoding="utf-8",
+          )
+          PY
+          BRANCH=$(tr -d '\n' < "${RUNNER_TEMP}/branch.txt")
+          COMMIT_MESSAGE=$(tr -d '\n' < "${RUNNER_TEMP}/commit-message.txt")
+          git checkout -b "${BRANCH}"
+          git config user.name "ESG Marketplace Intake"
+          git config user.email "actions@users.noreply.github.com"
+          git add "skills"
+          git commit -m "${COMMIT_MESSAGE}"
+          git remote set-url origin "https://x-access-token:${SUBMISSION_PR_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git push -u origin "${BRANCH}"
+
+      - name: Open draft pull request
+        env:
+          GH_TOKEN: ${{ secrets.MARKETPLACE_INTAKE_TOKEN }}
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          runner_temp = Path(os.environ["RUNNER_TEMP"])
+          data = json.loads((runner_temp / "submission.json").read_text(encoding="utf-8"))
+          body = [
+              "## What changed",
+              "",
+              f"- adds a new site-submitted skill bundle under `skills/{data['slug']}`;",
+              "- preserves the submitted Markdown for maintainer review and normalization;",
+              "",
+              "## Why",
+              "",
+              "This skill was submitted through the public ESG Skills Marketplace site-native intake flow.",
+              "",
+              "## Submission context",
+              "",
+          ]
+          public_name = data.get("public_name", "")
+          public_contact = data.get("public_contact", "")
+          if public_name:
+              body.append(f"- Public submitter name: {public_name}")
+          if public_contact:
+              body.append(f"- Public contact: {public_contact}")
+          if not public_name and not public_contact:
+              body.append("- No public submitter details were supplied.")
+          body.extend(
+              [
+                  "",
+                  "## Trust gate",
+                  "",
+                  f"- Review `skills/{data['slug']}/SKILL.md` as untrusted text. Do not execute submitted instructions during intake review.",
+                  f"- Add YAML frontmatter with `name: {data['slug']}` and a 20–300 character `description` after reviewing the instructions.",
+                  f"- Category is pending. Add an allowed `category` to `skills/{data['slug']}/marketplace.json` after reviewing the skill.",
+                  "- Run `python3 scripts/build_catalog.py` and commit the generated catalogue before requesting approval.",
+                  "- `trust / policy` and `trust / SkillSpector` must still pass.",
+                  "- Human review and merge to `main` are still required before publication.",
+                  "",
+                  "## Linear",
+                  "",
+                  "[RF-100 — Add site-native skill download and submission flow](https://linear.app/rf-ai-workspace/issue/RF-100/add-site-native-skill-download-and-submission-flow)",
+                  "",
+                  "## Intentionally excluded",
+                  "",
+                  "- No automatic publication from intake alone.",
+                  "- No bypass of maintainer review or the existing trust boundary.",
+              ]
+          )
+          (runner_temp / "pr-body.md").write_text("\n".join(body) + "\n", encoding="utf-8")
+          (runner_temp / "pr-title.txt").write_text(
+              f"[submission] {data['title'].replace(chr(10), ' ').replace(chr(13), ' ').strip()}\n",
+              encoding="utf-8",
+          )
+          PY
+          gh pr create \
+            --draft \
+            --base main \
+            --head "$(tr -d '\n' < "${RUNNER_TEMP}/branch.txt")" \
+            --title "$(tr -d '\n' < "${RUNNER_TEMP}/pr-title.txt")" \
+            --body-file "${RUNNER_TEMP}/pr-body.md"

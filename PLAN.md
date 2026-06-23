@@ -1,87 +1,84 @@
-# Plan: Complete And Publish The ESG Skills Marketplace
+# Plan: Local Folder-Triggered Skill Intake
 
 ## Goal
 
-Finish Linear issue RF-99 by repairing the trust-gate gaps, adding two useful text-only environmental, social, and governance (ESG) skills, building the Aster catalogue frontend, verifying the complete flow, and publishing the site permanently through here.now.
+Accept a skill on the here.now website, store it privately, materialize it in a designated inbox on the always-on Mac mini, trigger an isolated Codex review when the file arrives, push a bounded review branch to GitHub, and publish the approved skill back to here.now after human merge.
 
 ## Acceptance Criteria
 
-- The GitHub repository and Linear project remain linked to RF-99, and RF-99 is closed only after every criterion below is evidenced.
-- External pull requests cannot add, modify, rename, or delete platform files; they may change exactly one valid skill folder plus the generated catalogue.
-- Tests reproduce the deleted-platform-file scope bug by proving `changed_paths()` returns a deleted `.github`, `scripts`, or site-code path and that `scope_errors()` rejects it for an external actor.
-- `main` requires the two trust checks, resolved conversations, one code-owner approval, last-push approval, and administrator enforcement after this release lands.
-- The approved catalogue contains exactly two text-only skills:
-  - `esg-materiality-brief`, which turns user-provided business and stakeholder evidence into a bounded materiality briefing without making compliance or assurance claims.
-  - `ghg-inventory-evidence-pack`, which organizes user-provided greenhouse-gas activity data, factors, boundaries, calculations, and source notes into a reviewable working evidence pack without presenting assurance or legal conclusions.
-- Each seed skill uses the existing schema only: `SKILL.md` has `name` and `description` frontmatter, while `marketplace.json` has exactly `title` and `category`. The categories are `strategy` for the materiality brief and `data` for the greenhouse-gas evidence pack; both are already present in `ALLOWED_CATEGORIES` in `scripts/validate_skills.py`. No new pillar, tag, or `evidence_workflow` field is introduced.
-- Both skills pass structural validation, catalogue integrity checks, and the pinned NVIDIA SkillSpector scan with a `SAFE` recommendation without executing skill content.
-- The framework-free site contains semantic HTML, Aster tokens, small CSS and JavaScript files, and the generated `site/catalog.json`; it renders only merged catalogue data and links each card to its GitHub skill folder.
-- The populated site explains the trust gate and professional-advice boundary in plain language, renders both skills from catalogue data, and handles loading, error, and empty-catalogue states honestly.
-- The primary flow is keyboard accessible, has visible focus states, respects reduced motion, has no blocking console errors, and works at mobile, tablet, and desktop widths in the gstack `/browse` Chromium workflow.
-- The permanent authenticated here.now publish succeeds, the live URL is reloaded and verified, and the URL is recorded in `README.md`, `MEMORY.md`, and RF-99.
-- The installed Graphify CLI produces `graphify-out/graph.json` for the completed repository and its query or explain commands can read that graph; costs and caches remain ignored.
-- The GitHub source is updated through a branch and pull request with both trust checks passing. The user's signoff on this reviewed plan is the one-time human approval for the bootstrap release that establishes administrator enforcement. If the connected GitHub app authors the pull request as a distinct actor, Ricardo also records that approval in GitHub; if GitHub attributes it to Ricardo and rejects self-approval, the administrator merge is permitted only for this explicitly approved bootstrap and enforcement is enabled immediately afterward.
+- Work remains linked to `FilhoRicardo/esg-skills-marketplace`, the `ESG Skills Marketplace` Linear project, and RF-100.
+- The public catalogue remains on the permanent here.now site; GitHub Pages is not introduced because it does not provide server-side intake or local file delivery.
+- The public form uploads one validated JSON bundle to a private `ESG Skills Intake` here.now Drive under `incoming/`; the Drive token is write-only, path-scoped, stored as a here.now service variable, and never reaches browser JavaScript.
+- The upload preserves the existing 40 KB Markdown limit, title, optional public name/contact, and attestations. A UUID path plus `ifNoneMatch: "*"` prevents overwrite collisions.
+- A Mac mini sync job polls the Drive at most once per minute, atomically writes each bundle to `var/intake/inbox/<submission-id>/SKILL.md` plus `submission.json`, and moves the remote bundle from `incoming/` to `claimed/` only after the local write succeeds.
+- The staged upload SHA-256 is rechecked after download and recorded in local state, the review branch commit, and the draft PR body; any mismatch fails closed.
+- A macOS `launchd` queue watcher triggers when the inbox becomes non-empty and processes one submission at a time.
+- The reviewer invokes `codex exec` with `gpt-5.4-mini`, low reasoning, a dedicated `CODEX_API_KEY`, a clean temporary HOME/CODEX_HOME, read-only sandboxing, disabled web search, no MCP/plugins, an empty tool environment, a deny-all `PreToolUse` hook, and a strict output schema.
+- Submitted Markdown is passed as untrusted stdin data. Codex cannot execute it, edit files, access GitHub credentials, or control paths, commands, labels, approvals, or merge state.
+- Codex may output only a single-line description, one existing allowed category, and fixed advisory risk flags. Trusted code deterministically validates every value.
+- A separate deterministic publisher preserves the instruction body byte-for-byte, adds canonical frontmatter/category, rebuilds deterministic catalogue/download outputs, and permits exactly four changed paths relative to `main`.
+- The publisher uses a dedicated repository SSH deploy key, not the Mac's broad `gh` token. It can push the review branch but cannot call the GitHub API or change repository settings.
+- A trusted workflow on `main` reacts to `submission-reviewed/**` branch pushes, validates the exact diff, and opens or updates a draft pull request using GitHub's short-lived workflow token.
+- Existing policy validation and pinned NVIDIA SkillSpector `--no-llm` scanning remain authoritative. Human approval and merge remain mandatory.
+- Merge to `main` triggers the existing here.now deployment and the approved skill appears on the catalogue.
+- Successful local items move to `var/intake/processed/` and remote `processed/`; ambiguous, rejected, or failed items move to `var/intake/needs-attention/` and remain unpublished.
 
 ## Approach
 
-1. Add a regression test for deleted platform paths, then remove the deletion-excluding diff filter from `changed_paths` so every changed path reaches the existing external-contributor scope policy.
-2. Author the two skill bundles using the existing template and editorial rules. Keep inputs user-provided, preserve source references, state uncertainty, and distinguish workflow guidance from legal, financial, compliance, certification, or assurance advice.
-3. Regenerate `site/catalog.json` from validated skill metadata.
-4. Extend the currently data-only `site/` directory by copying the canonical tokens from `/Users/ricardofilho/Documents/Projects/resources/branding/aster/aster-tokens.css` to `site/aster-tokens.css` and adding its first and only catalogue page, with small vanilla JavaScript for data loading and honest loading, error, and empty states. There is no existing `src/` frontend or second catalogue to preserve.
-5. Extend tests only where they prove repository policy or catalogue/site invariants. Avoid a frontend framework, build step, package manager, backend, installer, or speculative feature.
-6. Run structural validation, catalogue freshness, unit tests, and pinned SkillSpector. Serve `site/` locally and use gstack `/browse` for interaction, console, link, keyboard, and responsive evidence.
-7. Create a release branch, push it, open the pull request through the connected GitHub app, and let both required checks run. Record GitHub approval when actor attribution permits it; otherwise use the user-approved bootstrap exception. Merge, enable administrator enforcement immediately, and verify the final branch-protection state.
-8. Publish the exact merged `site/` directory with the here.now helper and saved credentials. Verify the returned live URL with `/browse`; never publish an expiring anonymous substitute as completion.
-9. Run Graphify extraction against the final repository, verify the graph with a targeted query or explanation, record the permanent URL and durable release facts, close RF-99, and perform a requirement-by-requirement completion audit.
+1. Create a private `ESG Skills Intake` Drive and mint a renewable write token restricted to `incoming/`. Store it as a here.now account variable allowed only to `here.now`.
+2. Replace the GitHub workflow-dispatch proxy with two Drive proxy routes: stage upload and finalize upload. Update the browser submission handler to hash the JSON bundle, request a staged upload, PUT to the presigned URL, finalize it, and show a receipt id.
+3. Add a local sync script that lists `incoming/`, downloads unseen bundles through the owner API, validates and writes them atomically under `var/intake/inbox/`, then moves claimed remote files with ETag protection.
+4. Add a deterministic local reviewer runner and JSON schema. Run Codex from a clean temporary directory with a dedicated config and deny-all tool hook; pass the raw bundle through stdin and keep `CODEX_API_KEY` out of all model-proposed subprocess environments.
+5. Add a deterministic normalizer/publisher that revalidates the source hash and model output, preserves body bytes, creates canonical frontmatter and category metadata, rebuilds deterministic outputs, verifies the exact diff, and pushes `submission-reviewed/<slug>-<id>` using a repository deploy key. Include the source SHA-256 in fixed commit and pull-request metadata.
+6. Add a trusted branch-push workflow that validates the candidate using trusted `main` scripts and opens a draft PR. Keep the existing required policy and SkillSpector workflows unchanged.
+7. Install two user LaunchAgents: a one-minute Drive sync and a `QueueDirectories` reviewer watcher. Keep logs bounded and exclude submitted content, contact data, keys, and tokens.
+8. Test a controlled submission through the live form, observe it land in the local inbox, run through Codex and GitHub checks, then close the smoke-test PR and remove its branch without merging.
+9. Land the production change, republish here.now, confirm the LaunchAgents survive logout/reboot, and complete one approved end-to-end publication only when a real reviewed skill is available.
 
 ## Key Decisions And Tradeoffs
 
-- The two seed skills are evidence-organization workflows, not promises of ESG compliance or professional conclusions. This makes them useful while keeping claims reviewable.
-- The site stays framework-free. Four static files plus generated JSON are enough for two cards, filtering, and deployment.
-- Aster is the concrete visual source. The implementation uses its canonical palette, typography, spacing, glass surfaces, and quiet motion rather than inventing another design direction.
-- With only two cards, search and category filters add more interface than value. The primary interaction is opening each reviewed source skill on GitHub; accounts, ratings, installs, downloads, and submission forms remain out of scope.
-- The site links to GitHub as the source of truth rather than duplicating full skill instructions into the frontend.
-- Administrator enforcement is enabled only after this user-reviewed bootstrap release lands. The bootstrap exception expires with this release; future maintainer-authored platform work requires a second trusted reviewer or an explicitly documented maintenance window.
-- The owner runbook will document the only emergency recovery path for broken required checks: record a maintenance window, temporarily disable administrator enforcement, repair the check through a pull request, and restore enforcement immediately. Normal contributions never use that exception.
-- Permanent authenticated here.now publication is required; an anonymous 24-hour URL is not an acceptable final result.
-- Here, authenticated means the helper reads the saved API key from `~/.herenow/credentials`; permanent means the publish reports authenticated mode and no expiry. The returned slug URL is the stable pointer for later updates, while its content is intentionally mutable only through explicit redeployment; the merged Git commit remains the immutable source that can reproduce it.
+- here.now stays because its private Drive, scoped tokens, and authenticated proxy solve the public-to-private handoff. GitHub Pages would still need the same external storage or webhook bridge.
+- `launchd`, not a native Codex App automation, supplies the filesystem event trigger. The triggered reviewer is Codex CLI in non-interactive mode, which is the supported pipeline surface.
+- A dedicated API key is used instead of ChatGPT-managed `auth.json`; official Codex guidance recommends API keys for automation touching public/open-source repositories.
+- The model is deliberately separated from GitHub credentials and file writes. Its only product is schema-constrained advisory metadata.
+- The deterministic publisher, required checks, and human merge are the security boundary.
+- Drive polling adds up to one minute of delivery latency but avoids exposing the Mac mini through a public tunnel.
+- Processing is serial to keep costs and race conditions bounded.
 
 ## Risks And Unknowns
 
-- GitHub may attribute an app-created pull request to the same user who must approve it. This plan makes the user's post-review signoff the explicit bootstrap approval; no continuing bypass remains after administrator enforcement is enabled.
-- SkillSpector may report a false positive. A non-`SAFE` result blocks publication until the content is narrowed or the user explicitly changes the acceptance criterion; the scanner will not be bypassed.
-- SkillSpector success means `risk_assessment.recommendation` in each JSON report is exactly `SAFE`. The wrapper runs locally and in GitHub Actions. If the reviewed upstream commit becomes unavailable, the owner must review and pin a replacement commit in a separate platform change; the check is never weakened to unblock a contribution.
-- Codex may make at most two content revisions in response to SkillSpector findings without changing either skill's promised job. If a skill is still not `SAFE`, publication pauses and the user decides whether to replace that skill or stop; no acceptance criterion is weakened.
-- Graphify is installed locally and its `claude-cli` backend can use the authenticated Claude CLI without another API key. The release runs `graphify extract . --backend claude-cli --no-cluster --out .` and requires a readable `graphify-out/graph.json`.
-- Preflight has confirmed the saved here.now credential is accepted by the authenticated sites endpoint with HTTP 200 and the pinned SkillSpector commit resolves at the expected SHA.
-- Google-hosted Aster fonts are a network dependency. System fallbacks keep the site readable if the font request is unavailable.
-- here.now live behavior can differ from local documentation. The publish helper's current structured result and a live browser reload are authoritative.
+- Browser PUT support for the Drive presigned upload URL must be verified for CORS before implementation is considered complete. If it is not supported, use a minimal authenticated upload relay; do not reduce the 40 KB limit to Site Data's 16 KB record cap silently.
+- `CODEX_API_KEY` is not configured yet. The user must provide a dedicated key with a low project spend limit before the reviewer can run end to end.
+- The deploy key can push any unprotected branch in the repository. The publisher must construct paths and git arguments itself, use no shell interpolation from model output, and fail closed on any unexpected diff.
+- A malicious submission can manipulate the advisory description/category/risk flags, but cannot execute tools or publish; human review remains required.
+- The Mac mini, here.now API key, local LaunchAgents, network connection, and Codex CLI become production dependencies. Failures must leave recoverable files in `needs-attention/`.
+- here.now Drive tokens are shown only once. The setup must store the scoped token directly as a service variable and record only its token id/expiry for rotation.
 
 ## Out Of Scope
 
-- Payments, subscriptions, accounts, ratings, reviews, analytics, recommendations, or personalised content.
-- Open self-service publication, a contributor portal, a package manager, remote installation, or automatic execution of skills.
-- A backend, database, frontend framework, build service, single-page application routing, custom domain, or private access gate.
-- Regulatory determinations, legal or financial advice, certification, audit, or assurance work.
-- More than the two named seed skills.
+- Exposing the Mac mini through Cloudflare Tunnel, ngrok, or a public webhook.
+- GitHub Pages migration.
+- Executing submitted skills or installing dependencies.
+- Auto-merge, auto-approval, or bypassing required checks.
+- Accounts, public submission status pages, email notifications, ratings, or payments.
+- Rewriting contributor instructions or expanding the category taxonomy.
 
 ## Verification
 
+- Unit tests for bundle validation, source-hash mismatch, atomic inbox writes, ETag/idempotency behavior, claim/retry state, schema and Unicode validation, body preservation, exact diff allowlisting, deterministic ZIP output, and safe subprocess argument construction.
+- Verify the deny-all Codex hook blocks Bash, apply-patch, and MCP tool attempts; verify web search and user config/plugins are disabled.
+- Run a malicious prompt-injection fixture and confirm the only accepted output is the bounded JSON schema.
 - `python3 scripts/build_catalog.py --check`
 - `python3 scripts/validate_skills.py --all`
 - `python3 -m unittest discover -s tests`
-- `python3 scripts/run_skillspector.py --all --reports artifacts/skillspector` using NVIDIA SkillSpector pinned at `a5092dd9b9521ff57a9b53612bb129ce78019002`
-- `graphify extract . --backend claude-cli --no-cluster --out .`, followed by a targeted `graphify query` or `graphify explain`
-- GitHub Actions `trust / policy` and `trust / SkillSpector` pass for the release pull request.
-- A manual editorial check confirms both skills describe a bounded job, preserve source references and uncertainty, and make no legal, financial, compliance, certification, audit, assurance, completeness, or guaranteed-outcome claim.
-- GitHub branch protection reports strict checks, conversation resolution, code-owner and last-push approval, one approval, force-push/deletion denial, and administrator enforcement enabled.
-- Local `/browse` checks cover content, both GitHub links, keyboard focus, console errors, failed network requests, and screenshots at 375x812, 768x1024, and 1280x720. Every viewport must show the brand, trust boundary, count, and both cards without horizontal overflow.
-- here.now's current publish result reports authenticated mode and no expiry; `/browse` verifies the returned stable URL, two skill cards, source links, and clean console.
-- `graphify-out/graph.json` exists and answers a targeted query or explanation, while `graphify-out/cost.json` and `graphify-out/cache/` remain untracked.
-- Final `git status`, remote branch, pull request, Linear state, README, and project memory agree on the shipped URL and outcome.
+- Pinned NVIDIA SkillSpector scan with `--no-llm` and `SAFE` required.
+- Validate both LaunchAgent plists and test restart/reboot loading.
+- gstack `/browse` verification of Drive staging, presigned upload, finalization, success/error states, and responsive layout.
+- GitHub verification that only the expected branch/diff can create a draft PR and that required checks block merge on failure.
+- Live here.now verification that a merged approved skill appears as a downloadable catalogue entry.
 
 ## GitHub, Linear, And Memory Impact
 
-- GitHub: deliver RF-99 on a `codex/` release branch, preserve the trust checks, close the disposable smoke branch if appropriate, land the release, and enable administrator enforcement after merge.
-- Linear: keep RF-99 as the implementation issue, move it through active work, attach the release pull request and permanent site URL, then close it only after live verification.
-- Project memory: record the two shipped skills, trust-gate deletion fix, permanent here.now URL, Aster frontend, final protection state, and Graphify outcome in one or two concise durable entries.
+- GitHub: update PR #6 with Drive-backed intake, local automation scripts/config, trusted branch-push PR workflow, deterministic bundles, tests, and operations guidance; keep human merge and current required checks.
+- Linear: RF-100 remains the active linked issue because this implements hidden intake, local automated review, and post-merge publication.
+- Memory: record here.now Drive as the private inbox, `var/intake/` as the local handoff folder, launchd-triggered isolated Codex review, deploy-key publishing, and human merge as the release gate.
