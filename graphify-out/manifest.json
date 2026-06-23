@@ -199,11 +199,6 @@
     "ast_hash": "c3ad88c9ee227d871972096ca33283ac",
     "semantic_hash": ""
   },
-  "design-qa.md": {
-    "mtime": 1782242342.776132,
-    "ast_hash": "d8e6abaf704c97504017ade4082dd15b",
-    "semantic_hash": "d8e6abaf704c97504017ade4082dd15b"
-  },
   "docs/SITE-OPERATIONS.md": {
     "mtime": 1782242342.776974,
     "ast_hash": "a11caa430d772669f91277a499520d8e",
@@ -215,28 +210,13 @@
     "semantic_hash": ""
   },
   ".claude/settings.local.json": {
-    "mtime": 1782247759.656924,
-    "ast_hash": "d1ddaf6fa921465858efb7bab9c71edf",
-    "semantic_hash": ""
-  },
-  "config/codex-review-schema.json": {
-    "mtime": 1782242929.9457874,
-    "ast_hash": "33979cf6046d53fd92bc6c11101e17cd",
-    "semantic_hash": ""
-  },
-  "scripts/local_review.py": {
-    "mtime": 1782246679.0862298,
-    "ast_hash": "a5cdd37eca4d55d31f212e18fb99b4f0",
+    "mtime": 1782248600.3989346,
+    "ast_hash": "4958e0213b63ab90428f47ce35d0ca67",
     "semantic_hash": ""
   },
   "scripts/submission_publisher.py": {
     "mtime": 1782243026.3036225,
     "ast_hash": "d74563022704d0d4bbc038bc50ed824f",
-    "semantic_hash": ""
-  },
-  "tests/test_local_review.py": {
-    "mtime": 1782243223.6602,
-    "ast_hash": "689ee5b1ce5e8b8c30a103963aa58c28",
     "semantic_hash": ""
   },
   "tests/test_submission_publisher.py": {
@@ -267,11 +247,6 @@
   "scripts/accept_submission.py": {
     "mtime": 1782248490.258588,
     "ast_hash": "f2837f5e603f9edf6b15b737aefbd635",
-    "semantic_hash": ""
-  },
-  "scripts/run_reviewer.py": {
-    "mtime": 1782247860.1582372,
-    "ast_hash": "61b35f0c8ccf4f1ae999fe6c9997ff77",
     "semantic_hash": ""
   }
 }
