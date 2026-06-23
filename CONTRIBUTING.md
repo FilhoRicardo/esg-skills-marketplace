@@ -1,10 +1,10 @@
 # Contributing a skill
 
-Thank you for proposing an ESG skill. The easiest path is the public ESG Skills Marketplace site: upload `SKILL.md` and enter a public title. The hidden intake flow creates a draft review request, and the maintainer assigns the category after reading the skill. This repository guide remains the fallback for maintainers and advanced contributors who want the GitHub-first path directly.
+Thank you for proposing an ESG skill. The easiest path is the public ESG Skills Marketplace site: upload any Markdown instructions and enter a public title. Frontmatter is optional at this stage. The hidden intake flow creates a draft review request, and the maintainer normalizes frontmatter and assigns the category after reading the skill. This repository guide remains the fallback for maintainers and advanced contributors who want the GitHub-first path directly.
 
 ## Before you start
 
-Your v1 submission must:
+Every published v1 skill must eventually:
 
 - solve one clear ESG job;
 - contain only UTF-8 text files;
@@ -30,12 +30,12 @@ Your v1 submission must:
 ## Submit through the public site
 
 1. Open the live ESG Skills Marketplace site.
-2. Choose `SKILL.md`.
-3. Enter the public catalogue title. The maintainer assigns the category during review.
+2. Choose any UTF-8 Markdown file containing the skill instructions. Frontmatter is optional.
+3. Enter the public catalogue title. The maintainer derives the final frontmatter and assigns the category during review.
 4. Confirm redistribution rights and the review boundary.
 5. Send the submission for review.
 
-If the browser-side checks pass, the site hands the bundle to the hidden intake flow. If the server-side intake also passes, GitHub receives a draft pull request. The maintainer reads the skill, assigns a category, rebuilds the catalogue, and then runs the normal trust checks.
+If the browser-side checks pass, the site hands the bundle to the hidden intake flow. If the server-side intake also passes, GitHub receives a draft pull request containing the instructions unchanged. The maintainer reads the skill, adds valid `name` and `description` frontmatter, assigns a category, rebuilds the catalogue, and then runs the normal trust checks.
 
 ## Open the request on GitHub directly
 

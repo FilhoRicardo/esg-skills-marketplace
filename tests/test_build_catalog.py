@@ -42,6 +42,8 @@ class BuildCatalogueTests(unittest.TestCase):
         self.assertNotIn("allowedCategories", rendered)
         self.assertEqual(rendered["minTitleChars"], 4)
         self.assertEqual(rendered["maxTitleChars"], 80)
+        self.assertEqual(rendered["minSkillChars"], 80)
+        self.assertNotIn("minBodyChars", rendered)
         self.assertGreater(rendered["maxSkillFileBytes"], rendered["maxMarketplaceFileBytes"])
 
     def test_download_bundle_contains_reviewed_bundle(self) -> None:

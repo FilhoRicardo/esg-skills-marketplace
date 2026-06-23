@@ -104,6 +104,16 @@ class SkillPolicyTests(unittest.TestCase):
         with self.assertRaisesRegex(PolicyError, "title and category"):
             validate_skill(skill)
 
+    def test_approved_skill_requires_frontmatter(self) -> None:
+        root = self.make_root()
+        skill = self.add_skill(root)
+        (skill / "SKILL.md").write_text(
+            "# Materiality brief\n\nReview supplied evidence and produce a traceable briefing with explicit uncertainty and source references.\n",
+            encoding="utf-8",
+        )
+        with self.assertRaisesRegex(PolicyError, "must start with YAML frontmatter"):
+            validate_skill(skill)
+
 
 if __name__ == "__main__":
     unittest.main()

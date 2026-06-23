@@ -70,36 +70,31 @@ function normalizePublicField(value, maxChars) {
   return value.replace(/\s+/g, " ").trim().slice(0, maxChars);
 }
 
-function parseFrontmatter(text) {
-  const lines = text.split(/\r?\n/);
-  if (lines[0] !== "---") {
-    throw new Error("SKILL.md must start with YAML frontmatter.");
+function slugifyTitle(title) {
+  const slug = title
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+  if (!SLUG_RE.test(slug)) {
+    throw new Error("Public title must include letters or numbers that can form a URL slug.");
   }
+  return slug;
+}
 
-  const closing = lines.indexOf("---", 1);
-  if (closing === -1) {
-    throw new Error("SKILL.md frontmatter needs a closing --- line.");
+function validateSkillMarkdown(text) {
+  if (text.trim().length < intakeConfig.minSkillChars) {
+    throw new Error(
+      `Skill instructions must contain at least ${intakeConfig.minSkillChars} characters.`,
+    );
   }
-
-  const metadata = {};
-  for (const line of lines.slice(1, closing)) {
-    if (!line.trim() || /^\s*#/.test(line)) continue;
-    if (!line.includes(":") || /^[\t ]/.test(line)) {
-      throw new Error("SKILL.md frontmatter must use simple top-level key: value pairs.");
-    }
-    const [rawKey, ...rest] = line.split(":");
-    const key = rawKey.trim();
-    const value = rest.join(":").trim().replace(/^['"]|['"]$/g, "");
-    if (!key || !value) {
-      throw new Error("SKILL.md frontmatter keys and values cannot be empty.");
-    }
-    metadata[key] = value;
+  const hasInvisibleControl = [...text].some(
+    (character) => !"\n\r\t".includes(character) && /[\p{Cc}\p{Cf}]/u.test(character),
+  );
+  if (hasInvisibleControl) {
+    throw new Error("Skill instructions contain unsupported invisible control characters.");
   }
-
-  return {
-    metadata,
-    body: lines.slice(closing + 1).join("\n").trim(),
-  };
 }
 
 function parseMarketplace(text) {
@@ -138,28 +133,7 @@ function buildPreview(skillText, marketplaceText) {
     );
   }
 
-  const { metadata, body } = parseFrontmatter(skillText);
-  const slug = metadata.name || "";
-  if (!SLUG_RE.test(slug)) {
-    throw new Error("SKILL.md frontmatter name must be a lowercase hyphenated slug.");
-  }
-
-  const description = (metadata.description || "").trim();
-  if (
-    description.length < intakeConfig.minDescriptionChars ||
-    description.length > intakeConfig.maxDescriptionChars
-  ) {
-    throw new Error(
-      `SKILL.md description must contain ${intakeConfig.minDescriptionChars} to ${intakeConfig.maxDescriptionChars} characters.`,
-    );
-  }
-
-  if (body.length < intakeConfig.minBodyChars) {
-    throw new Error(
-      `SKILL.md body must contain at least ${intakeConfig.minBodyChars} characters of meaningful instructions.`,
-    );
-  }
-
+  validateSkillMarkdown(skillText);
   const marketplace = parseMarketplace(marketplaceText);
   const title = typeof marketplace.title === "string" ? marketplace.title.trim() : "";
   if (
@@ -173,10 +147,10 @@ function buildPreview(skillText, marketplaceText) {
   }
 
   return {
-    slug,
+    slug: slugifyTitle(title),
     title,
     category: "Assigned during review",
-    description,
+    description: "Instructions uploaded. Frontmatter and category will be completed during review.",
   };
 }
 
@@ -188,7 +162,7 @@ function updatePreview(nextPreview) {
     previewTitle.textContent = "—";
     previewCategory.textContent = "Assigned during review";
     previewDetail.textContent =
-      "Choose `SKILL.md` and enter a public title before anything is queued.";
+      "Choose a Markdown file and enter a public title before anything is queued.";
     return;
   }
 

@@ -5,15 +5,15 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from scripts.site_intake import SITE_INTAKE_MARKETPLACE_MAX_BYTES, PolicyError, validate_submission
+from scripts.site_intake import (
+    SITE_INTAKE_MARKETPLACE_MAX_BYTES,
+    PolicyError,
+    validate_submission,
+    write_submission,
+)
 
 
-VALID_SKILL = """---
-name: climate-action-brief
-description: Prepare a bounded ESG briefing from user-provided operating evidence and source notes.
----
-
-# Climate action brief
+VALID_SKILL = """# Climate action brief
 
 Use the supplied evidence only. Separate facts from assumptions, preserve source links, and call out uncertainty where the source pack is incomplete.
 """
@@ -40,6 +40,32 @@ class SiteIntakeTests(unittest.TestCase):
         )
         self.assertEqual(entry["slug"], "climate-action-brief")
         self.assertEqual(entry["category"], "pending-review")
+
+    def test_write_submission_preserves_raw_markdown(self) -> None:
+        root = self.make_root()
+        entry = write_submission(
+            root=root,
+            skill_md=VALID_SKILL,
+            marketplace_json=VALID_MARKETPLACE,
+            public_name="",
+            public_contact="",
+            rights_confirmed=True,
+            boundary_confirmed=True,
+        )
+        self.assertEqual(
+            (root / entry["path"] / "SKILL.md").read_text(encoding="utf-8"),
+            VALID_SKILL,
+        )
+
+    def test_slug_is_derived_from_public_title(self) -> None:
+        entry = validate_submission(
+            VALID_SKILL,
+            json.dumps({"title": "Café climate brief"}),
+            root=self.make_root(),
+            rights_confirmed=True,
+            boundary_confirmed=True,
+        )
+        self.assertEqual(entry["slug"], "cafe-climate-brief")
 
     def test_site_submitter_cannot_assign_category(self) -> None:
         with self.assertRaisesRegex(PolicyError, "may only contain title"):
@@ -85,6 +111,26 @@ class SiteIntakeTests(unittest.TestCase):
                 VALID_MARKETPLACE,
                 root=self.make_root(),
                 rights_confirmed=False,
+                boundary_confirmed=True,
+            )
+
+    def test_short_skill_instructions_are_rejected(self) -> None:
+        with self.assertRaisesRegex(PolicyError, "at least 80 characters"):
+            validate_submission(
+                "# Too short",
+                VALID_MARKETPLACE,
+                root=self.make_root(),
+                rights_confirmed=True,
+                boundary_confirmed=True,
+            )
+
+    def test_invisible_control_character_is_rejected(self) -> None:
+        with self.assertRaisesRegex(PolicyError, "invisible Unicode control"):
+            validate_submission(
+                VALID_SKILL + "\u202e",
+                VALID_MARKETPLACE,
+                root=self.make_root(),
+                rights_confirmed=True,
                 boundary_confirmed=True,
             )
 

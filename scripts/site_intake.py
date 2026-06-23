@@ -6,20 +6,22 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import sys
-import tempfile
+import unicodedata
 from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 if str(SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPT_DIR))
 
-from validate_skills import PolicyError, ROOT, SLUG_RE, parse_frontmatter, validate_skill
+from validate_skills import PolicyError, ROOT, SLUG_RE
 
 SITE_INTAKE_SKILL_MD_MAX_BYTES = 40_000
 SITE_INTAKE_MARKETPLACE_MAX_BYTES = 4_000
 SITE_INTAKE_MAX_PUBLIC_NAME_CHARS = 80
 SITE_INTAKE_MAX_PUBLIC_CONTACT_CHARS = 200
+SITE_INTAKE_MIN_SKILL_CHARS = 80
 
 
 def submission_config() -> dict[str, object]:
@@ -31,9 +33,7 @@ def submission_config() -> dict[str, object]:
         "maxPublicContactChars": SITE_INTAKE_MAX_PUBLIC_CONTACT_CHARS,
         "minTitleChars": 4,
         "maxTitleChars": 80,
-        "minDescriptionChars": 20,
-        "maxDescriptionChars": 300,
-        "minBodyChars": 80,
+        "minSkillChars": SITE_INTAKE_MIN_SKILL_CHARS,
     }
 
 
@@ -49,6 +49,48 @@ def _normalize_public_field(value: str, label: str, maximum_chars: int) -> str:
     if len(compact) > maximum_chars:
         raise PolicyError(f"{label} must be {maximum_chars} characters or fewer")
     return compact
+
+
+def _validate_skill_markdown(text: str) -> None:
+    if len(text.strip()) < SITE_INTAKE_MIN_SKILL_CHARS:
+        raise PolicyError(
+            f"skill instructions must contain at least {SITE_INTAKE_MIN_SKILL_CHARS} characters"
+        )
+    if "\x00" in text:
+        raise PolicyError("skill instructions must not contain NUL bytes")
+    for character in text:
+        if character not in "\n\r\t" and unicodedata.category(character) in {"Cc", "Cf"}:
+            raise PolicyError(
+                "skill instructions contain unsupported invisible Unicode control characters"
+            )
+
+
+def _parse_title(marketplace_json: str) -> str:
+    try:
+        marketplace = json.loads(marketplace_json)
+    except json.JSONDecodeError as exc:
+        raise PolicyError(f"submission metadata is invalid JSON: {exc.msg}") from exc
+    if not isinstance(marketplace, dict) or set(marketplace) != {"title"}:
+        raise PolicyError("site intake metadata may only contain title")
+    title = marketplace.get("title")
+    if not isinstance(title, str) or not 4 <= len(title.strip()) <= 80:
+        raise PolicyError("public title must contain 4 to 80 characters")
+    if any(character in title for character in "\r\n\t"):
+        raise PolicyError("public title must be a single line of plain text")
+    return title.strip()
+
+
+def _slugify_title(title: str) -> str:
+    ascii_title = (
+        unicodedata.normalize("NFKD", title)
+        .encode("ascii", "ignore")
+        .decode("ascii")
+        .lower()
+    )
+    slug = re.sub(r"[^a-z0-9]+", "-", ascii_title).strip("-")
+    if not SLUG_RE.fullmatch(slug):
+        raise PolicyError("public title must include letters or numbers that can form a URL slug")
+    return slug
 
 
 def validate_submission(
@@ -71,25 +113,20 @@ def validate_submission(
         SITE_INTAKE_MARKETPLACE_MAX_BYTES,
     )
 
-    with tempfile.TemporaryDirectory() as temporary_name:
-        temporary_root = Path(temporary_name)
-        seed_file = temporary_root / "seed-SKILL.md"
-        seed_file.write_text(skill_md, encoding="utf-8")
-        metadata, _body = parse_frontmatter(seed_file)
-        proposed_slug = metadata.get("name", "")
-        folder_slug = proposed_slug if SLUG_RE.fullmatch(proposed_slug) else "candidate-skill"
-
-        skill_dir = temporary_root / folder_slug
-        skill_dir.mkdir()
-        (skill_dir / "SKILL.md").write_text(skill_md, encoding="utf-8")
-        (skill_dir / "marketplace.json").write_text(marketplace_json, encoding="utf-8")
-        entry = validate_skill(skill_dir, allow_pending_category=True)
-
-    if (root / "skills" / entry["slug"]).exists():
+    _validate_skill_markdown(skill_md)
+    title = _parse_title(marketplace_json)
+    slug = _slugify_title(title)
+    if (root / "skills" / slug).exists():
         raise PolicyError(
-            f"skills/{entry['slug']} already exists in the approved catalogue; use maintainer review for updates"
+            f"skills/{slug} already exists in the approved catalogue; use maintainer review for updates"
         )
-    return entry
+    return {
+        "slug": slug,
+        "title": title,
+        "description": "Pending maintainer normalization.",
+        "category": "pending-review",
+        "path": f"skills/{slug}",
+    }
 
 
 def write_submission(

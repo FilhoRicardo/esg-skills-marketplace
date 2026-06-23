@@ -189,3 +189,29 @@ Codex response:
 - Claude received only the proposed data flow and strict-validator boundary, with no surrounding plan prose.
 - The third call again returned no critique or verdict. This reproduces the documented silent-critic behavior for RF-100.
 - The user's request explicitly approves the exact product change, and Codex's implementation remains bounded to title-only draft intake with the unchanged validator preventing publication until category assignment. Implementation proceeds without inventing a Claude verdict.
+
+## 2026-06-23 — Unnormalized Markdown intake follow-up
+
+- The user requested removal of the frontmatter-format requirement at public upload time so maintainers can normalize accepted skills after review.
+- Codex's bounded interpretation is: accept meaningful UTF-8 Markdown, derive the temporary slug from the public title, preserve the instructions unchanged, and keep strict frontmatter plus category as hard pre-merge requirements.
+
+### Round 1
+
+- Claude CLI passed the authenticated no-tools smoke test and received the full plan.
+- The review returned no critique or verdict. Codex did not treat silence as `CLEAR` and moved to a focused data-boundary retry.
+
+### Round 2
+
+- Claude received only the raw-Markdown intake boundary, title-derived slug, unchanged strict merge gate, and no-execution constraint.
+- The call again returned no critique or verdict. Codex did not treat silence as approval and moved to one minimal safety question.
+
+### Round 3 — Claude verdict: CLEAR
+
+Claude found the intake boundary materially contained by size, UTF-8, control-character, slug-collision, attestation, no-execution, and strict merge-gate controls. It raised one conditional concern: raw Markdown must not be rendered as unsanitized HTML in downstream views.
+
+`VERDICT: CLEAR`
+
+Codex response:
+
+- Accepted the concern as a verification requirement. The browser preview inserts only fixed plain text and metadata through `textContent`; it does not render submitted Markdown. The public catalogue also renders validated metadata through `textContent`, while GitHub owns and sanitizes its pull-request Markdown view.
+- The user's request is the final signoff for this exact bounded change: raw Markdown intake now, maintainer normalization before merge, and no execution or automatic rewriting of submitted instructions.

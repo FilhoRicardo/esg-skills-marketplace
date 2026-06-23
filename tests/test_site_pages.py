@@ -61,6 +61,8 @@ class SitePageTests(unittest.TestCase):
         app = (SITE / "app.js").read_text(encoding="utf-8")
         self.assertIn("JSON.stringify({ title })", app)
         self.assertIn("marketplace_json: submission.marketplaceText", app)
+        self.assertIn("slugifyTitle", app)
+        self.assertNotIn("parseFrontmatter", app)
 
     def test_public_page_does_not_lock_document_scrolling(self) -> None:
         styles = (SITE / "styles.css").read_text(encoding="utf-8")

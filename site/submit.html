@@ -10,7 +10,7 @@
     <title>Submit a skill · ESG Skills Marketplace</title>
     <link rel="stylesheet" href="aster-tokens.css">
     <link rel="stylesheet" href="styles.css">
-    <script src="app.js?v=category-review" defer></script>
+    <script src="app.js?v=raw-markdown" defer></script>
   </head>
   <body class="aster-bg">
     <div class="site-shell">
@@ -33,8 +33,8 @@
             <h1 id="submit-title">Submit a skill for review</h1>
           </div>
           <p>
-            Upload <code>SKILL.md</code> and add a public title. The maintainer assigns the category
-            after reading the skill.
+            Upload any Markdown skill instructions and add a public title. Frontmatter and category
+            are completed during review.
           </p>
         </section>
 
@@ -53,9 +53,9 @@
             <form id="submission-form" class="submission-form" novalidate>
               <div class="field-grid">
                 <label class="file-field aster-inner" for="skill-file">
-                  <span class="field-label">SKILL.md</span>
-                  <span class="field-help">Workflow instructions in UTF-8 Markdown.</span>
-                  <input id="skill-file" name="skill-file" type="file" accept=".md,text/markdown" required>
+                  <span class="field-label">Skill instructions</span>
+                  <span class="field-help">Any UTF-8 Markdown file. Frontmatter is optional.</span>
+                  <input id="skill-file" name="skill-file" type="file" accept=".md,text/markdown,text/plain" required>
                 </label>
 
                 <div class="skill-details aster-inner">
@@ -149,14 +149,18 @@
                 <dd id="preview-title-value">—</dd>
               </div>
               <div>
+                <dt>Frontmatter</dt>
+                <dd>Completed during review</dd>
+              </div>
+              <div>
                 <dt>Category</dt>
                 <dd id="preview-category">Assigned during review</dd>
               </div>
             </dl>
 
             <p id="preview-detail" class="preview-detail">
-              Choose <code>SKILL.md</code> and enter a public title to check the bundle before it
-              enters review.
+              Choose a Markdown file and enter a public title to check the bundle before it enters
+              review.
             </p>
           </aside>
         </section>
