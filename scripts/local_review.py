@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
-"""Run an isolated Codex review of a skill submission from the local inbox.
+"""Run a MiniMax review of a skill submission from the local inbox.
 
 Processes ONE submission directory at a time. Called by the launchd reviewer
 watcher when inbox becomes non-empty.
 
 Required environment variables:
-  CODEX_API_KEY   - dedicated OpenAI API key with a low project spend limit
+  MINIMAX_API_KEY  - MiniMax API key
 
 Optional:
-  ESG_INTAKE_ROOT - repository root (defaults to script's parent)
-  CODEX_PATH      - path to the codex binary (defaults to 'codex' on PATH)
+  ESG_INTAKE_ROOT  - repository root (defaults to script's parent)
+  MINIMAX_MODEL    - model name (default: MiniMax-Text-01)
 """
 
 from __future__ import annotations
@@ -18,10 +18,10 @@ import json
 import logging
 import os
 import re
-import subprocess
 import sys
-import tempfile
 import unicodedata
+import urllib.error
+import urllib.request
 from pathlib import Path
 
 ROOT = Path(os.environ.get("ESG_INTAKE_ROOT", Path(__file__).resolve().parents[1]))
@@ -130,78 +130,39 @@ def _validate_review_output(raw: str) -> dict:
     return obj
 
 
-def _build_codex_config(config_dir: Path) -> None:
-    # deny-all PreToolUse hook: Codex cannot execute tools
-    config = {
-        "model": "gpt-5.4-mini",
-        "approvalMode": "full-auto",
-        "disableWebSearch": True,
-        "disableMcp": True,
-        "hooks": {
-            "PreToolUse": [
-                {
-                    "matcher": ".*",
-                    "hooks": [{"type": "command", "command": "exit 2"}],
-                }
-            ]
+def _run_minimax(skill_md: str, api_key: str) -> str:
+    model = os.environ.get("MINIMAX_MODEL", "MiniMax-Text-01")
+    prompt = _REVIEW_PROMPT + skill_md
+    payload = json.dumps({
+        "model": model,
+        "messages": [{"role": "user", "content": prompt}],
+        "max_tokens": 500,
+        "temperature": 0.1,
+    }).encode("utf-8")
+
+    req = urllib.request.Request(
+        "https://api.minimax.chat/v1/chat/completions",
+        data=payload,
+        headers={
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json",
         },
-    }
-    config_path = config_dir / "config.json"
-    config_path.write_text(json.dumps(config), encoding="utf-8")
+        method="POST",
+    )
 
+    try:
+        with urllib.request.urlopen(req, timeout=60) as resp:
+            data = json.loads(resp.read())
+    except urllib.error.HTTPError as exc:
+        body = exc.read().decode("utf-8", errors="replace")
+        raise RuntimeError(f"MiniMax API error {exc.code}: {body[:300]}") from exc
+    except Exception as exc:
+        raise RuntimeError(f"MiniMax request failed: {exc}") from exc
 
-def _run_codex(skill_md: str, api_key: str) -> str:
-    codex_bin = os.environ.get("CODEX_PATH", "codex")
-
-    with tempfile.TemporaryDirectory(prefix="esg-review-") as tmpdir:
-        tmp_path = Path(tmpdir)
-        codex_home = tmp_path / ".codex"
-        codex_home.mkdir()
-        _build_codex_config(codex_home)
-
-        prompt = _REVIEW_PROMPT + skill_md
-
-        env = {
-            "HOME": tmpdir,
-            "CODEX_HOME": str(codex_home),
-            "OPENAI_API_KEY": api_key,
-            # Exclude all Mac credential stores, plugins, and user config
-            "PATH": "/usr/bin:/bin:/usr/sbin:/sbin",
-        }
-
-        try:
-            result = subprocess.run(
-                [
-                    codex_bin,
-                    "exec",
-                    "--approval-mode",
-                    "full-auto",
-                    "--sandbox-type",
-                    "read-only",
-                    "--no-web-search",
-                    prompt,
-                ],
-                capture_output=True,
-                text=True,
-                env=env,
-                cwd=tmpdir,
-                timeout=120,
-            )
-        except FileNotFoundError:
-            raise RuntimeError(
-                f"Codex binary not found at {codex_bin!r}. "
-                "Set CODEX_PATH or install Codex CLI."
-            )
-        except subprocess.TimeoutExpired:
-            raise RuntimeError("Codex review timed out after 120 seconds")
-
-        if result.returncode != 0:
-            stderr_snippet = result.stderr[:500] if result.stderr else "(no stderr)"
-            raise RuntimeError(
-                f"Codex exited with code {result.returncode}: {stderr_snippet}"
-            )
-
-        return result.stdout.strip()
+    try:
+        return data["choices"][0]["message"]["content"].strip()
+    except (KeyError, IndexError) as exc:
+        raise RuntimeError(f"Unexpected MiniMax response shape: {exc}") from exc
 
 
 def _move_to_needs_attention(submission_dir: Path, reason: str) -> None:
@@ -216,9 +177,9 @@ def _move_to_needs_attention(submission_dir: Path, reason: str) -> None:
 
 
 def review_submission(submission_dir: Path) -> bool:
-    api_key = os.environ.get("CODEX_API_KEY", "").strip()
+    api_key = os.environ.get("MINIMAX_API_KEY", "").strip()
     if not api_key:
-        raise RuntimeError("CODEX_API_KEY environment variable is not set")
+        raise RuntimeError("MINIMAX_API_KEY environment variable is not set")
 
     submission_id = submission_dir.name
     skill_md_path = submission_dir / "SKILL.md"
@@ -230,9 +191,9 @@ def review_submission(submission_dir: Path) -> bool:
     log.info("Reviewing: %s (title: %s)", submission_id, submission_meta.get("title", ""))
 
     try:
-        raw_output = _run_codex(skill_md, api_key)
+        raw_output = _run_minimax(skill_md, api_key)
     except RuntimeError as exc:
-        _move_to_needs_attention(submission_dir, f"Codex runner error: {exc}")
+        _move_to_needs_attention(submission_dir, f"MiniMax runner error: {exc}")
         return False
 
     try:
@@ -240,7 +201,7 @@ def review_submission(submission_dir: Path) -> bool:
     except ValueError as exc:
         _move_to_needs_attention(
             submission_dir,
-            f"Codex output failed validation: {exc}\nRaw output:\n{raw_output[:500]}",
+            f"MiniMax output failed validation: {exc}\nRaw output:\n{raw_output[:500]}",
         )
         return False
 
