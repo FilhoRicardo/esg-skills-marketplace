@@ -60,7 +60,9 @@ class SitePageTests(unittest.TestCase):
     def test_browser_still_sends_generated_marketplace_metadata(self) -> None:
         app = (SITE / "app.js").read_text(encoding="utf-8")
         self.assertIn("JSON.stringify({ title })", app)
-        self.assertIn("marketplace_json: submission.marketplaceText", app)
+        self.assertIn("submitPath", app)
+        self.assertNotIn("stageUploadPath", app)
+        self.assertNotIn("finalizeUploadPath", app)
         self.assertIn("slugifyTitle", app)
         self.assertNotIn("parseFrontmatter", app)
 

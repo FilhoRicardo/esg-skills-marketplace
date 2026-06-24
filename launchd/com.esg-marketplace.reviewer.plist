@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  ESG Skills Marketplace — reviewer watcher LaunchAgent
+  Triggers when var/intake/inbox becomes non-empty.
+  Runs local_review.py then submission_publisher.py in sequence.
+
+  BEFORE LOADING:
+    1. Obtain a dedicated OpenAI API key (see docs/INTAKE-SETUP.md).
+    2. Create an SSH deploy key for the GitHub repo (see docs/INTAKE-SETUP.md).
+    3. Set EnvironmentVariables below.
+    4. Copy this file to ~/Library/LaunchAgents/ and load it:
+         cp launchd/com.esg-marketplace.reviewer.plist ~/Library/LaunchAgents/
+         launchctl load ~/Library/LaunchAgents/com.esg-marketplace.reviewer.plist
+-->
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.esg-marketplace.reviewer</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/bin/python3</string>
+    <string>/Users/ricardofilho/Documents/Projects/active/esg-skills-marketplace/scripts/run_reviewer.py</string>
+  </array>
+
+  <key>WorkingDirectory</key>
+  <string>/Users/ricardofilho/Documents/Projects/active/esg-skills-marketplace</string>
+
+  <!-- Replace placeholder values before loading -->
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>MINIMAX_API_KEY</key>
+    <string>sk-cp-njHlhiN_Vkkvpaj8d0lh3BpEYIbjIRbAQwdr0CKL0IquUdR2On0EJHQHrJUfKUk29EM7TkvE3xqISH6GhH-gabheQeSiIBZe17MuOXIYl-sa4v9bFYQgq18</string>
+    <key>ESG_DEPLOY_KEY_PATH</key>
+    <string>/Users/ricardofilho/.ssh/esg-marketplace-deploy</string>
+    <key>ESG_INTAKE_ROOT</key>
+    <string>/Users/ricardofilho/Documents/Projects/active/esg-skills-marketplace</string>
+    <key>ESG_GITHUB_REPO</key>
+    <string>FilhoRicardo/esg-skills-marketplace</string>
+  </dict>
+
+  <!-- Poll every 30 seconds -->
+  <key>StartInterval</key>
+  <integer>30</integer>
+
+  <!-- Bounded log files -->
+  <key>StandardOutPath</key>
+  <string>/Users/ricardofilho/Library/Logs/esg-marketplace/reviewer.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/ricardofilho/Library/Logs/esg-marketplace/reviewer-error.log</string>
+
+  <key>RunAtLoad</key>
+  <false/>
+</dict>
+</plist>

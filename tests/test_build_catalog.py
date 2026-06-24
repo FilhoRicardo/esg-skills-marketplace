@@ -38,7 +38,10 @@ class BuildCatalogueTests(unittest.TestCase):
 
     def test_submission_config_exposes_public_limits(self) -> None:
         rendered = json.loads(rendered_submission_config())
-        self.assertEqual(rendered["dispatchPath"], "/api/submit-skill")
+        self.assertEqual(rendered["submitPath"], "/api/intake/submit")
+        self.assertNotIn("stageUploadPath", rendered)
+        self.assertNotIn("finalizeUploadPath", rendered)
+        self.assertNotIn("dispatchPath", rendered)
         self.assertNotIn("allowedCategories", rendered)
         self.assertEqual(rendered["minTitleChars"], 4)
         self.assertEqual(rendered["maxTitleChars"], 80)

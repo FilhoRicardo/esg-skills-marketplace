@@ -66,6 +66,33 @@ This project is `ESG Skills Marketplace` in `/Users/ricardofilho/Documents/Proje
 - Every Linear issue creation or closure requires a memory touch; add an entry only when durable knowledge changed.
 - Keep each memory entry to one or two sentences.
 
+## Intake Review Workflow
+
+When asked to review or process the intake queue:
+
+1. List pending submissions:
+   ```
+   ls skills-to-review/
+   ```
+2. For each submission directory, read `skills-to-review/<uuid>/SKILL.md` and
+   `skills-to-review/<uuid>/submission.json`.
+3. Evaluate whether the skill is appropriate for the ESG Skills Marketplace:
+   - Is it genuinely ESG-related?
+   - Is it safe to redistribute? No credentials, no PII, no misleading claims.
+   - Is the quality good enough to publish?
+4. If **approved**, run:
+   ```
+   python3 scripts/accept_submission.py <uuid> \
+     --slug <url-slug> \
+     --description "<one-line description, 20-300 chars>" \
+     --category <data|disclosure|operations|reporting|risk|strategy>
+   ```
+   This copies the skill to `skills/`, rebuilds the catalogue, commits to `main`,
+   pushes to GitHub, and redeploys the here.now site automatically.
+5. If **rejected**, move the submission directory to `var/intake/needs-attention/<uuid>/`
+   and write a short `rejection-reason.txt` explaining why.
+6. Process one submission at a time. Confirm with the user before publishing.
+
 ## Verification
 
 - Run `python3 scripts/validate_skills.py --all` and `python3 -m unittest discover -s tests`.

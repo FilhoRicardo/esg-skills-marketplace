@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  ESG Skills Marketplace — Cloudflare quick tunnel LaunchAgent
+  Runs cloudflared in the background. Check the log for the tunnel URL
+  after each start:
+    grep trycloudflare ~/Library/Logs/esg-marketplace/tunnel.log | tail -1
+
+  When the URL changes, update site/.herenow/proxy.json and redeploy.
+-->
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.esg-marketplace.tunnel</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/Users/ricardofilho/bin/cloudflared</string>
+    <string>tunnel</string>
+    <string>--url</string>
+    <string>http://localhost:8766</string>
+  </array>
+
+  <key>KeepAlive</key>
+  <true/>
+
+  <key>StandardOutPath</key>
+  <string>/Users/ricardofilho/Library/Logs/esg-marketplace/tunnel.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/ricardofilho/Library/Logs/esg-marketplace/tunnel.log</string>
+
+  <key>RunAtLoad</key>
+  <true/>
+</dict>
+</plist>

@@ -170,6 +170,7 @@ async function readSubmissionValues() {
   return {
     skillText: await skillFile.text(),
     marketplaceText: JSON.stringify({ title }),
+    title,
   };
 }
 
@@ -324,43 +325,25 @@ if (form) {
     submitButton.disabled = true;
     setSubmissionTone("Sending for review", "neutral");
 
-    const payload = {
-      ref: "main",
-      inputs: {
-        skill_md: submission.skillText,
-        marketplace_json: submission.marketplaceText,
-        public_name: normalizePublicField(publicNameInput.value, intakeConfig.maxPublicNameChars),
-        public_contact: normalizePublicField(
-          publicContactInput.value,
-          intakeConfig.maxPublicContactChars,
-        ),
-        rights_confirmed: String(rightsInput.checked),
-        boundary_confirmed: String(boundaryInput.checked),
-      },
+    const bundle = {
+      skill_md: submission.skillText,
+      title: submission.title,
+      public_name: normalizePublicField(publicNameInput.value, intakeConfig.maxPublicNameChars),
+      public_contact: normalizePublicField(
+        publicContactInput.value,
+        intakeConfig.maxPublicContactChars,
+      ),
+      rights_confirmed: rightsInput.checked,
+      boundary_confirmed: boundaryInput.checked,
+      submitted_at: new Date().toISOString(),
     };
 
     try {
-      const response = await fetch(intakeConfig.dispatchPath, {
+      const response = await fetch(intakeConfig.submitPath, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify(payload),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(bundle),
       });
-
-      if (response.ok || response.status === 204) {
-        form.reset();
-        updatePreview(null);
-        setSubmissionTone("Submission queued for intake", "success");
-        setFeedback(
-          "Submission queued",
-          "Your skill details passed the browser checks and entered the review queue. Automated checks and maintainer review still run before anything becomes public.",
-          "success",
-        );
-        syncSubmitButton();
-        return;
-      }
 
       if (
         LOCAL_HOSTS.has(window.location.hostname) &&
@@ -376,7 +359,20 @@ if (form) {
         return;
       }
 
-      throw new Error(`Submission endpoint returned ${response.status}.`);
+      if (!response.ok) {
+        const data = await response.json().catch(() => ({}));
+        throw new Error(data.error || `Submit returned ${response.status}`);
+      }
+
+      form.reset();
+      updatePreview(null);
+      setSubmissionTone("Submission queued for intake", "success");
+      setFeedback(
+        "Submission queued",
+        "Your skill details passed the browser checks and entered the review queue. Automated checks and maintainer review still run before anything becomes public.",
+        "success",
+      );
+      syncSubmitButton();
     } catch (error) {
       console.error("Unable to queue submission", error);
       setSubmissionTone("Submission unavailable", "error");
