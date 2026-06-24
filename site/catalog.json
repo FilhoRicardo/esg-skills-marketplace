@@ -12,5 +12,12 @@
     "description": "Organize user-provided greenhouse-gas inventory data and factors into a traceable working evidence pack for review.",
     "category": "data",
     "path": "skills/ghg-inventory-evidence-pack"
+  },
+  {
+    "slug": "scope3-emissions-screener",
+    "title": "Scope 3 Emissions Screener",
+    "description": "Screens business activities for material Scope 3 emissions exposure using the GHG Protocol Corporate Value Chain standard.",
+    "category": "reporting",
+    "path": "skills/scope3-emissions-screener"
   }
 ]
