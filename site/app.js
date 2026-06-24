@@ -325,24 +325,26 @@ if (form) {
     submitButton.disabled = true;
     setSubmissionTone("Sending for review", "neutral");
 
-    const bundle = {
-      skill_md: submission.skillText,
-      title: submission.title,
-      public_name: normalizePublicField(publicNameInput.value, intakeConfig.maxPublicNameChars),
-      public_contact: normalizePublicField(
-        publicContactInput.value,
-        intakeConfig.maxPublicContactChars,
-      ),
-      rights_confirmed: rightsInput.checked,
-      boundary_confirmed: boundaryInput.checked,
-      submitted_at: new Date().toISOString(),
+    const payload = {
+      ref: "main",
+      inputs: {
+        skill_md: submission.skillText,
+        marketplace_json: submission.marketplaceText,
+        public_name: normalizePublicField(publicNameInput.value, intakeConfig.maxPublicNameChars),
+        public_contact: normalizePublicField(
+          publicContactInput.value,
+          intakeConfig.maxPublicContactChars,
+        ),
+        rights_confirmed: String(rightsInput.checked),
+        boundary_confirmed: String(boundaryInput.checked),
+      },
     };
 
     try {
       const response = await fetch(intakeConfig.submitPath, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(bundle),
+        body: JSON.stringify(payload),
       });
 
       if (
@@ -360,8 +362,7 @@ if (form) {
       }
 
       if (!response.ok) {
-        const data = await response.json().catch(() => ({}));
-        throw new Error(data.error || `Submit returned ${response.status}`);
+        throw new Error(`Submit returned ${response.status}`);
       }
 
       form.reset();

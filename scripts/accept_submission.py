@@ -118,8 +118,7 @@ def accept(uuid: str, slug: str, description: str, category: str) -> None:
     log.info("Catalogue rebuilt")
 
     # Commit and push
-    _run(["git", "add", f"skills/{slug}", "site/catalog.json", "site/submission-config.json",
-          f"site/downloads/{slug}.zip"])
+    _run(["git", "add", f"skills/{slug}", "site/catalog.json"])
     _run(["git", "commit", "-m", f"Add skill: {slug}\n\nAccepted from intake submission {uuid[:8]}"])
     _run(["git", "push", "origin", "main"])
     log.info("Pushed to GitHub")
