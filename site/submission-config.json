@@ -1,0 +1,10 @@
+{
+  "submitPath": "/api/intake/submit",
+  "maxSkillFileBytes": 40000,
+  "maxMarketplaceFileBytes": 4000,
+  "maxPublicNameChars": 80,
+  "maxPublicContactChars": 200,
+  "minTitleChars": 4,
+  "maxTitleChars": 80,
+  "minSkillChars": 80
+}

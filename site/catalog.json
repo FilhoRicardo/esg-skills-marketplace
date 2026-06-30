@@ -1,5 +1,12 @@
 [
   {
+    "slug": "after-hours-lighting-audit",
+    "title": "After-Hours Lighting Audit",
+    "description": "Identifies lighting circuits left on outside occupancy hours using meter or BMS data, ranks waste by circuit, and recommends corrective actions.",
+    "category": "operations",
+    "path": "skills/after-hours-lighting-audit"
+  },
+  {
     "slug": "esg-materiality-brief",
     "title": "ESG materiality brief",
     "description": "Turn user-provided business and stakeholder evidence into a traceable ESG materiality briefing with explicit uncertainty.",
@@ -14,10 +21,10 @@
     "path": "skills/ghg-inventory-evidence-pack"
   },
   {
-    "slug": "scope3-emissions-screener",
-    "title": "Scope 3 Emissions Screener",
-    "description": "Screens business activities for material Scope 3 emissions exposure using the GHG Protocol Corporate Value Chain standard.",
-    "category": "reporting",
-    "path": "skills/scope3-emissions-screener"
+    "slug": "storm-ecm",
+    "title": "Storm ECM",
+    "description": "Screens energy conservation measure ideas with five evidence lenses, then produces verified HTML and Markdown notes only for credible candidates.",
+    "category": "operations",
+    "path": "skills/storm-ecm"
   }
 ]
