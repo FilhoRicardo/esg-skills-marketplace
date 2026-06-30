@@ -1,0 +1,4 @@
+interface:
+  display_name: "Storm ECM"
+  short_description: "Evaluate ECMs and create HTML plus MD notes"
+  default_prompt: "Use $storm-ecm to evaluate this energy conservation measure idea and create verified HTML and Markdown outputs if it passes."
